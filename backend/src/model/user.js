@@ -39,5 +39,9 @@ const UserSchema = new mongoose_1.Schema({
         type: String,
         required: true,
     },
+    companyInfo: {
+        type: [Number],
+        required: false,
+    },
 });
 exports.UserModel = mongoose_1.default.model('User', UserSchema);

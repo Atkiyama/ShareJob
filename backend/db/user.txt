@@ -1,0 +1,7 @@
+{
+   email: "test@test.co.jp",
+   name: "てすとたろう",
+   password: "password",
+   companyInfoList: [1],
+
+} 

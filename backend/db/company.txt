@@ -1,0 +1,8 @@
+{
+   id: 1,
+   name:"マクロコスモス",
+   abstract:"エネルギー企業",
+   industries:["エネルギー産業"],
+   locations:["ガラル地方"],
+
+}

@@ -4,10 +4,10 @@ import { Request, Response, Router } from "express";
 
 import user from "../controller/user";
 import getTest from "../controller/getTest";
-import createUser from "../controller/createUser";
+import registerUser from "../controller/registerUser";
 
 const router: Router = express.Router();
 router.post("/user/login", user);
 router.get("/test/get/", getTest);
-router.post("/user/create", createUser);
+router.post("/user/register", registerUser);
 export default router

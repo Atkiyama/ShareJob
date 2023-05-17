@@ -20,7 +20,7 @@ function postUser(req, res) {
             yield (0, database_1.default)();
             const savedUserData = yield user_1.UserModel.findOne({ password: req.body.password });
             if (savedUserData) {
-                return res.status(200).json({ message: 'アイテム読み取り成功(オール)', savedUserData: savedUserData });
+                return res.status(200).json({ message: 'ログイン成功', savedUserData: savedUserData });
             }
             else {
                 return res.status(400).json({ message: 'ログイン失敗:ユーザー登録をしてください' });

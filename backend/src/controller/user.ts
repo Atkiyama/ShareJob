@@ -8,7 +8,7 @@ export default async function postUser(req: Request, res: Response) {
 
         const savedUserData: User | null = await UserModel.findOne({ password: req.body.password });
         if (savedUserData) {
-            return res.status(200).json({ message: 'アイテム読み取り成功(オール)', savedUserData: savedUserData });
+            return res.status(200).json({ message: 'ログイン成功', savedUserData: savedUserData });
         } else {
             return res.status(400).json({ message: 'ログイン失敗:ユーザー登録をしてください' });
         }

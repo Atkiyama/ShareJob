@@ -29,7 +29,7 @@ function Login() {
 					'\n email:' +
 					jsonResponse.savedUserData.email +
 					'\n password:' +
-					jsonResponse.savedUserData.email
+					jsonResponse.savedUserData.password
 			);
 			navigate('/pages/home');
 		} catch (err) {

@@ -1,14 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 function Header() {
 	return (
-		<div>
-			<ul>
+		<div className="header-container">
+			<h1 className="header-title">ShareJob</h1>
+
+			<ul className="header-links">
 				<li>
-					<Link to="/">トップ</Link>
+					<Link to="/">トップページ</Link>
 				</li>
 				<li>
-					<Link to="/pages/home"> ホーム</Link>
+					<Link to="/pages/home">ホーム</Link>
 				</li>
 				<li>
 					<Link to="/pages/user/register">ユーザ登録</Link>

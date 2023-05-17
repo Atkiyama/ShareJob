@@ -8,33 +8,23 @@ const Register = () => {
 	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		try {
-			const response = await fetch(
-				'http://localhost:5000/pages/user/register',
-				{
-					method: 'POST',
-					headers: {
-						Accept: 'application/json',
-						'Content-Type': 'application/json',
-					},
-					body: JSON.stringify({
-						name: name,
-						email: email,
-						password: password,
-					}),
-				}
-			);
+			const response = await fetch('http://localhost:5000/user/register', {
+				method: 'POST',
+				headers: {
+					Accept: 'application/json',
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({
+					name: name,
+					email: email,
+					password: password,
+				}),
+			});
 			const jsonResponse = await response.json();
-			alert(
-				'以下の情報でユーザを登録しました\n' +
-					'ユーザ名:' +
-					jsonResponse.savedUserData.name +
-					'\nメールアドレス:' +
-					jsonResponse.savedUserData.email +
-					'\nパスワード:' +
-					jsonResponse.savedUserData.password
-			);
+			alert('ユーザを登録しました');
 		} catch (err) {
-			alert('ユーザ登録失敗');
+			console.log(err);
+			alert(err);
 		}
 	};
 

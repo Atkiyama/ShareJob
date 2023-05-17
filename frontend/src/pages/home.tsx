@@ -12,7 +12,7 @@ function Home() {
 			navigate('/pages/user/login');
 		}
 	}, []);
-	return <div>localStorage.getItem('email')</div>;
+	return <div>{localStorage.getItem('email')}</div>;
 }
 
 export default Home;

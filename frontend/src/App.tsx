@@ -6,6 +6,7 @@ import Top from './pages/top';
 import Login from './pages/user/login';
 import Logout from './pages/user/logout';
 import Register from './pages/user/register';
+import './App.css';
 
 function App() {
 	return (

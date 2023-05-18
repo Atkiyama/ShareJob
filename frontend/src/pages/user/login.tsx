@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { LoginProps } from '../../utils/types';
 
-function Login() {
+function Login({ updateUser }: LoginProps) {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 	const navigate = useNavigate();
@@ -22,7 +23,6 @@ function Login() {
 			});
 			const jsonResponse = await response.json();
 			localStorage.setItem('token', jsonResponse.token);
-			localStorage.setItem('email', jsonResponse.savedUserData.email);
 
 			alert(
 				'ログインに成功しました' +
@@ -31,6 +31,11 @@ function Login() {
 					'\n password:' +
 					jsonResponse.savedUserData.password
 			);
+			updateUser({
+				name: jsonResponse.savedUserData.name,
+				email: jsonResponse.savedUserData.email,
+				companyInfoList: jsonResponse.savedUserData.companyInfoList,
+			});
 			navigate('/pages/home');
 		} catch (err) {
 			alert('ログインに失敗しました');

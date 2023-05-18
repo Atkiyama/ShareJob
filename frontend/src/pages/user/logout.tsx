@@ -1,11 +1,16 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { LoginProps } from '../../utils/types';
 
-function Logout() {
+function Logout({ updateUser }: LoginProps) {
 	const navigate = useNavigate();
 	const handleRemoveData = () => {
-		localStorage.removeItem('email');
 		localStorage.removeItem('token');
+		updateUser({
+			name: '',
+			email: '',
+			companyInfoList: [],
+		});
 		navigate('/');
 		// キーに関連付けられたデータが削除されます
 	};

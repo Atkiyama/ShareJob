@@ -16,6 +16,14 @@ db.companyInfo.insertOne( {
 
 } );
 
+
+db.companyInfo.insertOne( {
+   email: "test@test.co.jp",
+   id: 2,
+   memo: "てすと",
+
+} );
+
 db.company.insertOne( {
    id: 1,
    name:"マクロコスモス",
@@ -25,11 +33,20 @@ db.company.insertOne( {
 
 } );
 
+db.company.insertOne( {
+   id: 2,
+   name:"モンスターズインク",
+   abstract:"恐怖エネルギー企業",
+   industries:["恐怖エネルギー産業"],
+   locations:["モンスターワールド"],
+
+} );
+
 db.users.insertOne( {
    email: "test@test.co.jp",
    name: "てすとたろう",
    password: "password",
-   companyInfoList: [1],
+   companyInfoList: [1,2],
 
 } );
 exit

@@ -8,17 +8,29 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-function postUser(req, res) {
+const user_1 = require("../../model/user");
+const database_1 = __importDefault(require("../../utils/database"));
+function default_1(req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            console.log(req.body.email);
-            return res.status(200).json({ message: 'getSuccess' });
+            yield (0, database_1.default)();
+            const user = new user_1.UserModel({
+                name: req.body.name,
+                email: req.body.email,
+                password: req.body.password,
+                companyInfo: [],
+            });
+            yield user.save();
+            return res.status(200).json({ message: "ユーザー登録成功" });
         }
         catch (err) {
-            console.error(err);
-            return res.status(400).json({ message: 'getFailed' });
+            return res.status(400).json({ message: "ユーザー登録失敗" });
         }
     });
 }
-exports.default = postUser;
+exports.default = default_1;
+;

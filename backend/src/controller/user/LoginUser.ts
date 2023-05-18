@@ -1,8 +1,8 @@
 import { Request, Response } from 'express';
-import { UserModel, User } from '../model/user';
-import connectDB from '../utils/database';
+import { UserModel, User } from '../../model/user';
+import connectDB from '../../utils/database';
 
-export default async function postUser(req: Request, res: Response) {
+export default async function (req: Request, res: Response) {
     try {
         await connectDB();
 

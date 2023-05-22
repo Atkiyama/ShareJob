@@ -38,6 +38,8 @@ const CompanyInfoSchema = new mongoose_1.Schema({
         type: String,
         required: true,
     },
+}, {
+    collection: 'companyInfo' // コレクション名を指定
 });
 CompanyInfoSchema.index({ email: 1, id: 1 }, { unique: true });
-exports.CompanyInfoModel = mongoose_1.default.model('CompanyInfo', CompanyInfoSchema);
+exports.CompanyInfoModel = mongoose_1.default.model('companyInfo', CompanyInfoSchema);

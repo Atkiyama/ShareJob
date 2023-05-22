@@ -35,9 +35,11 @@ const CompanySchema: Schema<Company> = new Schema<Company>({
         required: true,
     },
 
+}, {
+    collection: 'company' // コレクション名を指定
 });
 
 
 
-
-export const CompanyModel: Model<Company> = mongoose.model<Company>('Company', CompanySchema);
+//ここでコレクション名を変更できる
+export const CompanyModel: Model<Company> = mongoose.model<Company>('company', CompanySchema);

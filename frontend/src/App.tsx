@@ -7,7 +7,8 @@ import Login from './pages/user/login';
 import Logout from './pages/user/logout';
 import Register from './pages/user/register';
 import './App.css';
-import { UserType } from './utils/types';
+import { UserType, CompanyInfoType } from './utils/types';
+import { Company } from '../../backend/src/model/company';
 
 function App() {
 	const [user, setUser] = useState<UserType>({
@@ -15,8 +16,15 @@ function App() {
 		email: '',
 		companyInfoList: [],
 	});
+
+	const [companyInfoList, setCompanyInfoList] = useState<CompanyInfoType[]>([]);
+
 	const updateUser = (updatedUser: UserType) => {
 		setUser(updatedUser);
+	};
+
+	const updateCompanyInfoList = (updateCompanyInfoList: CompanyInfoType[]) => {
+		setCompanyInfoList(updateCompanyInfoList);
 	};
 	return (
 		<BrowserRouter>
@@ -24,7 +32,10 @@ function App() {
 				<Header />
 				<Routes>
 					<Route path="/" element={<Top />} />
-					<Route path="/pages/home" element={<Home user={user} />} />
+					<Route
+						path="/pages/home"
+						element={<Home user={user} companyInfoList={companyInfoList} />}
+					/>
 					<Route
 						path="/pages/user/login"
 						element={<Login updateUser={updateUser} />}

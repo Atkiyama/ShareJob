@@ -26,12 +26,14 @@ const CompanyInfoSchema: Schema<CompanyInfo> = new Schema<CompanyInfo>({
     },
 
 
+}, {
+    collection: 'companyInfo' // コレクション名を指定
 });
 CompanyInfoSchema.index({ email: 1, id: 1 }, { unique: true });
 
 
 
 export const CompanyInfoModel: Model<CompanyInfo> = mongoose.model<CompanyInfo>(
-    'CompanyInfo',
+    'companyInfo',
     CompanyInfoSchema
 );

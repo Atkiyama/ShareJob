@@ -12,6 +12,7 @@ use shareJob
 db.companyInfo.insertOne( {
    email: "test@test.co.jp",
    id: 1,
+   name: "マクロコスモス",
    memo: "test",
 
 } );
@@ -20,6 +21,7 @@ db.companyInfo.insertOne( {
 db.companyInfo.insertOne( {
    email: "test@test.co.jp",
    id: 2,
+   name:"モンスターズインク",
    memo: "てすと",
 
 } );
@@ -42,7 +44,7 @@ db.company.insertOne( {
 
 } );
 
-db.users.insertOne( {
+db.user.insertOne( {
    email: "test@test.co.jp",
    name: "てすとたろう",
    password: "password",

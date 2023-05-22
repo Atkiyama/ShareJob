@@ -24,8 +24,13 @@ function default_1(req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             yield (0, database_1.default)();
-            const companyInfoList = yield companyInfo_1.CompanyInfoModel.find({ email: req.body.email });
-            return res.status(200).json({ email: req.body.email, CompanyInfoList: companyInfoList });
+            const companyInfo = new companyInfo_1.CompanyInfoModel({
+                email: req.body.email,
+                id: req.body.id,
+                memo: req.body.memo,
+            });
+            yield companyInfo.save();
+            return res.status(200).json({ message: "企業情報登録成功" });
         }
         catch (err) {
             return res.status(400).json({

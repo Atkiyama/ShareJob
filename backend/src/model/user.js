@@ -43,5 +43,7 @@ const UserSchema = new mongoose_1.Schema({
         type: [Number],
         required: false,
     },
+}, {
+    collection: 'user' // コレクション名を指定
 });
-exports.UserModel = mongoose_1.default.model('User', UserSchema);
+exports.UserModel = mongoose_1.default.model('user', UserSchema);

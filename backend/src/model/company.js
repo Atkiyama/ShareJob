@@ -47,5 +47,8 @@ const CompanySchema = new mongoose_1.Schema({
         type: [String],
         required: true,
     },
+}, {
+    collection: 'company' // コレクション名を指定
 });
-exports.CompanyModel = mongoose_1.default.model('Company', CompanySchema);
+//ここでコレクション名を変更できる
+exports.CompanyModel = mongoose_1.default.model('company', CompanySchema);

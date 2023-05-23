@@ -44,6 +44,7 @@ function Login({ updateUser }: LoginProps) {
 	useEffect(() => {
 		document.title = 'ログインページ';
 	}, []);
+
 	return (
 		<div>
 			<h1> ログイン</h1>

@@ -31,7 +31,7 @@ const CompanyInfoSchema = new mongoose_1.Schema({
         required: true,
     },
     id: {
-        type: Number,
+        type: String,
         required: true,
     },
     memo: {

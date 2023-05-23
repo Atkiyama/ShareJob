@@ -27,7 +27,7 @@ exports.CompanyModel = void 0;
 const mongoose_1 = __importStar(require("mongoose"));
 const CompanySchema = new mongoose_1.Schema({
     id: {
-        type: Number,
+        type: String,
         required: true,
         unique: true,
     },

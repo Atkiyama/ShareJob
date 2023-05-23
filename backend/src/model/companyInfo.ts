@@ -2,7 +2,7 @@ import mongoose, { Schema, Document, Model } from 'mongoose';
 
 export interface CompanyInfo extends Document {
     email: string
-    id: number,
+    id: string,
     memo: string;
 
 
@@ -16,7 +16,7 @@ const CompanyInfoSchema: Schema<CompanyInfo> = new Schema<CompanyInfo>({
         required: true,
     },
     id: {
-        type: Number,
+        type: String,
         required: true,
     },
 

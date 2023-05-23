@@ -1,7 +1,7 @@
 import mongoose, { Schema, Document, Model } from 'mongoose';
 
 export interface Company extends Document {
-    id: number,
+    id: string,
     name: string;
     abstract: string;
     industries: string[],
@@ -13,7 +13,7 @@ export interface Company extends Document {
 
 const CompanySchema: Schema<Company> = new Schema<Company>({
     id: {
-        type: Number,
+        type: String,
         required: true,
         unique: true,
     },

@@ -11,8 +11,7 @@ use shareJob
 
 db.companyInfo.insertOne( {
    email: "test@test.co.jp",
-   id: 1,
-   name: "マクロコスモス",
+   id: '1',
    memo: "test",
 
 } );
@@ -20,14 +19,13 @@ db.companyInfo.insertOne( {
 
 db.companyInfo.insertOne( {
    email: "test@test.co.jp",
-   id: 2,
-   name:"モンスターズインク",
+   id: '2',
    memo: "てすと",
 
 } );
 
 db.company.insertOne( {
-   id: 1,
+   id: '1',
    name:"マクロコスモス",
    abstract:"エネルギー企業",
    industries:["エネルギー産業"],
@@ -36,7 +34,7 @@ db.company.insertOne( {
 } );
 
 db.company.insertOne( {
-   id: 2,
+   id: '2',
    name:"モンスターズインク",
    abstract:"恐怖エネルギー企業",
    industries:["恐怖エネルギー産業"],
@@ -48,7 +46,7 @@ db.user.insertOne( {
    email: "test@test.co.jp",
    name: "てすとたろう",
    password: "password",
-   companyInfoList: [1,2],
+   companyInfoList: ['1','2'],
 
 } );
 exit

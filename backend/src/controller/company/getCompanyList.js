@@ -24,17 +24,21 @@ function default_1(req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             yield (0, database_1.default)();
-            let ids = [];
             const companyList = [];
             if (typeof req.query.ids === 'string') {
-                ids.push(req.query.ids);
-                const idArray = Array.isArray(ids) ? ids : [ids];
+                const ids = req.query.ids;
+                const idArray = ids.split(",");
                 for (let i = 0; i < idArray.length; i++) {
+                    console.log(idArray[i]);
                     const company = yield company_1.CompanyModel.findOne({ id: idArray[i] });
                     if (company) {
                         companyList.push(company);
                     }
+                    else {
+                        console.log("企業メモがみつかりません");
+                    }
                 }
+                return res.status(200).json({ companyList: companyList, res: idArray });
             }
             return res.status(200).json({ companyList: companyList });
         }

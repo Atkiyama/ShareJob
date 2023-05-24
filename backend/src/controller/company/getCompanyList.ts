@@ -11,18 +11,24 @@ import { Company, CompanyModel } from '../../model/company';
 export default async function (req: Request, res: Response) {
     try {
         await connectDB();
-        let ids: string[] = [];
-        const companyList: Company[] = [];
-        if (typeof req.query.ids === 'string') {
-            ids.push(req.query.ids);
 
-            const idArray: string[] = Array.isArray(ids) ? ids : [ids];
+        const companyList: Company[] = [];
+
+        if (typeof req.query.ids === 'string') {
+
+            const ids: string = req.query.ids;
+            const decodedIds = decodeURIComponent(ids);
+            const idArray: string[] = decodedIds.split(",");
             for (let i = 0; i < idArray.length; i++) {
+                console.log(idArray[i]);
                 const company: Company | null = await CompanyModel.findOne({ id: idArray[i] });
                 if (company) {
                     companyList.push(company);
+                } else {
+                    console.log("企業メモがみつかりません");
                 }
             }
+
         }
 
         return res.status(200).json({ companyList: companyList });

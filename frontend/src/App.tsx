@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import Header from './components/header';
 import Home from './pages/home';
@@ -8,7 +8,6 @@ import Logout from './pages/user/logout';
 import Register from './pages/user/register';
 import './App.css';
 import { UserType, CompanyInfoType, CompanyType } from './utils/types';
-import { Company } from '../../backend/src/model/company';
 
 function App() {
 	const [user, setUser] = useState<UserType>({
@@ -23,14 +22,14 @@ function App() {
 		setUser(updatedUser);
 	};
 
-	const updateCompanyInfoList = (updateCompanyInfoList: CompanyInfoType[]) => {
-		setCompanyInfoList(updateCompanyInfoList);
+	const updateCompanyInfoList = (updatedCompanyInfoList: CompanyInfoType[]) => {
+		setCompanyInfoList(updatedCompanyInfoList);
 	};
 
 	const [companyList, setCompanyList] = useState<CompanyType[]>([]);
 
-	const updateCompanyList = (updateCompanyList: CompanyType[]) => {
-		setCompanyList(updateCompanyList);
+	const updateCompanyList = (updatedCompanyList: CompanyType[]) => {
+		setCompanyList(updatedCompanyList);
 	};
 
 	useEffect(() => {
@@ -55,35 +54,39 @@ function App() {
 					console.log(err);
 				}
 			};
+
 			handleCompanyInfoList();
 		}
 	}, [user.email]);
 
 	useEffect(() => {
-		if (user.email !== '') {
+		if (user.email !== '' && companyInfoList.length > 0) {
 			const handleCompanyList = async () => {
 				try {
-					const response = await fetch(
-						`http://localhost:5000/companyInfo/getCompanyInfoList?email=${user.email}`,
-						{
-							method: 'GET',
-							headers: {
-								'Content-Type': 'application/json',
-							},
-						}
-					);
+					const ids: string[] = companyInfoList.map((info) => info.id);
+					const joinedString = ids.join(',');
+					const encodedIds = encodeURIComponent(joinedString);
+					const req = `http://localhost:5000/company/getCompanyList?ids=${encodedIds}`;
+
+					const response = await fetch(req, {
+						method: 'GET',
+						headers: {
+							'Content-Type': 'application/json',
+						},
+					});
 
 					const jsonResponse = await response.json();
-					const jsonCompanyInfoList = jsonResponse.CompanyInfoList;
-					updateCompanyInfoList(jsonCompanyInfoList);
+					const jsonCompanyList = jsonResponse.CompanyList;
+					updateCompanyList(jsonCompanyList);
 				} catch (err) {
 					alert('企業情報の取得に失敗しました\n' + err);
 					console.log(err);
 				}
 			};
+
 			handleCompanyList();
 		}
-	}, [companyInfoList]);
+	}, [user.email, companyInfoList]);
 
 	return (
 		<BrowserRouter>
@@ -93,7 +96,13 @@ function App() {
 					<Route path="/" element={<Top />} />
 					<Route
 						path="/pages/home"
-						element={<Home user={user} companyInfoList={companyInfoList} />}
+						element={
+							<Home
+								user={user}
+								companyInfoList={companyInfoList}
+								companyList={companyList}
+							/>
+						}
 					/>
 					<Route
 						path="/pages/user/login"

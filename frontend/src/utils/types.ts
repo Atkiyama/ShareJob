@@ -1,3 +1,5 @@
+import { CompanyInfo } from '../../../backend/src/model/companyInfo';
+import { Company } from '../../../backend/src/model/company';
 export type UserType = {
     name: string,
     email: string,
@@ -21,6 +23,7 @@ export interface CompanyInfoProps {
 export type HomeProps = {
     user: UserType;
     companyInfoList: CompanyInfoType[];
+    companyList: CompanyType[];
 };
 
 export type CompanyType = {
@@ -31,6 +34,11 @@ export type CompanyType = {
     locations: string[],
 
 }
-export interface CompanyInfoProps {
-    updateCompanyInfo: (companyInfo: CompanyInfoType) => void;
+export interface CompanyProps {
+    updateCompany: (company: CompanyType) => void;
+}
+
+export type CompanyInfoTableType = {
+    name: string,
+    memo: string,
 }

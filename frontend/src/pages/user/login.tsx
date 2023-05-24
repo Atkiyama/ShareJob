@@ -2,7 +2,11 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { LoginProps } from '../../utils/types';
 
-function Login({ updateUser }: LoginProps) {
+function Login({
+	handleCompanyInfoList,
+	handleCompanyList,
+	updateUser,
+}: LoginProps) {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 	const navigate = useNavigate();
@@ -24,18 +28,22 @@ function Login({ updateUser }: LoginProps) {
 			const jsonResponse = await response.json();
 			localStorage.setItem('token', jsonResponse.token);
 
-			alert(
-				'ログインに成功しました' +
-					'\n email:' +
-					jsonResponse.savedUserData.email +
-					'\n password:' +
-					jsonResponse.savedUserData.password
-			);
-			updateUser({
-				name: jsonResponse.savedUserData.name,
-				email: jsonResponse.savedUserData.email,
-				companyInfoList: jsonResponse.savedUserData.companyInfoList,
-			});
+			await Promise.all([
+				updateUser({
+					name: jsonResponse.savedUserData.name,
+					email: jsonResponse.savedUserData.email,
+					companyInfoList: jsonResponse.savedUserData.companyInfoList,
+				}),
+				handleCompanyInfoList(),
+				handleCompanyList(),
+				alert(
+					'ログインに成功しました' +
+						'\n email:' +
+						jsonResponse.savedUserData.email +
+						'\n password:' +
+						jsonResponse.savedUserData.password
+				),
+			]);
 			navigate('/pages/home');
 		} catch (err) {
 			alert('ログインに失敗しました');

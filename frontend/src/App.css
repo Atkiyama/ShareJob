@@ -19,3 +19,14 @@
 .header-links li {
     margin-left: 10px;
 }
+
+.table {
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}

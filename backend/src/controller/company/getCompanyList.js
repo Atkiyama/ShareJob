@@ -27,7 +27,8 @@ function default_1(req, res) {
             const companyList = [];
             if (typeof req.query.ids === 'string') {
                 const ids = req.query.ids;
-                const idArray = ids.split(",");
+                const decodedIds = decodeURIComponent(ids);
+                const idArray = decodedIds.split(",");
                 for (let i = 0; i < idArray.length; i++) {
                     console.log(idArray[i]);
                     const company = yield company_1.CompanyModel.findOne({ id: idArray[i] });
@@ -35,10 +36,10 @@ function default_1(req, res) {
                         companyList.push(company);
                     }
                     else {
-                        console.log("企業メモがみつかりません");
+                        console.log("企業メモがみつかりません " +
+                            "req.ids = " + ids);
                     }
                 }
-                return res.status(200).json({ companyList: companyList, res: idArray });
             }
             return res.status(200).json({ companyList: companyList });
         }

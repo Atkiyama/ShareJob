@@ -25,7 +25,8 @@ export default async function (req: Request, res: Response) {
                 if (company) {
                     companyList.push(company);
                 } else {
-                    console.log("企業メモがみつかりません");
+                    console.log("企業メモがみつかりません " +
+                        "req.ids = " + ids);
                 }
             }
 

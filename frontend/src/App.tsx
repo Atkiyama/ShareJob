@@ -31,59 +31,59 @@ function App() {
 	const updateCompanyList = (updatedCompanyList: CompanyType[]) => {
 		setCompanyList(updatedCompanyList);
 	};
-
-	useEffect(() => {
-		if (user.email !== '') {
-			const handleCompanyInfoList = async () => {
-				try {
-					const response = await fetch(
-						`http://localhost:5000/companyInfo/getCompanyInfoList?email=${user.email}`,
-						{
-							method: 'GET',
-							headers: {
-								'Content-Type': 'application/json',
-							},
-						}
-					);
-
-					const jsonResponse = await response.json();
-					const jsonCompanyInfoList = jsonResponse.CompanyInfoList;
-					updateCompanyInfoList(jsonCompanyInfoList);
-				} catch (err) {
-					alert('企業情報の取得に失敗しました\n' + err);
-					console.log(err);
+	const handleCompanyInfoList = async () => {
+		try {
+			const response = await fetch(
+				`http://localhost:5000/companyInfo/getCompanyInfoList?email=${user.email}`,
+				{
+					method: 'GET',
+					headers: {
+						'Content-Type': 'application/json',
+					},
 				}
-			};
+			);
 
+			const jsonResponse = await response.json();
+			const jsonCompanyInfoList = jsonResponse.CompanyInfoList;
+			updateCompanyInfoList(jsonCompanyInfoList);
+		} catch (err) {
+			alert('企業情報の取得に失敗しました\n' + err);
+			console.log(err);
+		}
+	};
+	useEffect(() => {
+		document.title = 'ShareJob';
+		if (user.email !== '') {
 			handleCompanyInfoList();
 		}
 	}, [user.email]);
 
+	const handleCompanyList = async () => {
+		try {
+			const ids: string[] = companyInfoList.map((info) => info.id);
+			const joinedString = ids.join(',');
+			const encodedIds = encodeURIComponent(joinedString);
+			const req = `http://localhost:5000/company/getCompanyList?ids=${encodedIds}`;
+
+			const response = await fetch(req, {
+				method: 'GET',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+			});
+
+			const jsonResponse = await response.json();
+			const jsonCompanyList = jsonResponse.companyList;
+
+			updateCompanyList(jsonCompanyList);
+		} catch (err) {
+			alert('企業情報の取得に失敗しました\n' + err);
+			console.log(err);
+		}
+	};
+
 	useEffect(() => {
 		if (user.email !== '' && companyInfoList.length > 0) {
-			const handleCompanyList = async () => {
-				try {
-					const ids: string[] = companyInfoList.map((info) => info.id);
-					const joinedString = ids.join(',');
-					const encodedIds = encodeURIComponent(joinedString);
-					const req = `http://localhost:5000/company/getCompanyList?ids=${encodedIds}`;
-
-					const response = await fetch(req, {
-						method: 'GET',
-						headers: {
-							'Content-Type': 'application/json',
-						},
-					});
-
-					const jsonResponse = await response.json();
-					const jsonCompanyList = jsonResponse.CompanyList;
-					updateCompanyList(jsonCompanyList);
-				} catch (err) {
-					alert('企業情報の取得に失敗しました\n' + err);
-					console.log(err);
-				}
-			};
-
 			handleCompanyList();
 		}
 	}, [user.email, companyInfoList]);
@@ -101,16 +101,23 @@ function App() {
 								user={user}
 								companyInfoList={companyInfoList}
 								companyList={companyList}
+								updateCompanyList={updateCompanyList}
 							/>
 						}
 					/>
 					<Route
 						path="/pages/user/login"
-						element={<Login updateUser={updateUser} />}
+						element={
+							<Login
+								handleCompanyInfoList={handleCompanyInfoList}
+								handleCompanyList={handleCompanyList}
+								updateUser={updateUser}
+							/>
+						}
 					/>
 					<Route
 						path="/pages/user/logout"
-						element={<Logout updateUser={updateUser} />}
+						element={<Logout user={user} updateUser={updateUser} />}
 					/>
 					<Route path="/pages/user/register" element={<Register />} />
 					<Route path="*" element={<h1>Page Not Found</h1>} />

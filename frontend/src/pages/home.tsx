@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-
 import {
 	UserType,
 	CompanyInfoType,
 	HomeProps,
 	CompanyInfoTableType,
+	CompanyType,
 } from '../utils/types';
 import { CompanyInfo } from '../../../backend/src/model/companyInfo';
 import {
@@ -15,7 +15,12 @@ import {
 	useReactTable,
 } from '@tanstack/react-table';
 
-function Home({ user, companyInfoList, companyList }: HomeProps) {
+function Home({
+	user,
+	companyInfoList,
+	companyList,
+	updateCompanyList,
+}: HomeProps) {
 	const navigate = useNavigate();
 	const [data, setData] = useState<CompanyInfoTableType[]>([]);
 
@@ -57,24 +62,25 @@ function Home({ user, companyInfoList, companyList }: HomeProps) {
 					setData(newData);
 				}
 			};
+
 			handleCompanyInfoTable();
 		} else {
 			alert('ログインしてください');
 			navigate('/pages/user/login');
 		}
-	}, [user.email, companyInfoList, companyList, navigate]);
+	}, [companyInfoList, companyList]);
 
 	return (
 		<div>
 			<h2>{user.name}様</h2>
 			<h3>登録企業</h3>
-			{companyInfoList.length}
-			<table>
+
+			<table className="table">
 				<thead>
-					{table.getHeaderGroups().map((headerGroup) => (
-						<tr key={headerGroup.id}>
-							{headerGroup.headers.map((header) => (
-								<th key={header.id}>
+					{table.getHeaderGroups().map((headerGroup, index) => (
+						<tr key={index}>
+							{headerGroup.headers.map((header, index) => (
+								<th key={index}>
 									{header.isPlaceholder
 										? null
 										: flexRender(
@@ -87,10 +93,10 @@ function Home({ user, companyInfoList, companyList }: HomeProps) {
 					))}
 				</thead>
 				<tbody>
-					{table.getRowModel().rows.map((row) => (
-						<tr key={row.id}>
-							{row.getVisibleCells().map((cell) => (
-								<td key={cell.id}>
+					{table.getRowModel().rows.map((row, index) => (
+						<tr key={index}>
+							{row.getVisibleCells().map((cell, index) => (
+								<td key={index}>
 									{flexRender(cell.column.columnDef.cell, cell.getContext())}
 								</td>
 							))}

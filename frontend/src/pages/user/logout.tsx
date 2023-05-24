@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { LoginProps } from '../../utils/types';
+import { LogoutProps } from '../../utils/types';
 
-function Logout({ updateUser }: LoginProps) {
+function Logout({ user, updateUser }: LogoutProps) {
 	const navigate = useNavigate();
 	const handleRemoveData = () => {
 		localStorage.removeItem('token');
@@ -18,11 +18,18 @@ function Logout({ updateUser }: LoginProps) {
 		navigate('/');
 	};
 	useEffect(() => {
+		if (user.email === '') {
+			alert('ログインしていません');
+			handleCancel();
+		}
 		document.title = 'ログアウト';
-	}, []);
+	});
+
 	return (
 		<div>
 			ログアウトしますか?
+			<div>ユーザ名:{user.name}</div>
+			<div>email:{user.email}</div>
 			<button onClick={handleRemoveData}>はい</button>
 			<button onClick={handleCancel}>いいえ</button>
 		</div>

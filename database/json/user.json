@@ -1,0 +1,62 @@
+[
+  {
+    "email": "john@example.com",
+    "name": "John Smith",
+    "password": "password123",
+    "companyInfoList": ["1", "3"]
+  },
+  {
+    "email": "jane@example.com",
+    "name": "Jane Doe",
+    "password": "qwerty",
+    "companyInfoList": ["2", "5", "9"]
+  },
+  {
+    "email": "alex@example.com",
+    "name": "Alex Johnson",
+    "password": "abc123",
+    "companyInfoList": ["6", "8", "10"]
+  },
+  {
+    "email": "sara@example.com",
+    "name": "Sara Wilson",
+    "password": "pass123",
+    "companyInfoList": ["4"]
+  },
+  {
+    "email": "michael@example.com",
+    "name": "Michael Brown",
+    "password": "hello",
+    "companyInfoList": []
+  },
+  {
+    "email": "emily@example.com",
+    "name": "Emily Davis",
+    "password": "testpass",
+    "companyInfoList": ["5"]
+  },
+  {
+    "email": "william@example.com",
+    "name": "William Taylor",
+    "password": "password123",
+    "companyInfoList": ["1", "2", "3", "4"]
+  },
+  {
+    "email": "olivia@example.com",
+    "name": "Olivia Martinez",
+    "password": "qwertyuiop",
+    "companyInfoList": []
+  },
+  {
+    "email": "daniel@example.com",
+    "name": "Daniel Anderson",
+    "password": "daniel123",
+    "companyInfoList": ["2", "3", "6"]
+  },
+  {
+    "email": "mia@example.com",
+    "name": "Mia Thomas",
+    "password": "miamia",
+    "companyInfoList": ["4", "7", "8"]
+  }
+]

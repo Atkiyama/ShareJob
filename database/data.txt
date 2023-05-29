@@ -1,0 +1,23 @@
+{
+    email: "test@test.co.jp",
+    id: '1',
+    memo: "test",
+    
+}
+
+{
+    id: '1',
+    name:"マクロコスモス",
+    abstract:"エネルギー企業",
+    industries:["エネルギー産業"],
+    locations:["ガラル地方"],
+    
+}
+
+{
+    email: "test@test.co.jp",
+    name: "てすとたろう",
+    password: "password",
+    companyInfoList: ['1','2'],
+    
+}

@@ -24,7 +24,7 @@ function default_1(req, res) {
                     name: req.body.name,
                     email: req.body.email,
                     password: req.body.password,
-                    companyInfo: [],
+                    companyInfoList: [],
                 });
                 yield user.save();
                 return res.status(200).json({ message: "ユーザー登録に成功しました成功" });

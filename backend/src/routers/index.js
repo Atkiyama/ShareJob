@@ -26,6 +26,6 @@ router.get('/companyInfo/getCompanyInfoList', getCompanyInfoList_1.default);
 router.post('/companyInfo/registerCompanyInfo', registerCompanyInfo_1.default);
 router.get('/company/getCompanyList', getCompanyList_1.default);
 router.put('/companyInfo/updateCompanyInfo/:email/:id', updateCompanyInfo_1.default);
-router.delete('/companyInfo/updateCompanyInfo/:email/:id', deleteCompanyInfo_1.default);
+router.delete('/companyInfo/deleteCompanyInfo/:email/:id', deleteCompanyInfo_1.default);
 router.put('/user/update/:email', updateUser_1.default);
 exports.default = router;

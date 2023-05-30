@@ -31,7 +31,7 @@ router.get('/companyInfo/getCompanyInfoList', getCompanyInfoList);
 router.post('/companyInfo/registerCompanyInfo', registerCompanyInfo);
 router.get('/company/getCompanyList', getCompanyList);
 router.put('/companyInfo/updateCompanyInfo/:email/:id', updateCompanyInfo);
-router.delete('/companyInfo/updateCompanyInfo/:email/:id', deleteCompanyInfo);
+router.delete('/companyInfo/deleteCompanyInfo/:email/:id', deleteCompanyInfo);
 router.put('/user/update/:email', updateUser);
 
 export default router;

@@ -23,10 +23,14 @@ function default_1(req, res) {
                 yield user_1.UserModel.updateOne({
                     name: req.body.name,
                     email: req.params.email,
-                    password: existsTest.password,
-                    companyInfo: req.body.companyInfo.split(","),
+                }, {
+                    $set: {
+                        password: existsTest.password,
+                        companyInfoList: req.body.companyInfoList.split(","),
+                    }
                 });
-                return res.status(200).json({ message: '更新に成功しました' });
+                const test = yield user_1.UserModel.findOne({ email: req.params.email });
+                return res.status(200).json({ message: '更新に成功しました', test: test });
             }
             else {
                 return res.status(400).json({ message: '更新失敗:ユーザーが存在しません' });

@@ -4,6 +4,7 @@ import {
 	CompanyInfoProps,
 	CompanyInfoType,
 	CompanyType,
+	UserType,
 } from '../../utils/types';
 
 function CompanyInfoEdit({
@@ -51,6 +52,59 @@ function CompanyInfoEdit({
 			alert('更新に失敗しました');
 		}
 	};
+	const handleUser = async () => {
+		const list: string[] = [];
+		for (let i = 0; i < user.companyInfoList.length; i++) {
+			if (user.companyInfoList[i] !== id) {
+				list.push(user.companyInfoList[i]);
+			}
+		}
+		const updatedUser: UserType = {
+			name: user.name,
+			email: user.email,
+			companyInfoList: list,
+		};
+		await fetch(`http://localhost:5000/user/update/${email}`, {
+			method: 'PUT',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({
+				name: user.name,
+				companyInfoList: list,
+			}),
+		});
+
+		updateUser(updatedUser);
+	};
+	const handleDelete = async () => {
+		const confirmDelete = window.confirm('本当に削除しますか？');
+		if (confirmDelete) {
+			try {
+				const response = await fetch(
+					`http://localhost:5000/companyInfo/deleteCompanyInfo/${email}/${id}`,
+					{
+						method: 'DELETE',
+					}
+				);
+
+				const jsonResponse = await response.json();
+				alert(jsonResponse.message);
+
+				// 削除が成功したら、リストから削除した情報を更新する
+				const updatedCompanyInfoList = companyInfoList.filter(
+					(info) => info.id !== id
+				);
+				updateCompanyInfoList(updatedCompanyInfoList);
+				handleUser();
+
+				// 削除後にリダイレクトするならば以下の行を有効化する
+				navigate('/pages/home');
+			} catch (err) {
+				alert('削除に失敗しました');
+			}
+		}
+	};
 
 	const handleComplete = () => {
 		// 完了ボタンが押されたときの処理を実装する
@@ -66,7 +120,7 @@ function CompanyInfoEdit({
 
 		updateCompanyInfoList(updatedCompanyInfoList);
 		handleUpdate();
-		//navigate('/pages/home');
+		navigate('/pages/home');
 	};
 
 	return (
@@ -81,6 +135,7 @@ function CompanyInfoEdit({
 				/>
 			</div>
 			<button onClick={handleComplete}>完了</button>
+			<button onClick={handleDelete}>消去</button>
 		</div>
 	);
 }

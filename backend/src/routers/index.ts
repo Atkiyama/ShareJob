@@ -1,7 +1,7 @@
 import express, { Request, Response, NextFunction } from 'express';
 import { Router } from 'express';
 
-import loginUser from '../controller/user/LoginUser';
+import loginUser from '../controller/user/loginUser';
 import registerUser from '../controller/user/registerUser';
 import getCompanyInfoList from '../controller/companyInfo/getCompanyInfoList';
 import registerCompanyInfo from '../controller/companyInfo/registerCompanyInfo';
@@ -10,6 +10,7 @@ import getCompanyList from '../controller/company/getCompanyList';
 const router: Router = express.Router();
 
 // カスタムミドルウェア関数
+// API呼び出しの際にログを出力する
 const logRequest = (
     req: Request,
     res: Response,

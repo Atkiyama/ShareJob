@@ -52,7 +52,7 @@ export type CompanyInfoTableType = {
     id: string,
 }
 
-export interface CompanyInfoProps {
+export interface EditMemoProps {
     user: UserType,
     companyList: CompanyType[],
     companyInfoList: CompanyInfoType[],
@@ -61,4 +61,11 @@ export interface CompanyInfoProps {
     //updateCompanyInfo: (updatedCompanyInfo: CompanyInfoType) => void; // 追加
 
 
+}
+
+export interface EditUserProps {
+    user: UserType,
+    updateUser: (user: UserType) => void;
+    updateCompanyList: (updatedCompanyList: CompanyType[]) => void;
+    updateCompanyInfoList: (updatedCompanyInfoList: CompanyInfoType[]) => void;
 }

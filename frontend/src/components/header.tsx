@@ -17,6 +17,9 @@ function Header() {
 					<Link to="/pages/user/register">ユーザ登録</Link>
 				</li>
 				<li>
+					<Link to="/pages/user/editUser">ユーザ情報編集</Link>
+				</li>
+				<li>
 					<Link to="/pages/user/login">ログイン</Link>
 				</li>
 				<li>

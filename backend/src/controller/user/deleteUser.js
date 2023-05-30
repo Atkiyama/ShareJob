@@ -20,25 +20,16 @@ function default_1(req, res) {
             yield (0, database_1.default)();
             const existsTest = yield user_1.UserModel.findOne({ email: req.params.email });
             if (existsTest) {
-                yield user_1.UserModel.updateOne({
-                    name: req.body.name,
-                    email: req.params.email,
-                }, {
-                    $set: {
-                        password: existsTest.password,
-                        companyInfoList: req.body.companyInfoList,
-                    }
-                });
-                const test = yield user_1.UserModel.findOne({ email: req.params.email });
-                return res.status(200).json({ message: '更新に成功しました', test: test });
+                yield user_1.UserModel.deleteOne({ email: req.params.email });
+                return res.status(200).json({ message: '削除に成功しました' });
             }
             else {
-                return res.status(400).json({ message: '更新失敗:ユーザーが存在しません' });
+                return res.status(400).json({ message: '削除失敗:ユーザーが存在しません' });
             }
         }
         catch (err) {
             console.error(err);
-            return res.status(400).json({ message: '更新失敗:\n' + err });
+            return res.status(400).json({ message: '削除失敗:\n' + err });
         }
     });
 }

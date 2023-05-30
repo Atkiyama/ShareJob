@@ -50,7 +50,7 @@ function Login({
 		}
 	};
 	useEffect(() => {
-		document.title = 'ログインページ';
+		document.title = 'ログイン';
 	}, []);
 
 	return (

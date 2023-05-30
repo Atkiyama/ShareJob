@@ -1,8 +1,13 @@
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { LogoutProps } from '../../utils/types';
+import { EditUserProps } from '../../utils/types';
 
-function Logout({ user, updateUser }: LogoutProps) {
+function Logout({
+	user,
+	updateUser,
+	updateCompanyList,
+	updateCompanyInfoList,
+}: EditUserProps) {
 	const navigate = useNavigate();
 	const handleRemoveData = () => {
 		localStorage.removeItem('token');
@@ -11,6 +16,8 @@ function Logout({ user, updateUser }: LogoutProps) {
 			email: '',
 			companyInfoList: [],
 		});
+		updateCompanyList([]); // 空の配列でリストを更新
+		updateCompanyInfoList([]); // 空の配列でリストを更新
 		navigate('/');
 		// キーに関連付けられたデータが削除されます
 	};

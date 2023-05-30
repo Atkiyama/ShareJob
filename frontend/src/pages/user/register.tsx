@@ -31,7 +31,7 @@ const Register = () => {
 	};
 
 	useEffect(() => {
-		document.title = '登録ページ';
+		document.title = 'ユーザ登録';
 	}, []);
 
 	return (

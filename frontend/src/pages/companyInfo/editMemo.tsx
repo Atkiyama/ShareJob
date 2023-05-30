@@ -1,19 +1,19 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {
-	CompanyInfoProps,
+	EditMemoProps,
 	CompanyInfoType,
 	CompanyType,
 	UserType,
 } from '../../utils/types';
 
-function CompanyInfoEdit({
+function EditMemo({
 	user,
 	companyList,
 	companyInfoList,
 	updateUser,
 	updateCompanyInfoList,
-}: CompanyInfoProps) {
+}: EditMemoProps) {
 	const { email, id } = useParams();
 	const navigate = useNavigate();
 	// 対応する会社情報を探す
@@ -78,7 +78,7 @@ function CompanyInfoEdit({
 		updateUser(updatedUser);
 	};
 	const handleDelete = async () => {
-		const confirmDelete = window.confirm('本当に削除しますか？');
+		const confirmDelete = window.confirm('本当にメモを削除しますか？');
 		if (confirmDelete) {
 			try {
 				const response = await fetch(
@@ -122,6 +122,11 @@ function CompanyInfoEdit({
 		handleUpdate();
 		navigate('/pages/home');
 	};
+	useEffect(() => {
+		if (company) {
+			document.title = `${company.name}のメモ`;
+		}
+	});
 
 	return (
 		<div>
@@ -140,4 +145,4 @@ function CompanyInfoEdit({
 	);
 }
 
-export default CompanyInfoEdit;
+export default EditMemo;

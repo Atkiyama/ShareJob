@@ -6,9 +6,10 @@ import Top from './pages/top';
 import Login from './pages/user/login';
 import Logout from './pages/user/logout';
 import Register from './pages/user/register';
-import CompanyInfoEdit from './pages/companyInfo/companyInfoEdit';
 import './App.css';
 import { UserType, CompanyInfoType, CompanyType } from './utils/types';
+import EditMemo from './pages/companyInfo/editMemo';
+import EditUser from './pages/user/editUser';
 
 function App() {
 	const [user, setUser] = useState<UserType>({
@@ -118,13 +119,31 @@ function App() {
 					/>
 					<Route
 						path="/pages/user/logout"
-						element={<Logout user={user} updateUser={updateUser} />}
+						element={
+							<Logout
+								user={user}
+								updateUser={updateUser}
+								updateCompanyList={updateCompanyList}
+								updateCompanyInfoList={updateCompanyInfoList}
+							/>
+						}
+					/>
+					<Route
+						path="/pages/user/editUser"
+						element={
+							<EditUser
+								user={user}
+								updateUser={updateUser}
+								updateCompanyList={updateCompanyList}
+								updateCompanyInfoList={updateCompanyInfoList}
+							/>
+						}
 					/>
 					<Route path="/pages/user/register" element={<Register />} />
 					<Route
 						path="/pages/companyInfo/companyInfo/:email/:id"
 						element={
-							<CompanyInfoEdit
+							<EditMemo
 								user={user}
 								companyList={companyList}
 								companyInfoList={companyInfoList}

@@ -9,6 +9,8 @@ import getCompanyList from '../controller/company/getCompanyList';
 import updateCompanyInfo from '../controller/companyInfo/updateCompanyInfo';
 import deleteCompanyInfo from '../controller/companyInfo/deleteCompanyInfo';
 import updateUser from '../controller/user/updateUser';
+import updateUserAll from '../controller/user/updateUserAll';
+import deleteUser from '../controller/user/deleteUser';
 
 const router: Router = express.Router();
 
@@ -33,5 +35,8 @@ router.get('/company/getCompanyList', getCompanyList);
 router.put('/companyInfo/updateCompanyInfo/:email/:id', updateCompanyInfo);
 router.delete('/companyInfo/deleteCompanyInfo/:email/:id', deleteCompanyInfo);
 router.put('/user/update/:email', updateUser);
+router.put('/user/updateAll/:email', updateUserAll);
+router.delete('/user/delete/:email', deleteUser);
+
 
 export default router;

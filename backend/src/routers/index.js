@@ -12,6 +12,8 @@ const getCompanyList_1 = __importDefault(require("../controller/company/getCompa
 const updateCompanyInfo_1 = __importDefault(require("../controller/companyInfo/updateCompanyInfo"));
 const deleteCompanyInfo_1 = __importDefault(require("../controller/companyInfo/deleteCompanyInfo"));
 const updateUser_1 = __importDefault(require("../controller/user/updateUser"));
+const updateUserAll_1 = __importDefault(require("../controller/user/updateUserAll"));
+const deleteUser_1 = __importDefault(require("../controller/user/deleteUser"));
 const router = express_1.default.Router();
 // カスタムミドルウェア関数
 // API呼び出しの際にログを出力する
@@ -28,4 +30,6 @@ router.get('/company/getCompanyList', getCompanyList_1.default);
 router.put('/companyInfo/updateCompanyInfo/:email/:id', updateCompanyInfo_1.default);
 router.delete('/companyInfo/deleteCompanyInfo/:email/:id', deleteCompanyInfo_1.default);
 router.put('/user/update/:email', updateUser_1.default);
+router.put('/user/updateAll/:email', updateUserAll_1.default);
+router.delete('/user/delete/:email', deleteUser_1.default);
 exports.default = router;

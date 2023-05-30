@@ -18,19 +18,19 @@ function default_1(req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             yield (0, database_1.default)();
-            const existsTest = yield user_1.UserModel.findOne({ email: req.params.email });
-            if (existsTest) {
-                yield user_1.UserModel.updateOne({
+            const oldUser = yield user_1.UserModel.findOne({ email: req.params.email });
+            if (oldUser) {
+                const user = new user_1.UserModel({
+                    email: req.body.email,
                     name: req.body.name,
-                    email: req.params.email,
-                }, {
-                    $set: {
-                        password: existsTest.password,
-                        companyInfoList: req.body.companyInfoList,
-                    }
+                    password: req.body.password,
+                    companyInfoList: oldUser.companyInfoList
                 });
-                const test = yield user_1.UserModel.findOne({ email: req.params.email });
-                return res.status(200).json({ message: '更新に成功しました', test: test });
+                yield user_1.UserModel.deleteOne({
+                    email: req.params.email,
+                });
+                yield user.save();
+                return res.status(200).json({ message: '更新に成功しました' });
             }
             else {
                 return res.status(400).json({ message: '更新失敗:ユーザーが存在しません' });

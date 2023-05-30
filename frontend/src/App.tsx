@@ -6,6 +6,7 @@ import Top from './pages/top';
 import Login from './pages/user/login';
 import Logout from './pages/user/logout';
 import Register from './pages/user/register';
+import CompanyInfoEdit from './pages/companyInfo/companyInfoEdit';
 import './App.css';
 import { UserType, CompanyInfoType, CompanyType } from './utils/types';
 
@@ -120,6 +121,19 @@ function App() {
 						element={<Logout user={user} updateUser={updateUser} />}
 					/>
 					<Route path="/pages/user/register" element={<Register />} />
+					<Route
+						path="/pages/companyInfo/companyInfo/:email/:id"
+						element={
+							<CompanyInfoEdit
+								user={user}
+								companyList={companyList}
+								companyInfoList={companyInfoList}
+								updateUser={updateUser}
+								updateCompanyInfoList={updateCompanyInfoList}
+							/>
+						}
+					/>
+
 					<Route path="*" element={<h1>Page Not Found</h1>} />
 				</Routes>
 			</div>

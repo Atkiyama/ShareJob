@@ -21,9 +21,7 @@ export type CompanyInfoType = {
     memo: string,
 
 }
-export interface CompanyInfoProps {
-    updateCompanyInfo: (companyInfo: CompanyInfoType) => void;
-}
+
 
 export type HomeProps = {
     user: UserType;
@@ -31,6 +29,8 @@ export type HomeProps = {
     companyList: CompanyType[];
     updateCompanyList: (updatedCompanyList: CompanyType[]) => void;
 };
+
+
 
 export type CompanyType = {
     id: string,
@@ -40,11 +40,25 @@ export type CompanyType = {
     locations: string[],
 
 }
+/*
 export interface CompanyProps {
     updateCompany: (company: CompanyType) => void;
-}
+}*/
 
 export type CompanyInfoTableType = {
     name: string,
     memo: string,
+    email: string,
+    id: string,
+}
+
+export interface CompanyInfoProps {
+    user: UserType,
+    companyList: CompanyType[],
+    companyInfoList: CompanyInfoType[],
+    updateUser: (user: UserType) => void;
+    updateCompanyInfoList: (updatedCompanyInfoList: CompanyInfoType[]) => void;
+    //updateCompanyInfo: (updatedCompanyInfo: CompanyInfoType) => void; // 追加
+
+
 }

@@ -12,29 +12,30 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const user_1 = require("../../model/user");
+const companyInfo_1 = require("../../model/companyInfo");
 const database_1 = __importDefault(require("../../utils/database"));
 function default_1(req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             yield (0, database_1.default)();
-            const exitsTest = yield user_1.UserModel.findOne({ email: req.body.email });
-            if (!exitsTest) {
-                const user = new user_1.UserModel({
-                    name: req.body.name,
-                    email: req.body.email,
-                    password: req.body.password,
-                    companyInfoList: [],
-                });
-                yield user.save();
-                return res.status(200).json({ message: "ユーザー登録に成功しました成功" });
+            const existsTest = yield companyInfo_1.CompanyInfoModel.findOne({ email: req.params.email, id: req.params.id });
+            if (existsTest) {
+                yield companyInfo_1.CompanyInfoModel.updateOne({ email: req.params.email, id: req.params.id }, // 更新対象のクエリ
+                { $set: { memo: req.body.memo } } // 更新内容
+                );
+                return res.status(200).json({ message: "更新に成功しました" });
             }
             else {
-                return res.status(200).json({ message: "ユーザー登録に失敗しました\n このemailのユーザはすでに存在しています" });
+                return res.status(400).json({
+                    message: "エラーが発生しました\nこのメモは存在しません"
+                });
             }
         }
         catch (err) {
-            return res.status(400).json({ message: "ユーザー登録に失敗しました\n" + err });
+            return res.status(400).json({
+                message: "エラーが発生しました",
+                err: err
+            });
         }
     });
 }

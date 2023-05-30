@@ -39,8 +39,8 @@ const UserSchema = new mongoose_1.Schema({
         type: String,
         required: true,
     },
-    companyInfo: {
-        type: [Number],
+    companyInfoList: {
+        type: [String],
         required: false,
     },
 }, {

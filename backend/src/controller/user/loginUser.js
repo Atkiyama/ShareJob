@@ -18,7 +18,7 @@ function default_1(req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             yield (0, database_1.default)();
-            const savedUserData = yield user_1.UserModel.findOne({ password: req.body.password });
+            const savedUserData = yield user_1.UserModel.findOne({ email: req.body.email, password: req.body.password });
             if (savedUserData) {
                 return res.status(200).json({ message: 'ログイン成功', savedUserData: savedUserData });
             }

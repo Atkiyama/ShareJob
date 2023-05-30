@@ -18,17 +18,23 @@ function default_1(req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             yield (0, database_1.default)();
-            const user = new user_1.UserModel({
-                name: req.body.name,
-                email: req.body.email,
-                password: req.body.password,
-                companyInfo: [],
-            });
-            yield user.save();
-            return res.status(200).json({ message: "ユーザー登録成功" });
+            const exitsTest = yield user_1.UserModel.findOne({ email: req.body.email });
+            if (!exitsTest) {
+                const user = new user_1.UserModel({
+                    name: req.body.name,
+                    email: req.body.email,
+                    password: req.body.password,
+                    companyInfo: [],
+                });
+                yield user.save();
+                return res.status(200).json({ message: "ユーザー登録に成功しました成功" });
+            }
+            else {
+                return res.status(200).json({ message: "ユーザー登録に失敗しました\n このemailのユーザはすでに存在しています" });
+            }
         }
         catch (err) {
-            return res.status(400).json({ message: "ユーザー登録失敗" });
+            return res.status(400).json({ message: "ユーザー登録に失敗しました\n" + err });
         }
     });
 }

@@ -6,7 +6,7 @@ export default async function (req: Request, res: Response) {
     try {
         await connectDB();
 
-        const savedUserData: User | null = await UserModel.findOne({ password: req.body.password });
+        const savedUserData: User | null = await UserModel.findOne({ email: req.body.email, password: req.body.password });
         if (savedUserData) {
             return res.status(200).json({ message: 'ログイン成功', savedUserData: savedUserData });
         } else {

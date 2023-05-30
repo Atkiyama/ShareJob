@@ -6,6 +6,9 @@ import registerUser from '../controller/user/registerUser';
 import getCompanyInfoList from '../controller/companyInfo/getCompanyInfoList';
 import registerCompanyInfo from '../controller/companyInfo/registerCompanyInfo';
 import getCompanyList from '../controller/company/getCompanyList';
+import updateCompanyInfo from '../controller/companyInfo/updateCompanyInfo';
+import deleteCompanyInfo from '../controller/companyInfo/deleteCompanyInfo';
+import updateUser from '../controller/user/updateUser';
 
 const router: Router = express.Router();
 
@@ -27,5 +30,8 @@ router.post('/user/register', registerUser);
 router.get('/companyInfo/getCompanyInfoList', getCompanyInfoList);
 router.post('/companyInfo/registerCompanyInfo', registerCompanyInfo);
 router.get('/company/getCompanyList', getCompanyList);
+router.put('/companyInfo/updateCompanyInfo/:email/:id', updateCompanyInfo);
+router.delete('/companyInfo/updateCompanyInfo/:email/:id', deleteCompanyInfo);
+router.put('/user/update/:email', updateUser);
 
 export default router;

@@ -40,7 +40,7 @@ const UserSchema = new mongoose_1.Schema({
         required: true,
     },
     companyInfo: {
-        type: [Number],
+        type: [String],
         required: false,
     },
 }, {

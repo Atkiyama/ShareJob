@@ -1,6 +1,7 @@
+import fs from 'fs';
+import path from 'path';
 import express, { Request, Response, NextFunction } from 'express';
 import { Router } from 'express';
-
 import loginUser from '../controller/user/loginUser';
 import registerUser from '../controller/user/registerUser';
 import getCompanyInfoList from '../controller/companyInfo/getCompanyInfoList';
@@ -14,18 +15,43 @@ import deleteUser from '../controller/user/deleteUser';
 
 const router: Router = express.Router();
 
-// カスタムミドルウェア関数
-// API呼び出しの際にログを出力する
-const logRequest = (
+const getFormattedDate = (): string => {
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, '0');
+    const day = String(today.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+};
+
+const logRequestAndResponse = (
     req: Request,
     res: Response,
     next: NextFunction
 ) => {
-    console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
+    const requestTime = new Date().toISOString();
+    const logMessage = `[${requestTime}] ${req.method} ${req.url}\n`;
+    const logFilePath = path.join(__dirname, `../../../database/log/${getFormattedDate()}.log`); // 日付ごとのログファイルのパスを指定
+
+    console.log(logMessage); // コンソールにログを表示
+
+
+    fs.appendFileSync(logFilePath, logMessage);
+
+    res.on('finish', () => {
+        const responseMessage = `Response ${res.statusCode} ${res.statusMessage}\n`;
+        const responseBodyMessage = `Response Body: ${JSON.stringify(res.locals.data)}\n`;
+
+        console.log(responseMessage); // コンソールにレスポンスのログを表示
+        console.log(responseBodyMessage); // コンソールにレスポンスボディのログを表示
+
+        fs.appendFileSync(logFilePath, responseMessage);
+        fs.appendFileSync(logFilePath, responseBodyMessage);
+    });
+
     next();
 };
 
-router.use(logRequest); // ミドルウェアの適用
+router.use(logRequestAndResponse);
 
 router.post('/user/login', loginUser);
 router.post('/user/register', registerUser);
@@ -37,6 +63,5 @@ router.delete('/companyInfo/deleteCompanyInfo/:email/:id', deleteCompanyInfo);
 router.put('/user/update/:email', updateUser);
 router.put('/user/updateAll/:email', updateUserAll);
 router.delete('/user/delete/:email', deleteUser);
-
 
 export default router;

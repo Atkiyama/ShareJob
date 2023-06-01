@@ -86,6 +86,10 @@ function Home({
 		navigate(`/pages/companyInfo/companyInfo/${row.email}/${row.id}`);
 	};
 
+	const handleSearch = () => {
+		navigate('/pages/company/searchCompany');
+	};
+
 	return (
 		<div>
 			<h2>{user.name}様</h2>
@@ -120,6 +124,11 @@ function Home({
 					))}
 				</tbody>
 			</table>
+			<div className="position-fixed">
+				<button className="large-button" onClick={handleSearch}>
+					+
+				</button>
+			</div>
 		</div>
 	);
 }

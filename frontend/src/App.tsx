@@ -10,6 +10,8 @@ import './App.css';
 import { UserType, CompanyInfoType, CompanyType } from './utils/types';
 import EditMemo from './pages/companyInfo/editMemo';
 import EditUser from './pages/user/editUser';
+import SearchCompany from './pages/company/searchCompany';
+import CompanyDetail from './pages/company/companyDetail';
 
 function App() {
 	const [user, setUser] = useState<UserType>({
@@ -33,6 +35,14 @@ function App() {
 	const updateCompanyList = (updatedCompanyList: CompanyType[]) => {
 		setCompanyList(updatedCompanyList);
 	};
+
+	const [searchedCompany, setSearchedCompany] = useState<CompanyType[]>([]);
+	const updateSearchCompanyList = (
+		updatedSearchedCompanyList: CompanyType[]
+	) => {
+		setSearchedCompany(updatedSearchedCompanyList);
+	};
+
 	const handleCompanyInfoList = async () => {
 		try {
 			const response = await fetch(
@@ -148,6 +158,29 @@ function App() {
 								companyList={companyList}
 								companyInfoList={companyInfoList}
 								updateUser={updateUser}
+								updateCompanyInfoList={updateCompanyInfoList}
+							/>
+						}
+					/>
+					<Route
+						path="/pages/company/searchCompany"
+						element={
+							<SearchCompany
+								searchedCompany={searchedCompany}
+								updateSearchCompanyList={updateSearchCompanyList}
+							/>
+						}
+					/>
+					<Route
+						path="/pages/company/companyDetail/:id"
+						element={
+							<CompanyDetail
+								searchedCompany={searchedCompany}
+								user={user}
+								companyInfoList={companyInfoList}
+								companyList={companyList}
+								updateUser={updateUser}
+								updateCompanyList={updateCompanyList}
 								updateCompanyInfoList={updateCompanyInfoList}
 							/>
 						}

@@ -40,3 +40,65 @@
     width: 50%;
     height: 100%;
 }
+
+.position-fixed {
+    position: fixed;
+    bottom: 20px;
+    /* ボタンの下側の余白を調整 */
+    right: 20px;
+    /* ボタンの右側の余白を調整 */
+}
+
+.large-button {
+    width: 60px;
+    /* ボタンの幅を調整 */
+    height: 60px;
+    /* ボタンの高さを調整 */
+    font-size: 24px;
+    /* ボタンのテキストのフォントサイズを調整 */
+}
+
+.search-company {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.search-company__title {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.search-company__input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.search-company__textarea {
+    width: 40%;
+    height: 33px;
+    padding: 8px;
+    font-size: 15px;
+    overflow: hidden;
+    flex: 1;
+    margin-right: 8px;
+    box-sizing: border-box;
+}
+
+.search-company__button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: -2px;
+    /* ボタンの位置を微調整するマージン */
+}
+.search-company__table {
+    width: 100%;
+    /* 幅を適切な値に調整してください */
+}

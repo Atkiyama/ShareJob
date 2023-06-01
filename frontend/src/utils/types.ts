@@ -69,3 +69,26 @@ export interface EditUserProps {
     updateCompanyList: (updatedCompanyList: CompanyType[]) => void;
     updateCompanyInfoList: (updatedCompanyInfoList: CompanyInfoType[]) => void;
 }
+
+export type CompanyTableType = {
+    name: string,
+    abstract: string,
+    id: string,
+}
+
+export interface SearchCompanyProps {
+    searchedCompany: CompanyType[],
+    updateSearchCompanyList: (
+        updatedSearchedCompanyList: CompanyType[]
+    ) => void;
+}
+export interface CompanyDetailProps {
+    searchedCompany: CompanyType[],
+    user: UserType,
+    companyList: CompanyType[],
+    companyInfoList: CompanyInfoType[],
+    updateUser: (user: UserType) => void;
+    updateCompanyList: (updatedCompanyList: CompanyType[]) => void;
+    updateCompanyInfoList: (updatedCompanyInfoList: CompanyInfoType[]) => void;
+
+}

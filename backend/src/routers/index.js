@@ -16,6 +16,7 @@ const deleteCompanyInfo_1 = __importDefault(require("../controller/companyInfo/d
 const updateUser_1 = __importDefault(require("../controller/user/updateUser"));
 const updateUserAll_1 = __importDefault(require("../controller/user/updateUserAll"));
 const deleteUser_1 = __importDefault(require("../controller/user/deleteUser"));
+const searchCompany_1 = __importDefault(require("../controller/company/searchCompany"));
 const router = express_1.default.Router();
 const getFormattedDate = () => {
     const today = new Date();
@@ -51,4 +52,5 @@ router.delete('/companyInfo/deleteCompanyInfo/:email/:id', deleteCompanyInfo_1.d
 router.put('/user/update/:email', updateUser_1.default);
 router.put('/user/updateAll/:email', updateUserAll_1.default);
 router.delete('/user/delete/:email', deleteUser_1.default);
+router.get('/company/searchCompany', searchCompany_1.default);
 exports.default = router;

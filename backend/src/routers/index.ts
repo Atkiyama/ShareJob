@@ -12,6 +12,7 @@ import deleteCompanyInfo from '../controller/companyInfo/deleteCompanyInfo';
 import updateUser from '../controller/user/updateUser';
 import updateUserAll from '../controller/user/updateUserAll';
 import deleteUser from '../controller/user/deleteUser';
+import searchCompany from '../controller/company/searchCompany';
 
 const router: Router = express.Router();
 
@@ -63,5 +64,6 @@ router.delete('/companyInfo/deleteCompanyInfo/:email/:id', deleteCompanyInfo);
 router.put('/user/update/:email', updateUser);
 router.put('/user/updateAll/:email', updateUserAll);
 router.delete('/user/delete/:email', deleteUser);
+router.get('/company/searchCompany', searchCompany);
 
 export default router;

@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import {
-	CompanyType,
-	CompanyTableType,
-	SearchCompanyProps,
-} from '../../utils/types';
+import { CompanyTableType, SearchCompanyProps } from '../../utils/types';
 
 import {
 	ColumnDef,

@@ -30,7 +30,11 @@ const logRequestAndResponse = (req, res, next) => {
     const logMessage = `[${requestTime}] ${req.method} ${req.url}\n`;
     const logFilePath = path_1.default.join(__dirname, `../../../database/log/${getFormattedDate()}.log`); // 日付ごとのログファイルのパスを指定
     console.log(logMessage); // コンソールにログを表示
+    // リクエストボディをログに追加
+    const requestBodyMessage = `Request Body: ${JSON.stringify(req.body)}\n`;
+    console.log(requestBodyMessage);
     fs_1.default.appendFileSync(logFilePath, logMessage);
+    fs_1.default.appendFileSync(logFilePath, requestBodyMessage);
     res.on('finish', () => {
         const responseMessage = `Response ${res.statusCode} ${res.statusMessage}\n`;
         const responseBodyMessage = `Response Body: ${JSON.stringify(res.locals.data)}\n`;

@@ -35,8 +35,12 @@ const logRequestAndResponse = (
 
     console.log(logMessage); // コンソールにログを表示
 
+    // リクエストボディをログに追加
+    const requestBodyMessage = `Request Body: ${JSON.stringify(req.body)}\n`;
+    console.log(requestBodyMessage);
 
     fs.appendFileSync(logFilePath, logMessage);
+    fs.appendFileSync(logFilePath, requestBodyMessage);
 
     res.on('finish', () => {
         const responseMessage = `Response ${res.statusCode} ${res.statusMessage}\n`;
@@ -51,6 +55,7 @@ const logRequestAndResponse = (
 
     next();
 };
+
 
 router.use(logRequestAndResponse);
 

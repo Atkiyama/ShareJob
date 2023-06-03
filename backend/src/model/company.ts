@@ -24,15 +24,15 @@ const CompanySchema: Schema<Company> = new Schema<Company>({
 
     abstract: {
         type: String,
-        required: true,
+        required: false,
     },
     industries: {
         type: [String],
-        required: true,
+        required: false,
     },
     locations: {
         type: [String],
-        required: true,
+        required: false,
     },
 
 }, {

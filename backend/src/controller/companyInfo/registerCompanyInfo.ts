@@ -19,6 +19,7 @@ export default async function (req: Request, res: Response) {
 
         return res.status(200).json({ message: "企業情報登録成功" });
     } catch (err) {
+        console.log(err)
         return res.status(400).json({
             message: "エラーが発生しました"
             , err: err

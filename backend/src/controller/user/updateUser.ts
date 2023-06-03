@@ -7,6 +7,9 @@ export default async function (req: Request, res: Response) {
         await connectDB();
 
         const existsTest: User | null = await UserModel.findOne({ email: req.params.email });
+        console.log(req.body.name);
+        console.log(req.params.email);
+        console.log(req.body.companyInfoList);
         if (existsTest) {
             await UserModel.updateOne({
                 name: req.body.name,

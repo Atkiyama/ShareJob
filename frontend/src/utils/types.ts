@@ -12,6 +12,9 @@ export interface LoginProps {
 export interface LogoutProps {
     user: UserType,
     updateUser: (user: UserType) => void;
+    updateCompanyList: (updatedCompanyList: CompanyType[]) => void;
+    updateCompanyInfoList: (updatedCompanyInfoList: CompanyInfoType[]) => void;
+    updateSearchCompanyList: (updateSearchCompanyList: CompanyType[]) => void;
 }
 
 

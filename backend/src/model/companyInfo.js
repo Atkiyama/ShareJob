@@ -36,7 +36,7 @@ const CompanyInfoSchema = new mongoose_1.Schema({
     },
     memo: {
         type: String,
-        required: true,
+        required: false,
     },
 }, {
     collection: 'companyInfo' // コレクション名を指定

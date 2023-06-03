@@ -135,6 +135,7 @@ function App() {
 								updateUser={updateUser}
 								updateCompanyList={updateCompanyList}
 								updateCompanyInfoList={updateCompanyInfoList}
+								updateSearchCompanyList={updateSearchCompanyList}
 							/>
 						}
 					/>

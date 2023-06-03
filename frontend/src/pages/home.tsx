@@ -1,13 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import {
-	UserType,
-	CompanyInfoType,
-	HomeProps,
-	CompanyInfoTableType,
-	CompanyType,
-} from '../utils/types';
-import { CompanyInfo } from '../../../backend/src/model/companyInfo';
+import { HomeProps, CompanyInfoTableType } from '../utils/types';
+
 import {
 	ColumnDef,
 	flexRender,

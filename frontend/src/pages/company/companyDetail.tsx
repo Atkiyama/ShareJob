@@ -28,24 +28,26 @@ function CompanyDetail({
 			}
 		}
 	});
-	const handleUpdateCompanyInfo = async () => {
+	const handleRegisterCompanyInfo = async () => {
 		try {
-			const response = await fetch(
-				`http://localhost:5000/companyInfo/updateCompanyInfo/${user.email}/${id}`,
-				{
-					method: 'PUT',
-					headers: {
-						'Content-Type': 'application/json',
-					},
-					body: JSON.stringify({
-						memo: '',
-					}),
-				}
-			);
+			await fetch(`http://localhost:5000/companyInfo/registerCompanyInfo`, {
+				method: 'POST',
+				headers: {
+					Accept: 'application/json',
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({
+					email: user.email,
+					id: id,
+					memo: '',
+				}),
+			});
 
-			const jsonResponse = await response.json();
+			if (company) {
+				alert(`${company.name}を登録しました`);
+			}
 		} catch (err) {
-			alert('更新に失敗しました');
+			alert('登録に失敗しました');
 		}
 	};
 
@@ -57,7 +59,7 @@ function CompanyDetail({
 			},
 			body: JSON.stringify({
 				name: user.name,
-				companyInfoList: companyInfoList,
+				companyInfoList: user.companyInfoList,
 			}),
 		});
 	};
@@ -95,8 +97,12 @@ function CompanyDetail({
 				}
 			}
 		}
-		handleUpdateCompanyInfo();
+		handleRegisterCompanyInfo();
 		handleUser();
+		if (company) {
+			//alert(`${company.name}を登録しました`);
+		}
+
 		navigate('/pages/company/searchCompany');
 	};
 	const handleReturn = () => {

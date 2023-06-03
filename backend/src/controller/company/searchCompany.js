@@ -24,19 +24,34 @@ function default_1(req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             yield (0, database_1.default)();
-            const companyList = [];
-            if (typeof req.query.ids === 'string') {
-                const ids = req.query.ids;
-                const decodedIds = decodeURIComponent(ids);
-                const idArray = decodedIds.split(",");
-                for (let i = 0; i < idArray.length; i++) {
-                    const company = yield company_1.CompanyModel.findOne({ id: idArray[i] });
-                    if (company) {
-                        companyList.push(company);
+            if (typeof req.query.words === 'string') {
+                const companyList = [];
+                let words = [];
+                console.log(typeof req.query.words);
+                words = req.query.words.split(" ");
+                for (let i = 0; i < words.length; i++) {
+                    if (words[i].split("　").length > 1) {
+                        words.splice(i, 1, ...words[i].split("　"));
                     }
                 }
+                for (let i = 0; i < words.length; i++) {
+                    const companies = yield company_1.CompanyModel.find({
+                        $or: [
+                            { name: { $regex: words[i], $options: 'i' } },
+                            { abstract: { $regex: words[i], $options: 'i' } },
+                            { industries: { $regex: words[i], $options: 'i' } },
+                            { locations: { $regex: words[i], $options: 'i' } }
+                        ]
+                    });
+                    companyList.push(...companies);
+                }
+                console.log(companyList);
+                const uniqueCompanyList = Array.from(new Set(companyList.map((company) => company.id))).map((id) => companyList.find((company) => company.id === id));
+                return res.status(200).json({ companyList: uniqueCompanyList });
             }
-            return res.status(200).json({ companyList: companyList });
+            else {
+                return res.status(200).json({ companyList: [] });
+            }
         }
         catch (err) {
             return res.status(400).json({

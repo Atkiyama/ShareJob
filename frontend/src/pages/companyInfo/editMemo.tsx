@@ -33,7 +33,7 @@ function EditMemo({
 
 	const handleUpdate = async () => {
 		try {
-			const response = await fetch(
+			await fetch(
 				`http://localhost:5000/companyInfo/updateCompanyInfo/${email}/${id}`,
 				{
 					method: 'PUT',
@@ -45,9 +45,9 @@ function EditMemo({
 					}),
 				}
 			);
-
-			const jsonResponse = await response.json();
-			alert(jsonResponse.message);
+			if (company) {
+				alert(`${company.name}のメモを登録しました`);
+			}
 		} catch (err) {
 			alert('更新に失敗しました');
 		}

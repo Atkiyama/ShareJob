@@ -19,6 +19,9 @@ function default_1(req, res) {
         try {
             yield (0, database_1.default)();
             const existsTest = yield user_1.UserModel.findOne({ email: req.params.email });
+            console.log(req.body.name);
+            console.log(req.params.email);
+            console.log(req.body.companyInfoList);
             if (existsTest) {
                 yield user_1.UserModel.updateOne({
                     name: req.body.name,

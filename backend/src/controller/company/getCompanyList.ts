@@ -20,13 +20,9 @@ export default async function (req: Request, res: Response) {
             const decodedIds = decodeURIComponent(ids);
             const idArray: string[] = decodedIds.split(",");
             for (let i = 0; i < idArray.length; i++) {
-                console.log(idArray[i]);
                 const company: Company | null = await CompanyModel.findOne({ id: idArray[i] });
                 if (company) {
                     companyList.push(company);
-                } else {
-                    console.log("企業メモがみつかりません " +
-                        "req.ids = " + ids);
                 }
             }
 

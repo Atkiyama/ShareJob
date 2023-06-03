@@ -22,7 +22,7 @@ const CompanyInfoSchema: Schema<CompanyInfo> = new Schema<CompanyInfo>({
 
     memo: {
         type: String,
-        required: true,
+        required: false,
     },
 
 

@@ -37,15 +37,15 @@ const CompanySchema = new mongoose_1.Schema({
     },
     abstract: {
         type: String,
-        required: true,
+        required: false,
     },
     industries: {
         type: [String],
-        required: true,
+        required: false,
     },
     locations: {
         type: [String],
-        required: true,
+        required: false,
     },
 }, {
     collection: 'company' // コレクション名を指定

@@ -1,0 +1,312 @@
+[2023-06-01T04:01:59.873Z] GET /company/searchCompany?words=1%202
+Response 200 OK
+Response Body: undefined
+[2023-06-01T04:02:22.708Z] GET /company/searchCompany?words=1%202
+Response 200 OK
+Response Body: undefined
+[2023-06-01T04:02:25.786Z] GET /company/searchCompany?words=1%202
+Response 200 OK
+Response Body: undefined
+[2023-06-01T04:02:45.856Z] GET /company/searchCompany?words=1%202
+Response 200 OK
+Response Body: undefined
+[2023-06-01T04:02:53.851Z] GET /company/searchCompany?words=1%202
+Response 200 OK
+Response Body: undefined
+[2023-06-01T04:02:54.363Z] GET /company/searchCompany?words=1%202
+Response 200 OK
+Response Body: undefined
+[2023-06-01T04:02:54.591Z] GET /company/searchCompany?words=1%202
+Response 200 OK
+Response Body: undefined
+[2023-06-01T04:02:54.812Z] GET /company/searchCompany?words=1%202
+Response 200 OK
+Response Body: undefined
+[2023-06-01T04:03:13.264Z] GET /company/searchCompany?words=1%202
+Response 200 OK
+Response Body: undefined
+[2023-06-01T04:03:13.932Z] GET /company/searchCompany?words=1%202
+Response 200 OK
+Response Body: undefined
+[2023-06-01T04:03:37.744Z] GET /company/searchCompany?words=1%202
+Response 200 OK
+Response Body: undefined
+[2023-06-01T04:05:04.462Z] GET /company/searchCompany?words=1%202
+Response 200 OK
+Response Body: undefined
+[2023-06-01T04:05:51.097Z] GET /company/searchCompany?words=1%202
+Response 200 OK
+Response Body: undefined
+[2023-06-01T04:06:01.918Z] GET /company/searchCompany?words=1%202%E3%80%80
+Response 200 OK
+Response Body: undefined
+[2023-06-01T04:06:07.812Z] GET /company/searchCompany?words=1%202%E3%80%803
+Response 200 OK
+Response Body: undefined
+[2023-06-01T04:06:10.901Z] GET /company/searchCompany?words=1%202%E3%80%803
+Response 200 OK
+Response Body: undefined
+[2023-06-01T04:06:15.833Z] GET /company/searchCompany?words=1%202
+Response 200 OK
+Response Body: undefined
+[2023-06-01T04:21:35.278Z] GET /company/searchCompany?words=%E3%83%86%E3%83%83%E3%82%AF
+Response 200 OK
+Response Body: undefined
+[2023-06-01T04:21:37.874Z] GET /company/searchCompany?words=%E3%83%86%E3%83%83%E3%82%AF
+Response 200 OK
+Response Body: undefined
+[2023-06-01T04:22:26.397Z] GET /company/searchCompany?words=%E3%83%86%E3%83%83%E3%82%AF
+Response 200 OK
+Response Body: undefined
+[2023-06-01T04:22:27.183Z] GET /company/searchCompany?words=%E3%83%86%E3%83%83%E3%82%AF
+Response 200 OK
+Response Body: undefined
+[2023-06-01T04:22:57.858Z] GET /company/searchCompany?words=%E3%83%86%E3%83%83%E3%82%AF
+Response 200 OK
+Response Body: undefined
+[2023-06-01T04:22:58.688Z] GET /company/searchCompany?words=%E3%83%86%E3%83%83%E3%82%AF
+Response 200 OK
+Response Body: undefined
+[2023-06-01T04:22:59.168Z] GET /company/searchCompany?words=%E3%83%86%E3%83%83%E3%82%AF
+Response 200 OK
+Response Body: undefined
+[2023-06-01T04:22:59.354Z] GET /company/searchCompany?words=%E3%83%86%E3%83%83%E3%82%AF
+Response 200 OK
+Response Body: undefined
+[2023-06-01T04:22:59.536Z] GET /company/searchCompany?words=%E3%83%86%E3%83%83%E3%82%AF
+Response 200 OK
+Response Body: undefined
+[2023-06-01T04:22:59.704Z] GET /company/searchCompany?words=%E3%83%86%E3%83%83%E3%82%AF
+Response 200 OK
+Response Body: undefined
+[2023-06-01T04:22:59.921Z] GET /company/searchCompany?words=%E3%83%86%E3%83%83%E3%82%AF
+Response 200 OK
+Response Body: undefined
+[2023-06-01T04:23:35.133Z] GET /company/searchCompany?words=%E3%83%86%E3%83%83%E3%82%AF
+Response 200 OK
+Response Body: undefined
+[2023-06-01T04:24:24.487Z] GET /company/searchCompany?words=%E3%83%86%E3%83%83%E3%82%AF
+Response 200 OK
+Response Body: undefined
+[2023-06-01T04:25:08.648Z] GET /company/searchCompany?words=%E3%83%86%E3%83%83%E3%82%AF
+Response 200 OK
+Response Body: undefined
+[2023-06-01T04:26:20.711Z] GET /company/searchCompany?words=%E3%83%86%E3%83%83%E3%82%AF
+Response 200 OK
+Response Body: undefined
+[2023-06-01T04:26:34.805Z] GET /company/searchCompany?words=%E3%83%86%E3%83%83%E3%82%AF%20%E3%83%86%E3%83%83%E3%82%AF
+Response 200 OK
+Response Body: undefined
+[2023-06-01T04:26:39.731Z] GET /company/searchCompany?words=%E3%83%86%E3%83%83%E3%82%AF%20%E3%83%86%E3%83%83%E3%82%AF
+Response 200 OK
+Response Body: undefined
+[2023-06-01T04:27:28.247Z] GET /company/searchCompany?words=%E3%83%86%E3%83%83%E3%82%AF%20%E3%83%86%E3%83%83%E3%82%AF
+Response 200 OK
+Response Body: undefined
+[2023-06-01T05:08:28.717Z] POST /user/login
+Response 200 OK
+Response Body: undefined
+[2023-06-01T05:08:28.885Z] GET /companyInfo/getCompanyInfoList?email=
+[2023-06-01T05:08:28.889Z] GET /company/getCompanyList?ids=
+Response 304 Not Modified
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-01T05:08:35.273Z] GET /companyInfo/getCompanyInfoList?email=jane@example.com
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-01T05:08:35.299Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-01T05:30:02.349Z] POST /user/login
+Response 200 OK
+Response Body: undefined
+[2023-06-01T05:30:02.392Z] GET /companyInfo/getCompanyInfoList?email=
+[2023-06-01T05:30:02.397Z] GET /company/getCompanyList?ids=
+Response 200 OK
+Response Body: undefined
+Response 200 OK
+Response Body: undefined
+[2023-06-01T05:30:03.709Z] GET /companyInfo/getCompanyInfoList?email=jane@example.com
+Response 200 OK
+Response Body: undefined
+[2023-06-01T05:30:03.720Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Response 200 OK
+Response Body: undefined
+[2023-06-01T06:13:36.821Z] POST /user/login
+Response 200 OK
+Response Body: undefined
+[2023-06-01T06:13:36.867Z] GET /companyInfo/getCompanyInfoList?email=
+[2023-06-01T06:13:36.870Z] GET /company/getCompanyList?ids=
+Response 304 Not Modified
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-01T06:13:37.895Z] GET /companyInfo/getCompanyInfoList?email=jane@example.com
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-01T06:13:37.904Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-01T06:15:02.703Z] GET /company/searchCompany/?%E3%83%86%E3%83%83%E3%82%AF
+Response 200 OK
+Response Body: undefined
+[2023-06-01T06:15:25.603Z] GET /company/searchCompany/?%E3%83%86%E3%83%83%E3%82%AF
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-01T06:16:10.551Z] GET /company/searchCompany/?%E3%83%86%E3%83%83%E3%82%AF
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-01T06:16:31.393Z] GET /company/searchCompany/?%E3%83%86%E3%83%83%E3%82%AF
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-01T06:17:07.206Z] GET /company/searchCompany/?word=%E3%83%86%E3%83%83%E3%82%AF
+Response 200 OK
+Response Body: undefined
+[2023-06-01T06:17:40.449Z] GET /company/searchCompany/?word=%E3%83%86%E3%83%83%E3%82%AF
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-01T06:18:24.166Z] GET /company/searchCompany?words=%E3%83%86%E3%83%83%E3%82%AF%20%E3%83%86%E3%83%83%E3%82%AF
+Response 200 OK
+Response Body: undefined
+[2023-06-01T06:18:29.309Z] GET /company/searchCompany/?word=%E3%83%86%E3%83%83%E3%82%AF
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-01T06:18:45.974Z] GET /company/searchCompany/?word=%E3%83%86%E3%83%83%E3%82%AF
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-01T06:19:08.939Z] GET /company/searchCompany/?words=%E3%83%86%E3%83%83%E3%82%AF
+Response 200 OK
+Response Body: undefined
+[2023-06-01T06:19:40.585Z] GET /company/searchCompany/?words=%E3%83%86%E3%83%83%E3%82%AF
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-01T06:35:42.611Z] GET /company/searchCompany/?words=%E3%83%86%E3%83%83%E3%82%AF
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-01T06:48:54.934Z] GET /company/getCompanyList?ids=2%2C5%2C9
+[2023-06-01T06:48:54.937Z] GET /companyInfo/getCompanyInfoList?email=jane@example.com
+Response 304 Not Modified
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-01T06:48:54.953Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-01T06:49:18.127Z] GET /companyInfo/getCompanyInfoList?email=jane@example.com
+[2023-06-01T06:49:18.129Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Response 304 Not Modified
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-01T06:49:18.143Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-01T06:49:22.030Z] GET /company/getCompanyList?ids=2%2C5%2C9
+[2023-06-01T06:49:22.032Z] GET /companyInfo/getCompanyInfoList?email=jane@example.com
+Response 304 Not Modified
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-01T06:49:22.043Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-01T06:49:46.206Z] GET /companyInfo/getCompanyInfoList?email=jane@example.com
+[2023-06-01T06:49:46.208Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Response 304 Not Modified
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-01T06:49:46.218Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-01T06:59:01.863Z] POST /user/login
+Response 200 OK
+Response Body: undefined
+[2023-06-01T06:59:01.903Z] GET /companyInfo/getCompanyInfoList?email=
+[2023-06-01T06:59:01.905Z] GET /company/getCompanyList?ids=
+Response 304 Not Modified
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-01T06:59:02.904Z] GET /companyInfo/getCompanyInfoList?email=jane@example.com
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-01T06:59:02.914Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-01T06:59:45.210Z] GET /company/searchCompany/?words=%E3%83%86%E3%83%83%E3%82%AF
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-01T07:02:07.734Z] GET /companyInfo/getCompanyInfoList?email=jane@example.com
+[2023-06-01T07:02:07.736Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Response 304 Not Modified
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-01T07:02:07.743Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-01T07:02:38.876Z] GET /companyInfo/getCompanyInfoList?email=jane@example.com
+[2023-06-01T07:02:38.877Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Response 304 Not Modified
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-01T07:02:38.886Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-01T07:35:20.194Z] GET /companyInfo/getCompanyInfoList?email=jane@example.com
+[2023-06-01T07:35:20.196Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Response 304 Not Modified
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-01T07:35:20.204Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-01T07:36:00.249Z] GET /companyInfo/getCompanyInfoList?email=jane@example.com
+[2023-06-01T07:36:00.250Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Response 304 Not Modified
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-01T07:36:00.257Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-01T07:50:38.923Z] PUT /companyInfo/updateCompanyInfo/jane@example.com/1
+[2023-06-01T07:50:38.927Z] GET /company/getCompanyList?ids=2%2C5%2C9%2C1
+Response 400 Bad Request
+Response Body: undefined
+Response 200 OK
+Response Body: undefined
+[2023-06-01T07:55:28.382Z] POST /user/login
+Response 200 OK
+Response Body: undefined
+[2023-06-01T07:55:28.428Z] GET /companyInfo/getCompanyInfoList?email=
+[2023-06-01T07:55:28.430Z] GET /company/getCompanyList?ids=
+Response 304 Not Modified
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-01T07:55:29.540Z] GET /companyInfo/getCompanyInfoList?email=jane@example.com
+Response 200 OK
+Response Body: undefined
+[2023-06-01T07:55:29.549Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Response 200 OK
+Response Body: undefined
+[2023-06-01T07:55:41.000Z] GET /company/searchCompany/?words=%E3%83%86%E3%83%83%E3%82%AF
+Response 200 OK
+Response Body: undefined
+[2023-06-01T07:55:44.340Z] PUT /companyInfo/updateCompanyInfo/jane@example.com/1
+[2023-06-01T07:55:44.342Z] PUT /user/update/jane@example.com
+Response 400 Bad Request
+Response Body: undefined
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-01T07:55:51.646Z] PUT /companyInfo/updateCompanyInfo/jane@example.com/1
+[2023-06-01T07:55:51.648Z] GET /company/getCompanyList?ids=2%2C5%2C9%2C1
+Response 400 Bad Request
+Response Body: undefined
+Response 200 OK
+Response Body: undefined

@@ -16,6 +16,7 @@ const deleteCompanyInfo_1 = __importDefault(require("../controller/companyInfo/d
 const updateUser_1 = __importDefault(require("../controller/user/updateUser"));
 const updateUserAll_1 = __importDefault(require("../controller/user/updateUserAll"));
 const deleteUser_1 = __importDefault(require("../controller/user/deleteUser"));
+const searchCompany_1 = __importDefault(require("../controller/company/searchCompany"));
 const router = express_1.default.Router();
 const getFormattedDate = () => {
     const today = new Date();
@@ -29,7 +30,11 @@ const logRequestAndResponse = (req, res, next) => {
     const logMessage = `[${requestTime}] ${req.method} ${req.url}\n`;
     const logFilePath = path_1.default.join(__dirname, `../../../database/log/${getFormattedDate()}.log`); // 日付ごとのログファイルのパスを指定
     console.log(logMessage); // コンソールにログを表示
+    // リクエストボディをログに追加
+    const requestBodyMessage = `Request Body: ${JSON.stringify(req.body)}\n`;
+    console.log(requestBodyMessage);
     fs_1.default.appendFileSync(logFilePath, logMessage);
+    fs_1.default.appendFileSync(logFilePath, requestBodyMessage);
     res.on('finish', () => {
         const responseMessage = `Response ${res.statusCode} ${res.statusMessage}\n`;
         const responseBodyMessage = `Response Body: ${JSON.stringify(res.locals.data)}\n`;
@@ -51,4 +56,5 @@ router.delete('/companyInfo/deleteCompanyInfo/:email/:id', deleteCompanyInfo_1.d
 router.put('/user/update/:email', updateUser_1.default);
 router.put('/user/updateAll/:email', updateUserAll_1.default);
 router.delete('/user/delete/:email', deleteUser_1.default);
+router.get('/company/searchCompany', searchCompany_1.default);
 exports.default = router;

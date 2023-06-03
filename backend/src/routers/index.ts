@@ -12,6 +12,7 @@ import deleteCompanyInfo from '../controller/companyInfo/deleteCompanyInfo';
 import updateUser from '../controller/user/updateUser';
 import updateUserAll from '../controller/user/updateUserAll';
 import deleteUser from '../controller/user/deleteUser';
+import searchCompany from '../controller/company/searchCompany';
 
 const router: Router = express.Router();
 
@@ -34,8 +35,12 @@ const logRequestAndResponse = (
 
     console.log(logMessage); // コンソールにログを表示
 
+    // リクエストボディをログに追加
+    const requestBodyMessage = `Request Body: ${JSON.stringify(req.body)}\n`;
+    console.log(requestBodyMessage);
 
     fs.appendFileSync(logFilePath, logMessage);
+    fs.appendFileSync(logFilePath, requestBodyMessage);
 
     res.on('finish', () => {
         const responseMessage = `Response ${res.statusCode} ${res.statusMessage}\n`;
@@ -51,6 +56,7 @@ const logRequestAndResponse = (
     next();
 };
 
+
 router.use(logRequestAndResponse);
 
 router.post('/user/login', loginUser);
@@ -63,5 +69,6 @@ router.delete('/companyInfo/deleteCompanyInfo/:email/:id', deleteCompanyInfo);
 router.put('/user/update/:email', updateUser);
 router.put('/user/updateAll/:email', updateUserAll);
 router.delete('/user/delete/:email', deleteUser);
+router.get('/company/searchCompany', searchCompany);
 
 export default router;

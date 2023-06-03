@@ -1,7 +1,6 @@
-import { useParams, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { EditUserProps, UserType } from '../../utils/types';
-import { CompanyInfo } from '../../../../backend/src/model/companyInfo';
 
 function EditUser({
 	user,

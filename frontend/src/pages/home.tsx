@@ -1,13 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import {
-	UserType,
-	CompanyInfoType,
-	HomeProps,
-	CompanyInfoTableType,
-	CompanyType,
-} from '../utils/types';
-import { CompanyInfo } from '../../../backend/src/model/companyInfo';
+import { HomeProps, CompanyInfoTableType } from '../utils/types';
+
 import {
 	ColumnDef,
 	flexRender,
@@ -86,6 +80,10 @@ function Home({
 		navigate(`/pages/companyInfo/companyInfo/${row.email}/${row.id}`);
 	};
 
+	const handleSearch = () => {
+		navigate('/pages/company/searchCompany');
+	};
+
 	return (
 		<div>
 			<h2>{user.name}様</h2>
@@ -120,6 +118,11 @@ function Home({
 					))}
 				</tbody>
 			</table>
+			<div className="position-fixed">
+				<button className="large-button" onClick={handleSearch}>
+					+
+				</button>
+			</div>
 		</div>
 	);
 }

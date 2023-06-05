@@ -100,7 +100,7 @@ function CompanyDetail({
 		handleRegisterCompanyInfo();
 		handleUser();
 		if (company) {
-			//alert(`${company.name}を登録しました`);
+			alert(`${company.name}を登録しました`);
 		}
 
 		navigate('/pages/company/searchCompany');

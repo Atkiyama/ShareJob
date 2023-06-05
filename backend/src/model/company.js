@@ -35,6 +35,10 @@ const CompanySchema = new mongoose_1.Schema({
         type: String,
         required: true,
     },
+    author: {
+        type: String,
+        required: true,
+    },
     abstract: {
         type: String,
         required: false,

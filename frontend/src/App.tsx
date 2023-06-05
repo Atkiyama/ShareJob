@@ -35,6 +35,10 @@ function App() {
 	const updateCompanyList = (updatedCompanyList: CompanyType[]) => {
 		setCompanyList(updatedCompanyList);
 	};
+	const [myCompanyList, setMyCompanyList] = useState<CompanyType[]>([]);
+	const updateMyCompanyList = (updatedMyCompanyList: CompanyType[]) => {
+		setMyCompanyList(updatedMyCompanyList);
+	};
 
 	const [searchedCompany, setSearchedCompany] = useState<CompanyType[]>([]);
 	const updateSearchCompanyList = (

@@ -1,3 +1,5 @@
+import internal from "stream";
+
 export type UserType = {
     name: string,
     email: string,
@@ -38,6 +40,7 @@ export type HomeProps = {
 export type CompanyType = {
     id: string,
     name: string,
+    author: string,
     abstract: string,
     industries: string[],
     locations: string[],
@@ -94,4 +97,10 @@ export interface CompanyDetailProps {
     updateCompanyList: (updatedCompanyList: CompanyType[]) => void;
     updateCompanyInfoList: (updatedCompanyInfoList: CompanyInfoType[]) => void;
 
+}
+
+export interface CompanyListProps {
+    user: UserType,
+    myCompanyList: CompanyType[]
+    updateMyCompanyList: (updatedMyCompanyList: CompanyType[]) => void;
 }

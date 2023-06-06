@@ -12,6 +12,8 @@ import EditMemo from './pages/companyInfo/editMemo';
 import EditUser from './pages/user/editUser';
 import SearchCompany from './pages/company/searchCompany';
 import CompanyDetail from './pages/company/companyDetail';
+import CompanyList from './pages/company/companyList';
+import CompanyEdit from './pages/company/companyEdit';
 
 function App() {
 	const [user, setUser] = useState<UserType>({
@@ -186,6 +188,32 @@ function App() {
 								companyList={companyList}
 								updateUser={updateUser}
 								updateCompanyList={updateCompanyList}
+								updateCompanyInfoList={updateCompanyInfoList}
+							/>
+						}
+					/>
+					<Route
+						path="/pages/company/companyList"
+						element={
+							<CompanyList
+								user={user}
+								myCompanyList={myCompanyList}
+								updateMyCompanyList={updateMyCompanyList}
+							/>
+						}
+					/>
+					<Route
+						path="/pages/company/companyEdit/:id"
+						element={
+							<CompanyEdit
+								searchedCompany={searchedCompany}
+								user={user}
+								companyList={companyList}
+								myCompanyList={myCompanyList}
+								companyInfoList={companyInfoList}
+								updateUser={updateUser}
+								updateCompanyList={updateCompanyList}
+								updateMyCompanyList={updateMyCompanyList}
 								updateCompanyInfoList={updateCompanyInfoList}
 							/>
 						}

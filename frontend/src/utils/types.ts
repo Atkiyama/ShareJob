@@ -104,3 +104,16 @@ export interface CompanyListProps {
     myCompanyList: CompanyType[]
     updateMyCompanyList: (updatedMyCompanyList: CompanyType[]) => void;
 }
+
+export interface CompanyEditProps {
+    searchedCompany: CompanyType[],
+    user: UserType,
+    companyList: CompanyType[],
+    myCompanyList: CompanyType[],
+    companyInfoList: CompanyInfoType[],
+    updateUser: (user: UserType) => void;
+    updateCompanyList: (updatedMyCompanyList: CompanyType[]) => void;
+    updateMyCompanyList: (updatedCompanyList: CompanyType[]) => void;
+    updateCompanyInfoList: (updatedCompanyInfoList: CompanyInfoType[]) => void;
+
+}

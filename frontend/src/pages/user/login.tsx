@@ -2,6 +2,11 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { LoginProps } from '../../utils/types';
 
+/**
+ *	ログイン画面
+ * @param param0
+ * @returns
+ */
 function Login({
 	handleCompanyInfoList,
 	handleCompanyList,
@@ -11,6 +16,10 @@ function Login({
 	const [password, setPassword] = useState('');
 	const navigate = useNavigate();
 
+	/**
+	 *APIを呼び出してログイン処理を行う
+	 * @param e
+	 */
 	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		try {
@@ -28,6 +37,9 @@ function Login({
 			const jsonResponse = await response.json();
 			localStorage.setItem('token', jsonResponse.token);
 
+			/**
+			 * 同期処理を行う
+			 */
 			await Promise.all([
 				updateUser({
 					name: jsonResponse.savedUserData.name,
@@ -49,6 +61,10 @@ function Login({
 			alert('ログインに失敗しました');
 		}
 	};
+
+	/**
+	 * タイトルを更新する
+	 */
 	useEffect(() => {
 		document.title = 'ログイン';
 	}, []);

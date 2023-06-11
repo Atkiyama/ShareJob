@@ -10,13 +10,21 @@ import {
 	CellContext,
 } from '@tanstack/react-table';
 
+/**
+ * 企業情報を検索する
+ * @param param0
+ * @returns
+ */
 function SearchCompany({
 	searchedCompany,
 	updateSearchCompanyList,
 }: SearchCompanyProps) {
 	const navigate = useNavigate();
+	//検索ワード
 	const [word, setWord] = useState<string>('');
 	//const [searchedCompany, setSearchedCompany] = useState<CompanyType[]>([]);
+
+	//検索ワードのセッター
 	const updateWord = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
 		setWord(event.target.value);
 	};
@@ -24,10 +32,17 @@ function SearchCompany({
 		document.title = `企業検索`;
 	});
 
+	/**
+	 * 企業の詳細画面を開く
+	 * @param row idに企業のidが開く
+	 */
 	const handleOpenDetail = (row: CompanyTableType) => {
 		navigate(`/pages/company/companyDetail/${row.id}`);
 	};
 
+	/**
+	 * 表のヘッダーを定義
+	 */
 	const columns: ColumnDef<CompanyTableType, any>[] = [
 		{
 			accessorKey: 'name',
@@ -51,6 +66,9 @@ function SearchCompany({
 
 	const data = searchedCompany; // 検索結果のデータを使用します
 
+	/**
+	 * バックエンドに検索ワードを送信、結果を取得する
+	 */
 	const handleSearch = async () => {
 		try {
 			const response = await fetch(
@@ -70,6 +88,9 @@ function SearchCompany({
 		}
 	};
 
+	/**
+	 * ReactTableを定義
+	 */
 	const table = useReactTable<CompanyTableType>({
 		data: data,
 		columns,

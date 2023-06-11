@@ -1,10 +1,18 @@
 import { useState, useEffect } from 'react';
 
+/**
+ * ユーザ登録画面
+ * @returns
+ */
 const Register = () => {
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 
+	/**
+	 *
+	 * @param e APIを呼び出してユーザを登録する
+	 */
 	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		try {
@@ -30,6 +38,9 @@ const Register = () => {
 		}
 	};
 
+	/**
+	 * タイトルを更新する
+	 */
 	useEffect(() => {
 		document.title = 'ユーザ登録';
 	}, []);

@@ -1,16 +1,28 @@
-import internal from "stream";
+/**
+ * 様々なデータ型を定義
+ */
 
+/**
+ * ユーザのデータ型
+ */
 export type UserType = {
     name: string,
     email: string,
     companyInfoList: string[]
 }
+
+/**
+ * ログイン画面のprops
+ */
 export interface LoginProps {
     updateUser: (user: UserType) => void;
     handleCompanyInfoList: () => void;
     handleCompanyList: () => void;
-
 }
+
+/**
+ * ログアウト画面のprops
+ */
 export interface LogoutProps {
     user: UserType,
     updateUser: (user: UserType) => void;
@@ -19,7 +31,9 @@ export interface LogoutProps {
     updateSearchCompanyList: (updateSearchCompanyList: CompanyType[]) => void;
 }
 
-
+/**
+ * 企業メモのデータ型
+ */
 export type CompanyInfoType = {
     email: string,
     id: string,
@@ -27,7 +41,9 @@ export type CompanyInfoType = {
 
 }
 
-
+/**
+ * ホーム画面のprops
+ */
 export type HomeProps = {
     user: UserType;
     companyInfoList: CompanyInfoType[];
@@ -36,7 +52,9 @@ export type HomeProps = {
 };
 
 
-
+/**
+ * 企業のデータ型
+ */
 export type CompanyType = {
     id: string,
     name: string,
@@ -46,11 +64,10 @@ export type CompanyType = {
     locations: string[],
 
 }
-/*
-export interface CompanyProps {
-    updateCompany: (company: CompanyType) => void;
-}*/
 
+/**
+ * companyInfoをhome画面でテーブルにする際に用いる型
+ */
 export type CompanyInfoTableType = {
     name: string,
     memo: string,
@@ -58,17 +75,21 @@ export type CompanyInfoTableType = {
     id: string,
 }
 
+/**
+ * メモ編集画面のprops
+ */
 export interface EditMemoProps {
     user: UserType,
     companyList: CompanyType[],
     companyInfoList: CompanyInfoType[],
     updateUser: (user: UserType) => void;
     updateCompanyInfoList: (updatedCompanyInfoList: CompanyInfoType[]) => void;
-    //updateCompanyInfo: (updatedCompanyInfo: CompanyInfoType) => void; // 追加
-
 
 }
 
+/**
+ * ユーザ編集画面のprops
+ */
 export interface EditUserProps {
     user: UserType,
     updateUser: (user: UserType) => void;
@@ -76,18 +97,28 @@ export interface EditUserProps {
     updateCompanyInfoList: (updatedCompanyInfoList: CompanyInfoType[]) => void;
 }
 
+/**
+ * 企業検索画面や企業リストの表に使うデータ型
+ */
 export type CompanyTableType = {
     name: string,
     abstract: string,
     id: string,
 }
 
+/**
+ * 企業検索画面のprops
+ */
 export interface SearchCompanyProps {
     searchedCompany: CompanyType[],
     updateSearchCompanyList: (
         updatedSearchedCompanyList: CompanyType[]
     ) => void;
 }
+
+/**
+ * 企業詳細画面のprops
+ */
 export interface CompanyDetailProps {
     searchedCompany: CompanyType[],
     user: UserType,
@@ -99,12 +130,18 @@ export interface CompanyDetailProps {
 
 }
 
+/**
+ * 企業リストのprops
+ */
 export interface CompanyListProps {
     user: UserType,
     myCompanyList: CompanyType[]
     updateMyCompanyList: (updatedMyCompanyList: CompanyType[]) => void;
 }
 
+/**
+ * 企業編集画面のprops
+ */
 export interface CompanyEditProps {
     searchedCompany: CompanyType[],
     user: UserType,

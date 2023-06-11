@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { HomeProps, CompanyInfoTableType } from '../utils/types';
-
 import {
 	ColumnDef,
 	flexRender,
@@ -10,6 +9,11 @@ import {
 	CellContext,
 } from '@tanstack/react-table';
 
+/**
+ * ホーム画面
+ * @param param0
+ * @returns
+ */
 function Home({
 	user,
 	companyInfoList,
@@ -18,6 +22,9 @@ function Home({
 }: HomeProps) {
 	const navigate = useNavigate();
 	const [data, setData] = useState<CompanyInfoTableType[]>([]);
+	/**
+	 * テーブルのヘッダを定義する
+	 */
 	const columns: ColumnDef<CompanyInfoTableType, any>[] = [
 		{
 			accessorKey: 'name',
@@ -38,12 +45,18 @@ function Home({
 		},
 	];
 
+	/**
+	 * ReactTableを定義する
+	 */
 	const table = useReactTable<CompanyInfoTableType>({
 		data: data,
 		columns,
 		getCoreRowModel: getCoreRowModel(),
 	});
 
+	/**
+	 * companyInfoからcompanyInfoTableの情報を取得する
+	 */
 	useEffect(() => {
 		if (user.email !== '') {
 			document.title = 'ホーム';
@@ -75,11 +88,18 @@ function Home({
 		}
 	}, [companyInfoList, companyList]);
 
+	/**
+	 * 編集画面に遷移する
+	 * @param row emailとidが含まれる
+	 */
 	const handleEdit = (row: CompanyInfoTableType) => {
 		// 編集処理を実装する
 		navigate(`/pages/companyInfo/companyInfo/${row.email}/${row.id}`);
 	};
 
+	/**
+	 * 検索画面に遷移する
+	 */
 	const handleSearch = () => {
 		navigate('/pages/company/searchCompany');
 	};

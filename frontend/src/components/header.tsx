@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+/**
+ * ヘッダを定義
+ * @returns
+ */
 function Header() {
 	return (
 		<div className="header-container">

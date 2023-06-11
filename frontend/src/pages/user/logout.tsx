@@ -2,6 +2,11 @@ import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { LogoutProps } from '../../utils/types';
 
+/**
+ * ログアウト画面
+ * @param param0
+ * @returns
+ */
 function Logout({
 	user,
 	updateUser,
@@ -9,6 +14,9 @@ function Logout({
 	updateCompanyInfoList,
 }: LogoutProps) {
 	const navigate = useNavigate();
+	/**
+	 *ログアウト処理を行う
+	 */
 	const handleRemoveData = () => {
 		localStorage.removeItem('token');
 		updateUser({
@@ -22,9 +30,17 @@ function Logout({
 		navigate('/');
 		// キーに関連付けられたデータが削除されます
 	};
+
+	/**
+	 * トップ画面に戻る
+	 */
 	const handleCancel = () => {
 		navigate('/');
 	};
+
+	/**
+	 *ログインしているか判定し、ログインしていなければトップに戻る
+	 */
 	useEffect(() => {
 		if (user.email === '') {
 			alert('ログインしていません');

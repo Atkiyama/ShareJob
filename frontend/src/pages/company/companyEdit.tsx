@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import {
-	CompanyEditProps,
-	CompanyInfoType,
-	CompanyType,
-} from '../../utils/types';
+import { CompanyEditProps, CompanyType } from '../../utils/types';
 
+/**
+ * 企業情報を編集する(制作中)
+ * @param id 編集する企業のid
+ * @returns
+ */
 function CompanyEdit({
 	searchedCompany,
 	user,
@@ -22,6 +23,9 @@ function CompanyEdit({
 	const [company, setCompany] = useState<CompanyType | undefined>(undefined);
 	const [newTextBoxes, setNewTextBoxes] = useState<string[]>([]);
 
+	/**
+	 * idに合致するcompanyをセットする
+	 */
 	useEffect(() => {
 		const foundCompany = myCompanyList.find((item) => item.id === id);
 

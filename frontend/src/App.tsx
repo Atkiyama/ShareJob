@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import './App.css';
+
 import Header from './components/header';
 import Home from './pages/home';
 import Top from './pages/top';
 import Login from './pages/user/login';
 import Logout from './pages/user/logout';
 import Register from './pages/user/register';
-import './App.css';
-import { UserType, CompanyInfoType, CompanyType } from './utils/types';
 import EditMemo from './pages/companyInfo/editMemo';
 import EditUser from './pages/user/editUser';
 import SearchCompany from './pages/company/searchCompany';
@@ -15,14 +15,39 @@ import CompanyDetail from './pages/company/companyDetail';
 import CompanyList from './pages/company/companyList';
 import CompanyEdit from './pages/company/companyEdit';
 
+import { UserType, CompanyInfoType, CompanyType } from './utils/types';
+
 function App() {
+	/**
+	 * ログインしているユーザの情報
+	 */
 	const [user, setUser] = useState<UserType>({
 		name: '',
 		email: '',
 		companyInfoList: [],
 	});
 
+	/**
+	 * ユーザの企業メモ
+	 */
 	const [companyInfoList, setCompanyInfoList] = useState<CompanyInfoType[]>([]);
+	/**
+	 * メモを登録している企業のリスト
+	 */
+	const [companyList, setCompanyList] = useState<CompanyType[]>([]);
+	/**
+	 * 自分で登録した企業のリスト
+	 */
+	const [myCompanyList, setMyCompanyList] = useState<CompanyType[]>([]);
+	/**
+	 * 検索した企業のリスト
+	 */
+	const [searchedCompany, setSearchedCompany] = useState<CompanyType[]>([]);
+
+	/**
+	 * 以下、下位のコンポーネントで各変数を更新するための関数
+	 * @param updatedUser
+	 */
 
 	const updateUser = (updatedUser: UserType) => {
 		setUser(updatedUser);
@@ -32,23 +57,23 @@ function App() {
 		setCompanyInfoList(updatedCompanyInfoList);
 	};
 
-	const [companyList, setCompanyList] = useState<CompanyType[]>([]);
-
 	const updateCompanyList = (updatedCompanyList: CompanyType[]) => {
 		setCompanyList(updatedCompanyList);
 	};
-	const [myCompanyList, setMyCompanyList] = useState<CompanyType[]>([]);
+
 	const updateMyCompanyList = (updatedMyCompanyList: CompanyType[]) => {
 		setMyCompanyList(updatedMyCompanyList);
 	};
 
-	const [searchedCompany, setSearchedCompany] = useState<CompanyType[]>([]);
 	const updateSearchCompanyList = (
 		updatedSearchedCompanyList: CompanyType[]
 	) => {
 		setSearchedCompany(updatedSearchedCompanyList);
 	};
 
+	/**
+	 *企業メモのリストを取得する
+	 */
 	const handleCompanyInfoList = async () => {
 		try {
 			const response = await fetch(
@@ -69,13 +94,9 @@ function App() {
 			console.log(err);
 		}
 	};
-	useEffect(() => {
-		document.title = 'ShareJob';
-		if (user.email !== '') {
-			handleCompanyInfoList();
-		}
-	}, [user.email]);
-
+	/**
+	 *メモを登録している企業のリストを取得する
+	 */
 	const handleCompanyList = async () => {
 		try {
 			const ids: string[] = companyInfoList.map((info) => info.id);
@@ -100,12 +121,28 @@ function App() {
 		}
 	};
 
+	/**
+	 * companyInfoListを取得する
+	 */
+	useEffect(() => {
+		document.title = 'ShareJob';
+		if (user.email !== '') {
+			handleCompanyInfoList();
+		}
+	}, [user.email]);
+
+	/**
+	 * companyListを取得する
+	 */
 	useEffect(() => {
 		if (user.email !== '' && companyInfoList.length > 0) {
 			handleCompanyList();
 		}
 	}, [user.email, companyInfoList]);
 
+	/**
+	 * 各コンポーネントをルーティングする
+	 */
 	return (
 		<BrowserRouter>
 			<div className="container">

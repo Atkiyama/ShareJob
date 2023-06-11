@@ -6,6 +6,11 @@ import {
 	CompanyType,
 } from '../../utils/types';
 
+/**
+ * 検索画面から企業の詳細確認できる画面
+ * @param param0 企業id
+ * @returns
+ */
 function CompanyDetail({
 	searchedCompany,
 	user,
@@ -17,7 +22,11 @@ function CompanyDetail({
 }: CompanyDetailProps) {
 	const { id } = useParams<{ id: string }>();
 	const navigate = useNavigate();
+	//idに合致するid
 	const [company, setCompany] = useState<CompanyType>();
+	/**
+	 *idに合致する企業情報を取得する
+	 */
 	useEffect(() => {
 		const foundCompany = searchedCompany.find((item) => item.id === id);
 
@@ -28,6 +37,9 @@ function CompanyDetail({
 			}
 		}
 	});
+	/**
+	 *バックエンドに企業メモを登録する
+	 */
 	const handleRegisterCompanyInfo = async () => {
 		try {
 			await fetch(`http://localhost:5000/companyInfo/registerCompanyInfo`, {
@@ -51,6 +63,9 @@ function CompanyDetail({
 		}
 	};
 
+	/**
+	 * ユーザ情報を更新する
+	 */
 	const handleUser = async () => {
 		await fetch(`http://localhost:5000/user/update/${user.email}`, {
 			method: 'PUT',
@@ -63,6 +78,10 @@ function CompanyDetail({
 			}),
 		});
 	};
+
+	/**
+	 * 企業リストにidの企業を加える
+	 */
 	const handleAdd = () => {
 		const findId: string | undefined = user.companyInfoList.find(
 			(item) => item === id
@@ -105,9 +124,14 @@ function CompanyDetail({
 
 		navigate('/pages/company/searchCompany');
 	};
+
+	/**
+	 * キャンセルボタンを押すと検索画面に戻る
+	 */
 	const handleReturn = () => {
 		navigate('/pages/company/searchCompany');
 	};
+
 	if (typeof company !== 'undefined') {
 		return (
 			<div>

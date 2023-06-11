@@ -9,12 +9,20 @@ import {
 	CellContext,
 } from '@tanstack/react-table';
 
+/**
+ * 自分で登録した企業リストを表示する
+ * @param param0
+ * @returns
+ */
 function CompanyList({
 	user,
 	myCompanyList,
 	updateMyCompanyList,
 }: CompanyListProps) {
 	const navigate = useNavigate();
+	/**
+	 * 表のヘッダを定義
+	 */
 	const columns: ColumnDef<CompanyTableType, any>[] = [
 		{
 			accessorKey: 'name',
@@ -35,16 +43,28 @@ function CompanyList({
 		},
 		// 他のカラムを追加する場合はここに定義します
 	];
+
+	/**
+	 * 企業編集画面を開く
+	 * @param row idを格納する
+	 */
 	const handleOpenEdit = (row: CompanyTableType) => {
 		navigate(`/pages/company/companyEdit/${row.id}`);
 	};
 
 	const data = myCompanyList;
+	/**
+	 * reactテーブルを定義
+	 */
 	const table = useReactTable<CompanyTableType>({
 		data: data,
 		columns,
 		getCoreRowModel: getCoreRowModel(),
 	});
+
+	/**
+	 * 自分が登録した企業をバックエンドから取得する
+	 */
 	const handleMyCompanyList = async () => {
 		const response = await fetch(
 			`http://localhost:5000/company/getMyCompanyList?email=${user.email}`,
@@ -59,6 +79,10 @@ function CompanyList({
 		const jsonResponse = await response.json();
 		updateMyCompanyList(jsonResponse.companyList);
 	};
+
+	/**
+	 *ログイン状態によって処理を分岐する
+	 */
 	useEffect(() => {
 		document.title = `登録企業一覧`;
 		if (user) {

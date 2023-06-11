@@ -2,6 +2,11 @@ import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { EditUserProps, UserType } from '../../utils/types';
 
+/**
+ * ユーザ情報を編集する
+ * @param param0
+ * @returns
+ */
 function EditUser({
 	user,
 	updateUser,
@@ -12,7 +17,10 @@ function EditUser({
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
-	// 対応する会社情報を探す
+	/**
+	 * APIを叩いて情報を更新する
+	 * @param e
+	 */
 	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		try {
@@ -46,6 +54,10 @@ function EditUser({
 		}
 	};
 
+	/**
+	 * ログインしていればuseStateにuserの情報を入れる
+	 * ログインしていなければログイン画面に遷移する
+	 */
 	useEffect(() => {
 		if (user.email === '') {
 			alert('ログインしていません');
@@ -57,10 +69,16 @@ function EditUser({
 		document.title = 'ユーザ情報編集';
 	});
 
+	/**
+	 * キャンセルボタンを押した際の処理
+	 */
 	const handleCancel = () => {
 		navigate('/');
 	};
 
+	/**
+	 * ユーザ削除をした時の処理
+	 */
 	const handleDelete = async () => {
 		const confirmDelete = window.confirm('本当にユーザを削除しますか？');
 		if (confirmDelete) {

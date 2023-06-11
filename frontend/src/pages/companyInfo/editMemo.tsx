@@ -20,7 +20,7 @@ function EditMemo({
 	const company: CompanyType | undefined = companyList.find(
 		(info) => info.id === id
 	);
-
+	//対応するメモを探す
 	const companyInfo: CompanyInfoType | undefined = companyInfoList.find(
 		(info) => info.id === id && info.email === email
 	);
@@ -30,7 +30,9 @@ function EditMemo({
 	const handleMemoChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
 		setMemo(event.target.value);
 	};
-
+	/**
+	 *APIにupdateリクエストする
+	 */
 	const handleUpdate = async () => {
 		try {
 			await fetch(
@@ -52,6 +54,10 @@ function EditMemo({
 			alert('更新に失敗しました');
 		}
 	};
+
+	/**
+	 * ユーザ情報を更新する
+	 */
 	const handleUser = async () => {
 		const list: string[] = [];
 		for (let i = 0; i < user.companyInfoList.length; i++) {
@@ -77,6 +83,10 @@ function EditMemo({
 
 		updateUser(updatedUser);
 	};
+
+	/**
+	 * メモ削除の処理をする
+	 */
 	const handleDelete = async () => {
 		const confirmDelete = window.confirm('本当にメモを削除しますか？');
 		if (confirmDelete) {
@@ -105,9 +115,10 @@ function EditMemo({
 			}
 		}
 	};
-
+	/**
+	 *完了ボタンが押されたときの処理を実装する
+	 */
 	const handleComplete = () => {
-		// 完了ボタンが押されたときの処理を実装する
 		const updatedCompanyInfoList = companyInfoList.map((info) => {
 			if (info.email === email && info.id === id) {
 				return {
@@ -122,6 +133,10 @@ function EditMemo({
 		handleUpdate();
 		navigate('/pages/home');
 	};
+
+	/**
+	 * タイトルを更新する
+	 */
 	useEffect(() => {
 		if (company) {
 			document.title = `${company.name}のメモ`;

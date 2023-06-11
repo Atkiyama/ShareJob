@@ -18,7 +18,14 @@ const updateUserAll_1 = __importDefault(require("../controller/user/updateUserAl
 const deleteUser_1 = __importDefault(require("../controller/user/deleteUser"));
 const searchCompany_1 = __importDefault(require("../controller/company/searchCompany"));
 const getMyCompanyList_1 = __importDefault(require("../controller/company/getMyCompanyList"));
+/**
+ * APIのルーティングとログ出力を定義する
+ */
 const router = express_1.default.Router();
+/**
+ *
+ * @returns 日付けのフォーマット関数
+ */
 const getFormattedDate = () => {
     const today = new Date();
     const year = today.getFullYear();
@@ -26,6 +33,12 @@ const getFormattedDate = () => {
     const day = String(today.getDate()).padStart(2, '0');
     return `${year}-${month}-${day}`;
 };
+/**
+ * APIリクエストのログを出力する
+ * @param req リクエスト
+ * @param res レスポンス
+ * @param next
+ */
 const logRequestAndResponse = (req, res, next) => {
     const requestTime = new Date().toISOString();
     const logMessage = `[${requestTime}] ${req.method} ${req.url}\n`;
@@ -47,6 +60,9 @@ const logRequestAndResponse = (req, res, next) => {
     next();
 };
 router.use(logRequestAndResponse);
+/**
+ * ルーティング部分
+ */
 router.post('/user/login', loginUser_1.default);
 router.post('/user/register', registerUser_1.default);
 router.get('/companyInfo/getCompanyInfoList', getCompanyInfoList_1.default);

@@ -15,9 +15,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const companyInfo_1 = require("../../model/companyInfo");
 const database_1 = __importDefault(require("../../utils/database"));
 /**
- * APIとその関連制作中
- * @param req
- * @param res
+ * 会社のメモを入手するAPI
+ * @param req emailが格納される
+ * @param res companyInfoListを返す
  * @returns
  */
 function default_1(req, res) {

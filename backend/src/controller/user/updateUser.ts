@@ -22,7 +22,6 @@ export default async function (req: Request, res: Response) {
                 {
                     $set: {
                         password: existsTest.password,
-                        companyInfoList: req.body.companyInfoList,
                     }
                 });
             const test: User | null = await UserModel.findOne({ email: req.params.email });

@@ -18,8 +18,7 @@ export default async function (req: Request, res: Response) {
             const user: User = new UserModel({
                 email: req.body.email,
                 name: req.body.name,
-                password: req.body.password,
-                companyInfoList: oldUser.companyInfoList
+                password: req.body.password
             });
 
             await UserModel.deleteOne({

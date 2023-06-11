@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import {
-	CompanyDetailProps,
+	CompanyRegisterProps,
 	CompanyInfoType,
 	CompanyType,
 } from '../../utils/types';
+import CompanyDetail from '../../components/companyDetail';
 
 /**
  * 検索画面から企業の詳細確認できる画面
  * @param param0 企業id
  * @returns
  */
-function CompanyDetail({
+function CompanyRegister({
 	searchedCompany,
 	user,
 	companyList,
@@ -19,7 +20,7 @@ function CompanyDetail({
 	updateUser,
 	updateCompanyList,
 	updateCompanyInfoList,
-}: CompanyDetailProps) {
+}: CompanyRegisterProps) {
 	const { id } = useParams<{ id: string }>();
 	const navigate = useNavigate();
 	//idに合致するid
@@ -64,63 +65,29 @@ function CompanyDetail({
 	};
 
 	/**
-	 * ユーザ情報を更新する
-	 */
-	const handleUser = async () => {
-		await fetch(`http://localhost:5000/user/update/${user.email}`, {
-			method: 'PUT',
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify({
-				name: user.name,
-				companyInfoList: user.companyInfoList,
-			}),
-		});
-	};
-
-	/**
 	 * 企業リストにidの企業を加える
 	 */
 	const handleAdd = () => {
-		const findId: string | undefined = user.companyInfoList.find(
-			(item) => item === id
-		);
-		if (!findId) {
-			const companyInfoListSt = user.companyInfoList;
-			if (typeof id === 'string') {
-				companyInfoListSt.push(id);
-			}
-			const updatedUser = {
-				name: user.name,
+		if (id) {
+			const CompanyInfo: CompanyInfoType = {
 				email: user.email,
-				companyInfoList: companyInfoListSt,
+				id: id,
+				memo: '',
 			};
-			updateUser(updatedUser);
-			if (id) {
-				const CompanyInfo: CompanyInfoType = {
-					email: user.email,
-					id: id,
-					memo: '',
-				};
-				const updatedCompanyInfoList: CompanyInfoType[] = companyInfoList;
-				updatedCompanyInfoList.push(CompanyInfo);
-				updateCompanyInfoList(updatedCompanyInfoList);
-				const findCompany: CompanyType | undefined = companyList.find(
-					(item) => item.id === id
-				);
-				if (!findCompany && company) {
-					const updatedCompanyList: CompanyType[] = companyList;
-					updatedCompanyList.push(company);
-					updateCompanyList(updatedCompanyList);
-				}
+			const updatedCompanyInfoList: CompanyInfoType[] = companyInfoList;
+			updatedCompanyInfoList.push(CompanyInfo);
+			updateCompanyInfoList(updatedCompanyInfoList);
+			const findCompany: CompanyType | undefined = companyList.find(
+				(item) => item.id === id
+			);
+			if (!findCompany && company) {
+				const updatedCompanyList: CompanyType[] = companyList;
+				updatedCompanyList.push(company);
+				updateCompanyList(updatedCompanyList);
 			}
 		}
+
 		handleRegisterCompanyInfo();
-		handleUser();
-		if (company) {
-			alert(`${company.name}を登録しました`);
-		}
 
 		navigate('/pages/company/searchCompany');
 	};
@@ -135,13 +102,7 @@ function CompanyDetail({
 	if (typeof company !== 'undefined') {
 		return (
 			<div>
-				<h1>{company.name}</h1>
-				<h2>概要</h2>
-				<div>{company.abstract}</div>
-				<h2>業種</h2>
-				<div>{company.industries.join(',')}</div>
-				<h2>勤務地</h2>
-				<div>{company.locations.join(',')}</div>
+				<CompanyDetail company={company} />
 				<button onClick={() => handleAdd()}>登録</button>
 				<button onClick={() => handleReturn()}>戻る</button>
 			</div>
@@ -151,4 +112,4 @@ function CompanyDetail({
 	}
 }
 
-export default CompanyDetail;
+export default CompanyRegister;

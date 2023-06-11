@@ -39,10 +39,6 @@ const UserSchema = new mongoose_1.Schema({
         type: String,
         required: true,
     },
-    companyInfoList: {
-        type: [String],
-        required: false,
-    },
 }, {
     collection: 'user' // コレクション名を指定
 });

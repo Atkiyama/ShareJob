@@ -33,7 +33,6 @@ function default_1(req, res) {
                 }, {
                     $set: {
                         password: existsTest.password,
-                        companyInfoList: req.body.companyInfoList,
                     }
                 });
                 const test = yield user_1.UserModel.findOne({ email: req.params.email });

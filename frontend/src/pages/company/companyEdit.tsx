@@ -58,19 +58,6 @@ function CompanyEdit({
 		}
 	};
 
-	const handleUser = async () => {
-		await fetch(`http://localhost:5000/user/update/${user.email}`, {
-			method: 'PUT',
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify({
-				name: user.name,
-				companyInfoList: user.companyInfoList,
-			}),
-		});
-	};
-
 	const handleAddTextBox = () => {
 		setNewTextBoxes((prevTextBoxes) => [...prevTextBoxes, '']);
 	};

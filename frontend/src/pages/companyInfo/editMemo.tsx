@@ -1,11 +1,7 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import {
-	EditMemoProps,
-	CompanyInfoType,
-	CompanyType,
-	UserType,
-} from '../../utils/types';
+import { EditMemoProps, CompanyInfoType, CompanyType } from '../../utils/types';
+import CompanyDetail from '../../components/companyDetail';
 
 function EditMemo({
 	user,
@@ -56,35 +52,6 @@ function EditMemo({
 	};
 
 	/**
-	 * ユーザ情報を更新する
-	 */
-	const handleUser = async () => {
-		const list: string[] = [];
-		for (let i = 0; i < user.companyInfoList.length; i++) {
-			if (user.companyInfoList[i] !== id) {
-				list.push(user.companyInfoList[i]);
-			}
-		}
-		const updatedUser: UserType = {
-			name: user.name,
-			email: user.email,
-			companyInfoList: list,
-		};
-		await fetch(`http://localhost:5000/user/update/${email}`, {
-			method: 'PUT',
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify({
-				name: user.name,
-				companyInfoList: list,
-			}),
-		});
-
-		updateUser(updatedUser);
-	};
-
-	/**
 	 * メモ削除の処理をする
 	 */
 	const handleDelete = async () => {
@@ -106,7 +73,6 @@ function EditMemo({
 					(info) => info.id !== id
 				);
 				updateCompanyInfoList(updatedCompanyInfoList);
-				handleUser();
 
 				// 削除後にリダイレクトするならば以下の行を有効化する
 				navigate('/pages/home');
@@ -145,6 +111,7 @@ function EditMemo({
 
 	return (
 		<div>
+			{company ? <CompanyDetail company={company} /> : null}
 			{company ? <h2>{company.name}のメモ</h2> : null}
 			<div className="textarea-container">
 				<textarea

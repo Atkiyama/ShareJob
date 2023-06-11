@@ -11,7 +11,7 @@ import Register from './pages/user/register';
 import EditMemo from './pages/companyInfo/editMemo';
 import EditUser from './pages/user/editUser';
 import SearchCompany from './pages/company/searchCompany';
-import CompanyDetail from './pages/company/companyDetail';
+import CompanyRegister from './pages/company/companyRegister';
 import CompanyList from './pages/company/companyList';
 import CompanyEdit from './pages/company/companyEdit';
 
@@ -24,7 +24,6 @@ function App() {
 	const [user, setUser] = useState<UserType>({
 		name: '',
 		email: '',
-		companyInfoList: [],
 	});
 
 	/**
@@ -218,7 +217,7 @@ function App() {
 					<Route
 						path="/pages/company/companyDetail/:id"
 						element={
-							<CompanyDetail
+							<CompanyRegister
 								searchedCompany={searchedCompany}
 								user={user}
 								companyInfoList={companyInfoList}

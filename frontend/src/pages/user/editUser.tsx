@@ -42,7 +42,6 @@ function EditUser({
 			const updatedUser: UserType = {
 				name: name,
 				email: email,
-				companyInfoList: user.companyInfoList,
 			};
 			updateUser(updatedUser);
 			alert(jsonResponse.message);
@@ -97,7 +96,7 @@ function EditUser({
 			if (response.ok) {
 				updateCompanyList([]); // 空の配列でリストを更新
 				updateCompanyInfoList([]); // 空の配列でリストを更新
-				updateUser({ name: '', email: '', companyInfoList: [] }); // 空のユーザ情報で更新
+				updateUser({ name: '', email: '' }); // 空のユーザ情報で更新
 
 				// 削除後にリダイレクトする場合は以下の行を有効化する
 				navigate('/');

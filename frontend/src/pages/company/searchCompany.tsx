@@ -32,6 +32,10 @@ function SearchCompany({
 		document.title = `企業検索`;
 	});
 
+	useEffect(() => {
+		updateSearchCompanyList([]);
+	}, [word]);
+
 	/**
 	 * 企業の詳細画面を開く
 	 * @param row idに企業のidが開く

@@ -7,7 +7,7 @@ export interface User extends Document {
     name: string;
     email: string;
     password: string;
-    companyInfoList: string[];
+
 }
 
 
@@ -26,10 +26,7 @@ const UserSchema: Schema<User> = new Schema({
         type: String,
         required: true,
     },
-    companyInfoList: {
-        type: [String],
-        required: false,
-    },
+
 }, {
     collection: 'user' // コレクション名を指定
 });

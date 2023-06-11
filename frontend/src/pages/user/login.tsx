@@ -44,7 +44,6 @@ function Login({
 				updateUser({
 					name: jsonResponse.savedUserData.name,
 					email: jsonResponse.savedUserData.email,
-					companyInfoList: jsonResponse.savedUserData.companyInfoList,
 				}),
 				handleCompanyInfoList(),
 				handleCompanyList(),

@@ -31,8 +31,7 @@ function default_1(req, res) {
                 const user = new user_1.UserModel({
                     email: req.body.email,
                     name: req.body.name,
-                    password: req.body.password,
-                    companyInfoList: oldUser.companyInfoList
+                    password: req.body.password
                 });
                 yield user_1.UserModel.deleteOne({
                     email: req.params.email,

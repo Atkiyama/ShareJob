@@ -22,7 +22,6 @@ function Logout({
 		updateUser({
 			name: '',
 			email: '',
-			companyInfoList: [],
 		});
 		updateCompanyList([]); // 空の配列でリストを更新
 		updateCompanyInfoList([]); // 空の配列でリストを更新

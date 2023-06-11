@@ -8,7 +8,6 @@
 export type UserType = {
     name: string,
     email: string,
-    companyInfoList: string[]
 }
 
 /**
@@ -119,7 +118,7 @@ export interface SearchCompanyProps {
 /**
  * 企業詳細画面のprops
  */
-export interface CompanyDetailProps {
+export interface CompanyRegisterProps {
     searchedCompany: CompanyType[],
     user: UserType,
     companyList: CompanyType[],
@@ -153,4 +152,12 @@ export interface CompanyEditProps {
     updateMyCompanyList: (updatedCompanyList: CompanyType[]) => void;
     updateCompanyInfoList: (updatedCompanyInfoList: CompanyInfoType[]) => void;
 
+}
+
+/**
+ * companyの詳細を表示するコンポーネントのprops
+ */
+export interface CompanyDetailProps {
+    company: CompanyType; // 例: 型の定義
+    // 他のプロパティ
 }

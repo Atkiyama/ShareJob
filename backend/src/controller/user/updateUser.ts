@@ -2,14 +2,18 @@ import { Request, Response } from 'express';
 import { UserModel, User } from '../../model/user';
 import connectDB from '../../utils/database';
 
+/**
+ * ユーザの更新用のAPI
+ * @param req paramsにemail,bodyにemailとcompanyInfoListを格納
+ * @param res メッセージを返す
+ * @returns 
+ */
 export default async function (req: Request, res: Response) {
     try {
         await connectDB();
-
+        //ユーザが存在するかのチェック
         const existsTest: User | null = await UserModel.findOne({ email: req.params.email });
-        console.log(req.body.name);
-        console.log(req.params.email);
-        console.log(req.body.companyInfoList);
+
         if (existsTest) {
             await UserModel.updateOne({
                 name: req.body.name,
@@ -22,7 +26,7 @@ export default async function (req: Request, res: Response) {
                     }
                 });
             const test: User | null = await UserModel.findOne({ email: req.params.email });
-            return res.status(200).json({ message: '更新に成功しました', test: test });
+            return res.status(200).json({ message: '更新に成功しました' });
         } else {
             return res.status(400).json({ message: '更新失敗:ユーザーが存在しません' });
         }

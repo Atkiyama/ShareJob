@@ -15,8 +15,15 @@ import deleteUser from '../controller/user/deleteUser';
 import searchCompany from '../controller/company/searchCompany';
 import getMyCompanyList from '../controller/company/getMyCompanyList';
 
+/**
+ * APIのルーティングとログ出力を定義する
+ */
 const router: Router = express.Router();
 
+/**
+ * 
+ * @returns 日付けのフォーマット関数
+ */
 const getFormattedDate = (): string => {
     const today = new Date();
     const year = today.getFullYear();
@@ -25,6 +32,12 @@ const getFormattedDate = (): string => {
     return `${year}-${month}-${day}`;
 };
 
+/**
+ * APIリクエストのログを出力する
+ * @param req リクエスト
+ * @param res レスポンス
+ * @param next 
+ */
 const logRequestAndResponse = (
     req: Request,
     res: Response,
@@ -60,6 +73,9 @@ const logRequestAndResponse = (
 
 router.use(logRequestAndResponse);
 
+/**
+ * ルーティング部分
+ */
 router.post('/user/login', loginUser);
 router.post('/user/register', registerUser);
 router.get('/companyInfo/getCompanyInfoList', getCompanyInfoList);

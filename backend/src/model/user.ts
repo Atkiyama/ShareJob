@@ -1,5 +1,8 @@
 import mongoose, { Schema, Document, Model } from 'mongoose';
 
+/**
+ * ユーザ情報のモデル
+ */
 export interface User extends Document {
     name: string;
     email: string;

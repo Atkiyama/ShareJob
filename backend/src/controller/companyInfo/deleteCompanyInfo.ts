@@ -1,6 +1,13 @@
 import { Request, Response } from 'express';
 import { CompanyInfo, CompanyInfoModel } from '../../model/companyInfo';
 import connectDB from '../../utils/database';
+
+/**
+ * 会社のメモの削除API
+ * @param req emailとidが格納される
+ * @param res メッセージを返す
+ * @returns 
+ */
 export default async function (req: Request, res: Response) {
     try {
         await connectDB();

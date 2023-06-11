@@ -2,9 +2,9 @@ import { Request, Response } from 'express';
 import { CompanyInfo, CompanyInfoModel } from '../../model/companyInfo';
 import connectDB from '../../utils/database';
 /**
- * APIとその関連制作中
- * @param req 
- * @param res 
+ * 会社のメモを入手するAPI
+ * @param req emailが格納される
+ * @param res companyInfoListを返す
  * @returns 
  */
 export default async function (req: Request, res: Response) {

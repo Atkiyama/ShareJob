@@ -1,5 +1,8 @@
 import mongoose, { Schema, Document, Model } from 'mongoose';
 
+/**
+ * 会社のメモ情報のモデル
+ */
 export interface CompanyInfo extends Document {
     email: string
     id: string,

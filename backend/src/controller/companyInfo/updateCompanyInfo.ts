@@ -2,6 +2,12 @@ import { Request, Response } from 'express';
 import { CompanyInfo, CompanyInfoModel } from '../../model/companyInfo';
 import connectDB from '../../utils/database';
 
+/**
+ * 会社のメモ情報を更新するAPI
+ * @param req paramsにemailとid,bodyにmemoを格納
+ * @param res メッセージを返す
+ * @returns 
+ */
 export default async function (req: Request, res: Response) {
     try {
         await connectDB();

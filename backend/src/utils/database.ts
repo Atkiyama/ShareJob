@@ -1,6 +1,9 @@
 import mongoose from "mongoose";
 
 // pass:45GvKUHZB6ILlhQJ
+/**
+ * データベースに接続する
+ */
 const connectDB = async (): Promise<void> => {
     try {
         await mongoose.connect("mongodb://127.0.0.1/shareJob");

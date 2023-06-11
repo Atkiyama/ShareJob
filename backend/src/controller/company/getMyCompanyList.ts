@@ -3,9 +3,9 @@ import connectDB from '../../utils/database';
 import { Company, CompanyModel } from '../../model/company';
 
 /**
- * APIとその関連制作中
- * @param req 
- * @param res 
+ * 自分で登録した会社のリストを入手するAPI
+ * @param req ユーザのemail
+ * @param res companyListを返す
  * @returns 
  */
 export default async function (req: Request, res: Response) {

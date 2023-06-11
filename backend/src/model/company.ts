@@ -1,5 +1,8 @@
 import mongoose, { Schema, Document, Model } from 'mongoose';
 
+/**
+ * 会社情報のモデル
+ */
 export interface Company extends Document {
     id: string,
     name: string;

@@ -2,8 +2,8 @@ import { Request, Response } from 'express';
 import { CompanyInfo, CompanyInfoModel } from '../../model/companyInfo';
 import connectDB from '../../utils/database';
 /**
- * APIとその関連制作中
- * @param req 
+ * 会社のメモ情報を登録するAPI
+ * @param req email,id,memoがbodyに格納される
  * @param res 
  * @returns 
  */

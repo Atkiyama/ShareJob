@@ -498,3 +498,133 @@ Response Body: undefined
 Request Body: {}
 Response 304 Not Modified
 Response Body: undefined
+[2023-06-19T09:08:01.289Z] POST /user/login
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 200 OK
+Response Body: undefined
+[2023-06-19T09:08:01.378Z] GET /myCompany/getMyCompanyList?email=
+Request Body: {}
+[2023-06-19T09:08:01.380Z] GET /company/getCompanyList?ids=
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T09:08:02.225Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T09:08:02.254Z] GET /company/getCompanyList?ids=1%2C2%2C4%2C5%2C9
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T09:08:18.074Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T09:08:32.117Z] POST /myCompany/registerMyCompany
+Request Body: {"name":"てすと","author":"jane@example.com","abstract":"て","industries":["d"],"locations":["f"]}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-19T09:13:20.009Z] POST /user/login
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 200 OK
+Response Body: undefined
+[2023-06-19T09:13:20.103Z] GET /myCompany/getMyCompanyList?email=
+Request Body: {}
+[2023-06-19T09:13:20.106Z] GET /company/getCompanyList?ids=
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T09:13:23.221Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T09:13:23.235Z] GET /company/getCompanyList?ids=1%2C2%2C4%2C5%2C9
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T09:13:27.339Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T09:13:34.695Z] POST /company/registerCompany
+Request Body: {"name":"dgfs","author":"jane@example.com","abstract":"fsdgs","industries":["fsdg"],"locations":["fdsg"]}
+Response 404 Not Found
+Response Body: undefined
+[2023-06-19T09:13:34.700Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T09:14:20.789Z] GET /company/getRegisterCompanyList?email=
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T09:14:27.751Z] POST /user/login
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 200 OK
+Response Body: undefined
+[2023-06-19T09:14:27.809Z] GET /myCompany/getMyCompanyList?email=
+Request Body: {}
+[2023-06-19T09:14:27.813Z] GET /company/getCompanyList?ids=
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T09:14:28.741Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T09:14:28.772Z] GET /company/getCompanyList?ids=1%2C2%2C4%2C5%2C9
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T09:14:31.217Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T09:14:37.185Z] POST /company/registerCompany
+Request Body: {"name":"adsgdsf","author":"jane@example.com","abstract":"asdfsa","industries":["adfsads"],"locations":["asdf"]}
+Response 404 Not Found
+Response Body: undefined
+[2023-06-19T09:14:37.190Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T09:15:20.021Z] POST /user/login
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 200 OK
+Response Body: undefined
+[2023-06-19T09:15:20.115Z] GET /myCompany/getMyCompanyList?email=
+Request Body: {}
+[2023-06-19T09:15:20.118Z] GET /company/getCompanyList?ids=
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T09:15:20.806Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T09:15:20.822Z] GET /company/getCompanyList?ids=1%2C2%2C4%2C5%2C9
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T09:15:22.400Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T09:15:30.687Z] POST /company/registerCompany
+Request Body: {"name":"adgfdsf","author":"jane@example.com","abstract":"adsfasdfsa","industries":["asdfasdf"],"locations":["afdasf"]}
+[2023-06-19T09:15:30.691Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T09:17:21.398Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined

@@ -19,6 +19,7 @@ const deleteUser_1 = __importDefault(require("../controller/user/deleteUser"));
 const searchCompany_1 = __importDefault(require("../controller/company/searchCompany"));
 const getRegisterCompanyList_1 = __importDefault(require("../controller/company/getRegisterCompanyList"));
 const updateCompany_1 = __importDefault(require("../controller/company/updateCompany"));
+const registerCompany_1 = __importDefault(require("../controller/company/registerCompany"));
 /**
  * APIのルーティングとログ出力を定義する
  */
@@ -77,4 +78,5 @@ router.delete('/user/delete/:email', deleteUser_1.default);
 router.get('/company/searchCompany', searchCompany_1.default);
 router.get('/company/getRegisterCompanyList', getRegisterCompanyList_1.default);
 router.put('/company/updateCompany/:id', updateCompany_1.default);
+router.post('/company/registerCompany', registerCompany_1.default);
 exports.default = router;

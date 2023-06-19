@@ -29,7 +29,7 @@ function CompanyRegister({ user }: CompanyRegisterProps) {
 	 */
 	const handleRegisterMyCompany = async () => {
 		try {
-			await fetch(`http://localhost:5000/myCompany/registerMyCompany`, {
+			await fetch(`http://localhost:5000/company/registerCompany`, {
 				method: 'POST',
 				headers: {
 					Accept: 'application/json',
@@ -46,6 +46,8 @@ function CompanyRegister({ user }: CompanyRegisterProps) {
 
 			if (company) {
 				alert(`${company.name}を登録しました`);
+			} else {
+				alert(`企業を登録しました`);
 			}
 		} catch (err) {
 			alert('登録に失敗しました');
@@ -58,14 +60,14 @@ function CompanyRegister({ user }: CompanyRegisterProps) {
 	const handleSave = () => {
 		handleRegisterMyCompany();
 
-		navigate('/pages/company/searchCompany');
+		navigate('/pages/company/companyList');
 	};
 
 	/**
 	 * キャンセルボタンを押すと検索画面に戻る
 	 */
 	const handleReturn = () => {
-		navigate('/pages/company/searchCompany');
+		navigate('/pages/company/companyList');
 	};
 
 	const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {

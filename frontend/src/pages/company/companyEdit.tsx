@@ -64,6 +64,7 @@ function CompanyEdit({
 
 	const handleSave = () => {
 		handleUpdateRegisterCompany();
+		navigate('/pages/company/companyList');
 	};
 
 	const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {

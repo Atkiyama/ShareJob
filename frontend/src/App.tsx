@@ -16,6 +16,7 @@ import CompanyList from './pages/company/companyList';
 import CompanyEdit from './pages/company/companyEdit';
 
 import { UserType, MyCompanyType, CompanyType } from './utils/types';
+import CompanyDetail from './components/companyDetail';
 
 function App() {
 	/**
@@ -124,6 +125,32 @@ function App() {
 		}
 	};
 
+	const handleRegisterCompanyList = async () => {
+		try {
+			const response = await fetch(
+				`http://localhost:5000/company/getRegisterCompanyList?email=${user.email}`,
+				{
+					method: 'GET',
+					headers: {
+						'Content-Type': 'application/json',
+					},
+				}
+			);
+
+			const jsonResponse = await response.json();
+			const jsonMyCompanyList = jsonResponse.myCompanyList;
+			updateRegisterCompanyList(jsonMyCompanyList);
+		} catch (err) {
+			alert('企業情報の取得に失敗しました\n' + err);
+			console.log(err);
+		}
+	};
+
+	const handleUpdate = async () => {
+		await handleMyCompanyList();
+		await handleCompanyList();
+		await handleRegisterCompanyList();
+	};
 	/**
 	 * companyInfoListを取得する
 	 */
@@ -142,6 +169,15 @@ function App() {
 			handleCompanyList();
 		}
 	}, [user.email, myCompanyList]);
+
+	/**
+	 * 常にユーザ以外の情報を更新する
+	 */
+	useEffect(() => {
+		if (user.email !== '') {
+			handleUpdate();
+		}
+	}, []);
 
 	/**
 	 * 各コンポーネントをルーティングする
@@ -218,20 +254,7 @@ function App() {
 							/>
 						}
 					/>
-					<Route
-						path="/pages/company/companyDetail/:id"
-						element={
-							<CompanyRegister
-								searchedCompany={searchedCompany}
-								user={user}
-								myCompanyList={myCompanyList}
-								companyList={companyList}
-								updateUser={updateUser}
-								updateCompanyList={updateCompanyList}
-								updateMyCompanyList={updateMyCompanyList}
-							/>
-						}
-					/>
+
 					<Route
 						path="/pages/company/companyList"
 						element={
@@ -257,6 +280,10 @@ function App() {
 								updateRegisterCompanyList={updateRegisterCompanyList}
 							/>
 						}
+					/>
+					<Route
+						path="/pages/company/companyRegister"
+						element={<CompanyRegister user={user} />}
 					/>
 
 					<Route path="*" element={<h1>Page Not Found</h1>} />

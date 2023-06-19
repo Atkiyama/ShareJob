@@ -79,6 +79,9 @@ function CompanyList({
 		const jsonResponse = await response.json();
 		updateRegisterCompanyList(jsonResponse.companyList);
 	};
+	const handleAdd = async () => {
+		navigate(`/pages/company/companyRegister/`);
+	};
 
 	/**
 	 *ログイン状態によって処理を分岐する
@@ -109,6 +112,11 @@ function CompanyList({
 					))}
 				</tbody>
 			</table>
+			<div className="position-fixed">
+				<button className="large-button" onClick={handleAdd}>
+					+
+				</button>
+			</div>
 		</div>
 	);
 }

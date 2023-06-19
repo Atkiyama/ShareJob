@@ -32,7 +32,7 @@ function CompanyEdit({
 			setCompany(foundCompany);
 			document.title = `${foundCompany.name}`;
 		}
-	}, [id, registerCompanyList]);
+	}, []);
 
 	const handleUpdateRegisterCompany = async () => {
 		if (company) {
@@ -131,7 +131,7 @@ function CompanyEdit({
 	};
 
 	const handleReturn = () => {
-		navigate('/pages/company/searchCompany');
+		navigate('/pages/company/companyList');
 	};
 
 	if (company) {

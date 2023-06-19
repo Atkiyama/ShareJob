@@ -118,16 +118,7 @@ export interface SearchCompanyProps {
 /**
  * 企業詳細画面のprops
  */
-export interface CompanyRegisterProps {
-    searchedCompany: CompanyType[],
-    user: UserType,
-    companyList: CompanyType[],
-    myCompanyList: MyCompanyType[],
-    updateUser: (user: UserType) => void;
-    updateCompanyList: (updatedCompanyList: CompanyType[]) => void;
-    updateMyCompanyList: (updatedMyCompanyList: MyCompanyType[]) => void;
 
-}
 
 /**
  * 企業リストのprops
@@ -160,4 +151,11 @@ export interface CompanyEditProps {
 export interface CompanyDetailProps {
     company: CompanyType; // 例: 型の定義
     // 他のプロパティ
+}
+
+export interface CompanyRegisterProps {
+
+    user: UserType,
+
+
 }

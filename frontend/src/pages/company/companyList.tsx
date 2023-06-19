@@ -67,7 +67,7 @@ function CompanyList({
 	 */
 	const handleMyCompanyList = async () => {
 		const response = await fetch(
-			`http://localhost:5000/company/getMyCompanyList?email=${user.email}`,
+			`http://localhost:5000/company/getRegisterCompanyList?email=${user.email}`,
 			{
 				method: 'GET',
 				headers: {

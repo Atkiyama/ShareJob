@@ -34,33 +34,36 @@ function CompanyEdit({
 		}
 	}, [id, registerCompanyList]);
 
-	const handleRegisterMyCompany = async () => {
-		try {
-			await fetch(`http://localhost:5000/myCompany/registerMyCompany`, {
-				method: 'POST',
-				headers: {
-					Accept: 'application/json',
-					'Content-Type': 'application/json',
-				},
-				body: JSON.stringify({
-					email: user.email,
-					id: id,
-					memo: '',
-				}),
-			});
-
-			if (company) {
-				alert(`${company.name}を登録しました`);
+	const handleUpdateRegisterCompany = async () => {
+		if (company) {
+			try {
+				const response = await fetch(
+					`http://localhost:5000/company/updateCompany/${id}`,
+					{
+						method: 'PUT',
+						headers: {
+							'Content-Type': 'application/json',
+						},
+						body: JSON.stringify({
+							id: company.id,
+							name: company.name,
+							author: company.author,
+							abstract: company.abstract,
+							industries: company.industries,
+							locations: company.locations,
+						}),
+					}
+				);
+				const jsonRes = await response.json();
+				alert(jsonRes.message);
+			} catch (err) {
+				alert('更新に失敗しました');
 			}
-		} catch (err) {
-			alert('登録に失敗しました');
 		}
 	};
 
 	const handleSave = () => {
-		// 保存する処理を行う
-		console.log(company);
-		// ... 保存処理のコード ...
+		handleUpdateRegisterCompany();
 	};
 
 	const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -110,6 +113,23 @@ function CompanyEdit({
 		}
 	};
 
+	const handleLocationsChange = (
+		event: React.ChangeEvent<HTMLInputElement>
+	) => {
+		const { value } = event.target;
+		if (company) {
+			const updatedCompany: CompanyType = {
+				id: company.id,
+				name: company.name,
+				author: company.author,
+				abstract: company.abstract,
+				industries: company.industries,
+				locations: value.split(','),
+			};
+			setCompany(updatedCompany);
+		}
+	};
+
 	const handleReturn = () => {
 		navigate('/pages/company/searchCompany');
 	};
@@ -118,7 +138,12 @@ function CompanyEdit({
 		return (
 			<div>
 				<h1>
-					<input type="text" value={company.name} onChange={handleNameChange} />
+					<input
+						type="text"
+						value={company.name}
+						onChange={handleNameChange}
+						className="textarea"
+					/>
 				</h1>
 				<h2>概要</h2>
 				<div>
@@ -126,6 +151,7 @@ function CompanyEdit({
 						type="text"
 						value={company.abstract}
 						onChange={handleAbstractChange}
+						className="textarea-container"
 					/>
 				</div>
 				<h2>業種</h2>
@@ -137,6 +163,7 @@ function CompanyEdit({
 						type="text"
 						value={company.industries.join(',')}
 						onChange={handleIndustriesChange}
+						className="textarea-container"
 					/>
 				</div>
 				<h2>勤務地</h2>
@@ -146,8 +173,9 @@ function CompanyEdit({
 				<div>
 					<input
 						type="text"
-						value={company.industries.join(',')}
-						onChange={handleIndustriesChange}
+						value={company.locations.join(',')}
+						onChange={handleLocationsChange}
+						className="textarea-container"
 					/>
 				</div>
 

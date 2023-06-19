@@ -150,3 +150,255 @@ Response Body: undefined
 Request Body: {}
 Response 404 Not Found
 Response Body: undefined
+[2023-06-19T06:14:41.709Z] POST /user/login
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 200 OK
+Response Body: undefined
+[2023-06-19T06:14:41.793Z] GET /myCompany/getMyCompanyList?email=
+Request Body: {}
+[2023-06-19T06:14:41.796Z] GET /company/getCompanyList?ids=
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T06:14:42.878Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T06:14:42.891Z] GET /company/getCompanyList?ids=1%2C2%2C4%2C5%2C9
+Request Body: {}
+Response 200 OK
+Response Body: undefined
+[2023-06-19T06:14:50.952Z] GET /company/getMyCompanyList?email=jane@example.com
+Request Body: {}
+Response 404 Not Found
+Response Body: undefined
+[2023-06-19T06:20:30.535Z] GET /company/getMyCompanyList?email=jane@example.com
+Request Body: {}
+Response 404 Not Found
+Response Body: undefined
+[2023-06-19T06:23:14.452Z] POST /user/login
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 200 OK
+Response Body: undefined
+[2023-06-19T06:23:14.492Z] GET /myCompany/getMyCompanyList?email=
+Request Body: {}
+[2023-06-19T06:23:14.495Z] GET /company/getCompanyList?ids=
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T06:23:15.683Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T06:23:15.695Z] GET /company/getCompanyList?ids=1%2C2%2C4%2C5%2C9
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T06:23:17.368Z] GET /company/getMyCompanyList?email=jane@example.com
+Request Body: {}
+Response 404 Not Found
+Response Body: undefined
+[2023-06-19T06:23:54.989Z] POST /user/login
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 200 OK
+Response Body: undefined
+[2023-06-19T06:23:55.061Z] GET /myCompany/getMyCompanyList?email=
+Request Body: {}
+[2023-06-19T06:23:55.064Z] GET /company/getCompanyList?ids=
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T06:23:57.321Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T06:23:57.348Z] GET /company/getCompanyList?ids=1%2C2%2C4%2C5%2C9
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T06:24:00.212Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Request Body: {}
+Response 200 OK
+Response Body: undefined
+[2023-06-19T06:24:45.633Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T06:38:38.021Z] POST /myCompany/registerMyCompany
+Request Body: {"email":"jane@example.com","id":"2","memo":""}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-19T06:38:51.678Z] PUT /myCompany/updateMyCompany/jane@example.com/2
+Request Body: {"memo":"プレゼン資料の作成おええ"}
+[2023-06-19T06:38:51.681Z] GET /company/getCompanyList?ids=1%2C2%2C4%2C5%2C9
+Request Body: {}
+Response 200 OK
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T06:39:02.148Z] POST /user/login
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 200 OK
+Response Body: undefined
+[2023-06-19T06:39:02.185Z] GET /myCompany/getMyCompanyList?email=
+Request Body: {}
+[2023-06-19T06:39:02.188Z] GET /company/getCompanyList?ids=
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T06:39:03.225Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T06:39:03.247Z] GET /company/getCompanyList?ids=1%2C2%2C4%2C5%2C9
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T08:04:40.207Z] POST /user/login
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 200 OK
+Response Body: undefined
+[2023-06-19T08:04:40.309Z] GET /myCompany/getMyCompanyList?email=
+Request Body: {}
+[2023-06-19T08:04:40.312Z] GET /company/getCompanyList?ids=
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T08:04:41.258Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T08:04:41.271Z] GET /company/getCompanyList?ids=1%2C2%2C4%2C5%2C9
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T08:04:43.277Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T08:04:55.465Z] PUT /Company/updateCompany/2
+Request Body: {"id":"2","name":"グローバルエナジー","author":"jane@example.com","abstract":"再生可能エネルギー企業で、太陽光発電、風力発電、バイオマスなどの事業を展開しています。地球環境への貢献を目指し、持続可能なエネルギー供給を提供しています。なんてな","industries":["エネルギー産業","環境"],"locations":["北米","ヨーロッパ"]}
+Response 404 Not Found
+Response Body: undefined
+[2023-06-19T08:05:09.033Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T08:06:19.577Z] PUT /Company/updateCompany/2
+Request Body: {"id":"2","name":"グローバルエナジー","author":"jane@example.com","abstract":"再生可能エネルギー企業で、太陽光発電、風力発電、バイオマスなどの事業を展開しています。地球環境への貢献を目指し、持続可能なエネルギー供給を提供しています。なんてな","industries":["エネルギー産業","環境"],"locations":["北米","ヨーロッパ"]}
+Response 404 Not Found
+Response Body: undefined
+[2023-06-19T08:09:23.752Z] PUT /company/updateCompany/1/
+Request Body: {"id":"1","name":"アクセラテック","author":"john@example.com","abstract":"更新","industries":" '情報技術', '人工知能' ","locations":"'北米', 'ヨーロッパ'"}
+Response 404 Not Found
+Response Body: undefined
+[2023-06-19T08:10:33.936Z] PUT /company/updateCompany/1/
+Request Body: {"id":"1","name":"アクセラテック","author":"john@example.com","abstract":"更新","industries":" '情報技術', '人工知能' ","locations":"'北米', 'ヨーロッパ'"}
+Response 404 Not Found
+Response Body: undefined
+[2023-06-19T08:10:35.274Z] PUT /company/updateCompany/1/
+Request Body: {"id":"1","name":"アクセラテック","author":"john@example.com","abstract":"更新","industries":" '情報技術', '人工知能' ","locations":"'北米', 'ヨーロッパ'"}
+Response 404 Not Found
+Response Body: undefined
+[2023-06-19T08:11:06.200Z] PUT /company/updateCompany/2
+Request Body: {"id":"2","name":"グローバルエナジー","author":"jane@example.com","abstract":"再生可能エネルギー企業で、太陽光発電、風力発電、バイオマスなどの事業を展開しています。地球環境への貢献を目指し、持続可能なエネルギー供給を提供しています。dsaf","industries":["エネルギー産業","環境"],"locations":["北米","ヨーロッパ"]}
+Response 404 Not Found
+Response Body: undefined
+[2023-06-19T08:11:47.695Z] PUT /company/updateCompany/2
+Request Body: {"id":"2","name":"グローバルエナジー","author":"jane@example.com","abstract":"再生可能エネルギー企業で、太陽光発電、風力発電、バイオマスなどの事業を展開しています。地球環境への貢献を目指し、持続可能なエネルギー供給を提供しています。dsaf","industries":["エネルギー産業","環境"],"locations":["北米","ヨーロッパ"]}
+Response 404 Not Found
+Response Body: undefined
+[2023-06-19T08:12:17.080Z] PUT /company/updateCompany/2
+Request Body: {"id":"2","name":"グローバルエナジー","author":"jane@example.com","abstract":"再生可能エネルギー企業で、太陽光発電、風力発電、バイオマスなどの事業を展開しています。地球環境への貢献を目指し、持続可能なエネルギー供給を提供しています。dsaf","industries":["エネルギー産業","環境"],"locations":["北米","ヨーロッパ"]}
+Response 200 OK
+Response Body: undefined
+[2023-06-19T08:12:31.919Z] PUT /myCompany/updateMyCompany/jane@example.com/2
+Request Body: {"memo":"プレゼン資料の作成おええ"}
+[2023-06-19T08:12:31.924Z] GET /company/getCompanyList?ids=1%2C2%2C4%2C5%2C9
+Request Body: {}
+Response 200 OK
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T08:12:35.566Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T08:12:59.850Z] PUT /company/updateCompany/1/
+Request Body: {"id":"1","name":"アクセラテック","author":"john@example.com","abstract":"更新","industries":" '情報技術', '人工知能' ","locations":"'北米', 'ヨーロッパ'"}
+Response 200 OK
+Response Body: undefined
+[2023-06-19T08:17:00.716Z] PUT /company/updateCompany/1/
+Request Body: {"id":"1","name":"アクセラテック","author":"john@example.com","abstract":"更新","industries":" '情報技術', '人工知能' ","locations":"'北米', 'ヨーロッパ'"}
+Response 200 OK
+Response Body: undefined
+[2023-06-19T08:17:29.396Z] PUT /company/updateCompany/1/
+Request Body: {"id":"1","name":"アクセラテック","author":"john@example.com","abstract":"更新","industries":" '情報技術', '人工知能' ","locations":"'北米', 'ヨーロッパ'"}
+Response 200 OK
+Response Body: undefined
+[2023-06-19T08:17:48.120Z] PUT /company/updateCompany/1/
+Request Body: {"id":"1","name":"アクセラテック","author":"john@example.com","abstract":"更新","industries":" '情報技術', '人工知能' ","locations":"'北米', 'ヨーロッパ'"}
+Response 200 OK
+Response Body: undefined
+[2023-06-19T08:17:56.238Z] PUT /company/updateCompany/1/
+Request Body: {"id":"1","name":"アクセラテック","author":"john@example.com","abstract":"更新","industries":" '情報技術', '人工知能' ","locations":"'北米', 'ヨーロッパ'"}
+Response 200 OK
+Response Body: undefined
+[2023-06-19T08:18:11.739Z] PUT /company/updateCompany/1/
+Request Body: {"id":"1","name":"アクセラテック","author":"john@example.com","abstract":"更新","industries":" '情報技術', '人工知能' ","locations":"'北米', 'ヨーロッパ'"}
+Response 200 OK
+Response Body: undefined
+[2023-06-19T08:18:20.800Z] PUT /company/updateCompany/1/
+Request Body: {"id":"1","name":"アクセラテック","author":"john@example.com","abstract":"更新","industries":" '情報技術', '人工知能' ","locations":"'北米', 'ヨーロッパ'"}
+Response 200 OK
+Response Body: undefined
+[2023-06-19T08:18:23.705Z] PUT /company/updateCompany/1/
+Request Body: {"id":"1","name":"アクセラテック","author":"john@example.com","abstract":"更新","industries":" '情報技術', '人工知能' ","locations":"'北米', 'ヨーロッパ'"}
+Response 200 OK
+Response Body: undefined
+[2023-06-19T08:19:03.506Z] PUT /company/updateCompany/1/
+Request Body: {"id":"1","name":"アクセラテック","author":"john@example.com","abstract":"更新","industries":" '情報技術', '人工知能' ","locations":"'北米', 'ヨーロッパ'"}
+Response 200 OK
+Response Body: undefined
+[2023-06-19T08:20:08.007Z] POST /user/login
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 200 OK
+Response Body: undefined
+[2023-06-19T08:20:08.095Z] GET /company/getCompanyList?ids=
+Request Body: {}
+[2023-06-19T08:20:08.098Z] GET /myCompany/getMyCompanyList?email=
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T08:20:09.091Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T08:20:09.104Z] GET /company/getCompanyList?ids=1%2C2%2C4%2C5%2C9
+Request Body: {}
+Response 200 OK
+Response Body: undefined
+[2023-06-19T08:20:15.542Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Request Body: {}
+Response 200 OK
+Response Body: undefined
+[2023-06-19T08:20:27.213Z] PUT /company/updateCompany/2
+Request Body: {"id":"2","name":"グローバルエナジー更新","author":"jane@example.com","abstract":"再生可能エネルギー企業で、太陽光発電、風力発電、バイオマスなどの事業を展開しています。地球環境への貢献を目指し、持続可能なエネルギー供給を提供しています。","industries":["エネルギー産業","環境"],"locations":["北米","ヨーロッパ"]}
+Response 200 OK
+Response Body: undefined
+[2023-06-19T08:21:29.485Z] PUT /company/updateCompany/2
+Request Body: {"id":"2","name":"グローバルエナジー的な","author":"jane@example.com","abstract":"再生可能エネルギー企業で、太陽光発電、風力発電、バイオマスなどの事業を展開しています。地球環境への貢献を目指し、持続可能なエネルギー供給を提供しています。","industries":["エネルギー産業","環境"],"locations":["北米","ヨーロッパ"]}
+Response 200 OK
+Response Body: undefined

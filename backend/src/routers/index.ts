@@ -14,6 +14,7 @@ import updateUserAll from '../controller/user/updateUserAll';
 import deleteUser from '../controller/user/deleteUser';
 import searchCompany from '../controller/company/searchCompany';
 import getRegisterCompanyList from '../controller/company/getRegisterCompanyList';
+import updateCompany from '../controller/company/updateCompany';
 
 /**
  * APIのルーティングとログ出力を定義する
@@ -88,5 +89,6 @@ router.put('/user/updateAll/:email', updateUserAll);
 router.delete('/user/delete/:email', deleteUser);
 router.get('/company/searchCompany', searchCompany);
 router.get('/company/getRegisterCompanyList', getRegisterCompanyList);
+router.put('/company/updateCompany/:id', updateCompany)
 
 export default router;

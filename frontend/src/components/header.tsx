@@ -24,7 +24,7 @@ function Header() {
 					<Link to="/pages/user/editUser">ユーザ情報編集</Link>
 				</li>
 				<li>
-					<Link to="/pages/company/companyList">企業登録</Link>
+					<Link to="/pages/company/companyList">登録企業</Link>
 				</li>
 				<li>
 					<Link to="/pages/user/login">ログイン</Link>

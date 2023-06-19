@@ -11,7 +11,7 @@ function Logout({
 	user,
 	updateUser,
 	updateCompanyList,
-	updateCompanyInfoList,
+	updateMyCompanyList,
 }: LogoutProps) {
 	const navigate = useNavigate();
 	/**
@@ -24,8 +24,8 @@ function Logout({
 			email: '',
 		});
 		updateCompanyList([]); // 空の配列でリストを更新
-		updateCompanyInfoList([]); // 空の配列でリストを更新
-		updateCompanyInfoList([]);
+		updateMyCompanyList([]); // 空の配列でリストを更新
+
 		navigate('/');
 		// キーに関連付けられたデータが削除されます
 	};

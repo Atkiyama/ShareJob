@@ -15,17 +15,27 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const companyInfo_1 = require("../../model/companyInfo");
 const database_1 = __importDefault(require("../../utils/database"));
 /**
- * 会社のメモを入手するAPI
- * @param req emailが格納される
- * @param res companyInfoListを返す
+ * 会社のメモ情報を更新するAPI
+ * @param req paramsにemailとid,bodyにmemoを格納
+ * @param res メッセージを返す
  * @returns
  */
 function default_1(req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             yield (0, database_1.default)();
-            const companyInfoList = yield companyInfo_1.CompanyInfoModel.find({ email: req.query.email });
-            return res.status(200).json({ CompanyInfoList: companyInfoList });
+            const existsTest = yield companyInfo_1.MyCompanyModel.findOne({ email: req.params.email, id: req.params.id });
+            if (existsTest) {
+                yield companyInfo_1.MyCompanyModel.updateOne({ email: req.params.email, id: req.params.id }, // 更新対象のクエリ
+                { $set: { memo: req.body.memo } } // 更新内容
+                );
+                return res.status(200).json({ message: "更新に成功しました" });
+            }
+            else {
+                return res.status(400).json({
+                    message: "エラーが発生しました\nこのメモは存在しません"
+                });
+            }
         }
         catch (err) {
             return res.status(400).json({

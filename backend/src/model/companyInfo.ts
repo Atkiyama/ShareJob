@@ -3,7 +3,7 @@ import mongoose, { Schema, Document, Model } from 'mongoose';
 /**
  * 会社のメモ情報のモデル
  */
-export interface CompanyInfo extends Document {
+export interface MyCompany extends Document {
     email: string
     id: string,
     memo: string;
@@ -13,7 +13,7 @@ export interface CompanyInfo extends Document {
 
 
 
-const CompanyInfoSchema: Schema<CompanyInfo> = new Schema<CompanyInfo>({
+const MyCompanySchema: Schema<MyCompany> = new Schema<MyCompany>({
     email: {
         type: String,
         required: true,
@@ -32,11 +32,11 @@ const CompanyInfoSchema: Schema<CompanyInfo> = new Schema<CompanyInfo>({
 }, {
     collection: 'companyInfo' // コレクション名を指定
 });
-CompanyInfoSchema.index({ email: 1, id: 1 }, { unique: true });
+MyCompanySchema.index({ email: 1, id: 1 }, { unique: true });
 
 
 
-export const CompanyInfoModel: Model<CompanyInfo> = mongoose.model<CompanyInfo>(
-    'companyInfo',
-    CompanyInfoSchema
+export const MyCompanyModel: Model<MyCompany> = mongoose.model<MyCompany>(
+    'myCompany',
+    MyCompanySchema
 );

@@ -1,0 +1,152 @@
+[2023-06-19T04:49:09.802Z] POST /user/login
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 200 OK
+Response Body: undefined
+[2023-06-19T04:49:09.998Z] GET /companyInfo/getCompanyInfoList?email=
+Request Body: {}
+[2023-06-19T04:49:10.000Z] GET /company/getCompanyList?ids=
+Request Body: {}
+Response 200 OK
+Response Body: undefined
+Response 200 OK
+Response Body: undefined
+[2023-06-19T04:49:11.499Z] GET /companyInfo/getCompanyInfoList?email=jane@example.com
+Request Body: {}
+Response 200 OK
+Response Body: undefined
+[2023-06-19T04:49:11.517Z] GET /company/getCompanyList?ids=1%2C2%2C5%2C9
+Request Body: {}
+Response 200 OK
+Response Body: undefined
+[2023-06-19T04:49:15.507Z] GET /company/getMyCompanyList?email=jane@example.com
+Request Body: {}
+Response 200 OK
+Response Body: undefined
+[2023-06-19T04:49:27.496Z] GET /company/getMyCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T04:49:37.954Z] GET /company/getMyCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T05:58:37.108Z] POST /user/login
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 200 OK
+Response Body: undefined
+[2023-06-19T05:58:37.175Z] GET /myCompany/getMyCompanyList?email=
+Request Body: {}
+[2023-06-19T05:58:37.177Z] GET /company/getCompanyList?ids=
+Request Body: {}
+Response 200 OK
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T05:58:38.829Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Body: {}
+Response 200 OK
+Response Body: undefined
+[2023-06-19T05:59:38.597Z] POST /user/login
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 200 OK
+Response Body: undefined
+[2023-06-19T05:59:38.679Z] GET /myCompany/getMyCompanyList?email=
+Request Body: {}
+[2023-06-19T05:59:38.683Z] GET /company/getCompanyList?ids=
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T05:59:39.740Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T06:02:02.607Z] POST /user/login
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 200 OK
+Response Body: undefined
+[2023-06-19T06:02:02.688Z] GET /myCompany/getMyCompanyList?email=
+Request Body: {}
+[2023-06-19T06:02:02.690Z] GET /company/getCompanyList?ids=
+Request Body: {}
+Response 200 OK
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T06:02:03.889Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Body: {}
+Response 200 OK
+Response Body: undefined
+[2023-06-19T06:02:03.902Z] GET /company/getCompanyList?ids=1%2C2%2C5%2C9
+Request Body: {}
+Response 200 OK
+Response Body: undefined
+[2023-06-19T06:04:13.004Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Body: {}
+[2023-06-19T06:04:13.006Z] GET /company/getCompanyList?ids=1%2C2%2C5%2C9
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T06:04:13.021Z] GET /company/getCompanyList?ids=1%2C2%2C5%2C9
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T06:04:31.780Z] PUT /myCompany/updateMyCompany/jane@example.com/2
+Request Body: {"memo":"プレゼン資料の作成おええ"}
+[2023-06-19T06:04:31.784Z] GET /company/getCompanyList?ids=1%2C2%2C5%2C9
+Request Body: {}
+Response 200 OK
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T06:04:41.281Z] GET /company/searchCompany/?words=%E3%83%86%E3%83%83%E3%82%AF
+Request Body: {}
+Response 200 OK
+Response Body: undefined
+[2023-06-19T06:04:50.485Z] GET /company/searchCompany/?words=%E3%83%86%E3%83%83%E3%82%AF
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-19T06:04:53.758Z] POST /myCompany/registerMyCompany
+Request Body: {"email":"jane@example.com","id":"4","memo":""}
+Response 200 OK
+Response Body: undefined
+[2023-06-19T06:05:14.713Z] PUT /user/updateAll/jane@example.com
+Request Body: {"name":"Jane Doe","email":"jane@example.com","password":"qwerty"}
+Response 200 OK
+Response Body: undefined
+[2023-06-19T06:05:59.797Z] POST /user/register
+Request Body: {"name":"ノコッチ","email":"test@test.co.jp","password":"password"}
+Response 200 OK
+Response Body: undefined
+[2023-06-19T06:06:39.213Z] POST /user/login
+Request Body: {"email":"test@test.co.jp","password":"password"}
+Response 200 OK
+Response Body: undefined
+[2023-06-19T06:06:39.249Z] GET /company/getCompanyList?ids=1%2C2%2C5%2C9%2C4
+Request Body: {}
+[2023-06-19T06:06:39.251Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Body: {}
+Response 200 OK
+Response Body: undefined
+Response 200 OK
+Response Body: undefined
+[2023-06-19T06:06:40.585Z] GET /company/getCompanyList?ids=1%2C2%2C5%2C9%2C4
+Request Body: {}
+[2023-06-19T06:06:40.592Z] GET /myCompany/getMyCompanyList?email=test@test.co.jp
+Request Body: {}
+[2023-06-19T06:06:40.596Z] GET /company/getCompanyList?ids=1%2C2%2C4%2C5%2C9
+Request Body: {}
+Response 200 OK
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+Response 200 OK
+Response Body: undefined
+[2023-06-19T06:07:34.278Z] GET /company/getMyCompanyList?email=test@test.co.jp
+Request Body: {}
+Response 404 Not Found
+Response Body: undefined

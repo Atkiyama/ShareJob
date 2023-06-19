@@ -24,9 +24,9 @@ function default_1(req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             yield (0, database_1.default)();
-            const existsTest = yield companyInfo_1.CompanyInfoModel.findOne({ email: req.params.email, id: req.params.id });
+            const existsTest = yield companyInfo_1.MyCompanyModel.findOne({ email: req.params.email, id: req.params.id });
             if (existsTest) {
-                yield companyInfo_1.CompanyInfoModel.deleteOne({ email: req.params.email, id: req.params.id });
+                yield companyInfo_1.MyCompanyModel.deleteOne({ email: req.params.email, id: req.params.id });
                 return res.status(200).json({ message: "消去に成功しました" });
             }
             else {

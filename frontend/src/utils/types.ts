@@ -15,7 +15,7 @@ export type UserType = {
  */
 export interface LoginProps {
     updateUser: (user: UserType) => void;
-    handleCompanyInfoList: () => void;
+    handleMyCompanyList: () => void;
     handleCompanyList: () => void;
 }
 
@@ -26,14 +26,14 @@ export interface LogoutProps {
     user: UserType,
     updateUser: (user: UserType) => void;
     updateCompanyList: (updatedCompanyList: CompanyType[]) => void;
-    updateCompanyInfoList: (updatedCompanyInfoList: CompanyInfoType[]) => void;
+    updateMyCompanyList: (updatedMyCompanyList: MyCompanyType[]) => void;
     updateSearchCompanyList: (updateSearchCompanyList: CompanyType[]) => void;
 }
 
 /**
  * 企業メモのデータ型
  */
-export type CompanyInfoType = {
+export type MyCompanyType = {
     email: string,
     id: string,
     memo: string,
@@ -45,7 +45,7 @@ export type CompanyInfoType = {
  */
 export type HomeProps = {
     user: UserType;
-    companyInfoList: CompanyInfoType[];
+    myCompanyList: MyCompanyType[];
     companyList: CompanyType[];
     updateCompanyList: (updatedCompanyList: CompanyType[]) => void;
 };
@@ -67,7 +67,7 @@ export type CompanyType = {
 /**
  * companyInfoをhome画面でテーブルにする際に用いる型
  */
-export type CompanyInfoTableType = {
+export type MyCompanyTableType = {
     name: string,
     memo: string,
     email: string,
@@ -80,9 +80,9 @@ export type CompanyInfoTableType = {
 export interface EditMemoProps {
     user: UserType,
     companyList: CompanyType[],
-    companyInfoList: CompanyInfoType[],
+    myCompanyList: MyCompanyType[],
     updateUser: (user: UserType) => void;
-    updateCompanyInfoList: (updatedCompanyInfoList: CompanyInfoType[]) => void;
+    updateMyCompanyList: (updatedMyCompanyList: MyCompanyType[]) => void;
 
 }
 
@@ -93,7 +93,7 @@ export interface EditUserProps {
     user: UserType,
     updateUser: (user: UserType) => void;
     updateCompanyList: (updatedCompanyList: CompanyType[]) => void;
-    updateCompanyInfoList: (updatedCompanyInfoList: CompanyInfoType[]) => void;
+    updateMyCompanyList: (updatedMyCompanyList: MyCompanyType[]) => void;
 }
 
 /**
@@ -122,10 +122,10 @@ export interface CompanyRegisterProps {
     searchedCompany: CompanyType[],
     user: UserType,
     companyList: CompanyType[],
-    companyInfoList: CompanyInfoType[],
+    myCompanyList: MyCompanyType[],
     updateUser: (user: UserType) => void;
     updateCompanyList: (updatedCompanyList: CompanyType[]) => void;
-    updateCompanyInfoList: (updatedCompanyInfoList: CompanyInfoType[]) => void;
+    updateMyCompanyList: (updatedMyCompanyList: MyCompanyType[]) => void;
 
 }
 
@@ -134,8 +134,8 @@ export interface CompanyRegisterProps {
  */
 export interface CompanyListProps {
     user: UserType,
-    myCompanyList: CompanyType[]
-    updateMyCompanyList: (updatedMyCompanyList: CompanyType[]) => void;
+    registerCompanyList: CompanyType[]
+    updateRegisterCompanyList: (updatedRegisterCompanyList: CompanyType[]) => void;
 }
 
 /**
@@ -145,12 +145,12 @@ export interface CompanyEditProps {
     searchedCompany: CompanyType[],
     user: UserType,
     companyList: CompanyType[],
-    myCompanyList: CompanyType[],
-    companyInfoList: CompanyInfoType[],
+    registerCompanyList: CompanyType[],
+    myCompanyList: MyCompanyType[],
     updateUser: (user: UserType) => void;
     updateCompanyList: (updatedMyCompanyList: CompanyType[]) => void;
-    updateMyCompanyList: (updatedCompanyList: CompanyType[]) => void;
-    updateCompanyInfoList: (updatedCompanyInfoList: CompanyInfoType[]) => void;
+    updateRegisterCompanyList: (updatedCompanyList: CompanyType[]) => void;
+    updateMyCompanyList: (updatedCompanyInfoList: MyCompanyType[]) => void;
 
 }
 

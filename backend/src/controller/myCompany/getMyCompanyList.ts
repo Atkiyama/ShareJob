@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { CompanyInfo, CompanyInfoModel } from '../../model/companyInfo';
+import { MyCompany, MyCompanyModel } from '../../model/companyInfo';
 import connectDB from '../../utils/database';
 /**
  * 会社のメモを入手するAPI
@@ -10,8 +10,8 @@ import connectDB from '../../utils/database';
 export default async function (req: Request, res: Response) {
     try {
         await connectDB();
-        const companyInfoList: CompanyInfo[] | null = await CompanyInfoModel.find({ email: req.query.email });
-        return res.status(200).json({ CompanyInfoList: companyInfoList });
+        const myCompanyList: MyCompany[] | null = await MyCompanyModel.find({ email: req.query.email });
+        return res.status(200).json({ myCompanyList: myCompanyList });
     } catch (err) {
         return res.status(400).json({
             message: "エラーが発生しました"

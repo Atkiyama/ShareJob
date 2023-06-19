@@ -11,33 +11,32 @@ function CompanyEdit({
 	searchedCompany,
 	user,
 	companyList,
+	registerCompanyList,
 	myCompanyList,
-	companyInfoList,
 	updateUser,
 	updateCompanyList,
+	updateRegisterCompanyList,
 	updateMyCompanyList,
-	updateCompanyInfoList,
 }: CompanyEditProps) {
 	const { id } = useParams<{ id: string }>();
 	const navigate = useNavigate();
 	const [company, setCompany] = useState<CompanyType | undefined>(undefined);
-	const [newTextBoxes, setNewTextBoxes] = useState<string[]>([]);
 
 	/**
 	 * idに合致するcompanyをセットする
 	 */
 	useEffect(() => {
-		const foundCompany = myCompanyList.find((item) => item.id === id);
+		const foundCompany = registerCompanyList.find((item) => item.id === id);
 
 		if (foundCompany) {
 			setCompany(foundCompany);
 			document.title = `${foundCompany.name}`;
 		}
-	}, [id, myCompanyList]);
+	}, [id, registerCompanyList]);
 
-	const handleRegisterCompanyInfo = async () => {
+	const handleRegisterMyCompany = async () => {
 		try {
-			await fetch(`http://localhost:5000/companyInfo/registerCompanyInfo`, {
+			await fetch(`http://localhost:5000/myCompany/registerMyCompany`, {
 				method: 'POST',
 				headers: {
 					Accept: 'application/json',
@@ -56,18 +55,6 @@ function CompanyEdit({
 		} catch (err) {
 			alert('登録に失敗しました');
 		}
-	};
-
-	const handleAddTextBox = () => {
-		setNewTextBoxes((prevTextBoxes) => [...prevTextBoxes, '']);
-	};
-
-	const handleRemoveTextBox = (index: number) => {
-		setNewTextBoxes((prevTextBoxes) => {
-			const updatedTextBoxes = [...prevTextBoxes];
-			updatedTextBoxes.splice(index, 1);
-			return updatedTextBoxes;
-		});
 	};
 
 	const handleSave = () => {
@@ -123,22 +110,6 @@ function CompanyEdit({
 		}
 	};
 
-	const handleLocationsChange = (
-		event: React.ChangeEvent<HTMLInputElement>
-	) => {
-		const { value } = event.target;
-		if (company) {
-			const updatedCompany: CompanyType = {
-				id: company.id,
-				name: company.name,
-				author: company.author,
-				abstract: company.abstract,
-				industries: company.industries,
-				locations: value.split(','),
-			};
-			setCompany(updatedCompany);
-		}
-	};
 	const handleReturn = () => {
 		navigate('/pages/company/searchCompany');
 	};

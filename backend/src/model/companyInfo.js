@@ -23,9 +23,9 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CompanyInfoModel = void 0;
+exports.MyCompanyModel = void 0;
 const mongoose_1 = __importStar(require("mongoose"));
-const CompanyInfoSchema = new mongoose_1.Schema({
+const MyCompanySchema = new mongoose_1.Schema({
     email: {
         type: String,
         required: true,
@@ -41,5 +41,5 @@ const CompanyInfoSchema = new mongoose_1.Schema({
 }, {
     collection: 'companyInfo' // コレクション名を指定
 });
-CompanyInfoSchema.index({ email: 1, id: 1 }, { unique: true });
-exports.CompanyInfoModel = mongoose_1.default.model('companyInfo', CompanyInfoSchema);
+MyCompanySchema.index({ email: 1, id: 1 }, { unique: true });
+exports.MyCompanyModel = mongoose_1.default.model('myCompany', MyCompanySchema);

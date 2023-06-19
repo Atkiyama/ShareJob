@@ -11,7 +11,7 @@ function EditUser({
 	user,
 	updateUser,
 	updateCompanyList,
-	updateCompanyInfoList,
+	updateMyCompanyList,
 }: EditUserProps) {
 	const navigate = useNavigate();
 	const [name, setName] = useState('');
@@ -95,7 +95,7 @@ function EditUser({
 			// 削除が成功したら、リストから削除した情報を更新する
 			if (response.ok) {
 				updateCompanyList([]); // 空の配列でリストを更新
-				updateCompanyInfoList([]); // 空の配列でリストを更新
+				updateMyCompanyList([]); // 空の配列でリストを更新
 				updateUser({ name: '', email: '' }); // 空のユーザ情報で更新
 
 				// 削除後にリダイレクトする場合は以下の行を有効化する
@@ -103,8 +103,6 @@ function EditUser({
 			} else {
 				alert('通信失敗');
 			}
-		} else {
-			alert('キャンセル');
 		}
 	};
 

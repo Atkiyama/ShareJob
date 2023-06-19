@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { CompanyInfo, CompanyInfoModel } from '../../model/companyInfo';
+import { MyCompany, MyCompanyModel } from '../../model/companyInfo';
 import connectDB from '../../utils/database';
 
 /**
@@ -11,9 +11,9 @@ import connectDB from '../../utils/database';
 export default async function (req: Request, res: Response) {
     try {
         await connectDB();
-        const existsTest: CompanyInfo | null = await CompanyInfoModel.findOne({ email: req.params.email, id: req.params.id });
+        const existsTest: MyCompany | null = await MyCompanyModel.findOne({ email: req.params.email, id: req.params.id });
         if (existsTest) {
-            await CompanyInfoModel.deleteOne({ email: req.params.email, id: req.params.id });
+            await MyCompanyModel.deleteOne({ email: req.params.email, id: req.params.id });
             return res.status(200).json({ message: "消去に成功しました" });
         } else {
             return res.status(400).json({

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import {
 	CompanyRegisterProps,
-	CompanyInfoType,
+	MyCompanyType,
 	CompanyType,
 } from '../../utils/types';
 import CompanyDetail from '../../components/companyDetail';
@@ -16,10 +16,10 @@ function CompanyRegister({
 	searchedCompany,
 	user,
 	companyList,
-	companyInfoList,
+	myCompanyList,
 	updateUser,
 	updateCompanyList,
-	updateCompanyInfoList,
+	updateMyCompanyList,
 }: CompanyRegisterProps) {
 	const { id } = useParams<{ id: string }>();
 	const navigate = useNavigate();
@@ -41,9 +41,9 @@ function CompanyRegister({
 	/**
 	 *バックエンドに企業メモを登録する
 	 */
-	const handleRegisterCompanyInfo = async () => {
+	const handleRegisterMyCompany = async () => {
 		try {
-			await fetch(`http://localhost:5000/companyInfo/registerCompanyInfo`, {
+			await fetch(`http://localhost:5000/myCompany/registerMyCompany`, {
 				method: 'POST',
 				headers: {
 					Accept: 'application/json',
@@ -69,14 +69,14 @@ function CompanyRegister({
 	 */
 	const handleAdd = () => {
 		if (id) {
-			const CompanyInfo: CompanyInfoType = {
+			const myCompany: MyCompanyType = {
 				email: user.email,
 				id: id,
 				memo: '',
 			};
-			const updatedCompanyInfoList: CompanyInfoType[] = companyInfoList;
-			updatedCompanyInfoList.push(CompanyInfo);
-			updateCompanyInfoList(updatedCompanyInfoList);
+			const updatedMyCompanyList: MyCompanyType[] = myCompanyList;
+			updatedMyCompanyList.push(myCompany);
+			updateMyCompanyList(updatedMyCompanyList);
 			const findCompany: CompanyType | undefined = companyList.find(
 				(item) => item.id === id
 			);
@@ -87,7 +87,7 @@ function CompanyRegister({
 			}
 		}
 
-		handleRegisterCompanyInfo();
+		handleRegisterMyCompany();
 
 		navigate('/pages/company/searchCompany');
 	};

@@ -20,7 +20,7 @@ export default async function (req: Request, res: Response) {
             });
 
             await user.save();
-            return res.status(200).json({ message: "ユーザー登録に成功しました成功" });
+            return res.status(200).json({ message: "ユーザー登録に成功しました" });
         } else {
             return res.status(200).json({ message: "ユーザー登録に失敗しました\n このemailのユーザはすでに存在しています" });
         }

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { HomeProps, CompanyInfoTableType } from '../utils/types';
+import { HomeProps, MyCompanyTableType } from '../utils/types';
 import {
 	ColumnDef,
 	flexRender,
@@ -16,16 +16,16 @@ import {
  */
 function Home({
 	user,
-	companyInfoList,
+	myCompanyList,
 	companyList,
 	updateCompanyList,
 }: HomeProps) {
 	const navigate = useNavigate();
-	const [data, setData] = useState<CompanyInfoTableType[]>([]);
+	const [data, setData] = useState<MyCompanyTableType[]>([]);
 	/**
 	 * テーブルのヘッダを定義する
 	 */
-	const columns: ColumnDef<CompanyInfoTableType, any>[] = [
+	const columns: ColumnDef<MyCompanyTableType, any>[] = [
 		{
 			accessorKey: 'name',
 			header: '企業名',
@@ -37,7 +37,7 @@ function Home({
 		{
 			accessorKey: 'actions',
 			header: '', // 空のヘッダーを指定して編集ボタンの列を作成
-			cell: (rowContext: CellContext<CompanyInfoTableType, any>) => (
+			cell: (rowContext: CellContext<MyCompanyTableType, any>) => (
 				<button onClick={() => handleEdit(rowContext.row.original)}>
 					編集
 				</button>
@@ -48,7 +48,7 @@ function Home({
 	/**
 	 * ReactTableを定義する
 	 */
-	const table = useReactTable<CompanyInfoTableType>({
+	const table = useReactTable<MyCompanyTableType>({
 		data: data,
 		columns,
 		getCoreRowModel: getCoreRowModel(),
@@ -62,15 +62,15 @@ function Home({
 			document.title = 'ホーム';
 			const handleCompanyInfoTable = async () => {
 				if (companyList.length > 0) {
-					const newData: CompanyInfoTableType[] = [];
-					for (let i = 0; i < companyInfoList.length; i++) {
+					const newData: MyCompanyTableType[] = [];
+					for (let i = 0; i < myCompanyList.length; i++) {
 						for (let j = 0; j < companyList.length; j++) {
-							if (companyInfoList[i].id === companyList[j].id) {
+							if (myCompanyList[i].id === companyList[j].id) {
 								const row = {
-									id: companyInfoList[i].id, // idを追加
-									email: companyInfoList[i].email, // emailを追加
+									id: myCompanyList[i].id, // idを追加
+									email: myCompanyList[i].email, // emailを追加
 									name: companyList[j].name,
-									memo: companyInfoList[i].memo,
+									memo: myCompanyList[i].memo,
 								};
 								newData.push(row);
 								break;
@@ -86,15 +86,15 @@ function Home({
 			alert('ログインしてください');
 			navigate('/pages/user/login');
 		}
-	}, [companyInfoList, companyList]);
+	}, [myCompanyList, companyList]);
 
 	/**
 	 * 編集画面に遷移する
 	 * @param row emailとidが含まれる
 	 */
-	const handleEdit = (row: CompanyInfoTableType) => {
+	const handleEdit = (row: MyCompanyTableType) => {
 		// 編集処理を実装する
-		navigate(`/pages/companyInfo/companyInfo/${row.email}/${row.id}`);
+		navigate(`/pages/myCompany/myCompany/${row.email}/${row.id}`);
 	};
 
 	/**

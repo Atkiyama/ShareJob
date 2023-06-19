@@ -8,7 +8,7 @@ import { LoginProps } from '../../utils/types';
  * @returns
  */
 function Login({
-	handleCompanyInfoList,
+	handleMyCompanyList,
 	handleCompanyList,
 	updateUser,
 }: LoginProps) {
@@ -45,7 +45,7 @@ function Login({
 					name: jsonResponse.savedUserData.name,
 					email: jsonResponse.savedUserData.email,
 				}),
-				handleCompanyInfoList(),
+				handleMyCompanyList(),
 				handleCompanyList(),
 				alert(
 					'ログインに成功しました' +

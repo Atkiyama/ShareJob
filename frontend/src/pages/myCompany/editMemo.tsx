@@ -1,14 +1,14 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { EditMemoProps, CompanyInfoType, CompanyType } from '../../utils/types';
+import { EditMemoProps, MyCompanyType, CompanyType } from '../../utils/types';
 import CompanyDetail from '../../components/companyDetail';
 
 function EditMemo({
 	user,
 	companyList,
-	companyInfoList,
+	myCompanyList,
 	updateUser,
-	updateCompanyInfoList,
+	updateMyCompanyList,
 }: EditMemoProps) {
 	const { email, id } = useParams();
 	const navigate = useNavigate();
@@ -17,11 +17,11 @@ function EditMemo({
 		(info) => info.id === id
 	);
 	//対応するメモを探す
-	const companyInfo: CompanyInfoType | undefined = companyInfoList.find(
+	const myCompany: MyCompanyType | undefined = myCompanyList.find(
 		(info) => info.id === id && info.email === email
 	);
 
-	const [memo, setMemo] = useState<string>(companyInfo?.memo || '');
+	const [memo, setMemo] = useState<string>(myCompany?.memo || '');
 
 	const handleMemoChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
 		setMemo(event.target.value);
@@ -32,7 +32,7 @@ function EditMemo({
 	const handleUpdate = async () => {
 		try {
 			await fetch(
-				`http://localhost:5000/companyInfo/updateCompanyInfo/${email}/${id}`,
+				`http://localhost:5000/myCompany/updateMyCompany/${email}/${id}`,
 				{
 					method: 'PUT',
 					headers: {
@@ -69,10 +69,10 @@ function EditMemo({
 				alert(jsonResponse.message);
 
 				// 削除が成功したら、リストから削除した情報を更新する
-				const updatedCompanyInfoList = companyInfoList.filter(
+				const updatedMyCompanyList = myCompanyList.filter(
 					(info) => info.id !== id
 				);
-				updateCompanyInfoList(updatedCompanyInfoList);
+				updateMyCompanyList(updatedMyCompanyList);
 
 				// 削除後にリダイレクトするならば以下の行を有効化する
 				navigate('/pages/home');
@@ -85,7 +85,7 @@ function EditMemo({
 	 *完了ボタンが押されたときの処理を実装する
 	 */
 	const handleComplete = () => {
-		const updatedCompanyInfoList = companyInfoList.map((info) => {
+		const updatedMyCompanyList = myCompanyList.map((info) => {
 			if (info.email === email && info.id === id) {
 				return {
 					...info,
@@ -95,7 +95,7 @@ function EditMemo({
 			return info;
 		});
 
-		updateCompanyInfoList(updatedCompanyInfoList);
+		updateMyCompanyList(updatedMyCompanyList);
 		handleUpdate();
 		navigate('/pages/home');
 	};

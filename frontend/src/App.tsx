@@ -8,14 +8,14 @@ import Top from './pages/top';
 import Login from './pages/user/login';
 import Logout from './pages/user/logout';
 import Register from './pages/user/register';
-import EditMemo from './pages/companyInfo/editMemo';
+import EditMemo from './pages/myCompany/editMemo';
 import EditUser from './pages/user/editUser';
 import SearchCompany from './pages/company/searchCompany';
 import CompanyRegister from './pages/company/companyRegister';
 import CompanyList from './pages/company/companyList';
 import CompanyEdit from './pages/company/companyEdit';
 
-import { UserType, CompanyInfoType, CompanyType } from './utils/types';
+import { UserType, MyCompanyType, CompanyType } from './utils/types';
 
 function App() {
 	/**
@@ -29,7 +29,7 @@ function App() {
 	/**
 	 * ユーザの企業メモ
 	 */
-	const [companyInfoList, setCompanyInfoList] = useState<CompanyInfoType[]>([]);
+	const [myCompanyList, setMyCompanyList] = useState<MyCompanyType[]>([]);
 	/**
 	 * メモを登録している企業のリスト
 	 */
@@ -37,7 +37,9 @@ function App() {
 	/**
 	 * 自分で登録した企業のリスト
 	 */
-	const [myCompanyList, setMyCompanyList] = useState<CompanyType[]>([]);
+	const [registerCompanyList, setRegisterCompanyList] = useState<CompanyType[]>(
+		[]
+	);
 	/**
 	 * 検索した企業のリスト
 	 */
@@ -52,16 +54,18 @@ function App() {
 		setUser(updatedUser);
 	};
 
-	const updateCompanyInfoList = (updatedCompanyInfoList: CompanyInfoType[]) => {
-		setCompanyInfoList(updatedCompanyInfoList);
+	const updateMyCompanyList = (updatedMyCompanyList: MyCompanyType[]) => {
+		setMyCompanyList(updatedMyCompanyList);
 	};
 
 	const updateCompanyList = (updatedCompanyList: CompanyType[]) => {
 		setCompanyList(updatedCompanyList);
 	};
 
-	const updateMyCompanyList = (updatedMyCompanyList: CompanyType[]) => {
-		setMyCompanyList(updatedMyCompanyList);
+	const updateRegisterCompanyList = (
+		updatedRegisterCompanyList: CompanyType[]
+	) => {
+		setRegisterCompanyList(updatedRegisterCompanyList);
 	};
 
 	const updateSearchCompanyList = (
@@ -73,10 +77,10 @@ function App() {
 	/**
 	 *企業メモのリストを取得する
 	 */
-	const handleCompanyInfoList = async () => {
+	const handleMyCompanyList = async () => {
 		try {
 			const response = await fetch(
-				`http://localhost:5000/companyInfo/getCompanyInfoList?email=${user.email}`,
+				`http://localhost:5000/myCompany/getMyCompanyList?email=${user.email}`,
 				{
 					method: 'GET',
 					headers: {
@@ -86,8 +90,8 @@ function App() {
 			);
 
 			const jsonResponse = await response.json();
-			const jsonCompanyInfoList = jsonResponse.CompanyInfoList;
-			updateCompanyInfoList(jsonCompanyInfoList);
+			const jsonMyCompanyList = jsonResponse.myCompanyList;
+			updateMyCompanyList(jsonMyCompanyList);
 		} catch (err) {
 			alert('企業情報の取得に失敗しました\n' + err);
 			console.log(err);
@@ -98,7 +102,7 @@ function App() {
 	 */
 	const handleCompanyList = async () => {
 		try {
-			const ids: string[] = companyInfoList.map((info) => info.id);
+			const ids: string[] = myCompanyList.map((info) => info.id);
 			const joinedString = ids.join(',');
 			const encodedIds = encodeURIComponent(joinedString);
 			const req = `http://localhost:5000/company/getCompanyList?ids=${encodedIds}`;
@@ -126,7 +130,7 @@ function App() {
 	useEffect(() => {
 		document.title = 'ShareJob';
 		if (user.email !== '') {
-			handleCompanyInfoList();
+			handleMyCompanyList();
 		}
 	}, [user.email]);
 
@@ -134,10 +138,10 @@ function App() {
 	 * companyListを取得する
 	 */
 	useEffect(() => {
-		if (user.email !== '' && companyInfoList.length > 0) {
+		if (user.email !== '' && myCompanyList.length > 0) {
 			handleCompanyList();
 		}
-	}, [user.email, companyInfoList]);
+	}, [user.email, myCompanyList]);
 
 	/**
 	 * 各コンポーネントをルーティングする
@@ -153,7 +157,7 @@ function App() {
 						element={
 							<Home
 								user={user}
-								companyInfoList={companyInfoList}
+								myCompanyList={myCompanyList}
 								companyList={companyList}
 								updateCompanyList={updateCompanyList}
 							/>
@@ -163,7 +167,7 @@ function App() {
 						path="/pages/user/login"
 						element={
 							<Login
-								handleCompanyInfoList={handleCompanyInfoList}
+								handleMyCompanyList={handleMyCompanyList}
 								handleCompanyList={handleCompanyList}
 								updateUser={updateUser}
 							/>
@@ -176,7 +180,7 @@ function App() {
 								user={user}
 								updateUser={updateUser}
 								updateCompanyList={updateCompanyList}
-								updateCompanyInfoList={updateCompanyInfoList}
+								updateMyCompanyList={updateMyCompanyList}
 								updateSearchCompanyList={updateSearchCompanyList}
 							/>
 						}
@@ -188,20 +192,20 @@ function App() {
 								user={user}
 								updateUser={updateUser}
 								updateCompanyList={updateCompanyList}
-								updateCompanyInfoList={updateCompanyInfoList}
+								updateMyCompanyList={updateMyCompanyList}
 							/>
 						}
 					/>
 					<Route path="/pages/user/register" element={<Register />} />
 					<Route
-						path="/pages/companyInfo/companyInfo/:email/:id"
+						path="/pages/myCompany/myCompany/:email/:id"
 						element={
 							<EditMemo
 								user={user}
 								companyList={companyList}
-								companyInfoList={companyInfoList}
+								myCompanyList={myCompanyList}
 								updateUser={updateUser}
-								updateCompanyInfoList={updateCompanyInfoList}
+								updateMyCompanyList={updateMyCompanyList}
 							/>
 						}
 					/>
@@ -220,11 +224,11 @@ function App() {
 							<CompanyRegister
 								searchedCompany={searchedCompany}
 								user={user}
-								companyInfoList={companyInfoList}
+								myCompanyList={myCompanyList}
 								companyList={companyList}
 								updateUser={updateUser}
 								updateCompanyList={updateCompanyList}
-								updateCompanyInfoList={updateCompanyInfoList}
+								updateMyCompanyList={updateMyCompanyList}
 							/>
 						}
 					/>
@@ -233,8 +237,8 @@ function App() {
 						element={
 							<CompanyList
 								user={user}
-								myCompanyList={myCompanyList}
-								updateMyCompanyList={updateMyCompanyList}
+								registerCompanyList={registerCompanyList}
+								updateRegisterCompanyList={updateRegisterCompanyList}
 							/>
 						}
 					/>
@@ -245,12 +249,12 @@ function App() {
 								searchedCompany={searchedCompany}
 								user={user}
 								companyList={companyList}
+								registerCompanyList={registerCompanyList}
 								myCompanyList={myCompanyList}
-								companyInfoList={companyInfoList}
 								updateUser={updateUser}
 								updateCompanyList={updateCompanyList}
 								updateMyCompanyList={updateMyCompanyList}
-								updateCompanyInfoList={updateCompanyInfoList}
+								updateRegisterCompanyList={updateRegisterCompanyList}
 							/>
 						}
 					/>

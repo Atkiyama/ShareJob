@@ -24,7 +24,7 @@ function default_1(req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             yield (0, database_1.default)();
-            const companyInfo = new companyInfo_1.CompanyInfoModel({
+            const companyInfo = new companyInfo_1.MyCompanyModel({
                 email: req.body.email,
                 id: req.body.id,
                 memo: req.body.memo,

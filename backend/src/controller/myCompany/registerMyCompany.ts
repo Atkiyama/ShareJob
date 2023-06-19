@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { CompanyInfo, CompanyInfoModel } from '../../model/companyInfo';
+import { MyCompany, MyCompanyModel } from '../../model/companyInfo';
 import connectDB from '../../utils/database';
 /**
  * 会社のメモ情報を登録するAPI
@@ -10,7 +10,7 @@ import connectDB from '../../utils/database';
 export default async function (req: Request, res: Response) {
     try {
         await connectDB();
-        const companyInfo: CompanyInfo = new CompanyInfoModel({
+        const companyInfo: MyCompany = new MyCompanyModel({
             email: req.body.email,
             id: req.body.id,
             memo: req.body.memo,

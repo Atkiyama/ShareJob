@@ -8,16 +8,16 @@ const path_1 = __importDefault(require("path"));
 const express_1 = __importDefault(require("express"));
 const loginUser_1 = __importDefault(require("../controller/user/loginUser"));
 const registerUser_1 = __importDefault(require("../controller/user/registerUser"));
-const getCompanyInfoList_1 = __importDefault(require("../controller/companyInfo/getCompanyInfoList"));
-const registerCompanyInfo_1 = __importDefault(require("../controller/companyInfo/registerCompanyInfo"));
+const getMyCompanyList_1 = __importDefault(require("../controller/myCompany/getMyCompanyList"));
+const registerMyCompany_1 = __importDefault(require("../controller/myCompany/registerMyCompany"));
 const getCompanyList_1 = __importDefault(require("../controller/company/getCompanyList"));
-const updateCompanyInfo_1 = __importDefault(require("../controller/companyInfo/updateCompanyInfo"));
-const deleteCompanyInfo_1 = __importDefault(require("../controller/companyInfo/deleteCompanyInfo"));
+const updateMyCompany_1 = __importDefault(require("../controller/myCompany/updateMyCompany"));
+const deleteMyCompany_1 = __importDefault(require("../controller/myCompany/deleteMyCompany"));
 const updateUser_1 = __importDefault(require("../controller/user/updateUser"));
 const updateUserAll_1 = __importDefault(require("../controller/user/updateUserAll"));
 const deleteUser_1 = __importDefault(require("../controller/user/deleteUser"));
 const searchCompany_1 = __importDefault(require("../controller/company/searchCompany"));
-const getMyCompanyList_1 = __importDefault(require("../controller/company/getMyCompanyList"));
+const getRegisterCompanyList_1 = __importDefault(require("../controller/company/getRegisterCompanyList"));
 /**
  * APIのルーティングとログ出力を定義する
  */
@@ -65,14 +65,14 @@ router.use(logRequestAndResponse);
  */
 router.post('/user/login', loginUser_1.default);
 router.post('/user/register', registerUser_1.default);
-router.get('/companyInfo/getCompanyInfoList', getCompanyInfoList_1.default);
-router.post('/companyInfo/registerCompanyInfo', registerCompanyInfo_1.default);
+router.get('/myCompany/getMyCompanyList', getMyCompanyList_1.default);
+router.post('/myCompany/registerMyCompany', registerMyCompany_1.default);
 router.get('/company/getCompanyList', getCompanyList_1.default);
-router.put('/companyInfo/updateCompanyInfo/:email/:id', updateCompanyInfo_1.default);
-router.delete('/companyInfo/deleteCompanyInfo/:email/:id', deleteCompanyInfo_1.default);
+router.put('/myCompany/updateMyCompany/:email/:id', updateMyCompany_1.default);
+router.delete('/myCompany/deleteMyCompany/:email/:id', deleteMyCompany_1.default);
 router.put('/user/update/:email', updateUser_1.default);
 router.put('/user/updateAll/:email', updateUserAll_1.default);
 router.delete('/user/delete/:email', deleteUser_1.default);
 router.get('/company/searchCompany', searchCompany_1.default);
-router.get('/company/getMyCompanyList', getMyCompanyList_1.default);
+router.get('/company/getRegisterCompanyList', getRegisterCompanyList_1.default);
 exports.default = router;

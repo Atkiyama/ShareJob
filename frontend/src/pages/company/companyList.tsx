@@ -16,8 +16,8 @@ import {
  */
 function CompanyList({
 	user,
-	myCompanyList,
-	updateMyCompanyList,
+	registerCompanyList,
+	updateRegisterCompanyList,
 }: CompanyListProps) {
 	const navigate = useNavigate();
 	/**
@@ -52,7 +52,7 @@ function CompanyList({
 		navigate(`/pages/company/companyEdit/${row.id}`);
 	};
 
-	const data = myCompanyList;
+	const data = registerCompanyList;
 	/**
 	 * reactテーブルを定義
 	 */
@@ -77,7 +77,7 @@ function CompanyList({
 			}
 		);
 		const jsonResponse = await response.json();
-		updateMyCompanyList(jsonResponse.companyList);
+		updateRegisterCompanyList(jsonResponse.companyList);
 	};
 
 	/**

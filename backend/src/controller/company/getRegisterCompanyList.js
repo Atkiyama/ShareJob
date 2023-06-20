@@ -12,28 +12,28 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const companyInfo_1 = require("../../model/companyInfo");
 const database_1 = __importDefault(require("../../utils/database"));
+const company_1 = require("../../model/company");
 /**
- * APIとその関連制作中
- * @param req
- * @param res
+ * 自分で登録した会社のリストを入手するAPI
+ * @param req ユーザのemail
+ * @param res companyListを返す
  * @returns
  */
 function default_1(req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             yield (0, database_1.default)();
-            const companyInfo = new companyInfo_1.CompanyInfoModel({
-                email: req.body.email,
-                id: req.body.id,
-                memo: req.body.memo,
-            });
-            yield companyInfo.save();
-            return res.status(200).json({ message: "企業情報登録成功" });
+            if (typeof req.query.email === 'string') {
+                const email = req.query.email;
+                const companyList = yield company_1.CompanyModel.find({ author: email });
+                return res.status(200).json({ companyList: companyList });
+            }
+            else {
+                return res.status(400).json({ message: "エラーが発生しました \n" + "データがありません" });
+            }
         }
         catch (err) {
-            console.log(err);
             return res.status(400).json({
                 message: "エラーが発生しました",
                 err: err

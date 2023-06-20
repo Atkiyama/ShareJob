@@ -14,6 +14,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const user_1 = require("../../model/user");
 const database_1 = __importDefault(require("../../utils/database"));
+/**
+ * ユーザ削除のAPI
+ * @param req emailが格納される
+ * @param res メッセージを返す
+ * @returns
+ */
 function default_1(req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         try {

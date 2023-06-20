@@ -14,20 +14,18 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const companyInfo_1 = require("../../model/companyInfo");
 const database_1 = __importDefault(require("../../utils/database"));
+/**
+ * 会社のメモを入手するAPI
+ * @param req emailが格納される
+ * @param res companyInfoListを返す
+ * @returns
+ */
 function default_1(req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             yield (0, database_1.default)();
-            const existsTest = yield companyInfo_1.CompanyInfoModel.findOne({ email: req.params.email, id: req.params.id });
-            if (existsTest) {
-                yield companyInfo_1.CompanyInfoModel.deleteOne({ email: req.params.email, id: req.params.id });
-                return res.status(200).json({ message: "消去に成功しました" });
-            }
-            else {
-                return res.status(400).json({
-                    message: "エラーが発生しました\n このメモは存在しません"
-                });
-            }
+            const myCompanyList = yield companyInfo_1.MyCompanyModel.find({ email: req.query.email });
+            return res.status(200).json({ myCompanyList: myCompanyList });
         }
         catch (err) {
             return res.status(400).json({

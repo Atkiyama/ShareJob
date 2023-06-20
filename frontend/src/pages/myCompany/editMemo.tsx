@@ -1,18 +1,13 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import {
-	EditMemoProps,
-	CompanyInfoType,
-	CompanyType,
-	UserType,
-} from '../../utils/types';
+import { EditMemoProps, MyCompanyType, CompanyType } from '../../utils/types';
+import CompanyDetail from '../../components/companyDetail';
 
 function EditMemo({
-	user,
 	companyList,
-	companyInfoList,
-	updateUser,
-	updateCompanyInfoList,
+	myCompanyList,
+	updateMyCompanyList,
+	handleUpdate,
 }: EditMemoProps) {
 	const { email, id } = useParams();
 	const navigate = useNavigate();
@@ -20,21 +15,23 @@ function EditMemo({
 	const company: CompanyType | undefined = companyList.find(
 		(info) => info.id === id
 	);
-
-	const companyInfo: CompanyInfoType | undefined = companyInfoList.find(
+	//対応するメモを探す
+	const myCompany: MyCompanyType | undefined = myCompanyList.find(
 		(info) => info.id === id && info.email === email
 	);
 
-	const [memo, setMemo] = useState<string>(companyInfo?.memo || '');
+	const [memo, setMemo] = useState<string>(myCompany?.memo || '');
 
 	const handleMemoChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
 		setMemo(event.target.value);
 	};
-
-	const handleUpdate = async () => {
+	/**
+	 *APIにupdateリクエストする
+	 */
+	const handleUpdateMyCompany = async () => {
 		try {
 			await fetch(
-				`http://localhost:5000/companyInfo/updateCompanyInfo/${email}/${id}`,
+				`http://localhost:5000/myCompany/updateMyCompany/${email}/${id}`,
 				{
 					method: 'PUT',
 					headers: {
@@ -52,37 +49,16 @@ function EditMemo({
 			alert('更新に失敗しました');
 		}
 	};
-	const handleUser = async () => {
-		const list: string[] = [];
-		for (let i = 0; i < user.companyInfoList.length; i++) {
-			if (user.companyInfoList[i] !== id) {
-				list.push(user.companyInfoList[i]);
-			}
-		}
-		const updatedUser: UserType = {
-			name: user.name,
-			email: user.email,
-			companyInfoList: list,
-		};
-		await fetch(`http://localhost:5000/user/update/${email}`, {
-			method: 'PUT',
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify({
-				name: user.name,
-				companyInfoList: list,
-			}),
-		});
 
-		updateUser(updatedUser);
-	};
+	/**
+	 * メモ削除の処理をする
+	 */
 	const handleDelete = async () => {
 		const confirmDelete = window.confirm('本当にメモを削除しますか？');
 		if (confirmDelete) {
 			try {
 				const response = await fetch(
-					`http://localhost:5000/companyInfo/deleteCompanyInfo/${email}/${id}`,
+					`http://localhost:5000/myCompany/deleteMyCompany/${email}/${id}`,
 					{
 						method: 'DELETE',
 					}
@@ -92,11 +68,10 @@ function EditMemo({
 				alert(jsonResponse.message);
 
 				// 削除が成功したら、リストから削除した情報を更新する
-				const updatedCompanyInfoList = companyInfoList.filter(
+				const updatedMyCompanyList = myCompanyList.filter(
 					(info) => info.id !== id
 				);
-				updateCompanyInfoList(updatedCompanyInfoList);
-				handleUser();
+				updateMyCompanyList(updatedMyCompanyList);
 
 				// 削除後にリダイレクトするならば以下の行を有効化する
 				navigate('/pages/home');
@@ -104,11 +79,13 @@ function EditMemo({
 				alert('削除に失敗しました');
 			}
 		}
+		handleUpdate();
 	};
-
+	/**
+	 *完了ボタンが押されたときの処理を実装する
+	 */
 	const handleComplete = () => {
-		// 完了ボタンが押されたときの処理を実装する
-		const updatedCompanyInfoList = companyInfoList.map((info) => {
+		const updatedMyCompanyList = myCompanyList.map((info) => {
 			if (info.email === email && info.id === id) {
 				return {
 					...info,
@@ -118,10 +95,15 @@ function EditMemo({
 			return info;
 		});
 
-		updateCompanyInfoList(updatedCompanyInfoList);
+		updateMyCompanyList(updatedMyCompanyList);
+		handleUpdateMyCompany();
 		handleUpdate();
 		navigate('/pages/home');
 	};
+
+	/**
+	 * タイトルを更新する
+	 */
 	useEffect(() => {
 		if (company) {
 			document.title = `${company.name}のメモ`;
@@ -130,6 +112,7 @@ function EditMemo({
 
 	return (
 		<div>
+			{company ? <CompanyDetail company={company} /> : null}
 			{company ? <h2>{company.name}のメモ</h2> : null}
 			<div className="textarea-container">
 				<textarea

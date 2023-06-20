@@ -1,52 +1,87 @@
 import React, { useState, useEffect } from 'react';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import './App.css';
+
 import Header from './components/header';
 import Home from './pages/home';
 import Top from './pages/top';
 import Login from './pages/user/login';
 import Logout from './pages/user/logout';
 import Register from './pages/user/register';
-import './App.css';
-import { UserType, CompanyInfoType, CompanyType } from './utils/types';
-import EditMemo from './pages/companyInfo/editMemo';
+import EditMemo from './pages/myCompany/editMemo';
 import EditUser from './pages/user/editUser';
 import SearchCompany from './pages/company/searchCompany';
-import CompanyDetail from './pages/company/companyDetail';
+import CompanyRegister from './pages/company/companyRegister';
+import CompanyList from './pages/company/companyList';
+import CompanyEdit from './pages/company/companyEdit';
+
+import { UserType, MyCompanyType, CompanyType } from './utils/types';
+import CompanyAdd from './pages/company/companyAdd';
 
 function App() {
+	/**
+	 * ログインしているユーザの情報
+	 */
 	const [user, setUser] = useState<UserType>({
 		name: '',
 		email: '',
-		companyInfoList: [],
 	});
 
-	const [companyInfoList, setCompanyInfoList] = useState<CompanyInfoType[]>([]);
+	/**
+	 * ユーザの企業メモ
+	 */
+	const [myCompanyList, setMyCompanyList] = useState<MyCompanyType[]>([]);
+	/**
+	 * メモを登録している企業のリスト
+	 */
+	const [companyList, setCompanyList] = useState<CompanyType[]>([]);
+	/**
+	 * 自分で登録した企業のリスト
+	 */
+	const [registerCompanyList, setRegisterCompanyList] = useState<CompanyType[]>(
+		[]
+	);
+	/**
+	 * 検索した企業のリスト
+	 */
+	const [searchedCompany, setSearchedCompany] = useState<CompanyType[]>([]);
+
+	/**
+	 * 以下、下位のコンポーネントで各変数を更新するための関数
+	 * @param updatedUser
+	 */
 
 	const updateUser = (updatedUser: UserType) => {
 		setUser(updatedUser);
 	};
 
-	const updateCompanyInfoList = (updatedCompanyInfoList: CompanyInfoType[]) => {
-		setCompanyInfoList(updatedCompanyInfoList);
+	const updateMyCompanyList = (updatedMyCompanyList: MyCompanyType[]) => {
+		setMyCompanyList(updatedMyCompanyList);
 	};
-
-	const [companyList, setCompanyList] = useState<CompanyType[]>([]);
 
 	const updateCompanyList = (updatedCompanyList: CompanyType[]) => {
 		setCompanyList(updatedCompanyList);
 	};
 
-	const [searchedCompany, setSearchedCompany] = useState<CompanyType[]>([]);
+	const updateRegisterCompanyList = (
+		updatedRegisterCompanyList: CompanyType[]
+	) => {
+		setRegisterCompanyList(updatedRegisterCompanyList);
+	};
+
 	const updateSearchCompanyList = (
 		updatedSearchedCompanyList: CompanyType[]
 	) => {
 		setSearchedCompany(updatedSearchedCompanyList);
 	};
 
-	const handleCompanyInfoList = async () => {
+	/**
+	 *企業メモのリストを取得する
+	 */
+	const handleMyCompanyList = async () => {
 		try {
 			const response = await fetch(
-				`http://localhost:5000/companyInfo/getCompanyInfoList?email=${user.email}`,
+				`http://localhost:5000/myCompany/getMyCompanyList?email=${user.email}`,
 				{
 					method: 'GET',
 					headers: {
@@ -56,23 +91,19 @@ function App() {
 			);
 
 			const jsonResponse = await response.json();
-			const jsonCompanyInfoList = jsonResponse.CompanyInfoList;
-			updateCompanyInfoList(jsonCompanyInfoList);
+			const jsonMyCompanyList = jsonResponse.myCompanyList;
+			updateMyCompanyList(jsonMyCompanyList);
 		} catch (err) {
 			alert('企業情報の取得に失敗しました\n' + err);
 			console.log(err);
 		}
 	};
-	useEffect(() => {
-		document.title = 'ShareJob';
-		if (user.email !== '') {
-			handleCompanyInfoList();
-		}
-	}, [user.email]);
-
+	/**
+	 *メモを登録している企業のリストを取得する
+	 */
 	const handleCompanyList = async () => {
 		try {
-			const ids: string[] = companyInfoList.map((info) => info.id);
+			const ids: string[] = myCompanyList.map((info) => info.id);
 			const joinedString = ids.join(',');
 			const encodedIds = encodeURIComponent(joinedString);
 			const req = `http://localhost:5000/company/getCompanyList?ids=${encodedIds}`;
@@ -94,12 +125,63 @@ function App() {
 		}
 	};
 
+	const handleRegisterCompanyList = async () => {
+		try {
+			const response = await fetch(
+				`http://localhost:5000/company/getRegisterCompanyList?email=${user.email}`,
+				{
+					method: 'GET',
+					headers: {
+						'Content-Type': 'application/json',
+					},
+				}
+			);
+
+			const jsonResponse = await response.json();
+			const jsonMyCompanyList = jsonResponse.myCompanyList;
+			updateRegisterCompanyList(jsonMyCompanyList);
+		} catch (err) {
+			alert('企業情報の取得に失敗しました\n' + err);
+			console.log(err);
+		}
+	};
+
+	const handleUpdate = async () => {
+		await handleMyCompanyList();
+		await handleCompanyList();
+		await handleRegisterCompanyList();
+	};
+	/**
+	 * companyInfoListを取得する
+	 */
 	useEffect(() => {
-		if (user.email !== '' && companyInfoList.length > 0) {
+		document.title = 'ShareJob';
+		if (user.email !== '') {
+			handleMyCompanyList();
+		}
+	}, [user.email]);
+
+	/**
+	 * companyListを取得する
+	 */
+	useEffect(() => {
+		if (user.email !== '' && myCompanyList.length > 0) {
 			handleCompanyList();
 		}
-	}, [user.email, companyInfoList]);
+	}, [user.email, myCompanyList]);
 
+	/**
+	 * 常にユーザ以外の情報を更新する
+	 */
+	useEffect(() => {
+		if (user.email !== '') {
+			handleUpdate();
+		}
+	}, []);
+
+	/**
+	 * 各コンポーネントをルーティングする
+	 */
 	return (
 		<BrowserRouter>
 			<div className="container">
@@ -111,7 +193,7 @@ function App() {
 						element={
 							<Home
 								user={user}
-								companyInfoList={companyInfoList}
+								myCompanyList={myCompanyList}
 								companyList={companyList}
 								updateCompanyList={updateCompanyList}
 							/>
@@ -121,7 +203,7 @@ function App() {
 						path="/pages/user/login"
 						element={
 							<Login
-								handleCompanyInfoList={handleCompanyInfoList}
+								handleMyCompanyList={handleMyCompanyList}
 								handleCompanyList={handleCompanyList}
 								updateUser={updateUser}
 							/>
@@ -134,7 +216,7 @@ function App() {
 								user={user}
 								updateUser={updateUser}
 								updateCompanyList={updateCompanyList}
-								updateCompanyInfoList={updateCompanyInfoList}
+								updateMyCompanyList={updateMyCompanyList}
 								updateSearchCompanyList={updateSearchCompanyList}
 							/>
 						}
@@ -146,20 +228,20 @@ function App() {
 								user={user}
 								updateUser={updateUser}
 								updateCompanyList={updateCompanyList}
-								updateCompanyInfoList={updateCompanyInfoList}
+								updateMyCompanyList={updateMyCompanyList}
+								handleUpdate={handleUpdate}
 							/>
 						}
 					/>
 					<Route path="/pages/user/register" element={<Register />} />
 					<Route
-						path="/pages/companyInfo/companyInfo/:email/:id"
+						path="/pages/myCompany/myCompany/:email/:id"
 						element={
 							<EditMemo
-								user={user}
 								companyList={companyList}
-								companyInfoList={companyInfoList}
-								updateUser={updateUser}
-								updateCompanyInfoList={updateCompanyInfoList}
+								myCompanyList={myCompanyList}
+								updateMyCompanyList={updateMyCompanyList}
+								handleUpdate={handleUpdate}
 							/>
 						}
 					/>
@@ -172,17 +254,40 @@ function App() {
 							/>
 						}
 					/>
+
 					<Route
-						path="/pages/company/companyDetail/:id"
+						path="/pages/company/companyList"
 						element={
-							<CompanyDetail
-								searchedCompany={searchedCompany}
+							<CompanyList
 								user={user}
-								companyInfoList={companyInfoList}
-								companyList={companyList}
-								updateUser={updateUser}
-								updateCompanyList={updateCompanyList}
-								updateCompanyInfoList={updateCompanyInfoList}
+								registerCompanyList={registerCompanyList}
+								updateRegisterCompanyList={updateRegisterCompanyList}
+								handleUpdate={handleUpdate}
+							/>
+						}
+					/>
+					<Route
+						path="/pages/company/companyEdit/:id"
+						element={
+							<CompanyEdit
+								registerCompanyList={registerCompanyList}
+								handleUpdate={handleUpdate}
+							/>
+						}
+					/>
+					<Route
+						path="/pages/company/companyRegister"
+						element={
+							<CompanyRegister user={user} handleUpdate={handleUpdate} />
+						}
+					/>
+					<Route
+						path="/pages/company/companyAdd/:id"
+						element={
+							<CompanyAdd
+								user={user}
+								searchedCompanyList={searchedCompany}
+								handleUpdate={handleUpdate}
 							/>
 						}
 					/>

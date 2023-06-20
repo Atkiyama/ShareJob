@@ -2,17 +2,26 @@ import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { EditUserProps, UserType } from '../../utils/types';
 
+/**
+ * ユーザ情報を編集する
+ * @param param0
+ * @returns
+ */
 function EditUser({
 	user,
 	updateUser,
 	updateCompanyList,
-	updateCompanyInfoList,
+	updateMyCompanyList,
+	handleUpdate,
 }: EditUserProps) {
 	const navigate = useNavigate();
-	const [name, setName] = useState('');
-	const [email, setEmail] = useState('');
+	const [name, setName] = useState(user.name);
+	const [email, setEmail] = useState(user.email);
 	const [password, setPassword] = useState('');
-	// 対応する会社情報を探す
+	/**
+	 * APIを叩いて情報を更新する
+	 * @param e
+	 */
 	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		try {
@@ -34,10 +43,10 @@ function EditUser({
 			const updatedUser: UserType = {
 				name: name,
 				email: email,
-				companyInfoList: user.companyInfoList,
 			};
 			updateUser(updatedUser);
 			alert(jsonResponse.message);
+			handleUpdate();
 		} catch (err) {
 			console.log(err);
 			alert(
@@ -46,21 +55,29 @@ function EditUser({
 		}
 	};
 
+	/**
+	 * ログインしていればuseStateにuserの情報を入れる
+	 * ログインしていなければログイン画面に遷移する
+	 */
 	useEffect(() => {
 		if (user.email === '') {
 			alert('ログインしていません');
 			handleCancel();
-		} else {
-			setName(user.name);
-			setEmail(user.email);
 		}
 		document.title = 'ユーザ情報編集';
 	});
 
+	/**
+	 * キャンセルボタンを押した際の処理
+	 */
 	const handleCancel = () => {
+		handleUpdate();
 		navigate('/');
 	};
 
+	/**
+	 * ユーザ削除をした時の処理
+	 */
 	const handleDelete = async () => {
 		const confirmDelete = window.confirm('本当にユーザを削除しますか？');
 		if (confirmDelete) {
@@ -78,16 +95,14 @@ function EditUser({
 			// 削除が成功したら、リストから削除した情報を更新する
 			if (response.ok) {
 				updateCompanyList([]); // 空の配列でリストを更新
-				updateCompanyInfoList([]); // 空の配列でリストを更新
-				updateUser({ name: '', email: '', companyInfoList: [] }); // 空のユーザ情報で更新
+				updateMyCompanyList([]); // 空の配列でリストを更新
+				updateUser({ name: '', email: '' }); // 空のユーザ情報で更新
 
 				// 削除後にリダイレクトする場合は以下の行を有効化する
 				navigate('/');
 			} else {
 				alert('通信失敗');
 			}
-		} else {
-			alert('キャンセル');
 		}
 	};
 

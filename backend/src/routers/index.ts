@@ -4,18 +4,28 @@ import express, { Request, Response, NextFunction } from 'express';
 import { Router } from 'express';
 import loginUser from '../controller/user/loginUser';
 import registerUser from '../controller/user/registerUser';
-import getCompanyInfoList from '../controller/companyInfo/getCompanyInfoList';
-import registerCompanyInfo from '../controller/companyInfo/registerCompanyInfo';
+import getMyCompanyList from '../controller/myCompany/getMyCompanyList';
+import registerMyCompany from '../controller/myCompany/registerMyCompany';
 import getCompanyList from '../controller/company/getCompanyList';
-import updateCompanyInfo from '../controller/companyInfo/updateCompanyInfo';
-import deleteCompanyInfo from '../controller/companyInfo/deleteCompanyInfo';
+import updateMyCompany from '../controller/myCompany/updateMyCompany';
+import deleteMyCompany from '../controller/myCompany/deleteMyCompany';
 import updateUser from '../controller/user/updateUser';
 import updateUserAll from '../controller/user/updateUserAll';
 import deleteUser from '../controller/user/deleteUser';
 import searchCompany from '../controller/company/searchCompany';
+import getRegisterCompanyList from '../controller/company/getRegisterCompanyList';
+import updateCompany from '../controller/company/updateCompany';
+import registerCompany from '../controller/company/registerCompany';
 
+/**
+ * APIのルーティングとログ出力を定義する
+ */
 const router: Router = express.Router();
 
+/**
+ * 
+ * @returns 日付けのフォーマット関数
+ */
 const getFormattedDate = (): string => {
     const today = new Date();
     const year = today.getFullYear();
@@ -24,6 +34,12 @@ const getFormattedDate = (): string => {
     return `${year}-${month}-${day}`;
 };
 
+/**
+ * APIリクエストのログを出力する
+ * @param req リクエスト
+ * @param res レスポンス
+ * @param next 
+ */
 const logRequestAndResponse = (
     req: Request,
     res: Response,
@@ -59,16 +75,22 @@ const logRequestAndResponse = (
 
 router.use(logRequestAndResponse);
 
+/**
+ * ルーティング部分
+ */
 router.post('/user/login', loginUser);
 router.post('/user/register', registerUser);
-router.get('/companyInfo/getCompanyInfoList', getCompanyInfoList);
-router.post('/companyInfo/registerCompanyInfo', registerCompanyInfo);
+router.get('/myCompany/getMyCompanyList', getMyCompanyList);
+router.post('/myCompany/registerMyCompany', registerMyCompany);
 router.get('/company/getCompanyList', getCompanyList);
-router.put('/companyInfo/updateCompanyInfo/:email/:id', updateCompanyInfo);
-router.delete('/companyInfo/deleteCompanyInfo/:email/:id', deleteCompanyInfo);
+router.put('/myCompany/updateMyCompany/:email/:id', updateMyCompany);
+router.delete('/myCompany/deleteMyCompany/:email/:id', deleteMyCompany);
 router.put('/user/update/:email', updateUser);
 router.put('/user/updateAll/:email', updateUserAll);
 router.delete('/user/delete/:email', deleteUser);
 router.get('/company/searchCompany', searchCompany);
+router.get('/company/getRegisterCompanyList', getRegisterCompanyList);
+router.put('/company/updateCompany/:id', updateCompany)
+router.post('/company/registerCompany', registerCompany)
 
 export default router;

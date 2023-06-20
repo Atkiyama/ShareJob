@@ -14,14 +14,18 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const user_1 = require("../../model/user");
 const database_1 = __importDefault(require("../../utils/database"));
+/**
+ * ユーザの更新用のAPI
+ * @param req paramsにemail,bodyにemailとcompanyInfoListを格納
+ * @param res メッセージを返す
+ * @returns
+ */
 function default_1(req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             yield (0, database_1.default)();
+            //ユーザが存在するかのチェック
             const existsTest = yield user_1.UserModel.findOne({ email: req.params.email });
-            console.log(req.body.name);
-            console.log(req.params.email);
-            console.log(req.body.companyInfoList);
             if (existsTest) {
                 yield user_1.UserModel.updateOne({
                     name: req.body.name,
@@ -29,11 +33,10 @@ function default_1(req, res) {
                 }, {
                     $set: {
                         password: existsTest.password,
-                        companyInfoList: req.body.companyInfoList,
                     }
                 });
                 const test = yield user_1.UserModel.findOne({ email: req.params.email });
-                return res.status(200).json({ message: '更新に成功しました', test: test });
+                return res.status(200).json({ message: '更新に成功しました' });
             }
             else {
                 return res.status(400).json({ message: '更新失敗:ユーザーが存在しません' });

@@ -12,30 +12,36 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const user_1 = require("../../model/user");
+const companyInfo_1 = require("../../model/companyInfo");
 const database_1 = __importDefault(require("../../utils/database"));
 /**
- * ログイン時のAPI
- * @param req emailとpasswordがbodyに格納される
- * @param res メッセージとユーザ情報を返す
+ * 会社のメモの削除API
+ * @param req emailとidが格納される
+ * @param res メッセージを返す
  * @returns
  */
 function default_1(req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             yield (0, database_1.default)();
-            const savedUserData = yield user_1.UserModel.findOne({ email: req.body.email, password: req.body.password });
-            if (savedUserData) {
-                return res.status(200).json({ message: 'ログイン成功', savedUserData: savedUserData });
+            const existsTest = yield companyInfo_1.MyCompanyModel.findOne({ email: req.params.email, id: req.params.id });
+            if (existsTest) {
+                yield companyInfo_1.MyCompanyModel.deleteOne({ email: req.params.email, id: req.params.id });
+                return res.status(200).json({ message: "消去に成功しました" });
             }
             else {
-                return res.status(400).json({ message: 'ログイン失敗:ユーザー登録をしてください' });
+                return res.status(400).json({
+                    message: "エラーが発生しました\n このメモは存在しません"
+                });
             }
         }
         catch (err) {
-            console.error(err);
-            return res.status(400).json({ message: 'ログイン失敗' });
+            return res.status(400).json({
+                message: "エラーが発生しました",
+                err: err
+            });
         }
     });
 }
 exports.default = default_1;
+;

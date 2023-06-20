@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+/**
+ * ヘッダを定義
+ * @returns
+ */
 function Header() {
 	return (
 		<div className="header-container">
@@ -18,6 +22,9 @@ function Header() {
 				</li>
 				<li>
 					<Link to="/pages/user/editUser">ユーザ情報編集</Link>
+				</li>
+				<li>
+					<Link to="/pages/company/companyList">登録企業</Link>
 				</li>
 				<li>
 					<Link to="/pages/user/login">ログイン</Link>

@@ -1,11 +1,11 @@
-email,name,password,companyInfoList
-john@example.com,John Smith,password123,"1, 3"
-jane@example.com,Jane Doe,qwerty,"2, 5, 9"
-alex@example.com,Alex Johnson,abc123,"6, 8, 10"
-sara@example.com,Sara Wilson,pass123,4
-michael@example.com,Michael Brown,hello,
-emily@example.com,Emily Davis,testpass,5
-william@example.com,William Taylor,password123,"1, 2, 3, 4"
-olivia@example.com,Olivia Martinez,qwertyuiop,
-daniel@example.com,Daniel Anderson,daniel123,"2, 3, 6"
-mia@example.com,Mia Thomas,miamia,"4, 7, 8"
+email,name,password
+john@example.com,John Smith,password123
+jane@example.com,Jane Doe,qwerty
+alex@example.com,Alex Johnson,abc123
+sara@example.com,Sara Wilson,pass123
+michael@example.com,Michael Brown,hello
+emily@example.com,Emily Davis,testpass
+william@example.com,William Taylor,password123
+olivia@example.com,Olivia Martinez,qwertyuiop
+daniel@example.com,Daniel Anderson,daniel123
+mia@example.com,Mia Thomas,miamia

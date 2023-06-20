@@ -12,20 +12,36 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const companyInfo_1 = require("../../model/companyInfo");
 const database_1 = __importDefault(require("../../utils/database"));
+const company_1 = require("../../model/company");
 /**
- * APIとその関連制作中
- * @param req
- * @param res
+ * 検索した会社を返すAPI
+ * @param req 検索ワードがwords:stringとして格納される
+ * @param res ヒットした企業がcompanyListとして返される
  * @returns
  */
 function default_1(req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             yield (0, database_1.default)();
-            const companyInfoList = yield companyInfo_1.CompanyInfoModel.find({ email: req.query.email });
-            return res.status(200).json({ CompanyInfoList: companyInfoList });
+            const existTest = yield company_1.CompanyModel.findOne({ id: req.params.id });
+            if (typeof req.params.id === 'string' && existTest) {
+                yield company_1.CompanyModel.updateOne({
+                    id: req.params.id
+                }, {
+                    $set: {
+                        name: req.body.name,
+                        author: req.body.author,
+                        abstract: req.body.abstract,
+                        industries: req.body.industries,
+                        locations: req.body.locations,
+                    }
+                });
+                return res.status(200).json({ message: req.body.name + "を更新しました" });
+            }
+            else {
+                return res.status(200).json({ message: 'リクエストが不正です' });
+            }
         }
         catch (err) {
             return res.status(400).json({

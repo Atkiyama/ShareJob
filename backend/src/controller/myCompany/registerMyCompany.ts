@@ -1,16 +1,16 @@
 import { Request, Response } from 'express';
-import { CompanyInfo, CompanyInfoModel } from '../../model/companyInfo';
+import { MyCompany, MyCompanyModel } from '../../model/companyInfo';
 import connectDB from '../../utils/database';
 /**
- * APIとその関連制作中
- * @param req 
+ * 会社のメモ情報を登録するAPI
+ * @param req email,id,memoがbodyに格納される
  * @param res 
  * @returns 
  */
 export default async function (req: Request, res: Response) {
     try {
         await connectDB();
-        const companyInfo: CompanyInfo = new CompanyInfoModel({
+        const companyInfo: MyCompany = new MyCompanyModel({
             email: req.body.email,
             id: req.body.id,
             memo: req.body.memo,

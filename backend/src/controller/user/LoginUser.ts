@@ -2,6 +2,12 @@ import { Request, Response } from 'express';
 import { UserModel, User } from '../../model/user';
 import connectDB from '../../utils/database';
 
+/**
+ * ログイン時のAPI
+ * @param req emailとpasswordがbodyに格納される
+ * @param res メッセージとユーザ情報を返す
+ * @returns 
+ */
 export default async function (req: Request, res: Response) {
     try {
         await connectDB();

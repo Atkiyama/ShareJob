@@ -2,6 +2,12 @@ import { Request, Response } from 'express';
 import { UserModel, User } from '../../model/user';
 import connectDB from '../../utils/database';
 
+/**
+ * ユーザ情報登録のAPI
+ * @param req bodyにemail,name,passwordを格納する
+ * @param res メッセージを返す
+ * @returns 
+ */
 export default async function (req: Request, res: Response) {
     try {
         await connectDB();
@@ -11,11 +17,10 @@ export default async function (req: Request, res: Response) {
                 name: req.body.name,
                 email: req.body.email,
                 password: req.body.password,
-                companyInfoList: [],
             });
 
             await user.save();
-            return res.status(200).json({ message: "ユーザー登録に成功しました成功" });
+            return res.status(200).json({ message: "ユーザー登録に成功しました" });
         } else {
             return res.status(200).json({ message: "ユーザー登録に失敗しました\n このemailのユーザはすでに存在しています" });
         }

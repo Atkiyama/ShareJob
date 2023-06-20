@@ -2,8 +2,13 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { LoginProps } from '../../utils/types';
 
+/**
+ *	ログイン画面
+ * @param param0
+ * @returns
+ */
 function Login({
-	handleCompanyInfoList,
+	handleMyCompanyList,
 	handleCompanyList,
 	updateUser,
 }: LoginProps) {
@@ -11,6 +16,10 @@ function Login({
 	const [password, setPassword] = useState('');
 	const navigate = useNavigate();
 
+	/**
+	 *APIを呼び出してログイン処理を行う
+	 * @param e
+	 */
 	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		try {
@@ -28,13 +37,15 @@ function Login({
 			const jsonResponse = await response.json();
 			localStorage.setItem('token', jsonResponse.token);
 
+			/**
+			 * 同期処理を行う
+			 */
 			await Promise.all([
 				updateUser({
 					name: jsonResponse.savedUserData.name,
 					email: jsonResponse.savedUserData.email,
-					companyInfoList: jsonResponse.savedUserData.companyInfoList,
 				}),
-				handleCompanyInfoList(),
+				handleMyCompanyList(),
 				handleCompanyList(),
 				alert(
 					'ログインに成功しました' +
@@ -49,6 +60,10 @@ function Login({
 			alert('ログインに失敗しました');
 		}
 	};
+
+	/**
+	 * タイトルを更新する
+	 */
 	useEffect(() => {
 		document.title = 'ログイン';
 	}, []);
@@ -73,7 +88,7 @@ function Login({
 					placeholder="パスワード"
 					required
 				/>
-				<button>登録</button>
+				<button>ログイン</button>
 			</form>
 		</div>
 	);

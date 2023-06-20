@@ -14,17 +14,24 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const user_1 = require("../../model/user");
 const database_1 = __importDefault(require("../../utils/database"));
+/**
+ * ユーザ情報更新のAPI
+ * データの主キーとなっているemailも更新したい場合はこちらを呼び出す
+ * @param req paramsに更新前のemail,bodyに更新後のemail,name,passwordを格納される
+ * @param res メッセージを返す
+ * @returns
+ */
 function default_1(req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             yield (0, database_1.default)();
+            //存在チェック
             const oldUser = yield user_1.UserModel.findOne({ email: req.params.email });
             if (oldUser) {
                 const user = new user_1.UserModel({
                     email: req.body.email,
                     name: req.body.name,
-                    password: req.body.password,
-                    companyInfoList: oldUser.companyInfoList
+                    password: req.body.password
                 });
                 yield user_1.UserModel.deleteOne({
                     email: req.params.email,

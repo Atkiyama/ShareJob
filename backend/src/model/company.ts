@@ -1,8 +1,12 @@
 import mongoose, { Schema, Document, Model } from 'mongoose';
 
+/**
+ * 会社情報のモデル
+ */
 export interface Company extends Document {
     id: string,
     name: string;
+    author: string;
     abstract: string;
     industries: string[],
     locations: string[],
@@ -21,7 +25,10 @@ const CompanySchema: Schema<Company> = new Schema<Company>({
         type: String,
         required: true,
     },
-
+    author: {
+        type: String,
+        required: true,
+    },
     abstract: {
         type: String,
         required: false,

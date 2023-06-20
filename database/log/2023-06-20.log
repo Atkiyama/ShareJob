@@ -1424,3 +1424,43 @@ Response Body: undefined
 Request Body: {}
 Response 304 Not Modified
 Response Body: undefined
+[2023-06-20T10:42:39.314Z] POST /user/login
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-20T10:45:28.484Z] POST /user/login
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-20T10:53:46.287Z] POST /user/login
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-20T10:55:07.960Z] POST /user/login
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-20T11:16:10.339Z] POST /user/login
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-20T11:18:32.578Z] POST /user/login
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-20T11:19:47.007Z] POST /user/login
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-20T11:23:43.785Z] POST /user/login
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-20T11:23:48.077Z] POST /user/login
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-20T11:38:24.058Z] POST /user/login
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 400 Bad Request
+Response Body: undefined

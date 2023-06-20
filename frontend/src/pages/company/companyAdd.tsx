@@ -17,18 +17,21 @@ function CompanyAdd({
 
 	const handleRegister = async () => {
 		try {
-			await fetch(`http://localhost:5000/myCompany/registerMyCompany`, {
-				method: 'POST',
-				headers: {
-					Accept: 'application/json',
-					'Content-Type': 'application/json',
-				},
-				body: JSON.stringify({
-					email: user.email,
-					id: id,
-					memo: '',
-				}),
-			});
+			await fetch(
+				process.env.REACT_APP_BASE_URL! + `myCompany/registerMyCompany`,
+				{
+					method: 'POST',
+					headers: {
+						Accept: 'application/json',
+						'Content-Type': 'application/json',
+					},
+					body: JSON.stringify({
+						email: user.email,
+						id: id,
+						memo: '',
+					}),
+				}
+			);
 
 			if (company) {
 				alert(company.name + 'を登録しました');

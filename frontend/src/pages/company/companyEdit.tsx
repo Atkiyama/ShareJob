@@ -28,7 +28,7 @@ function CompanyEdit({ registerCompanyList, handleUpdate }: CompanyEditProps) {
 		if (company) {
 			try {
 				const response = await fetch(
-					`http://localhost:5000/company/updateCompany/${id}`,
+					process.env.REACT_APP_BASE_URL! + `company/updateCompany/${id}`,
 					{
 						method: 'PUT',
 						headers: {

@@ -14,6 +14,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const user_1 = require("../../model/user");
 const database_1 = __importDefault(require("../../utils/database"));
+const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
+const bcryptjs_1 = __importDefault(require("bcryptjs"));
+const dotenv_1 = __importDefault(require("dotenv"));
+dotenv_1.default.config();
 /**
  * ログイン時のAPI
  * @param req emailとpasswordがbodyに格納される
@@ -24,12 +28,18 @@ function default_1(req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             yield (0, database_1.default)();
-            const savedUserData = yield user_1.UserModel.findOne({ email: req.body.email, password: req.body.password });
-            if (savedUserData) {
-                return res.status(200).json({ message: 'ログイン成功', savedUserData: savedUserData });
+            const savedUserData = yield user_1.UserModel.findOne({ email: req.body.email });
+            const saltRounds = parseInt(process.env.SALT_ROUNDS);
+            const hashedPassword = yield bcryptjs_1.default.hash(req.body.password, saltRounds);
+            console.log(saltRounds);
+            console.log(hashedPassword);
+            console.log(savedUserData.password);
+            if (savedUserData && (yield bcryptjs_1.default.compare(hashedPassword, savedUserData.password))) {
+                const token = jsonwebtoken_1.default.sign(savedUserData.email, process.env.SECRET_KEY, { expiresIn: "23h" });
+                return res.status(200).json({ message: 'ログイン成功', savedUserData: savedUserData, token: token });
             }
             else {
-                return res.status(400).json({ message: 'ログイン失敗:ユーザー登録をしてください' });
+                return res.status(400).json({ message: 'ログイン失敗' });
             }
         }
         catch (err) {

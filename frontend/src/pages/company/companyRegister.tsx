@@ -29,7 +29,7 @@ function CompanyRegister({ user, handleUpdate }: CompanyRegisterProps) {
 	 */
 	const handleRegisterMyCompany = async () => {
 		try {
-			await fetch(`http://localhost:5000/company/registerCompany`, {
+			await fetch(process.env.REACT_APP_BASE_URL! + `company/registerCompany`, {
 				method: 'POST',
 				headers: {
 					Accept: 'application/json',

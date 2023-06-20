@@ -22,20 +22,23 @@ function Login({
 	 */
 	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
+		console.log(process.env.REACT_APP_BASE_URL);
 		try {
-			const response = await fetch('http://localhost:5000/user/login', {
-				method: 'POST',
-				headers: {
-					Accept: 'application/json',
-					'Content-Type': 'application/json',
-				},
-				body: JSON.stringify({
-					email: email,
-					password: password,
-				}),
-			});
+			const response = await fetch(
+				process.env.REACT_APP_BASE_URL! + `user/login`,
+				{
+					method: 'POST',
+					headers: {
+						Accept: 'application/json',
+						'Content-Type': 'application/json',
+					},
+					body: JSON.stringify({
+						email: email,
+						password: password,
+					}),
+				}
+			);
 			const jsonResponse = await response.json();
-			localStorage.setItem('token', jsonResponse.token);
 
 			/**
 			 * 同期処理を行う
@@ -55,6 +58,7 @@ function Login({
 						jsonResponse.savedUserData.password
 				),
 			]);
+			localStorage.setItem('token', jsonResponse.token);
 			navigate('/pages/home');
 		} catch (err) {
 			alert('ログインに失敗しました');

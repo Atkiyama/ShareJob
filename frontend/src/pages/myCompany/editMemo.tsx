@@ -31,7 +31,8 @@ function EditMemo({
 	const handleUpdateMyCompany = async () => {
 		try {
 			await fetch(
-				`http://localhost:5000/myCompany/updateMyCompany/${email}/${id}`,
+				process.env.REACT_APP_BASE_URL! +
+					`myCompany/updateMyCompany/${email}/${id}`,
 				{
 					method: 'PUT',
 					headers: {
@@ -58,7 +59,8 @@ function EditMemo({
 		if (confirmDelete) {
 			try {
 				const response = await fetch(
-					`http://localhost:5000/myCompany/deleteMyCompany/${email}/${id}`,
+					process.env.REACT_APP_BASE_URL! +
+						`myCompany/deleteMyCompany/${email}/${id}`,
 					{
 						method: 'DELETE',
 					}

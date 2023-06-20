@@ -2,51 +2,51 @@
   {
     "email": "john@example.com",
     "name": "John Smith",
-    "password": "password123"
+    "password": "$2a$05$Zx12Ljbt/J9XZG685bxGou.yLfA8e4380kFMcLFMpJ9ZkKdaV6zPa"
   },
   {
     "email": "jane@example.com",
     "name": "Jane Doe",
-    "password": "qwerty"
+    "password": "$2a$05$h6KlKGx7Ov0dbVYtKVb66OK5M60/xs0JcT.QIxfSNB7xYcvDFa68G"
   },
   {
     "email": "alex@example.com",
     "name": "Alex Johnson",
-    "password": "abc123"
+    "password": "$2a$05$X9TrysYVWJFdqvQc6XaqyeIAOmvooJ2OLqOTuuDDBrTrC6jqiP3e."
   },
   {
     "email": "sara@example.com",
     "name": "Sara Wilson",
-    "password": "pass123"
+    "password": "$2a$05$3P9zNmlIw2wfE688Of6BCeng0RIFUFHScFkUwwTmZ59rRmRe86m8W"
   },
   {
     "email": "michael@example.com",
     "name": "Michael Brown",
-    "password": "hello"
+    "password": "$2a$05$eTFrgYF/InRfmiRov3YpReRmErb/5H1XOpriahOSkOTv6fbxpZV46"
   },
   {
     "email": "emily@example.com",
     "name": "Emily Davis",
-    "password": "testpass"
+    "password": "$2a$05$l1Zjt3bqfqzjo39Z7FpmR.UdnPsZQgW48bzVHlsqkolcJcEPbNtkC"
   },
   {
     "email": "william@example.com",
     "name": "William Taylor",
-    "password": "password123"
+    "password": "$2a$05$BBh8OhpX8nfX0l/sua2Ya.t4DKR1Kizqr4v2O3YfZMFat6kSgvlua"
   },
   {
     "email": "olivia@example.com",
     "name": "Olivia Martinez",
-    "password": "qwertyuiop"
+    "password": "$2a$05$.GLcF5oPgECzE9stENJ2wuZ1NUojigHox.PJDrQlqCPdRDtxTs3qa"
   },
   {
     "email": "daniel@example.com",
     "name": "Daniel Anderson",
-    "password": "daniel123"
+    "password": "$2a$05$GzRlkKK.4//bfATqIc9j9.Ht0lHB3iBCcpim91R05KxFksfA3RrRK"
   },
   {
     "email": "mia@example.com",
     "name": "Mia Thomas",
-    "password": "miamia"
+    "password": "$2a$05$gfuV/arze49On6btDbumHOjWF0eNvDKNIfJ4mHw5TnNC6hvDPZXwu"
   }
 ]

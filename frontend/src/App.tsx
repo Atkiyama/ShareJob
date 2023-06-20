@@ -81,7 +81,8 @@ function App() {
 	const handleMyCompanyList = async () => {
 		try {
 			const response = await fetch(
-				`http://localhost:5000/myCompany/getMyCompanyList?email=${user.email}`,
+				process.env.REACT_APP_BASE_URL! +
+					`myCompany/getMyCompanyList?email=${user.email}`,
 				{
 					method: 'GET',
 					headers: {
@@ -106,7 +107,9 @@ function App() {
 			const ids: string[] = myCompanyList.map((info) => info.id);
 			const joinedString = ids.join(',');
 			const encodedIds = encodeURIComponent(joinedString);
-			const req = `http://localhost:5000/company/getCompanyList?ids=${encodedIds}`;
+			const req =
+				process.env.REACT_APP_BASE_URL! +
+				`company/getCompanyList?ids=${encodedIds}`;
 
 			const response = await fetch(req, {
 				method: 'GET',
@@ -128,7 +131,8 @@ function App() {
 	const handleRegisterCompanyList = async () => {
 		try {
 			const response = await fetch(
-				`http://localhost:5000/company/getRegisterCompanyList?email=${user.email}`,
+				process.env.REACT_APP_BASE_URL! +
+					`company/getRegisterCompanyList?email=${user.email}`,
 				{
 					method: 'GET',
 					headers: {

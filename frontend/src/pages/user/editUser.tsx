@@ -26,7 +26,7 @@ function EditUser({
 		e.preventDefault();
 		try {
 			const response = await fetch(
-				`http://localhost:5000/user/updateAll/${user.email}`,
+				process.env.REACT_APP_BASE_URL! + `user/updateAll/${user.email}`,
 				{
 					method: 'PUT',
 					headers: {
@@ -82,7 +82,7 @@ function EditUser({
 		const confirmDelete = window.confirm('本当にユーザを削除しますか？');
 		if (confirmDelete) {
 			const response = await fetch(
-				`http://localhost:5000/user/delete/${email}`,
+				process.env.REACT_APP_BASE_URL! + `user/delete/${email}`,
 				{
 					method: 'DELETE',
 				}

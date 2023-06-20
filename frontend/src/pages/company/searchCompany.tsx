@@ -41,7 +41,7 @@ function SearchCompany({
 	 * @param row idに企業のidが開く
 	 */
 	const handleOpenDetail = (row: CompanyTableType) => {
-		navigate(`/pages/company/companyDetail/${row.id}`);
+		navigate(`/pages/company/companyAdd/${row.id}`);
 	};
 
 	/**

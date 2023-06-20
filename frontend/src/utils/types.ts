@@ -78,11 +78,12 @@ export type MyCompanyTableType = {
  * メモ編集画面のprops
  */
 export interface EditMemoProps {
-    user: UserType,
+
     companyList: CompanyType[],
     myCompanyList: MyCompanyType[],
-    updateUser: (user: UserType) => void;
+
     updateMyCompanyList: (updatedMyCompanyList: MyCompanyType[]) => void;
+    handleUpdate: () => void;
 
 }
 
@@ -94,6 +95,7 @@ export interface EditUserProps {
     updateUser: (user: UserType) => void;
     updateCompanyList: (updatedCompanyList: CompanyType[]) => void;
     updateMyCompanyList: (updatedMyCompanyList: MyCompanyType[]) => void;
+    handleUpdate: () => void;
 }
 
 /**
@@ -127,21 +129,16 @@ export interface CompanyListProps {
     user: UserType,
     registerCompanyList: CompanyType[]
     updateRegisterCompanyList: (updatedRegisterCompanyList: CompanyType[]) => void;
+    handleUpdate: () => void;
 }
 
 /**
  * 企業編集画面のprops
  */
 export interface CompanyEditProps {
-    searchedCompany: CompanyType[],
-    user: UserType,
-    companyList: CompanyType[],
+
     registerCompanyList: CompanyType[],
-    myCompanyList: MyCompanyType[],
-    updateUser: (user: UserType) => void;
-    updateCompanyList: (updatedMyCompanyList: CompanyType[]) => void;
-    updateRegisterCompanyList: (updatedCompanyList: CompanyType[]) => void;
-    updateMyCompanyList: (updatedCompanyInfoList: MyCompanyType[]) => void;
+    handleUpdate: () => void;
 
 }
 
@@ -150,12 +147,16 @@ export interface CompanyEditProps {
  */
 export interface CompanyDetailProps {
     company: CompanyType; // 例: 型の定義
-    // 他のプロパティ
+
 }
 
 export interface CompanyRegisterProps {
-
     user: UserType,
+    handleUpdate: () => void;
+}
 
-
+export interface CompanyAddProps {
+    user: UserType,
+    searchedCompanyList: CompanyType[],
+    handleUpdate: () => void;
 }

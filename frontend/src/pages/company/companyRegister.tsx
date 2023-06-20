@@ -7,7 +7,7 @@ import { CompanyRegisterProps, CompanyType } from '../../utils/types';
  * @param param0 企業id
  * @returns
  */
-function CompanyRegister({ user }: CompanyRegisterProps) {
+function CompanyRegister({ user, handleUpdate }: CompanyRegisterProps) {
 	const navigate = useNavigate();
 	//idに合致するid
 	const [company, setCompany] = useState<CompanyType>({
@@ -59,7 +59,7 @@ function CompanyRegister({ user }: CompanyRegisterProps) {
 	 */
 	const handleSave = () => {
 		handleRegisterMyCompany();
-
+		handleUpdate();
 		navigate('/pages/company/companyList');
 	};
 

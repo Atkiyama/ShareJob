@@ -88,7 +88,7 @@ function Login({
 					placeholder="パスワード"
 					required
 				/>
-				<button>登録</button>
+				<button>ログイン</button>
 			</form>
 		</div>
 	);

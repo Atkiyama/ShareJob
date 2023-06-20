@@ -16,7 +16,7 @@ import CompanyList from './pages/company/companyList';
 import CompanyEdit from './pages/company/companyEdit';
 
 import { UserType, MyCompanyType, CompanyType } from './utils/types';
-import CompanyDetail from './components/companyDetail';
+import CompanyAdd from './pages/company/companyAdd';
 
 function App() {
 	/**
@@ -229,6 +229,7 @@ function App() {
 								updateUser={updateUser}
 								updateCompanyList={updateCompanyList}
 								updateMyCompanyList={updateMyCompanyList}
+								handleUpdate={handleUpdate}
 							/>
 						}
 					/>
@@ -237,11 +238,10 @@ function App() {
 						path="/pages/myCompany/myCompany/:email/:id"
 						element={
 							<EditMemo
-								user={user}
 								companyList={companyList}
 								myCompanyList={myCompanyList}
-								updateUser={updateUser}
 								updateMyCompanyList={updateMyCompanyList}
+								handleUpdate={handleUpdate}
 							/>
 						}
 					/>
@@ -262,6 +262,7 @@ function App() {
 								user={user}
 								registerCompanyList={registerCompanyList}
 								updateRegisterCompanyList={updateRegisterCompanyList}
+								handleUpdate={handleUpdate}
 							/>
 						}
 					/>
@@ -269,21 +270,26 @@ function App() {
 						path="/pages/company/companyEdit/:id"
 						element={
 							<CompanyEdit
-								searchedCompany={searchedCompany}
-								user={user}
-								companyList={companyList}
 								registerCompanyList={registerCompanyList}
-								myCompanyList={myCompanyList}
-								updateUser={updateUser}
-								updateCompanyList={updateCompanyList}
-								updateMyCompanyList={updateMyCompanyList}
-								updateRegisterCompanyList={updateRegisterCompanyList}
+								handleUpdate={handleUpdate}
 							/>
 						}
 					/>
 					<Route
 						path="/pages/company/companyRegister"
-						element={<CompanyRegister user={user} />}
+						element={
+							<CompanyRegister user={user} handleUpdate={handleUpdate} />
+						}
+					/>
+					<Route
+						path="/pages/company/companyAdd/:id"
+						element={
+							<CompanyAdd
+								user={user}
+								searchedCompanyList={searchedCompany}
+								handleUpdate={handleUpdate}
+							/>
+						}
 					/>
 
 					<Route path="*" element={<h1>Page Not Found</h1>} />

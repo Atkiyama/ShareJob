@@ -18,6 +18,7 @@ function CompanyList({
 	user,
 	registerCompanyList,
 	updateRegisterCompanyList,
+	handleUpdate,
 }: CompanyListProps) {
 	const navigate = useNavigate();
 	/**
@@ -78,6 +79,7 @@ function CompanyList({
 		);
 		const jsonResponse = await response.json();
 		updateRegisterCompanyList(jsonResponse.companyList);
+		console.log(jsonResponse.companyList);
 	};
 	const handleAdd = async () => {
 		navigate(`/pages/company/companyRegister/`);
@@ -95,30 +97,37 @@ function CompanyList({
 			navigate('/pages/user/login');
 		}
 	}, []);
-
-	return (
-		<div>
-			<table className="table">
-				<thead></thead>
-				<tbody>
-					{table.getRowModel().rows.map((row, index) => (
-						<tr key={index}>
-							{row.getVisibleCells().map((cell, index) => (
-								<td key={index}>
-									{flexRender(cell.column.columnDef.cell, cell.getContext())}
-								</td>
-							))}
-						</tr>
-					))}
-				</tbody>
-			</table>
-			<div className="position-fixed">
-				<button className="large-button" onClick={handleAdd}>
-					+
-				</button>
+	if (typeof data !== 'undefined') {
+		return (
+			<div>
+				<table className="table">
+					<thead></thead>
+					<tbody>
+						{table.getRowModel().rows.map((row, index) => (
+							<tr key={index}>
+								{row.getVisibleCells().map((cell, index) => (
+									<td key={index}>
+										{flexRender(cell.column.columnDef.cell, cell.getContext())}
+									</td>
+								))}
+							</tr>
+						))}
+					</tbody>
+				</table>
+				<div className="position-fixed">
+					<button className="large-button" onClick={handleAdd}>
+						+
+					</button>
+				</div>
 			</div>
-		</div>
-	);
+		);
+	} else {
+		const handleError = () => {
+			handleMyCompanyList();
+		};
+		handleError();
+		return <div></div>;
+	}
 }
 
 export default CompanyList;

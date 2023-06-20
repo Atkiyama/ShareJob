@@ -7,17 +7,7 @@ import { CompanyEditProps, CompanyType } from '../../utils/types';
  * @param id 編集する企業のid
  * @returns
  */
-function CompanyEdit({
-	searchedCompany,
-	user,
-	companyList,
-	registerCompanyList,
-	myCompanyList,
-	updateUser,
-	updateCompanyList,
-	updateRegisterCompanyList,
-	updateMyCompanyList,
-}: CompanyEditProps) {
+function CompanyEdit({ registerCompanyList, handleUpdate }: CompanyEditProps) {
 	const { id } = useParams<{ id: string }>();
 	const navigate = useNavigate();
 	const [company, setCompany] = useState<CompanyType | undefined>(undefined);
@@ -64,6 +54,7 @@ function CompanyEdit({
 
 	const handleSave = () => {
 		handleUpdateRegisterCompany();
+		handleUpdate();
 		navigate('/pages/company/companyList');
 	};
 

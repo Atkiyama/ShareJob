@@ -4,11 +4,10 @@ import { EditMemoProps, MyCompanyType, CompanyType } from '../../utils/types';
 import CompanyDetail from '../../components/companyDetail';
 
 function EditMemo({
-	user,
 	companyList,
 	myCompanyList,
-	updateUser,
 	updateMyCompanyList,
+	handleUpdate,
 }: EditMemoProps) {
 	const { email, id } = useParams();
 	const navigate = useNavigate();
@@ -29,7 +28,7 @@ function EditMemo({
 	/**
 	 *APIにupdateリクエストする
 	 */
-	const handleUpdate = async () => {
+	const handleUpdateMyCompany = async () => {
 		try {
 			await fetch(
 				`http://localhost:5000/myCompany/updateMyCompany/${email}/${id}`,
@@ -59,7 +58,7 @@ function EditMemo({
 		if (confirmDelete) {
 			try {
 				const response = await fetch(
-					`http://localhost:5000/companyInfo/deleteCompanyInfo/${email}/${id}`,
+					`http://localhost:5000/myCompany/deleteMyCompany/${email}/${id}`,
 					{
 						method: 'DELETE',
 					}
@@ -80,6 +79,7 @@ function EditMemo({
 				alert('削除に失敗しました');
 			}
 		}
+		handleUpdate();
 	};
 	/**
 	 *完了ボタンが押されたときの処理を実装する
@@ -96,6 +96,7 @@ function EditMemo({
 		});
 
 		updateMyCompanyList(updatedMyCompanyList);
+		handleUpdateMyCompany();
 		handleUpdate();
 		navigate('/pages/home');
 	};

@@ -12,10 +12,11 @@ function EditUser({
 	updateUser,
 	updateCompanyList,
 	updateMyCompanyList,
+	handleUpdate,
 }: EditUserProps) {
 	const navigate = useNavigate();
-	const [name, setName] = useState('');
-	const [email, setEmail] = useState('');
+	const [name, setName] = useState(user.name);
+	const [email, setEmail] = useState(user.email);
 	const [password, setPassword] = useState('');
 	/**
 	 * APIを叩いて情報を更新する
@@ -45,6 +46,7 @@ function EditUser({
 			};
 			updateUser(updatedUser);
 			alert(jsonResponse.message);
+			handleUpdate();
 		} catch (err) {
 			console.log(err);
 			alert(
@@ -61,9 +63,6 @@ function EditUser({
 		if (user.email === '') {
 			alert('ログインしていません');
 			handleCancel();
-		} else {
-			setName(user.name);
-			setEmail(user.email);
 		}
 		document.title = 'ユーザ情報編集';
 	});
@@ -72,6 +71,7 @@ function EditUser({
 	 * キャンセルボタンを押した際の処理
 	 */
 	const handleCancel = () => {
+		handleUpdate();
 		navigate('/');
 	};
 

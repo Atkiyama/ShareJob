@@ -8,7 +8,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+const database_1 = __importDefault(require("../../utils/database"));
 const company_1 = require("../../model/company");
 const crypto_1 = require("crypto");
 /**
@@ -31,14 +35,17 @@ function default_1(req, res) {
                     id: id
                 });
             }
-            const company = {
+            yield (0, database_1.default)();
+            const company = new company_1.CompanyModel({
                 id: id,
                 name: req.body.name,
                 author: req.body.author,
                 abstract: req.body.abstract,
                 industries: req.body.industries,
                 locations: req.body.locations,
-            };
+            });
+            company.save();
+            return res.status(200).json({ message: company.name + "を登録しました" });
         }
         catch (err) {
             return res.status(400).json({

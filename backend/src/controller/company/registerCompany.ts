@@ -35,7 +35,7 @@ export default async function (req: Request, res: Response) {
             locations: req.body.locations,
         })
         company.save();
-
+        return res.status(200).json({ message: company.name + "を登録しました" });
 
 
     } catch (err) {

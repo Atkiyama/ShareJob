@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const fs_1 = __importDefault(require("fs"));
 const path_1 = __importDefault(require("path"));
 const express_1 = __importDefault(require("express"));
+const auth_1 = __importDefault(require("../utils/auth"));
 const loginUser_1 = __importDefault(require("../controller/user/loginUser"));
 const registerUser_1 = __importDefault(require("../controller/user/registerUser"));
 const getMyCompanyList_1 = __importDefault(require("../controller/myCompany/getMyCompanyList"));
@@ -42,22 +43,29 @@ const getFormattedDate = () => {
  * @param next
  */
 const logRequestAndResponse = (req, res, next) => {
+    var _a;
     const requestTime = new Date().toISOString();
     const logMessage = `[${requestTime}] ${req.method} ${req.url}\n`;
     const logFilePath = path_1.default.join(__dirname, `../../../database/log/${getFormattedDate()}.log`); // 日付ごとのログファイルのパスを指定
     console.log(logMessage); // コンソールにログを表示
+    // リクエストヘッダからトークンを取得
+    const token = ((_a = req.headers.authorization) === null || _a === void 0 ? void 0 : _a.split(' ')[1]) || 'No token';
+    const requestHeaderMessage = `Token: ${token}\n`;
+    console.log(requestHeaderMessage);
     // リクエストボディをログに追加
     const requestBodyMessage = `Request Body: ${JSON.stringify(req.body)}\n`;
     console.log(requestBodyMessage);
     fs_1.default.appendFileSync(logFilePath, logMessage);
+    fs_1.default.appendFileSync(logFilePath, requestHeaderMessage);
     fs_1.default.appendFileSync(logFilePath, requestBodyMessage);
     res.on('finish', () => {
         const responseMessage = `Response ${res.statusCode} ${res.statusMessage}\n`;
-        const responseBodyMessage = `Response Body: ${JSON.stringify(res.locals.data)}\n`;
         console.log(responseMessage); // コンソールにレスポンスのログを表示
-        console.log(responseBodyMessage); // コンソールにレスポンスボディのログを表示
+        // レスポンスの内容をログに追加
+        const responseDataMessage = `Response Data: ${JSON.stringify(res.locals.data)}\n`;
+        console.log(responseDataMessage);
         fs_1.default.appendFileSync(logFilePath, responseMessage);
-        fs_1.default.appendFileSync(logFilePath, responseBodyMessage);
+        fs_1.default.appendFileSync(logFilePath, responseDataMessage);
     });
     next();
 };
@@ -67,16 +75,16 @@ router.use(logRequestAndResponse);
  */
 router.post('/user/login', loginUser_1.default);
 router.post('/user/register', registerUser_1.default);
-router.get('/myCompany/getMyCompanyList', getMyCompanyList_1.default);
-router.post('/myCompany/registerMyCompany', registerMyCompany_1.default);
-router.get('/company/getCompanyList', getCompanyList_1.default);
-router.put('/myCompany/updateMyCompany/:email/:id', updateMyCompany_1.default);
-router.delete('/myCompany/deleteMyCompany/:email/:id', deleteMyCompany_1.default);
-router.put('/user/update/:email', updateUser_1.default);
-router.put('/user/updateAll/:email', updateUserAll_1.default);
-router.delete('/user/delete/:email', deleteUser_1.default);
-router.get('/company/searchCompany', searchCompany_1.default);
-router.get('/company/getRegisterCompanyList', getRegisterCompanyList_1.default);
-router.put('/company/updateCompany/:id', updateCompany_1.default);
-router.post('/company/registerCompany', registerCompany_1.default);
+router.get('/myCompany/getMyCompanyList', auth_1.default, getMyCompanyList_1.default);
+router.post('/myCompany/registerMyCompany', auth_1.default, registerMyCompany_1.default);
+router.get('/company/getCompanyList', auth_1.default, getCompanyList_1.default);
+router.put('/myCompany/updateMyCompany/:email/:id', auth_1.default, updateMyCompany_1.default);
+router.delete('/myCompany/deleteMyCompany/:email/:id', auth_1.default, deleteMyCompany_1.default);
+router.put('/user/update/:email', auth_1.default, updateUser_1.default);
+router.put('/user/updateAll/:email', auth_1.default, updateUserAll_1.default);
+router.delete('/user/delete/:email', auth_1.default, deleteUser_1.default);
+router.get('/company/searchCompany', auth_1.default, searchCompany_1.default);
+router.get('/company/getRegisterCompanyList', auth_1.default, getRegisterCompanyList_1.default);
+router.put('/company/updateCompany/:id', auth_1.default, updateCompany_1.default);
+router.post('/company/registerCompany', auth_1.default, registerCompany_1.default);
 exports.default = router;

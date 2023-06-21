@@ -33,6 +33,7 @@ function CompanyEdit({ registerCompanyList, handleUpdate }: CompanyEditProps) {
 						method: 'PUT',
 						headers: {
 							'Content-Type': 'application/json',
+							authorization: `Bearer ${localStorage.getItem('token')}`,
 						},
 						body: JSON.stringify({
 							id: company.id,

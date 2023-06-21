@@ -28,6 +28,7 @@ function default_1(req, res) {
             if (typeof req.query.ids === 'string') {
                 const ids = req.query.ids;
                 const decodedIds = decodeURIComponent(ids);
+                console.log(decodedIds);
                 const idArray = decodedIds.split(",");
                 for (let i = 0; i < idArray.length; i++) {
                     const company = yield company_1.CompanyModel.findOne({ id: idArray[i] });

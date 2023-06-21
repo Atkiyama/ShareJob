@@ -39,7 +39,7 @@ const MyCompanySchema = new mongoose_1.Schema({
         required: false,
     },
 }, {
-    collection: 'companyInfo' // コレクション名を指定
+    collection: 'myCompany' // コレクション名を指定
 });
 MyCompanySchema.index({ email: 1, id: 1 }, { unique: true });
 exports.MyCompanyModel = mongoose_1.default.model('myCompany', MyCompanySchema);

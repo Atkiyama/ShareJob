@@ -37,6 +37,7 @@ function EditMemo({
 					method: 'PUT',
 					headers: {
 						'Content-Type': 'application/json',
+						authorization: `Bearer ${localStorage.getItem('token')}`,
 					},
 					body: JSON.stringify({
 						memo: memo,
@@ -44,7 +45,7 @@ function EditMemo({
 				}
 			);
 			if (company) {
-				alert(`${company.name}のメモを登録しました`);
+				alert(`${company.name}のメモを変更しました`);
 			}
 		} catch (err) {
 			alert('更新に失敗しました');
@@ -61,8 +62,12 @@ function EditMemo({
 				const response = await fetch(
 					process.env.REACT_APP_BASE_URL! +
 						`myCompany/deleteMyCompany/${email}/${id}`,
+
 					{
 						method: 'DELETE',
+						headers: {
+							authorization: `Bearer ${localStorage.getItem('token')}`,
+						},
 					}
 				);
 
@@ -99,7 +104,8 @@ function EditMemo({
 
 		updateMyCompanyList(updatedMyCompanyList);
 		handleUpdateMyCompany();
-		handleUpdate();
+
+		//handleUpdate();
 		navigate('/pages/home');
 	};
 

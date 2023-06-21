@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
-import { MyCompany, MyCompanyModel } from '../../model/companyInfo';
+import { MyCompany, MyCompanyModel } from '../../model/myCompany';
 import connectDB from '../../utils/database';
+
 /**
  * 会社のメモを入手するAPI
  * @param req emailが格納される
@@ -8,6 +9,7 @@ import connectDB from '../../utils/database';
  * @returns 
  */
 export default async function (req: Request, res: Response) {
+
     try {
         await connectDB();
         const myCompanyList: MyCompany[] | null = await MyCompanyModel.find({ email: req.query.email });

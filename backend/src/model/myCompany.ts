@@ -30,7 +30,7 @@ const MyCompanySchema: Schema<MyCompany> = new Schema<MyCompany>({
 
 
 }, {
-    collection: 'companyInfo' // コレクション名を指定
+    collection: 'myCompany' // コレクション名を指定
 });
 MyCompanySchema.index({ email: 1, id: 1 }, { unique: true });
 

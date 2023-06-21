@@ -22,7 +22,7 @@ function Login({
 	 */
 	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
-		console.log(process.env.REACT_APP_BASE_URL);
+
 		try {
 			const response = await fetch(
 				process.env.REACT_APP_BASE_URL! + `user/login`,
@@ -40,21 +40,24 @@ function Login({
 			);
 			const jsonResponse = await response.json();
 			const name = jsonResponse.name;
+			if (jsonResponse.token) {
+				localStorage.setItem('token', jsonResponse.token);
+				/**
+				 * 同期処理を行う
+				 */
+				await Promise.all([
+					updateUser({
+						name: name,
+						email: email,
+					}),
 
-			/**
-			 * 同期処理を行う
-			 */
-			await Promise.all([
-				updateUser({
-					name: name,
-					email: email,
-				}),
-				handleMyCompanyList(),
-				handleCompanyList(),
-				alert(name + 'でログインしました'),
-			]);
-			localStorage.setItem('token', jsonResponse.token);
-			navigate('/pages/home');
+					alert(name + 'でログインしました'),
+				]);
+
+				navigate('/pages/home');
+			} else {
+				alert('ログインに失敗しました');
+			}
 		} catch (err) {
 			alert('ログインに失敗しました');
 		}

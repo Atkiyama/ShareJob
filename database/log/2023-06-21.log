@@ -118,3 +118,1922 @@ Response Body: undefined
 Request Body: {}
 Response 304 Not Modified
 Response Body: undefined
+[2023-06-21T07:41:48.074Z] POST /user/login
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 200 OK
+Response Body: undefined
+[2023-06-21T07:41:48.200Z] GET /myCompany/getMyCompanyList?email=
+Request Body: {}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T07:41:48.202Z] GET /company/getCompanyList?ids=
+Request Body: {}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T07:41:49.277Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Body: {}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T07:48:31.240Z] POST /user/login
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 200 OK
+Response Body: undefined
+[2023-06-21T07:48:31.344Z] GET /myCompany/getMyCompanyList?email=
+Request Body: {}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T07:48:31.346Z] GET /company/getCompanyList?ids=
+Request Body: {}
+Response 200 OK
+Response Body: undefined
+[2023-06-21T07:48:33.458Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Body: {}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T07:49:48.819Z] POST /user/login
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 200 OK
+Response Body: undefined
+[2023-06-21T07:49:48.871Z] GET /myCompany/getMyCompanyList?email=
+Request Body: {}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T07:49:48.875Z] GET /company/getCompanyList?ids=
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T07:49:50.221Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Body: {}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T07:52:22.254Z] POST /user/login
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 200 OK
+Response Body: undefined
+[2023-06-21T07:52:22.303Z] GET /myCompany/getMyCompanyList?email=
+Request Body: {}
+[2023-06-21T07:52:22.307Z] GET /company/getCompanyList?ids=
+Request Body: {}
+Response 200 OK
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T07:52:23.330Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Body: {}
+Response 200 OK
+Response Body: undefined
+[2023-06-21T07:52:23.346Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Request Body: {}
+Response 200 OK
+Response Body: undefined
+[2023-06-21T07:53:18.340Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Request Body: {}
+Response 200 OK
+Response Body: undefined
+[2023-06-21T07:53:22.638Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T07:53:30.727Z] PUT /myCompany/updateMyCompany/jane@example.com/9
+Request Body: {"memo":"社内会議のアジェンダ作成fsdad"}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T07:53:30.729Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Body: {}
+[2023-06-21T07:53:30.732Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T07:53:32.899Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T07:53:32.911Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Request Body: {}
+[2023-06-21T07:53:32.917Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T07:53:50.988Z] PUT /myCompany/updateMyCompany/jane@example.com/9
+Request Body: {"memo":"社内会議のアジェンダ作成gsdffdsf"}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T07:53:50.991Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Body: {}
+[2023-06-21T07:53:50.994Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T07:53:57.685Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T07:53:57.697Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Request Body: {}
+[2023-06-21T07:53:57.703Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T07:54:28.729Z] PUT /myCompany/updateMyCompany/jane@example.com/7
+Request Body: {"memo":"afsdasd"}
+[2023-06-21T07:54:28.734Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Body: {}
+[2023-06-21T07:54:28.736Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+Response 200 OK
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T07:54:28.758Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T07:54:28.768Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T07:54:30.211Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T07:54:55.063Z] PUT /myCompany/updateMyCompany/jane@example.com/7
+Request Body: {"memo":"fadssafdafa"}
+[2023-06-21T07:54:55.066Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Body: {}
+[2023-06-21T07:54:55.069Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Request Body: {}
+Response 200 OK
+Response Body: undefined
+Response 200 OK
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T07:54:55.082Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T07:54:55.093Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T07:55:13.147Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T07:55:23.121Z] PUT /myCompany/updateMyCompany/jane@example.com/7
+Request Body: {"memo":""}
+[2023-06-21T07:55:23.124Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Body: {}
+[2023-06-21T07:55:23.127Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Request Body: {}
+Response 200 OK
+Response Body: undefined
+Response 200 OK
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T07:55:23.141Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T07:55:23.149Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T07:55:24.930Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T07:56:51.279Z] POST /user/login
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 200 OK
+Response Body: undefined
+[2023-06-21T07:56:51.372Z] GET /myCompany/getMyCompanyList?email=
+Request Body: {}
+[2023-06-21T07:56:51.377Z] GET /company/getCompanyList?ids=
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T07:56:52.760Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Body: {}
+Response 200 OK
+Response Body: undefined
+[2023-06-21T07:56:52.775Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T07:56:56.965Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Body: {}
+[2023-06-21T07:56:56.969Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Request Body: {}
+[2023-06-21T07:56:56.973Z] PUT /myCompany/updateMyCompany/jane@example.com/7
+Request Body: {"memo":"dsfadfssfsdafsd"}
+Response 304 Not Modified
+Response Body: undefined
+Response 200 OK
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T07:56:56.995Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T07:56:57.003Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T07:57:09.727Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T07:58:39.386Z] DELETE /myCompany/deleteMyCompany/jane@example.com/7
+Request Body: {}
+Response 200 OK
+Response Body: undefined
+[2023-06-21T07:58:40.000Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Body: {}
+[2023-06-21T07:58:40.003Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Request Body: {}
+Response 200 OK
+Response Body: undefined
+Response 200 OK
+Response Body: undefined
+[2023-06-21T07:58:40.015Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Request Body: {}
+[2023-06-21T07:58:40.018Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T07:58:40.037Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T07:58:54.008Z] GET /company/searchCompany/?words=%E3%83%90%E3%82%A4%E3%82%AA
+Request Body: {}
+Response 200 OK
+Response Body: undefined
+[2023-06-21T07:58:57.271Z] POST /myCompany/registerMyCompany
+Request Body: {"email":"jane@example.com","id":"7","memo":""}
+Response 200 OK
+Response Body: undefined
+[2023-06-21T07:58:58.804Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Body: {}
+Response 200 OK
+Response Body: undefined
+[2023-06-21T07:58:58.815Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Request Body: {}
+[2023-06-21T07:58:58.817Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T07:58:58.833Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T07:59:20.430Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T07:59:20.437Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T07:59:25.734Z] PUT /company/updateCompany/9
+Request Body: {"id":"9","name":"ソーラーパワーソリューションズ","author":"jane@example.com","abstract":"太陽光発電事業を展開する会社で、ソーラーパネルの製造・販売・設置を行っています。持続可能なエネルギー利用を推進し、クリーンな電力供給を実現しています。","industries":["エネルギー産業","再生可能エネルギーfだsdsふぁあdsf"],"locations":["ロサンゼルス","シドニー"]}
+[2023-06-21T07:59:25.737Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Body: {}
+[2023-06-21T07:59:25.740Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+Response 200 OK
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T07:59:25.784Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Request Body: {}
+Response 200 OK
+Response Body: undefined
+[2023-06-21T07:59:25.794Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T07:59:47.962Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Request Body: {}
+Response 200 OK
+Response Body: undefined
+[2023-06-21T07:59:47.975Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T07:59:52.532Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Request Body: {}
+[2023-06-21T07:59:52.535Z] PUT /company/updateCompany/9
+Request Body: {"id":"9","name":"ソーラーパワーソリューションズ","author":"jane@example.com","abstract":"太陽光発電事業を展開する会社で、ソーラーパネルの製造・販売・設置を行っています。持続可能なエネルギー利用を推進し、クリーンな電力供給を実現しています。","industries":["エネルギー産業","再生可能エネルギーfだsdsふぁあdsf"],"locations":["ロサンゼルス","シドニー"]}
+[2023-06-21T07:59:52.537Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+Response 200 OK
+Response Body: undefined
+[2023-06-21T07:59:52.587Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T07:59:54.185Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Request Body: {}
+[2023-06-21T07:59:54.193Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T07:59:54.203Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T07:59:54.209Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T08:00:06.647Z] POST /company/registerCompany
+Request Body: {"name":"sds","author":"jane@example.com","abstract":"sada","industries":["aas"],"locations":["kjhっっk"]}
+[2023-06-21T08:00:06.651Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Body: {}
+[2023-06-21T08:00:06.653Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Request Body: {}
+Response 200 OK
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T08:00:08.515Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T08:00:08.525Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Request Body: {}
+[2023-06-21T08:00:08.527Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Request Body: {}
+Response 200 OK
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T08:00:08.539Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T08:00:08.544Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T08:00:18.541Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T08:00:52.522Z] PUT /user/updateAll/jane@example.com
+Request Body: {"name":"あdさsdふぁdfsdf","email":"jane@example.com","password":"qwerty"}
+Response 200 OK
+Response Body: undefined
+[2023-06-21T08:00:53.640Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T08:00:53.650Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T08:00:53.661Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Request Body: {}
+[2023-06-21T08:00:53.671Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T08:01:02.061Z] DELETE /user/delete/jane@example.com
+Request Body: {}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T08:01:57.901Z] DELETE /user/delete/jane@example.com
+Request Body: {}
+Response 200 OK
+Response Body: undefined
+[2023-06-21T08:02:04.670Z] POST /user/login
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T08:02:04.716Z] GET /myCompany/getMyCompanyList?email=
+Request Body: {}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T08:02:04.719Z] GET /company/getCompanyList?ids=
+Request Body: {}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T08:02:10.893Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Body: {}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T09:44:48.531Z] POST /user/login
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T09:44:48.626Z] GET /myCompany/getMyCompanyList?email=
+Request Body: {}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T09:44:48.629Z] GET /company/getCompanyList?ids=
+Request Body: {}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T09:44:51.342Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Body: {}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T09:45:12.065Z] POST /user/login
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T09:45:12.110Z] GET /myCompany/getMyCompanyList?email=
+Request Body: {}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T09:45:12.114Z] GET /company/getCompanyList?ids=
+Request Body: {}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T09:45:34.879Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Body: {}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T09:52:56.716Z] POST /user/login
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T09:52:56.807Z] GET /myCompany/getMyCompanyList?email=
+Request Body: {}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T09:52:56.810Z] GET /company/getCompanyList?ids=
+Request Body: {}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T09:56:13.150Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Body: {}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T09:56:19.528Z] POST /user/login
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T09:56:19.597Z] GET /myCompany/getMyCompanyList?email=
+Request Body: {}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T09:56:19.600Z] GET /company/getCompanyList?ids=
+Request Body: {}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T09:56:54.030Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Body: {}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T09:57:00.392Z] POST /user/login
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T09:57:00.483Z] GET /myCompany/getMyCompanyList?email=
+Request Body: {}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T09:57:00.487Z] GET /company/getCompanyList?ids=
+Request Body: {}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T09:57:24.093Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Body: {}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T09:57:31.482Z] POST /user/login
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T09:57:31.579Z] GET /myCompany/getMyCompanyList?email=
+Request Body: {}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T09:57:31.582Z] GET /company/getCompanyList?ids=
+Request Body: {}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T09:59:08.406Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Body: {}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T09:59:15.693Z] POST /user/login
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 200 OK
+Response Body: undefined
+[2023-06-21T09:59:15.750Z] GET /myCompany/getMyCompanyList?email=
+Request Body: {}
+[2023-06-21T09:59:15.755Z] GET /company/getCompanyList?ids=
+Request Body: {}
+Response 200 OK
+Response Body: undefined
+Response 200 OK
+Response Body: undefined
+[2023-06-21T09:59:28.291Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Body: {}
+Response 200 OK
+Response Body: undefined
+[2023-06-21T09:59:28.307Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Request Body: {}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T10:03:51.347Z] POST /user/login
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 200 OK
+Response Body: undefined
+[2023-06-21T10:03:51.384Z] GET /myCompany/getMyCompanyList?email=
+Request Body: {}
+[2023-06-21T10:03:51.393Z] GET /company/getCompanyList?ids=
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T10:03:52.395Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T10:03:52.408Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Request Body: {}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T10:03:59.289Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Request Body: {}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T10:03:59.295Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Request Body: {}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T10:04:00.941Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Request Body: {}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T10:05:14.606Z] POST /user/login
+Request Headers: {"host":"localhost:5000","connection":"keep-alive","content-length":"48","sec-ch-ua":"\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"","accept":"application/json","content-type":"application/json","sec-ch-ua-mobile":"?0","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","origin":"http://localhost:3000","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br","accept-language":"ja,en-US;q=0.9,en;q=0.8"}
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 200 OK
+Response Body: undefined
+[2023-06-21T10:05:14.703Z] GET /myCompany/getMyCompanyList?email=
+Request Headers: {"host":"localhost:5000","connection":"keep-alive","sec-ch-ua":"\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"","content-type":"application/json","sec-ch-ua-mobile":"?0","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDE5MTQsImV4cCI6MTY4NzM0NTUxNH0.2HxhLg76gT7ZRcaZdjTiWVjKTIDTbPO5xZ8jTrP84sw","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","accept":"*/*","origin":"http://localhost:3000","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br","accept-language":"ja,en-US;q=0.9,en;q=0.8","if-none-match":"W/\"14-TIuE8INhheifamG+IxmiP13sWsE\""}
+Request Body: {}
+[2023-06-21T10:05:14.708Z] GET /company/getCompanyList?ids=
+Request Headers: {"host":"localhost:5000","connection":"keep-alive","sec-ch-ua":"\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"","content-type":"application/json","sec-ch-ua-mobile":"?0","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDE5MTQsImV4cCI6MTY4NzM0NTUxNH0.2HxhLg76gT7ZRcaZdjTiWVjKTIDTbPO5xZ8jTrP84sw","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","accept":"*/*","origin":"http://localhost:3000","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br","accept-language":"ja,en-US;q=0.9,en;q=0.8","if-none-match":"W/\"12-IS1ZQYTBkqed85+8Qj0ryrPEJrI\""}
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T10:05:51.693Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Headers: {"host":"localhost:5000","connection":"keep-alive","sec-ch-ua":"\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"","content-type":"application/json","sec-ch-ua-mobile":"?0","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDE5MTQsImV4cCI6MTY4NzM0NTUxNH0.2HxhLg76gT7ZRcaZdjTiWVjKTIDTbPO5xZ8jTrP84sw","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","accept":"*/*","origin":"http://localhost:3000","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br","accept-language":"ja,en-US;q=0.9,en;q=0.8","if-none-match":"W/\"1bf-YSKD03z84aY5QFwQmuZ1BBcf+8g\""}
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T10:05:51.708Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Request Headers: {"host":"localhost:5000","connection":"keep-alive","sec-ch-ua":"\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"","content-type":"application/json","sec-ch-ua-mobile":"?0","authorization":"Bearer null","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","accept":"*/*","origin":"http://localhost:3000","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br","accept-language":"ja,en-US;q=0.9,en;q=0.8"}
+Request Body: {}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T10:07:28.210Z] POST /user/login
+Request Headers: {"host":"localhost:5000","connection":"keep-alive","content-length":"48","sec-ch-ua":"\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"","accept":"application/json","content-type":"application/json","sec-ch-ua-mobile":"?0","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","origin":"http://localhost:3000","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br","accept-language":"ja,en-US;q=0.9,en;q=0.8"}
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 200 OK
+Response Body: undefined
+[2023-06-21T10:07:28.310Z] GET /myCompany/getMyCompanyList?email=
+Request Headers: {"host":"localhost:5000","connection":"keep-alive","sec-ch-ua":"\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"","content-type":"application/json","sec-ch-ua-mobile":"?0","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDIwNDgsImV4cCI6MTY4NzM0NTY0OH0.OagvYWiVc4ILABOuKjPhtMrthtxXn7Rttejj-J2LBgE","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","accept":"*/*","origin":"http://localhost:3000","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br","accept-language":"ja,en-US;q=0.9,en;q=0.8","if-none-match":"W/\"14-TIuE8INhheifamG+IxmiP13sWsE\""}
+Request Body: {}
+[2023-06-21T10:07:28.314Z] GET /company/getCompanyList?ids=
+Request Headers: {"host":"localhost:5000","connection":"keep-alive","sec-ch-ua":"\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"","content-type":"application/json","sec-ch-ua-mobile":"?0","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDIwNDgsImV4cCI6MTY4NzM0NTY0OH0.OagvYWiVc4ILABOuKjPhtMrthtxXn7Rttejj-J2LBgE","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","accept":"*/*","origin":"http://localhost:3000","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br","accept-language":"ja,en-US;q=0.9,en;q=0.8","if-none-match":"W/\"12-IS1ZQYTBkqed85+8Qj0ryrPEJrI\""}
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T10:07:31.961Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Headers: {"host":"localhost:5000","connection":"keep-alive","sec-ch-ua":"\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"","content-type":"application/json","sec-ch-ua-mobile":"?0","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDIwNDgsImV4cCI6MTY4NzM0NTY0OH0.OagvYWiVc4ILABOuKjPhtMrthtxXn7Rttejj-J2LBgE","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","accept":"*/*","origin":"http://localhost:3000","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br","accept-language":"ja,en-US;q=0.9,en;q=0.8","if-none-match":"W/\"1bf-YSKD03z84aY5QFwQmuZ1BBcf+8g\""}
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T10:07:31.974Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Request Headers: {"host":"localhost:5000","connection":"keep-alive","sec-ch-ua":"\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"","content-type":"application/json","sec-ch-ua-mobile":"?0","authorization":"Bearer null","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","accept":"*/*","origin":"http://localhost:3000","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br","accept-language":"ja,en-US;q=0.9,en;q=0.8"}
+Request Body: {}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T10:09:35.273Z] POST /user/login
+Request Headers: {"host":"localhost:5000","connection":"keep-alive","content-length":"48","sec-ch-ua":"\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"","accept":"application/json","content-type":"application/json","sec-ch-ua-mobile":"?0","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","origin":"http://localhost:3000","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br","accept-language":"ja,en-US;q=0.9,en;q=0.8"}
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 200 OK
+Response Body: undefined
+[2023-06-21T10:09:35.364Z] GET /myCompany/getMyCompanyList?email=
+Request Headers: {"host":"localhost:5000","connection":"keep-alive","sec-ch-ua":"\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"","content-type":"application/json","sec-ch-ua-mobile":"?0","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDIxNzUsImV4cCI6MTY4NzM0NTc3NX0.66pz3uQ9F4zMBX2JCXrXRR5AEjOLbyQQVV89wXEYUhc","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","accept":"*/*","origin":"http://localhost:3000","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br","accept-language":"ja,en-US;q=0.9,en;q=0.8","if-none-match":"W/\"14-TIuE8INhheifamG+IxmiP13sWsE\""}
+Request Body: {}
+[2023-06-21T10:09:35.370Z] GET /company/getCompanyList?ids=
+Request Headers: {"host":"localhost:5000","connection":"keep-alive","sec-ch-ua":"\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"","content-type":"application/json","sec-ch-ua-mobile":"?0","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDIxNzUsImV4cCI6MTY4NzM0NTc3NX0.66pz3uQ9F4zMBX2JCXrXRR5AEjOLbyQQVV89wXEYUhc","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","accept":"*/*","origin":"http://localhost:3000","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br","accept-language":"ja,en-US;q=0.9,en;q=0.8","if-none-match":"W/\"12-IS1ZQYTBkqed85+8Qj0ryrPEJrI\""}
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T10:09:41.119Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Headers: {"host":"localhost:5000","connection":"keep-alive","sec-ch-ua":"\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"","content-type":"application/json","sec-ch-ua-mobile":"?0","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDIxNzUsImV4cCI6MTY4NzM0NTc3NX0.66pz3uQ9F4zMBX2JCXrXRR5AEjOLbyQQVV89wXEYUhc","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","accept":"*/*","origin":"http://localhost:3000","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br","accept-language":"ja,en-US;q=0.9,en;q=0.8","if-none-match":"W/\"1bf-YSKD03z84aY5QFwQmuZ1BBcf+8g\""}
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T10:09:41.134Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Request Headers: {"host":"localhost:5000","connection":"keep-alive","sec-ch-ua":"\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"","content-type":"application/json","sec-ch-ua-mobile":"?0","authorization":"Bearer null","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","accept":"*/*","origin":"http://localhost:3000","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br","accept-language":"ja,en-US;q=0.9,en;q=0.8"}
+Request Body: {}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T10:11:15.807Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Request Headers: {"host":"localhost:5000","connection":"keep-alive","sec-ch-ua":"\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"","content-type":"application/json","sec-ch-ua-mobile":"?0","authorization":"Bearer null","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","accept":"*/*","origin":"http://localhost:3000","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br","accept-language":"ja,en-US;q=0.9,en;q=0.8"}
+Request Body: {}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T10:11:15.812Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Headers: {"host":"localhost:5000","connection":"keep-alive","sec-ch-ua":"\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"","content-type":"application/json","sec-ch-ua-mobile":"?0","authorization":"Bearer null","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","accept":"*/*","origin":"http://localhost:3000","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br","accept-language":"ja,en-US;q=0.9,en;q=0.8","if-none-match":"W/\"1bf-YSKD03z84aY5QFwQmuZ1BBcf+8g\""}
+Request Body: {}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T10:11:15.817Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Headers: {"host":"localhost:5000","connection":"keep-alive","sec-ch-ua":"\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"","content-type":"application/json","sec-ch-ua-mobile":"?0","authorization":"Bearer null","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","accept":"*/*","origin":"http://localhost:3000","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br","accept-language":"ja,en-US;q=0.9,en;q=0.8"}
+Request Body: {}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T10:11:15.837Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Request Headers: {"host":"localhost:5000","connection":"keep-alive","sec-ch-ua":"\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"","content-type":"application/json","sec-ch-ua-mobile":"?0","authorization":"Bearer null","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","accept":"*/*","origin":"http://localhost:3000","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br","accept-language":"ja,en-US;q=0.9,en;q=0.8"}
+Request Body: {}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T10:11:15.844Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Request Headers: {"host":"localhost:5000","connection":"keep-alive","sec-ch-ua":"\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"","content-type":"application/json","sec-ch-ua-mobile":"?0","authorization":"Bearer null","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","accept":"*/*","origin":"http://localhost:3000","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br","accept-language":"ja,en-US;q=0.9,en;q=0.8"}
+Request Body: {}
+Response 400 Bad Request
+Response Body: undefined
+[2023-06-21T10:11:33.556Z] POST /user/login
+Request Headers: {"host":"localhost:5000","connection":"keep-alive","content-length":"48","sec-ch-ua":"\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"","accept":"application/json","content-type":"application/json","sec-ch-ua-mobile":"?0","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","origin":"http://localhost:3000","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br","accept-language":"ja,en-US;q=0.9,en;q=0.8"}
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 200 OK
+Response Body: undefined
+[2023-06-21T10:11:33.610Z] GET /myCompany/getMyCompanyList?email=
+Request Headers: {"host":"localhost:5000","connection":"keep-alive","sec-ch-ua":"\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"","content-type":"application/json","sec-ch-ua-mobile":"?0","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDIyOTMsImV4cCI6MTY4NzM0NTg5M30.PSXtVH4hyLWsXDRCPXdYSrYs42zGnogH9m2AnQwIoiY","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","accept":"*/*","origin":"http://localhost:3000","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br","accept-language":"ja,en-US;q=0.9,en;q=0.8","if-none-match":"W/\"14-TIuE8INhheifamG+IxmiP13sWsE\""}
+Request Body: {}
+[2023-06-21T10:11:33.614Z] GET /company/getCompanyList?ids=
+Request Headers: {"host":"localhost:5000","connection":"keep-alive","sec-ch-ua":"\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"","content-type":"application/json","sec-ch-ua-mobile":"?0","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDIyOTMsImV4cCI6MTY4NzM0NTg5M30.PSXtVH4hyLWsXDRCPXdYSrYs42zGnogH9m2AnQwIoiY","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","accept":"*/*","origin":"http://localhost:3000","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br","accept-language":"ja,en-US;q=0.9,en;q=0.8","if-none-match":"W/\"12-IS1ZQYTBkqed85+8Qj0ryrPEJrI\""}
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T10:11:34.769Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Request Headers: {"host":"localhost:5000","connection":"keep-alive","sec-ch-ua":"\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"","content-type":"application/json","sec-ch-ua-mobile":"?0","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDIyOTMsImV4cCI6MTY4NzM0NTg5M30.PSXtVH4hyLWsXDRCPXdYSrYs42zGnogH9m2AnQwIoiY","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","accept":"*/*","origin":"http://localhost:3000","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br","accept-language":"ja,en-US;q=0.9,en;q=0.8"}
+Request Body: {}
+Response 200 OK
+Response Body: undefined
+[2023-06-21T10:11:34.785Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Request Headers: {"host":"localhost:5000","connection":"keep-alive","sec-ch-ua":"\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"","content-type":"application/json","sec-ch-ua-mobile":"?0","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDIyOTMsImV4cCI6MTY4NzM0NTg5M30.PSXtVH4hyLWsXDRCPXdYSrYs42zGnogH9m2AnQwIoiY","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","accept":"*/*","origin":"http://localhost:3000","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br","accept-language":"ja,en-US;q=0.9,en;q=0.8"}
+Request Body: {}
+Response 200 OK
+Response Body: undefined
+[2023-06-21T10:14:39.437Z] POST /user/register
+Request Headers: {"host":"localhost:5000","connection":"keep-alive","content-length":"74","sec-ch-ua":"\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"","accept":"application/json","content-type":"application/json","sec-ch-ua-mobile":"?0","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","origin":"http://localhost:3000","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br","accept-language":"ja,en-US;q=0.9,en;q=0.8"}
+Request Body: {"name":"ジバコイル","email":"test@test.co.jp","password":"password"}
+Response 200 OK
+Response Body: undefined
+[2023-06-21T10:14:47.517Z] POST /user/login
+Request Headers: {"host":"localhost:5000","connection":"keep-alive","content-length":"49","sec-ch-ua":"\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"","accept":"application/json","content-type":"application/json","sec-ch-ua-mobile":"?0","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","origin":"http://localhost:3000","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br","accept-language":"ja,en-US;q=0.9,en;q=0.8"}
+Request Body: {"email":"test@test.co.jp","password":"password"}
+Response 200 OK
+Response Body: undefined
+[2023-06-21T10:14:47.569Z] GET /company/getCompanyList?ids=
+Request Headers: {"host":"localhost:5000","connection":"keep-alive","sec-ch-ua":"\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"","content-type":"application/json","sec-ch-ua-mobile":"?0","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jby5qcCIsImlhdCI6MTY4NzM0MjQ4NywiZXhwIjoxNjg3MzQ2MDg3fQ.7vSsapCQ5gB9j_soq_o_qPUfnZXxk9tmKqds4C88PwA","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","accept":"*/*","origin":"http://localhost:3000","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br","accept-language":"ja,en-US;q=0.9,en;q=0.8","if-none-match":"W/\"12-IS1ZQYTBkqed85+8Qj0ryrPEJrI\""}
+Request Body: {}
+[2023-06-21T10:14:47.574Z] GET /myCompany/getMyCompanyList?email=
+Request Headers: {"host":"localhost:5000","connection":"keep-alive","sec-ch-ua":"\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"","content-type":"application/json","sec-ch-ua-mobile":"?0","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jby5qcCIsImlhdCI6MTY4NzM0MjQ4NywiZXhwIjoxNjg3MzQ2MDg3fQ.7vSsapCQ5gB9j_soq_o_qPUfnZXxk9tmKqds4C88PwA","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","accept":"*/*","origin":"http://localhost:3000","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br","accept-language":"ja,en-US;q=0.9,en;q=0.8","if-none-match":"W/\"14-TIuE8INhheifamG+IxmiP13sWsE\""}
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T10:14:48.614Z] GET /myCompany/getMyCompanyList?email=test@test.co.jp
+Request Headers: {"host":"localhost:5000","connection":"keep-alive","sec-ch-ua":"\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"","content-type":"application/json","sec-ch-ua-mobile":"?0","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jby5qcCIsImlhdCI6MTY4NzM0MjQ4NywiZXhwIjoxNjg3MzQ2MDg3fQ.7vSsapCQ5gB9j_soq_o_qPUfnZXxk9tmKqds4C88PwA","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","accept":"*/*","origin":"http://localhost:3000","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br","accept-language":"ja,en-US;q=0.9,en;q=0.8","if-none-match":"W/\"14-TIuE8INhheifamG+IxmiP13sWsE\""}
+Request Body: {}
+Response 304 Not Modified
+Response Body: undefined
+[2023-06-21T10:14:51.292Z] GET /company/getRegisterCompanyList?email=test@test.co.jp
+Request Headers: {"host":"localhost:5000","connection":"keep-alive","sec-ch-ua":"\"Not.A/Brand\";v=\"8\", \"Chromium\";v=\"114\", \"Google Chrome\";v=\"114\"","accept":"application/json","content-type":"application/json","sec-ch-ua-mobile":"?0","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAdGVzdC5jby5qcCIsImlhdCI6MTY4NzM0MjQ4NywiZXhwIjoxNjg3MzQ2MDg3fQ.7vSsapCQ5gB9j_soq_o_qPUfnZXxk9tmKqds4C88PwA","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36","sec-ch-ua-platform":"\"macOS\"","origin":"http://localhost:3000","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:3000/","accept-encoding":"gzip, deflate, br","accept-language":"ja,en-US;q=0.9,en;q=0.8"}
+Request Body: {}
+Response 200 OK
+Response Body: undefined
+[2023-06-21T10:20:13.530Z] POST /user/login
+Token: No token
+Request Body: {"email":"jane@example.com","password":"password"}
+Response 400 Bad Request
+Response Data: undefined
+[2023-06-21T10:20:13.623Z] GET /myCompany/getMyCompanyList?email=test@test.co.jp
+Token: undefined
+Request Body: {}
+Response 400 Bad Request
+Response Data: undefined
+[2023-06-21T10:20:13.627Z] GET /company/getCompanyList?ids=
+Token: undefined
+Request Body: {}
+Response 400 Bad Request
+Response Data: undefined
+[2023-06-21T10:20:17.999Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: undefined
+Request Body: {}
+Response 400 Bad Request
+Response Data: undefined
+[2023-06-21T10:22:26.466Z] POST /user/login
+Token: No token
+Request Body: {"email":"jane@example.com","password":"password"}
+Response 400 Bad Request
+Response Data: undefined
+[2023-06-21T10:22:34.654Z] POST /user/login
+Token: No token
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 200 OK
+Response Data: undefined
+[2023-06-21T10:22:34.716Z] GET /company/getCompanyList?ids=
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDI5NTQsImV4cCI6MTY4NzM0NjU1NH0.n9TIyKELwIjXP2-SFq0lMBZ2y7mwYxAEGawx4zmFLbI
+Request Body: {}
+[2023-06-21T10:22:34.721Z] GET /myCompany/getMyCompanyList?email=
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDI5NTQsImV4cCI6MTY4NzM0NjU1NH0.n9TIyKELwIjXP2-SFq0lMBZ2y7mwYxAEGawx4zmFLbI
+Request Body: {}
+Response 200 OK
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:22:35.925Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDI5NTQsImV4cCI6MTY4NzM0NjU1NH0.n9TIyKELwIjXP2-SFq0lMBZ2y7mwYxAEGawx4zmFLbI
+Request Body: {}
+Response 200 OK
+Response Data: undefined
+[2023-06-21T10:22:35.941Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDI5NTQsImV4cCI6MTY4NzM0NjU1NH0.n9TIyKELwIjXP2-SFq0lMBZ2y7mwYxAEGawx4zmFLbI
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:24:07.841Z] PUT /myCompany/updateMyCompany/jane@example.com/2
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDI5NTQsImV4cCI6MTY4NzM0NjU1NH0.n9TIyKELwIjXP2-SFq0lMBZ2y7mwYxAEGawx4zmFLbI
+Request Body: {"memo":"プレゼン資料の作成おええretrgtgwrtges"}
+[2023-06-21T10:24:07.846Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDI5NTQsImV4cCI6MTY4NzM0NjU1NH0.n9TIyKELwIjXP2-SFq0lMBZ2y7mwYxAEGawx4zmFLbI
+Request Body: {}
+[2023-06-21T10:24:07.850Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDI5NTQsImV4cCI6MTY4NzM0NjU1NH0.n9TIyKELwIjXP2-SFq0lMBZ2y7mwYxAEGawx4zmFLbI
+Request Body: {}
+Response 200 OK
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:24:10.146Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDI5NTQsImV4cCI6MTY4NzM0NjU1NH0.n9TIyKELwIjXP2-SFq0lMBZ2y7mwYxAEGawx4zmFLbI
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:24:10.160Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDI5NTQsImV4cCI6MTY4NzM0NjU1NH0.n9TIyKELwIjXP2-SFq0lMBZ2y7mwYxAEGawx4zmFLbI
+Request Body: {}
+[2023-06-21T10:24:10.169Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDI5NTQsImV4cCI6MTY4NzM0NjU1NH0.n9TIyKELwIjXP2-SFq0lMBZ2y7mwYxAEGawx4zmFLbI
+Request Body: {}
+Response 200 OK
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:24:35.497Z] PUT /myCompany/updateMyCompany/jane@example.com/5
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDI5NTQsImV4cCI6MTY4NzM0NjU1NH0.n9TIyKELwIjXP2-SFq0lMBZ2y7mwYxAEGawx4zmFLbI
+Request Body: {"memo":"営業戦略の見直しafsasdsaafd"}
+[2023-06-21T10:24:35.500Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDI5NTQsImV4cCI6MTY4NzM0NjU1NH0.n9TIyKELwIjXP2-SFq0lMBZ2y7mwYxAEGawx4zmFLbI
+Request Body: {}
+[2023-06-21T10:24:35.504Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDI5NTQsImV4cCI6MTY4NzM0NjU1NH0.n9TIyKELwIjXP2-SFq0lMBZ2y7mwYxAEGawx4zmFLbI
+Request Body: {}
+Response 200 OK
+Response Data: undefined
+Response 200 OK
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:24:35.519Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDI5NTQsImV4cCI6MTY4NzM0NjU1NH0.n9TIyKELwIjXP2-SFq0lMBZ2y7mwYxAEGawx4zmFLbI
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:24:35.528Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDI5NTQsImV4cCI6MTY4NzM0NjU1NH0.n9TIyKELwIjXP2-SFq0lMBZ2y7mwYxAEGawx4zmFLbI
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:25:19.302Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDI5NTQsImV4cCI6MTY4NzM0NjU1NH0.n9TIyKELwIjXP2-SFq0lMBZ2y7mwYxAEGawx4zmFLbI
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:25:29.298Z] PUT /myCompany/updateMyCompany/jane@example.com/2
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDI5NTQsImV4cCI6MTY4NzM0NjU1NH0.n9TIyKELwIjXP2-SFq0lMBZ2y7mwYxAEGawx4zmFLbI
+Request Body: {"memo":""}
+[2023-06-21T10:25:29.301Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDI5NTQsImV4cCI6MTY4NzM0NjU1NH0.n9TIyKELwIjXP2-SFq0lMBZ2y7mwYxAEGawx4zmFLbI
+Request Body: {}
+[2023-06-21T10:25:29.304Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDI5NTQsImV4cCI6MTY4NzM0NjU1NH0.n9TIyKELwIjXP2-SFq0lMBZ2y7mwYxAEGawx4zmFLbI
+Request Body: {}
+Response 200 OK
+Response Data: undefined
+Response 200 OK
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:25:29.320Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDI5NTQsImV4cCI6MTY4NzM0NjU1NH0.n9TIyKELwIjXP2-SFq0lMBZ2y7mwYxAEGawx4zmFLbI
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:25:29.328Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDI5NTQsImV4cCI6MTY4NzM0NjU1NH0.n9TIyKELwIjXP2-SFq0lMBZ2y7mwYxAEGawx4zmFLbI
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:25:31.601Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDI5NTQsImV4cCI6MTY4NzM0NjU1NH0.n9TIyKELwIjXP2-SFq0lMBZ2y7mwYxAEGawx4zmFLbI
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:25:37.627Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDI5NTQsImV4cCI6MTY4NzM0NjU1NH0.n9TIyKELwIjXP2-SFq0lMBZ2y7mwYxAEGawx4zmFLbI
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:25:37.634Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDI5NTQsImV4cCI6MTY4NzM0NjU1NH0.n9TIyKELwIjXP2-SFq0lMBZ2y7mwYxAEGawx4zmFLbI
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:25:43.570Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDI5NTQsImV4cCI6MTY4NzM0NjU1NH0.n9TIyKELwIjXP2-SFq0lMBZ2y7mwYxAEGawx4zmFLbI
+Request Body: {}
+Response 200 OK
+Response Data: undefined
+[2023-06-21T10:25:43.581Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDI5NTQsImV4cCI6MTY4NzM0NjU1NH0.n9TIyKELwIjXP2-SFq0lMBZ2y7mwYxAEGawx4zmFLbI
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:25:43.593Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDI5NTQsImV4cCI6MTY4NzM0NjU1NH0.n9TIyKELwIjXP2-SFq0lMBZ2y7mwYxAEGawx4zmFLbI
+Request Body: {}
+[2023-06-21T10:25:43.603Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDI5NTQsImV4cCI6MTY4NzM0NjU1NH0.n9TIyKELwIjXP2-SFq0lMBZ2y7mwYxAEGawx4zmFLbI
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:25:45.361Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDI5NTQsImV4cCI6MTY4NzM0NjU1NH0.n9TIyKELwIjXP2-SFq0lMBZ2y7mwYxAEGawx4zmFLbI
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:25:45.367Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDI5NTQsImV4cCI6MTY4NzM0NjU1NH0.n9TIyKELwIjXP2-SFq0lMBZ2y7mwYxAEGawx4zmFLbI
+Request Body: {}
+[2023-06-21T10:25:45.372Z] PUT /myCompany/updateMyCompany/jane@example.com/2
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDI5NTQsImV4cCI6MTY4NzM0NjU1NH0.n9TIyKELwIjXP2-SFq0lMBZ2y7mwYxAEGawx4zmFLbI
+Request Body: {"memo":"プレゼン資料の作成おええretrgtgwrtges"}
+Response 200 OK
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:25:45.383Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDI5NTQsImV4cCI6MTY4NzM0NjU1NH0.n9TIyKELwIjXP2-SFq0lMBZ2y7mwYxAEGawx4zmFLbI
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:25:45.395Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDI5NTQsImV4cCI6MTY4NzM0NjU1NH0.n9TIyKELwIjXP2-SFq0lMBZ2y7mwYxAEGawx4zmFLbI
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:25:46.677Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDI5NTQsImV4cCI6MTY4NzM0NjU1NH0.n9TIyKELwIjXP2-SFq0lMBZ2y7mwYxAEGawx4zmFLbI
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:29:43.891Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDI5NTQsImV4cCI6MTY4NzM0NjU1NH0.n9TIyKELwIjXP2-SFq0lMBZ2y7mwYxAEGawx4zmFLbI
+Request Body: {}
+[2023-06-21T10:29:43.893Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDI5NTQsImV4cCI6MTY4NzM0NjU1NH0.n9TIyKELwIjXP2-SFq0lMBZ2y7mwYxAEGawx4zmFLbI
+Request Body: {}
+Response 200 OK
+Response Data: undefined
+[2023-06-21T10:29:43.895Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDI5NTQsImV4cCI6MTY4NzM0NjU1NH0.n9TIyKELwIjXP2-SFq0lMBZ2y7mwYxAEGawx4zmFLbI
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:29:43.904Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDI5NTQsImV4cCI6MTY4NzM0NjU1NH0.n9TIyKELwIjXP2-SFq0lMBZ2y7mwYxAEGawx4zmFLbI
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:29:43.910Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDI5NTQsImV4cCI6MTY4NzM0NjU1NH0.n9TIyKELwIjXP2-SFq0lMBZ2y7mwYxAEGawx4zmFLbI
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:29:43.915Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDI5NTQsImV4cCI6MTY4NzM0NjU1NH0.n9TIyKELwIjXP2-SFq0lMBZ2y7mwYxAEGawx4zmFLbI
+Request Body: {}
+[2023-06-21T10:29:43.921Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDI5NTQsImV4cCI6MTY4NzM0NjU1NH0.n9TIyKELwIjXP2-SFq0lMBZ2y7mwYxAEGawx4zmFLbI
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:30:31.102Z] POST /user/login
+Token: No token
+Request Body: {"email":"jane@example.com","password":"password"}
+Response 400 Bad Request
+Response Data: undefined
+[2023-06-21T10:30:47.466Z] POST /user/login
+Token: No token
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 200 OK
+Response Data: undefined
+[2023-06-21T10:30:52.121Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM0NDcsImV4cCI6MTY4NzM0NzA0N30.xXqzYwhnasHepTL5ZprjKGjW5T3n_7uHETJf3fK6SlY
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:30:52.144Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM0NDcsImV4cCI6MTY4NzM0NzA0N30.xXqzYwhnasHepTL5ZprjKGjW5T3n_7uHETJf3fK6SlY
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:35:02.000Z] POST /user/login
+Token: No token
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 200 OK
+Response Data: undefined
+[2023-06-21T10:35:03.839Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM3MDIsImV4cCI6MTY4NzM0NzMwMn0.WCnOFy5fdCnIrqSSUPCa2xWZsRJfb0JIzasYBMVUiQI
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:35:03.862Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM3MDIsImV4cCI6MTY4NzM0NzMwMn0.WCnOFy5fdCnIrqSSUPCa2xWZsRJfb0JIzasYBMVUiQI
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:35:30.440Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM3MDIsImV4cCI6MTY4NzM0NzMwMn0.WCnOFy5fdCnIrqSSUPCa2xWZsRJfb0JIzasYBMVUiQI
+Request Body: {}
+[2023-06-21T10:35:30.442Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM3MDIsImV4cCI6MTY4NzM0NzMwMn0.WCnOFy5fdCnIrqSSUPCa2xWZsRJfb0JIzasYBMVUiQI
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:35:30.446Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM3MDIsImV4cCI6MTY4NzM0NzMwMn0.WCnOFy5fdCnIrqSSUPCa2xWZsRJfb0JIzasYBMVUiQI
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:35:30.453Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM3MDIsImV4cCI6MTY4NzM0NzMwMn0.WCnOFy5fdCnIrqSSUPCa2xWZsRJfb0JIzasYBMVUiQI
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:35:30.476Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM3MDIsImV4cCI6MTY4NzM0NzMwMn0.WCnOFy5fdCnIrqSSUPCa2xWZsRJfb0JIzasYBMVUiQI
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:35:30.481Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM3MDIsImV4cCI6MTY4NzM0NzMwMn0.WCnOFy5fdCnIrqSSUPCa2xWZsRJfb0JIzasYBMVUiQI
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:35:30.489Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM3MDIsImV4cCI6MTY4NzM0NzMwMn0.WCnOFy5fdCnIrqSSUPCa2xWZsRJfb0JIzasYBMVUiQI
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:35:38.114Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM3MDIsImV4cCI6MTY4NzM0NzMwMn0.WCnOFy5fdCnIrqSSUPCa2xWZsRJfb0JIzasYBMVUiQI
+Request Body: {}
+[2023-06-21T10:35:38.116Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM3MDIsImV4cCI6MTY4NzM0NzMwMn0.WCnOFy5fdCnIrqSSUPCa2xWZsRJfb0JIzasYBMVUiQI
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:35:38.120Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM3MDIsImV4cCI6MTY4NzM0NzMwMn0.WCnOFy5fdCnIrqSSUPCa2xWZsRJfb0JIzasYBMVUiQI
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:35:38.129Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM3MDIsImV4cCI6MTY4NzM0NzMwMn0.WCnOFy5fdCnIrqSSUPCa2xWZsRJfb0JIzasYBMVUiQI
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:35:38.136Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM3MDIsImV4cCI6MTY4NzM0NzMwMn0.WCnOFy5fdCnIrqSSUPCa2xWZsRJfb0JIzasYBMVUiQI
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:35:38.142Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM3MDIsImV4cCI6MTY4NzM0NzMwMn0.WCnOFy5fdCnIrqSSUPCa2xWZsRJfb0JIzasYBMVUiQI
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:35:38.157Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM3MDIsImV4cCI6MTY4NzM0NzMwMn0.WCnOFy5fdCnIrqSSUPCa2xWZsRJfb0JIzasYBMVUiQI
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:35:40.471Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM3MDIsImV4cCI6MTY4NzM0NzMwMn0.WCnOFy5fdCnIrqSSUPCa2xWZsRJfb0JIzasYBMVUiQI
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:35:40.475Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM3MDIsImV4cCI6MTY4NzM0NzMwMn0.WCnOFy5fdCnIrqSSUPCa2xWZsRJfb0JIzasYBMVUiQI
+Request Body: {}
+[2023-06-21T10:35:40.477Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM3MDIsImV4cCI6MTY4NzM0NzMwMn0.WCnOFy5fdCnIrqSSUPCa2xWZsRJfb0JIzasYBMVUiQI
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:35:40.484Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM3MDIsImV4cCI6MTY4NzM0NzMwMn0.WCnOFy5fdCnIrqSSUPCa2xWZsRJfb0JIzasYBMVUiQI
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:35:40.490Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM3MDIsImV4cCI6MTY4NzM0NzMwMn0.WCnOFy5fdCnIrqSSUPCa2xWZsRJfb0JIzasYBMVUiQI
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:35:40.494Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM3MDIsImV4cCI6MTY4NzM0NzMwMn0.WCnOFy5fdCnIrqSSUPCa2xWZsRJfb0JIzasYBMVUiQI
+Request Body: {}
+[2023-06-21T10:35:40.511Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM3MDIsImV4cCI6MTY4NzM0NzMwMn0.WCnOFy5fdCnIrqSSUPCa2xWZsRJfb0JIzasYBMVUiQI
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:36:00.290Z] POST /user/login
+Token: No token
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 200 OK
+Response Data: undefined
+[2023-06-21T10:36:01.751Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM3NjAsImV4cCI6MTY4NzM0NzM2MH0.tMOsTIMniQckcNmS-37BrMLoMAO_WXYJsB45gXY9558
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:36:01.776Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM3NjAsImV4cCI6MTY4NzM0NzM2MH0.tMOsTIMniQckcNmS-37BrMLoMAO_WXYJsB45gXY9558
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:36:26.638Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM3NjAsImV4cCI6MTY4NzM0NzM2MH0.tMOsTIMniQckcNmS-37BrMLoMAO_WXYJsB45gXY9558
+Request Body: {}
+[2023-06-21T10:36:26.640Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM3NjAsImV4cCI6MTY4NzM0NzM2MH0.tMOsTIMniQckcNmS-37BrMLoMAO_WXYJsB45gXY9558
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:36:26.644Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM3NjAsImV4cCI6MTY4NzM0NzM2MH0.tMOsTIMniQckcNmS-37BrMLoMAO_WXYJsB45gXY9558
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:36:26.656Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM3NjAsImV4cCI6MTY4NzM0NzM2MH0.tMOsTIMniQckcNmS-37BrMLoMAO_WXYJsB45gXY9558
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:36:26.673Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM3NjAsImV4cCI6MTY4NzM0NzM2MH0.tMOsTIMniQckcNmS-37BrMLoMAO_WXYJsB45gXY9558
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:36:26.688Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM3NjAsImV4cCI6MTY4NzM0NzM2MH0.tMOsTIMniQckcNmS-37BrMLoMAO_WXYJsB45gXY9558
+Request Body: {}
+[2023-06-21T10:36:26.695Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM3NjAsImV4cCI6MTY4NzM0NzM2MH0.tMOsTIMniQckcNmS-37BrMLoMAO_WXYJsB45gXY9558
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:36:50.920Z] PUT /myCompany/updateMyCompany/jane@example.com/5
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM3NjAsImV4cCI6MTY4NzM0NzM2MH0.tMOsTIMniQckcNmS-37BrMLoMAO_WXYJsB45gXY9558
+Request Body: {"memo":"営業戦略の見直しafsasdsaafd\nadfafsddf"}
+[2023-06-21T10:36:50.925Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM3NjAsImV4cCI6MTY4NzM0NzM2MH0.tMOsTIMniQckcNmS-37BrMLoMAO_WXYJsB45gXY9558
+Request Body: {}
+[2023-06-21T10:36:50.928Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM3NjAsImV4cCI6MTY4NzM0NzM2MH0.tMOsTIMniQckcNmS-37BrMLoMAO_WXYJsB45gXY9558
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+Response 200 OK
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:36:50.948Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM3NjAsImV4cCI6MTY4NzM0NzM2MH0.tMOsTIMniQckcNmS-37BrMLoMAO_WXYJsB45gXY9558
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:36:50.956Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM3NjAsImV4cCI6MTY4NzM0NzM2MH0.tMOsTIMniQckcNmS-37BrMLoMAO_WXYJsB45gXY9558
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:36:52.308Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM3NjAsImV4cCI6MTY4NzM0NzM2MH0.tMOsTIMniQckcNmS-37BrMLoMAO_WXYJsB45gXY9558
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:36:57.042Z] PUT /myCompany/updateMyCompany/jane@example.com/7
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM3NjAsImV4cCI6MTY4NzM0NzM2MH0.tMOsTIMniQckcNmS-37BrMLoMAO_WXYJsB45gXY9558
+Request Body: {"memo":"ffff"}
+[2023-06-21T10:36:57.046Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM3NjAsImV4cCI6MTY4NzM0NzM2MH0.tMOsTIMniQckcNmS-37BrMLoMAO_WXYJsB45gXY9558
+Request Body: {}
+Response 200 OK
+Response Data: undefined
+[2023-06-21T10:36:57.054Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM3NjAsImV4cCI6MTY4NzM0NzM2MH0.tMOsTIMniQckcNmS-37BrMLoMAO_WXYJsB45gXY9558
+Request Body: {}
+Response 200 OK
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:36:57.065Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM3NjAsImV4cCI6MTY4NzM0NzM2MH0.tMOsTIMniQckcNmS-37BrMLoMAO_WXYJsB45gXY9558
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:36:58.992Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM3NjAsImV4cCI6MTY4NzM0NzM2MH0.tMOsTIMniQckcNmS-37BrMLoMAO_WXYJsB45gXY9558
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:36:59.013Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDM3NjAsImV4cCI6MTY4NzM0NzM2MH0.tMOsTIMniQckcNmS-37BrMLoMAO_WXYJsB45gXY9558
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:40:02.717Z] POST /user/login
+Token: No token
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 200 OK
+Response Data: undefined
+[2023-06-21T10:40:04.217Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDQwMDIsImV4cCI6MTY4NzM0NzYwMn0.qp3yu3e4Oy6Vkdu8UG3j_rN3fcxZxbEwjFIB7_wMr_g
+Request Body: {}
+Response 200 OK
+Response Data: undefined
+[2023-06-21T10:40:04.245Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDQwMDIsImV4cCI6MTY4NzM0NzYwMn0.qp3yu3e4Oy6Vkdu8UG3j_rN3fcxZxbEwjFIB7_wMr_g
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:43:09.413Z] PUT /myCompany/updateMyCompany/jane@example.com/7
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDQwMDIsImV4cCI6MTY4NzM0NzYwMn0.qp3yu3e4Oy6Vkdu8UG3j_rN3fcxZxbEwjFIB7_wMr_g
+Request Body: {"memo":"てすと"}
+[2023-06-21T10:43:09.421Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDQwMDIsImV4cCI6MTY4NzM0NzYwMn0.qp3yu3e4Oy6Vkdu8UG3j_rN3fcxZxbEwjFIB7_wMr_g
+Request Body: {}
+[2023-06-21T10:43:09.439Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDQwMDIsImV4cCI6MTY4NzM0NzYwMn0.qp3yu3e4Oy6Vkdu8UG3j_rN3fcxZxbEwjFIB7_wMr_g
+Request Body: {}
+Response 200 OK
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:43:23.966Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDQwMDIsImV4cCI6MTY4NzM0NzYwMn0.qp3yu3e4Oy6Vkdu8UG3j_rN3fcxZxbEwjFIB7_wMr_g
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:43:23.981Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDQwMDIsImV4cCI6MTY4NzM0NzYwMn0.qp3yu3e4Oy6Vkdu8UG3j_rN3fcxZxbEwjFIB7_wMr_g
+Request Body: {}
+[2023-06-21T10:43:23.989Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDQwMDIsImV4cCI6MTY4NzM0NzYwMn0.qp3yu3e4Oy6Vkdu8UG3j_rN3fcxZxbEwjFIB7_wMr_g
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:46:26.361Z] POST /user/login
+Token: No token
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 200 OK
+Response Data: undefined
+[2023-06-21T10:46:28.938Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDQzODYsImV4cCI6MTY4NzM0Nzk4Nn0.SzLDgGEws8hcL6ZS4ZsxdxYk4tS9za1k1qDm2VVcn0s
+Request Body: {}
+Response 200 OK
+Response Data: undefined
+[2023-06-21T10:46:28.963Z] GET /company/getCompanyList?ids=2%2C5%2C7%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDQzODYsImV4cCI6MTY4NzM0Nzk4Nn0.SzLDgGEws8hcL6ZS4ZsxdxYk4tS9za1k1qDm2VVcn0s
+Request Body: {}
+Response 200 OK
+Response Data: undefined
+[2023-06-21T10:50:55.176Z] POST /user/login
+Token: No token
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 200 OK
+Response Data: undefined
+[2023-06-21T10:50:56.351Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDQ2NTUsImV4cCI6MTY4NzM0ODI1NX0.fxUOwDg3MXVamCKBeWiCj8NTAaxlDP1G0dZ_ACsJ0do
+Request Body: {}
+Response 200 OK
+Response Data: undefined
+[2023-06-21T10:50:56.378Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDQ2NTUsImV4cCI6MTY4NzM0ODI1NX0.fxUOwDg3MXVamCKBeWiCj8NTAaxlDP1G0dZ_ACsJ0do
+Request Body: {}
+Response 200 OK
+Response Data: undefined
+[2023-06-21T10:51:05.841Z] PUT /myCompany/updateMyCompany/jane@example.com/9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDQ2NTUsImV4cCI6MTY4NzM0ODI1NX0.fxUOwDg3MXVamCKBeWiCj8NTAaxlDP1G0dZ_ACsJ0do
+Request Body: {"memo":"社内会議のアジェンダ作成しない"}
+[2023-06-21T10:51:05.846Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDQ2NTUsImV4cCI6MTY4NzM0ODI1NX0.fxUOwDg3MXVamCKBeWiCj8NTAaxlDP1G0dZ_ACsJ0do
+Request Body: {}
+[2023-06-21T10:51:05.849Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDQ2NTUsImV4cCI6MTY4NzM0ODI1NX0.fxUOwDg3MXVamCKBeWiCj8NTAaxlDP1G0dZ_ACsJ0do
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+Response 200 OK
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:51:05.870Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDQ2NTUsImV4cCI6MTY4NzM0ODI1NX0.fxUOwDg3MXVamCKBeWiCj8NTAaxlDP1G0dZ_ACsJ0do
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:51:07.411Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDQ2NTUsImV4cCI6MTY4NzM0ODI1NX0.fxUOwDg3MXVamCKBeWiCj8NTAaxlDP1G0dZ_ACsJ0do
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T10:51:07.431Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDQ2NTUsImV4cCI6MTY4NzM0ODI1NX0.fxUOwDg3MXVamCKBeWiCj8NTAaxlDP1G0dZ_ACsJ0do
+Request Body: {}
+Response 200 OK
+Response Data: undefined
+[2023-06-21T10:59:31.587Z] PUT /myCompany/updateMyCompany/jane@example.com/9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDQ2NTUsImV4cCI6MTY4NzM0ODI1NX0.fxUOwDg3MXVamCKBeWiCj8NTAaxlDP1G0dZ_ACsJ0do
+Request Body: {"memo":"社内会議のアジェンダ作成"}
+[2023-06-21T10:59:31.591Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDQ2NTUsImV4cCI6MTY4NzM0ODI1NX0.fxUOwDg3MXVamCKBeWiCj8NTAaxlDP1G0dZ_ACsJ0do
+Request Body: {}
+Response 200 OK
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:00:00.751Z] PUT /myCompany/updateMyCompany/jane@example.com/9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDQ2NTUsImV4cCI6MTY4NzM0ODI1NX0.fxUOwDg3MXVamCKBeWiCj8NTAaxlDP1G0dZ_ACsJ0do
+Request Body: {"memo":""}
+[2023-06-21T11:00:00.754Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDQ2NTUsImV4cCI6MTY4NzM0ODI1NX0.fxUOwDg3MXVamCKBeWiCj8NTAaxlDP1G0dZ_ACsJ0do
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+Response 200 OK
+Response Data: undefined
+[2023-06-21T11:00:00.766Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDQ2NTUsImV4cCI6MTY4NzM0ODI1NX0.fxUOwDg3MXVamCKBeWiCj8NTAaxlDP1G0dZ_ACsJ0do
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:00:06.487Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDQ2NTUsImV4cCI6MTY4NzM0ODI1NX0.fxUOwDg3MXVamCKBeWiCj8NTAaxlDP1G0dZ_ACsJ0do
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:00:06.507Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDQ2NTUsImV4cCI6MTY4NzM0ODI1NX0.fxUOwDg3MXVamCKBeWiCj8NTAaxlDP1G0dZ_ACsJ0do
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:01:39.135Z] POST /user/login
+Token: No token
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 200 OK
+Response Data: undefined
+[2023-06-21T11:01:41.444Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDUyOTksImV4cCI6MTY4NzM0ODg5OX0.YzMepteFLFVFD4LLKsWY6x7soFKaycMs6g64AcVO-_w
+Request Body: {}
+Response 200 OK
+Response Data: undefined
+[2023-06-21T11:01:41.471Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDUyOTksImV4cCI6MTY4NzM0ODg5OX0.YzMepteFLFVFD4LLKsWY6x7soFKaycMs6g64AcVO-_w
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:02:10.755Z] PUT /myCompany/updateMyCompany/jane@example.com/2
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDUyOTksImV4cCI6MTY4NzM0ODg5OX0.YzMepteFLFVFD4LLKsWY6x7soFKaycMs6g64AcVO-_w
+Request Body: {"memo":""}
+[2023-06-21T11:02:10.759Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDUyOTksImV4cCI6MTY4NzM0ODg5OX0.YzMepteFLFVFD4LLKsWY6x7soFKaycMs6g64AcVO-_w
+Request Body: {}
+[2023-06-21T11:02:10.763Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDUyOTksImV4cCI6MTY4NzM0ODg5OX0.YzMepteFLFVFD4LLKsWY6x7soFKaycMs6g64AcVO-_w
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+Response 200 OK
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:02:10.797Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDUyOTksImV4cCI6MTY4NzM0ODg5OX0.YzMepteFLFVFD4LLKsWY6x7soFKaycMs6g64AcVO-_w
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:02:25.372Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDUyOTksImV4cCI6MTY4NzM0ODg5OX0.YzMepteFLFVFD4LLKsWY6x7soFKaycMs6g64AcVO-_w
+Request Body: {}
+[2023-06-21T11:02:25.384Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDUyOTksImV4cCI6MTY4NzM0ODg5OX0.YzMepteFLFVFD4LLKsWY6x7soFKaycMs6g64AcVO-_w
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:02:49.057Z] DELETE /myCompany/deleteMyCompany/jane@example.com/2
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDUyOTksImV4cCI6MTY4NzM0ODg5OX0.YzMepteFLFVFD4LLKsWY6x7soFKaycMs6g64AcVO-_w
+Request Body: {}
+Response 200 OK
+Response Data: undefined
+[2023-06-21T11:02:50.024Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDUyOTksImV4cCI6MTY4NzM0ODg5OX0.YzMepteFLFVFD4LLKsWY6x7soFKaycMs6g64AcVO-_w
+Request Body: {}
+Response 200 OK
+Response Data: undefined
+[2023-06-21T11:02:50.029Z] GET /company/getCompanyList?ids=5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDUyOTksImV4cCI6MTY4NzM0ODg5OX0.YzMepteFLFVFD4LLKsWY6x7soFKaycMs6g64AcVO-_w
+Request Body: {}
+Response 200 OK
+Response Data: undefined
+[2023-06-21T11:02:50.036Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDUyOTksImV4cCI6MTY4NzM0ODg5OX0.YzMepteFLFVFD4LLKsWY6x7soFKaycMs6g64AcVO-_w
+Request Body: {}
+[2023-06-21T11:02:50.039Z] GET /company/getCompanyList?ids=5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDUyOTksImV4cCI6MTY4NzM0ODg5OX0.YzMepteFLFVFD4LLKsWY6x7soFKaycMs6g64AcVO-_w
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:02:50.062Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDUyOTksImV4cCI6MTY4NzM0ODg5OX0.YzMepteFLFVFD4LLKsWY6x7soFKaycMs6g64AcVO-_w
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:02:57.874Z] PUT /myCompany/updateMyCompany/jane@example.com/5
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDUyOTksImV4cCI6MTY4NzM0ODg5OX0.YzMepteFLFVFD4LLKsWY6x7soFKaycMs6g64AcVO-_w
+Request Body: {"memo":""}
+[2023-06-21T11:02:57.877Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDUyOTksImV4cCI6MTY4NzM0ODg5OX0.YzMepteFLFVFD4LLKsWY6x7soFKaycMs6g64AcVO-_w
+Request Body: {}
+[2023-06-21T11:02:57.881Z] GET /company/getCompanyList?ids=5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDUyOTksImV4cCI6MTY4NzM0ODg5OX0.YzMepteFLFVFD4LLKsWY6x7soFKaycMs6g64AcVO-_w
+Request Body: {}
+Response 200 OK
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:03:18.153Z] GET /company/getCompanyList?ids=5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDUyOTksImV4cCI6MTY4NzM0ODg5OX0.YzMepteFLFVFD4LLKsWY6x7soFKaycMs6g64AcVO-_w
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:03:18.160Z] GET /company/getCompanyList?ids=5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDUyOTksImV4cCI6MTY4NzM0ODg5OX0.YzMepteFLFVFD4LLKsWY6x7soFKaycMs6g64AcVO-_w
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:03:18.166Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDUyOTksImV4cCI6MTY4NzM0ODg5OX0.YzMepteFLFVFD4LLKsWY6x7soFKaycMs6g64AcVO-_w
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:04:22.530Z] POST /user/login
+Token: No token
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 200 OK
+Response Data: undefined
+[2023-06-21T11:04:25.213Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU0NjIsImV4cCI6MTY4NzM0OTA2Mn0.68LV9CvPuy5suuM_e34GTkeAdinuBJEDzFd0l2Kltro
+Request Body: {}
+Response 200 OK
+Response Data: undefined
+[2023-06-21T11:04:25.237Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU0NjIsImV4cCI6MTY4NzM0OTA2Mn0.68LV9CvPuy5suuM_e34GTkeAdinuBJEDzFd0l2Kltro
+Request Body: {}
+Response 200 OK
+Response Data: undefined
+[2023-06-21T11:04:43.653Z] PUT /myCompany/updateMyCompany/jane@example.com/9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU0NjIsImV4cCI6MTY4NzM0OTA2Mn0.68LV9CvPuy5suuM_e34GTkeAdinuBJEDzFd0l2Kltro
+Request Body: {"memo":""}
+[2023-06-21T11:04:43.657Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU0NjIsImV4cCI6MTY4NzM0OTA2Mn0.68LV9CvPuy5suuM_e34GTkeAdinuBJEDzFd0l2Kltro
+Request Body: {}
+[2023-06-21T11:04:43.661Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU0NjIsImV4cCI6MTY4NzM0OTA2Mn0.68LV9CvPuy5suuM_e34GTkeAdinuBJEDzFd0l2Kltro
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+Response 200 OK
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:04:43.682Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU0NjIsImV4cCI6MTY4NzM0OTA2Mn0.68LV9CvPuy5suuM_e34GTkeAdinuBJEDzFd0l2Kltro
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:04:51.730Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU0NjIsImV4cCI6MTY4NzM0OTA2Mn0.68LV9CvPuy5suuM_e34GTkeAdinuBJEDzFd0l2Kltro
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:04:51.762Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU0NjIsImV4cCI6MTY4NzM0OTA2Mn0.68LV9CvPuy5suuM_e34GTkeAdinuBJEDzFd0l2Kltro
+Request Body: {}
+Response 200 OK
+Response Data: undefined
+[2023-06-21T11:06:23.824Z] POST /user/login
+Token: No token
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 200 OK
+Response Data: undefined
+[2023-06-21T11:06:25.005Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU1ODMsImV4cCI6MTY4NzM0OTE4M30.ySQGYNRu3TSMRgI9DBaqh43S4_8uNcbc0DE7_KZqZlU
+Request Body: {}
+Response 200 OK
+Response Data: undefined
+[2023-06-21T11:06:25.028Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU1ODMsImV4cCI6MTY4NzM0OTE4M30.ySQGYNRu3TSMRgI9DBaqh43S4_8uNcbc0DE7_KZqZlU
+Request Body: {}
+Response 200 OK
+Response Data: undefined
+[2023-06-21T11:07:35.359Z] POST /user/login
+Token: No token
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 200 OK
+Response Data: undefined
+[2023-06-21T11:07:39.164Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU2NTUsImV4cCI6MTY4NzM0OTI1NX0.6Bu_swHvkjqBig3u3G9t0aEGxBCrVKEvjaMh22tYBBU
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:07:39.187Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU2NTUsImV4cCI6MTY4NzM0OTI1NX0.6Bu_swHvkjqBig3u3G9t0aEGxBCrVKEvjaMh22tYBBU
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:07:58.819Z] PUT /myCompany/updateMyCompany/jane@example.com/2
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU2NTUsImV4cCI6MTY4NzM0OTI1NX0.6Bu_swHvkjqBig3u3G9t0aEGxBCrVKEvjaMh22tYBBU
+Request Body: {"memo":"おげええええええええ"}
+[2023-06-21T11:07:58.824Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU2NTUsImV4cCI6MTY4NzM0OTI1NX0.6Bu_swHvkjqBig3u3G9t0aEGxBCrVKEvjaMh22tYBBU
+Request Body: {}
+[2023-06-21T11:07:58.828Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU2NTUsImV4cCI6MTY4NzM0OTI1NX0.6Bu_swHvkjqBig3u3G9t0aEGxBCrVKEvjaMh22tYBBU
+Request Body: {}
+Response 200 OK
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:08:17.963Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU2NTUsImV4cCI6MTY4NzM0OTI1NX0.6Bu_swHvkjqBig3u3G9t0aEGxBCrVKEvjaMh22tYBBU
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:08:17.974Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU2NTUsImV4cCI6MTY4NzM0OTI1NX0.6Bu_swHvkjqBig3u3G9t0aEGxBCrVKEvjaMh22tYBBU
+Request Body: {}
+[2023-06-21T11:08:17.980Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU2NTUsImV4cCI6MTY4NzM0OTI1NX0.6Bu_swHvkjqBig3u3G9t0aEGxBCrVKEvjaMh22tYBBU
+Request Body: {}
+Response 200 OK
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:09:03.591Z] PUT /myCompany/updateMyCompany/jane@example.com/2
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU2NTUsImV4cCI6MTY4NzM0OTI1NX0.6Bu_swHvkjqBig3u3G9t0aEGxBCrVKEvjaMh22tYBBU
+Request Body: {"memo":"えんごおおおおお"}
+[2023-06-21T11:09:03.596Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU2NTUsImV4cCI6MTY4NzM0OTI1NX0.6Bu_swHvkjqBig3u3G9t0aEGxBCrVKEvjaMh22tYBBU
+Request Body: {}
+Response 200 OK
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:10:22.351Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU2NTUsImV4cCI6MTY4NzM0OTI1NX0.6Bu_swHvkjqBig3u3G9t0aEGxBCrVKEvjaMh22tYBBU
+Request Body: {}
+[2023-06-21T11:10:22.353Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU2NTUsImV4cCI6MTY4NzM0OTI1NX0.6Bu_swHvkjqBig3u3G9t0aEGxBCrVKEvjaMh22tYBBU
+Request Body: {}
+Response 200 OK
+Response Data: undefined
+[2023-06-21T11:10:22.358Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU2NTUsImV4cCI6MTY4NzM0OTI1NX0.6Bu_swHvkjqBig3u3G9t0aEGxBCrVKEvjaMh22tYBBU
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:10:22.375Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU2NTUsImV4cCI6MTY4NzM0OTI1NX0.6Bu_swHvkjqBig3u3G9t0aEGxBCrVKEvjaMh22tYBBU
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:10:22.389Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU2NTUsImV4cCI6MTY4NzM0OTI1NX0.6Bu_swHvkjqBig3u3G9t0aEGxBCrVKEvjaMh22tYBBU
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:10:22.394Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU2NTUsImV4cCI6MTY4NzM0OTI1NX0.6Bu_swHvkjqBig3u3G9t0aEGxBCrVKEvjaMh22tYBBU
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:10:22.413Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU2NTUsImV4cCI6MTY4NzM0OTI1NX0.6Bu_swHvkjqBig3u3G9t0aEGxBCrVKEvjaMh22tYBBU
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:10:31.208Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU2NTUsImV4cCI6MTY4NzM0OTI1NX0.6Bu_swHvkjqBig3u3G9t0aEGxBCrVKEvjaMh22tYBBU
+Request Body: {}
+[2023-06-21T11:10:31.210Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU2NTUsImV4cCI6MTY4NzM0OTI1NX0.6Bu_swHvkjqBig3u3G9t0aEGxBCrVKEvjaMh22tYBBU
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:10:31.212Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU2NTUsImV4cCI6MTY4NzM0OTI1NX0.6Bu_swHvkjqBig3u3G9t0aEGxBCrVKEvjaMh22tYBBU
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:10:31.225Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU2NTUsImV4cCI6MTY4NzM0OTI1NX0.6Bu_swHvkjqBig3u3G9t0aEGxBCrVKEvjaMh22tYBBU
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:10:31.236Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU2NTUsImV4cCI6MTY4NzM0OTI1NX0.6Bu_swHvkjqBig3u3G9t0aEGxBCrVKEvjaMh22tYBBU
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:10:31.244Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU2NTUsImV4cCI6MTY4NzM0OTI1NX0.6Bu_swHvkjqBig3u3G9t0aEGxBCrVKEvjaMh22tYBBU
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:10:31.263Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU2NTUsImV4cCI6MTY4NzM0OTI1NX0.6Bu_swHvkjqBig3u3G9t0aEGxBCrVKEvjaMh22tYBBU
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:10:42.843Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU2NTUsImV4cCI6MTY4NzM0OTI1NX0.6Bu_swHvkjqBig3u3G9t0aEGxBCrVKEvjaMh22tYBBU
+Request Body: {}
+[2023-06-21T11:10:42.845Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU2NTUsImV4cCI6MTY4NzM0OTI1NX0.6Bu_swHvkjqBig3u3G9t0aEGxBCrVKEvjaMh22tYBBU
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:10:42.847Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU2NTUsImV4cCI6MTY4NzM0OTI1NX0.6Bu_swHvkjqBig3u3G9t0aEGxBCrVKEvjaMh22tYBBU
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:11:02.985Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU2NTUsImV4cCI6MTY4NzM0OTI1NX0.6Bu_swHvkjqBig3u3G9t0aEGxBCrVKEvjaMh22tYBBU
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:11:03.018Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU2NTUsImV4cCI6MTY4NzM0OTI1NX0.6Bu_swHvkjqBig3u3G9t0aEGxBCrVKEvjaMh22tYBBU
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:11:03.081Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU2NTUsImV4cCI6MTY4NzM0OTI1NX0.6Bu_swHvkjqBig3u3G9t0aEGxBCrVKEvjaMh22tYBBU
+Request Body: {}
+[2023-06-21T11:11:03.088Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU2NTUsImV4cCI6MTY4NzM0OTI1NX0.6Bu_swHvkjqBig3u3G9t0aEGxBCrVKEvjaMh22tYBBU
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:11:03.096Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU2NTUsImV4cCI6MTY4NzM0OTI1NX0.6Bu_swHvkjqBig3u3G9t0aEGxBCrVKEvjaMh22tYBBU
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:11:03.112Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU2NTUsImV4cCI6MTY4NzM0OTI1NX0.6Bu_swHvkjqBig3u3G9t0aEGxBCrVKEvjaMh22tYBBU
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:11:03.129Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU2NTUsImV4cCI6MTY4NzM0OTI1NX0.6Bu_swHvkjqBig3u3G9t0aEGxBCrVKEvjaMh22tYBBU
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:11:03.136Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU2NTUsImV4cCI6MTY4NzM0OTI1NX0.6Bu_swHvkjqBig3u3G9t0aEGxBCrVKEvjaMh22tYBBU
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:11:03.158Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU2NTUsImV4cCI6MTY4NzM0OTI1NX0.6Bu_swHvkjqBig3u3G9t0aEGxBCrVKEvjaMh22tYBBU
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:11:27.411Z] POST /user/login
+Token: No token
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 200 OK
+Response Data: undefined
+[2023-06-21T11:11:29.941Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU4ODcsImV4cCI6MTY4NzM0OTQ4N30.MGShC9aI_VK3xlwjfHwyYc4MKb7hlU2HgRJGaHIgQAY
+Request Body: {}
+Response 200 OK
+Response Data: undefined
+[2023-06-21T11:11:29.968Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU4ODcsImV4cCI6MTY4NzM0OTQ4N30.MGShC9aI_VK3xlwjfHwyYc4MKb7hlU2HgRJGaHIgQAY
+Request Body: {}
+Response 200 OK
+Response Data: undefined
+[2023-06-21T11:11:44.496Z] PUT /myCompany/updateMyCompany/jane@example.com/2
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU4ODcsImV4cCI6MTY4NzM0OTQ4N30.MGShC9aI_VK3xlwjfHwyYc4MKb7hlU2HgRJGaHIgQAY
+Request Body: {"memo":"りらっくす"}
+[2023-06-21T11:11:44.501Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU4ODcsImV4cCI6MTY4NzM0OTQ4N30.MGShC9aI_VK3xlwjfHwyYc4MKb7hlU2HgRJGaHIgQAY
+Request Body: {}
+Response 200 OK
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:12:16.426Z] PUT /myCompany/updateMyCompany/jane@example.com/2
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU4ODcsImV4cCI6MTY4NzM0OTQ4N30.MGShC9aI_VK3xlwjfHwyYc4MKb7hlU2HgRJGaHIgQAY
+Request Body: {"memo":"おとん"}
+[2023-06-21T11:12:16.430Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU4ODcsImV4cCI6MTY4NzM0OTQ4N30.MGShC9aI_VK3xlwjfHwyYc4MKb7hlU2HgRJGaHIgQAY
+Request Body: {}
+[2023-06-21T11:12:16.433Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU4ODcsImV4cCI6MTY4NzM0OTQ4N30.MGShC9aI_VK3xlwjfHwyYc4MKb7hlU2HgRJGaHIgQAY
+Request Body: {}
+Response 200 OK
+Response Data: undefined
+Response 200 OK
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:12:16.449Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU4ODcsImV4cCI6MTY4NzM0OTQ4N30.MGShC9aI_VK3xlwjfHwyYc4MKb7hlU2HgRJGaHIgQAY
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:12:18.969Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU4ODcsImV4cCI6MTY4NzM0OTQ4N30.MGShC9aI_VK3xlwjfHwyYc4MKb7hlU2HgRJGaHIgQAY
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:12:19.005Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU4ODcsImV4cCI6MTY4NzM0OTQ4N30.MGShC9aI_VK3xlwjfHwyYc4MKb7hlU2HgRJGaHIgQAY
+Request Body: {}
+Response 200 OK
+Response Data: undefined
+[2023-06-21T11:12:40.374Z] POST /user/login
+Token: No token
+Request Body: {"email":"jane@example.com","password":"qwerty"}
+Response 200 OK
+Response Data: undefined
+[2023-06-21T11:12:41.923Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU5NjAsImV4cCI6MTY4NzM0OTU2MH0.moKObyQ0bjvbgSRTKLrsgdlQH0kP8zLctbr9BlKkOXg
+Request Body: {}
+Response 200 OK
+Response Data: undefined
+[2023-06-21T11:12:41.943Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU5NjAsImV4cCI6MTY4NzM0OTU2MH0.moKObyQ0bjvbgSRTKLrsgdlQH0kP8zLctbr9BlKkOXg
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:12:51.638Z] PUT /myCompany/updateMyCompany/jane@example.com/2
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU5NjAsImV4cCI6MTY4NzM0OTU2MH0.moKObyQ0bjvbgSRTKLrsgdlQH0kP8zLctbr9BlKkOXg
+Request Body: {"memo":"おかん"}
+[2023-06-21T11:12:51.640Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU5NjAsImV4cCI6MTY4NzM0OTU2MH0.moKObyQ0bjvbgSRTKLrsgdlQH0kP8zLctbr9BlKkOXg
+Request Body: {}
+[2023-06-21T11:12:51.646Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU5NjAsImV4cCI6MTY4NzM0OTU2MH0.moKObyQ0bjvbgSRTKLrsgdlQH0kP8zLctbr9BlKkOXg
+Request Body: {}
+Response 200 OK
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:12:53.833Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU5NjAsImV4cCI6MTY4NzM0OTU2MH0.moKObyQ0bjvbgSRTKLrsgdlQH0kP8zLctbr9BlKkOXg
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:12:53.848Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU5NjAsImV4cCI6MTY4NzM0OTU2MH0.moKObyQ0bjvbgSRTKLrsgdlQH0kP8zLctbr9BlKkOXg
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:12:53.869Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU5NjAsImV4cCI6MTY4NzM0OTU2MH0.moKObyQ0bjvbgSRTKLrsgdlQH0kP8zLctbr9BlKkOXg
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:14:17.891Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU5NjAsImV4cCI6MTY4NzM0OTU2MH0.moKObyQ0bjvbgSRTKLrsgdlQH0kP8zLctbr9BlKkOXg
+Request Body: {}
+[2023-06-21T11:14:17.893Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU5NjAsImV4cCI6MTY4NzM0OTU2MH0.moKObyQ0bjvbgSRTKLrsgdlQH0kP8zLctbr9BlKkOXg
+Request Body: {}
+Response 200 OK
+Response Data: undefined
+[2023-06-21T11:14:17.895Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU5NjAsImV4cCI6MTY4NzM0OTU2MH0.moKObyQ0bjvbgSRTKLrsgdlQH0kP8zLctbr9BlKkOXg
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:14:17.910Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU5NjAsImV4cCI6MTY4NzM0OTU2MH0.moKObyQ0bjvbgSRTKLrsgdlQH0kP8zLctbr9BlKkOXg
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:14:17.919Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU5NjAsImV4cCI6MTY4NzM0OTU2MH0.moKObyQ0bjvbgSRTKLrsgdlQH0kP8zLctbr9BlKkOXg
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:14:17.927Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU5NjAsImV4cCI6MTY4NzM0OTU2MH0.moKObyQ0bjvbgSRTKLrsgdlQH0kP8zLctbr9BlKkOXg
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:14:17.947Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU5NjAsImV4cCI6MTY4NzM0OTU2MH0.moKObyQ0bjvbgSRTKLrsgdlQH0kP8zLctbr9BlKkOXg
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:14:19.327Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU5NjAsImV4cCI6MTY4NzM0OTU2MH0.moKObyQ0bjvbgSRTKLrsgdlQH0kP8zLctbr9BlKkOXg
+Request Body: {}
+[2023-06-21T11:14:19.329Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU5NjAsImV4cCI6MTY4NzM0OTU2MH0.moKObyQ0bjvbgSRTKLrsgdlQH0kP8zLctbr9BlKkOXg
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:14:19.331Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU5NjAsImV4cCI6MTY4NzM0OTU2MH0.moKObyQ0bjvbgSRTKLrsgdlQH0kP8zLctbr9BlKkOXg
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:14:19.343Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU5NjAsImV4cCI6MTY4NzM0OTU2MH0.moKObyQ0bjvbgSRTKLrsgdlQH0kP8zLctbr9BlKkOXg
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:14:19.352Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU5NjAsImV4cCI6MTY4NzM0OTU2MH0.moKObyQ0bjvbgSRTKLrsgdlQH0kP8zLctbr9BlKkOXg
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:14:19.357Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU5NjAsImV4cCI6MTY4NzM0OTU2MH0.moKObyQ0bjvbgSRTKLrsgdlQH0kP8zLctbr9BlKkOXg
+Request Body: {}
+[2023-06-21T11:14:19.379Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU5NjAsImV4cCI6MTY4NzM0OTU2MH0.moKObyQ0bjvbgSRTKLrsgdlQH0kP8zLctbr9BlKkOXg
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:15:16.933Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU5NjAsImV4cCI6MTY4NzM0OTU2MH0.moKObyQ0bjvbgSRTKLrsgdlQH0kP8zLctbr9BlKkOXg
+Request Body: {}
+[2023-06-21T11:15:16.935Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU5NjAsImV4cCI6MTY4NzM0OTU2MH0.moKObyQ0bjvbgSRTKLrsgdlQH0kP8zLctbr9BlKkOXg
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:15:16.938Z] GET /myCompany/getMyCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU5NjAsImV4cCI6MTY4NzM0OTU2MH0.moKObyQ0bjvbgSRTKLrsgdlQH0kP8zLctbr9BlKkOXg
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:15:16.953Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU5NjAsImV4cCI6MTY4NzM0OTU2MH0.moKObyQ0bjvbgSRTKLrsgdlQH0kP8zLctbr9BlKkOXg
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:15:16.971Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU5NjAsImV4cCI6MTY4NzM0OTU2MH0.moKObyQ0bjvbgSRTKLrsgdlQH0kP8zLctbr9BlKkOXg
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:15:16.978Z] GET /company/getCompanyList?ids=2%2C5%2C9
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU5NjAsImV4cCI6MTY4NzM0OTU2MH0.moKObyQ0bjvbgSRTKLrsgdlQH0kP8zLctbr9BlKkOXg
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined
+[2023-06-21T11:15:17.007Z] GET /company/getRegisterCompanyList?email=jane@example.com
+Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImphbmVAZXhhbXBsZS5jb20iLCJpYXQiOjE2ODczNDU5NjAsImV4cCI6MTY4NzM0OTU2MH0.moKObyQ0bjvbgSRTKLrsgdlQH0kP8zLctbr9BlKkOXg
+Request Body: {}
+Response 304 Not Modified
+Response Data: undefined

@@ -30,12 +30,19 @@ function default_1(req, res) {
             yield (0, database_1.default)();
             const savedUserData = yield user_1.UserModel.findOne({ email: req.body.email });
             const password = req.body.password;
-            const hashed = savedUserData.password;
-            if (savedUserData && (yield bcrypt_1.default.compare(password, hashed))) {
-                const token = jsonwebtoken_1.default.sign({ email: savedUserData.email }, process.env.SECRET_KEY, { expiresIn: 3600 });
-                return res.status(200).json({ message: 'ログイン成功', name: savedUserData.name, token: token });
+            if (savedUserData) {
+                const hashed = savedUserData.password;
+                if (yield bcrypt_1.default.compare(password, hashed)) {
+                    const token = jsonwebtoken_1.default.sign({ email: savedUserData.email }, process.env.SECRET_KEY, { expiresIn: 3600 });
+                    console.log(token);
+                    return res.status(200).json({ message: 'ログイン成功', name: savedUserData.name, token: token });
+                }
+                else {
+                    return res.status(400).json({ message: 'ログイン失敗' });
+                }
             }
             else {
+                console.log("ユーザが存在しません");
                 return res.status(400).json({ message: 'ログイン失敗' });
             }
         }

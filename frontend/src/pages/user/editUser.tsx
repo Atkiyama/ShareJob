@@ -31,6 +31,7 @@ function EditUser({
 					method: 'PUT',
 					headers: {
 						'Content-Type': 'application/json',
+						authorization: `Bearer ${localStorage.getItem('token')}`,
 					},
 					body: JSON.stringify({
 						name: name,
@@ -85,6 +86,9 @@ function EditUser({
 				process.env.REACT_APP_BASE_URL! + `user/delete/${email}`,
 				{
 					method: 'DELETE',
+					headers: {
+						authorization: `Bearer ${localStorage.getItem('token')}`,
+					},
 				}
 			);
 
@@ -97,6 +101,7 @@ function EditUser({
 				updateCompanyList([]); // 空の配列でリストを更新
 				updateMyCompanyList([]); // 空の配列でリストを更新
 				updateUser({ name: '', email: '' }); // 空のユーザ情報で更新
+				localStorage.removeItem('token');
 
 				// 削除後にリダイレクトする場合は以下の行を有効化する
 				navigate('/');

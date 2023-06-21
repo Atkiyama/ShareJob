@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import express, { Request, Response, NextFunction } from 'express';
 import { Router } from 'express';
+import auth from '../utils/auth';
 import loginUser from '../controller/user/loginUser';
 import registerUser from '../controller/user/registerUser';
 import getMyCompanyList from '../controller/myCompany/getMyCompanyList';
@@ -51,27 +52,34 @@ const logRequestAndResponse = (
 
     console.log(logMessage); // コンソールにログを表示
 
+    // リクエストヘッダからトークンを取得
+    const token = req.headers.authorization?.split(' ')[1] || 'No token';
+    const requestHeaderMessage = `Token: ${token}\n`;
+    console.log(requestHeaderMessage);
+
     // リクエストボディをログに追加
     const requestBodyMessage = `Request Body: ${JSON.stringify(req.body)}\n`;
     console.log(requestBodyMessage);
 
     fs.appendFileSync(logFilePath, logMessage);
+    fs.appendFileSync(logFilePath, requestHeaderMessage);
     fs.appendFileSync(logFilePath, requestBodyMessage);
 
     res.on('finish', () => {
         const responseMessage = `Response ${res.statusCode} ${res.statusMessage}\n`;
-        const responseBodyMessage = `Response Body: ${JSON.stringify(res.locals.data)}\n`;
 
         console.log(responseMessage); // コンソールにレスポンスのログを表示
-        console.log(responseBodyMessage); // コンソールにレスポンスボディのログを表示
+
+        // レスポンスの内容をログに追加
+        const responseDataMessage = `Response Data: ${JSON.stringify(res.locals.data)}\n`;
+        console.log(responseDataMessage);
 
         fs.appendFileSync(logFilePath, responseMessage);
-        fs.appendFileSync(logFilePath, responseBodyMessage);
+        fs.appendFileSync(logFilePath, responseDataMessage);
     });
 
     next();
 };
-
 
 router.use(logRequestAndResponse);
 
@@ -80,17 +88,17 @@ router.use(logRequestAndResponse);
  */
 router.post('/user/login', loginUser);
 router.post('/user/register', registerUser);
-router.get('/myCompany/getMyCompanyList', getMyCompanyList);
-router.post('/myCompany/registerMyCompany', registerMyCompany);
-router.get('/company/getCompanyList', getCompanyList);
-router.put('/myCompany/updateMyCompany/:email/:id', updateMyCompany);
-router.delete('/myCompany/deleteMyCompany/:email/:id', deleteMyCompany);
-router.put('/user/update/:email', updateUser);
-router.put('/user/updateAll/:email', updateUserAll);
-router.delete('/user/delete/:email', deleteUser);
-router.get('/company/searchCompany', searchCompany);
-router.get('/company/getRegisterCompanyList', getRegisterCompanyList);
-router.put('/company/updateCompany/:id', updateCompany)
-router.post('/company/registerCompany', registerCompany)
+router.get('/myCompany/getMyCompanyList', auth, getMyCompanyList);
+router.post('/myCompany/registerMyCompany', auth, registerMyCompany);
+router.get('/company/getCompanyList', auth, getCompanyList);
+router.put('/myCompany/updateMyCompany/:email/:id', auth, updateMyCompany);
+router.delete('/myCompany/deleteMyCompany/:email/:id', auth, deleteMyCompany);
+router.put('/user/update/:email', auth, updateUser);
+router.put('/user/updateAll/:email', auth, updateUserAll);
+router.delete('/user/delete/:email', auth, deleteUser);
+router.get('/company/searchCompany', auth, searchCompany);
+router.get('/company/getRegisterCompanyList', auth, getRegisterCompanyList);
+router.put('/company/updateCompany/:id', auth, updateCompany)
+router.post('/company/registerCompany', auth, registerCompany)
 
 export default router;

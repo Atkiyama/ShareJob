@@ -75,12 +75,12 @@ function CompanyList({
 				headers: {
 					Accept: 'application/json',
 					'Content-Type': 'application/json',
+					authorization: `Bearer ${localStorage.getItem('token')}`,
 				},
 			}
 		);
 		const jsonResponse = await response.json();
 		updateRegisterCompanyList(jsonResponse.companyList);
-		console.log(jsonResponse.companyList);
 	};
 	const handleAdd = async () => {
 		navigate(`/pages/company/companyRegister/`);

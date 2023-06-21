@@ -27,8 +27,9 @@ function default_1(req, res) {
             yield (0, database_1.default)();
             const exitsTest = yield user_1.UserModel.findOne({ email: req.body.email });
             if (!exitsTest) {
-                process.env.SECRET_KEY;
-                const hashedPassword = yield bcryptjs_1.default.hash(req.body.password, process.env.SALT_ROUNDS);
+                const saltRounds = parseInt(process.env.SALT_ROUNDS);
+                const salt = yield bcryptjs_1.default.genSalt(saltRounds);
+                const hashedPassword = yield bcryptjs_1.default.hash(req.body.password, salt);
                 const user = new user_1.UserModel({
                     name: req.body.name,
                     email: req.body.email,

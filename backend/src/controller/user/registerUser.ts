@@ -14,8 +14,9 @@ export default async function (req: Request, res: Response) {
         await connectDB();
         const exitsTest: User | null = await UserModel.findOne({ email: req.body.email });
         if (!exitsTest) {
-            process.env.SECRET_KEY!;
-            const hashedPassword = await bcrypt.hash(req.body.password, process.env.SALT_ROUNDS!);
+            const saltRounds: number = parseInt(process.env.SALT_ROUNDS!);
+            const salt: string = await bcrypt.genSalt(saltRounds);
+            const hashedPassword = await bcrypt.hash(req.body.password, salt);
             const user: User = new UserModel({
                 name: req.body.name,
                 email: req.body.email,

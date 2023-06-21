@@ -39,24 +39,19 @@ function Login({
 				}
 			);
 			const jsonResponse = await response.json();
+			const name = jsonResponse.name;
 
 			/**
 			 * 同期処理を行う
 			 */
 			await Promise.all([
 				updateUser({
-					name: jsonResponse.savedUserData.name,
-					email: jsonResponse.savedUserData.email,
+					name: name,
+					email: email,
 				}),
 				handleMyCompanyList(),
 				handleCompanyList(),
-				alert(
-					'ログインに成功しました' +
-						'\n email:' +
-						jsonResponse.savedUserData.email +
-						'\n password:' +
-						jsonResponse.savedUserData.password
-				),
+				alert(name + 'でログインしました'),
 			]);
 			localStorage.setItem('token', jsonResponse.token);
 			navigate('/pages/home');

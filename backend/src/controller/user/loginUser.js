@@ -15,7 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const user_1 = require("../../model/user");
 const database_1 = __importDefault(require("../../utils/database"));
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
-const bcryptjs_1 = __importDefault(require("bcryptjs"));
+const bcrypt_1 = __importDefault(require("bcrypt"));
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
 /**
@@ -29,14 +29,11 @@ function default_1(req, res) {
         try {
             yield (0, database_1.default)();
             const savedUserData = yield user_1.UserModel.findOne({ email: req.body.email });
-            const saltRounds = parseInt(process.env.SALT_ROUNDS);
-            const hashedPassword = yield bcryptjs_1.default.hash(req.body.password, saltRounds);
-            console.log(saltRounds);
-            console.log(hashedPassword);
-            console.log(savedUserData.password);
-            if (savedUserData && (yield bcryptjs_1.default.compare(hashedPassword, savedUserData.password))) {
-                const token = jsonwebtoken_1.default.sign(savedUserData.email, process.env.SECRET_KEY, { expiresIn: "23h" });
-                return res.status(200).json({ message: 'ログイン成功', savedUserData: savedUserData, token: token });
+            const password = req.body.password;
+            const hashed = savedUserData.password;
+            if (savedUserData && (yield bcrypt_1.default.compare(password, hashed))) {
+                const token = jsonwebtoken_1.default.sign({ email: savedUserData.email }, process.env.SECRET_KEY, { expiresIn: 3600 });
+                return res.status(200).json({ message: 'ログイン成功', name: savedUserData.name, token: token });
             }
             else {
                 return res.status(400).json({ message: 'ログイン失敗' });

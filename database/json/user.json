@@ -2,51 +2,51 @@
   {
     "email": "john@example.com",
     "name": "John Smith",
-    "password": "$2a$05$Zx12Ljbt/J9XZG685bxGou.yLfA8e4380kFMcLFMpJ9ZkKdaV6zPa"
+    "password": "$2b$05$rkMgUlCICA/kUeS4UvCL5eS8GVHYS8pUaC5ZnP1P5fS4TCAb6ExKW"
   },
   {
     "email": "jane@example.com",
     "name": "Jane Doe",
-    "password": "$2a$05$h6KlKGx7Ov0dbVYtKVb66OK5M60/xs0JcT.QIxfSNB7xYcvDFa68G"
+    "password": "$2b$05$HARxyvXpwMRyui05B3G8LektgqyINcVmsGqKEfT6gUUaz6zFcIFTO"
   },
   {
     "email": "alex@example.com",
     "name": "Alex Johnson",
-    "password": "$2a$05$X9TrysYVWJFdqvQc6XaqyeIAOmvooJ2OLqOTuuDDBrTrC6jqiP3e."
+    "password": "$2b$05$OMSuYowwWc0.BBmY9w7.f.VnCXcKz8HBWuauCbdtuYZYLc41mU5Eq"
   },
   {
     "email": "sara@example.com",
     "name": "Sara Wilson",
-    "password": "$2a$05$3P9zNmlIw2wfE688Of6BCeng0RIFUFHScFkUwwTmZ59rRmRe86m8W"
+    "password": "$2b$05$VM8PdC/QDCaUv978G7bCKu8y1HY/Q5g/zVcZLlG2E7RtQMqA1milW"
   },
   {
     "email": "michael@example.com",
     "name": "Michael Brown",
-    "password": "$2a$05$eTFrgYF/InRfmiRov3YpReRmErb/5H1XOpriahOSkOTv6fbxpZV46"
+    "password": "$2b$05$EA1ITa58auujBdSkZxZiR.OfF/6al50aDQkghrgykv0u1hMng5d7i"
   },
   {
     "email": "emily@example.com",
     "name": "Emily Davis",
-    "password": "$2a$05$l1Zjt3bqfqzjo39Z7FpmR.UdnPsZQgW48bzVHlsqkolcJcEPbNtkC"
+    "password": "$2b$05$GsoylhvKzRxvVIUT2itgWONlFOHAPnVDXYKplPiVCKacmWfTxoQvG"
   },
   {
     "email": "william@example.com",
     "name": "William Taylor",
-    "password": "$2a$05$BBh8OhpX8nfX0l/sua2Ya.t4DKR1Kizqr4v2O3YfZMFat6kSgvlua"
+    "password": "$2b$05$gUEL8RzY61DzMqIOwxMDcOMO5jQn2W35pPC1miBTzVQZlZpOdP6Qa"
   },
   {
     "email": "olivia@example.com",
     "name": "Olivia Martinez",
-    "password": "$2a$05$.GLcF5oPgECzE9stENJ2wuZ1NUojigHox.PJDrQlqCPdRDtxTs3qa"
+    "password": "$2b$05$zVmVsci58JXNlMUjecgUBu6/RDTowmCF7V/PGD.Xf4z6PSUMHNEUO"
   },
   {
     "email": "daniel@example.com",
     "name": "Daniel Anderson",
-    "password": "$2a$05$GzRlkKK.4//bfATqIc9j9.Ht0lHB3iBCcpim91R05KxFksfA3RrRK"
+    "password": "$2b$05$9WO0dbcb9V9FOWc9/gtIOeDUak8WdjNVLtr6/35Xe4bv1KRH5UImC"
   },
   {
     "email": "mia@example.com",
     "name": "Mia Thomas",
-    "password": "$2a$05$gfuV/arze49On6btDbumHOjWF0eNvDKNIfJ4mHw5TnNC6hvDPZXwu"
+    "password": "$2b$05$KhXN0yJhrgRwPyDTbyWiRepAJkAhHfez5iAnHpyZOHFTAtxCnAINC"
   }
 ]

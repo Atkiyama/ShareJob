@@ -22,40 +22,42 @@ function Login({
 	 */
 	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
-		try {
-			const response = await fetch('http://localhost:5000/user/login', {
-				method: 'POST',
-				headers: {
-					Accept: 'application/json',
-					'Content-Type': 'application/json',
-				},
-				body: JSON.stringify({
-					email: email,
-					password: password,
-				}),
-			});
-			const jsonResponse = await response.json();
-			localStorage.setItem('token', jsonResponse.token);
 
-			/**
-			 * 同期処理を行う
-			 */
-			await Promise.all([
-				updateUser({
-					name: jsonResponse.savedUserData.name,
-					email: jsonResponse.savedUserData.email,
-				}),
-				handleMyCompanyList(),
-				handleCompanyList(),
-				alert(
-					'ログインに成功しました' +
-						'\n email:' +
-						jsonResponse.savedUserData.email +
-						'\n password:' +
-						jsonResponse.savedUserData.password
-				),
-			]);
-			navigate('/pages/home');
+		try {
+			const response = await fetch(
+				process.env.REACT_APP_BASE_URL! + `user/login`,
+				{
+					method: 'POST',
+					headers: {
+						Accept: 'application/json',
+						'Content-Type': 'application/json',
+					},
+					body: JSON.stringify({
+						email: email,
+						password: password,
+					}),
+				}
+			);
+			const jsonResponse = await response.json();
+			const name = jsonResponse.name;
+			if (jsonResponse.token) {
+				localStorage.setItem('token', jsonResponse.token);
+				/**
+				 * 同期処理を行う
+				 */
+				await Promise.all([
+					updateUser({
+						name: name,
+						email: email,
+					}),
+
+					alert(name + 'でログインしました'),
+				]);
+
+				navigate('/pages/home');
+			} else {
+				alert('ログインに失敗しました');
+			}
 		} catch (err) {
 			alert('ログインに失敗しました');
 		}

@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const companyInfo_1 = require("../../model/companyInfo");
+const myCompany_1 = require("../../model/myCompany");
 const database_1 = __importDefault(require("../../utils/database"));
 /**
  * 会社のメモを入手するAPI
@@ -24,7 +24,8 @@ function default_1(req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
             yield (0, database_1.default)();
-            const myCompanyList = yield companyInfo_1.MyCompanyModel.find({ email: req.query.email });
+            const myCompanyList = yield myCompany_1.MyCompanyModel.find({ email: req.query.email });
+            console.log(myCompanyList.length);
             return res.status(200).json({ myCompanyList: myCompanyList });
         }
         catch (err) {

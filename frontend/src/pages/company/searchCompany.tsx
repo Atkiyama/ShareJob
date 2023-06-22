@@ -76,11 +76,13 @@ function SearchCompany({
 	const handleSearch = async () => {
 		try {
 			const response = await fetch(
-				`http://localhost:5000/company/searchCompany/?words=${word}`,
+				process.env.REACT_APP_BASE_URL! +
+					`company/searchCompany/?words=${word}`,
 				{
 					method: 'GET',
 					headers: {
 						'Content-Type': 'application/json',
+						authorization: `Bearer ${localStorage.getItem('token')}`,
 					},
 				}
 			);

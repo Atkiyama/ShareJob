@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { MyCompany, MyCompanyModel } from '../../model/companyInfo';
+import { MyCompany, MyCompanyModel } from '../../model/myCompany';
 import connectDB from '../../utils/database';
 /**
  * 会社のメモ情報を登録するAPI

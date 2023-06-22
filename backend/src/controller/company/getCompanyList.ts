@@ -18,6 +18,7 @@ export default async function (req: Request, res: Response) {
 
             const ids: string = req.query.ids;
             const decodedIds = decodeURIComponent(ids);
+            console.log(decodedIds);
             const idArray: string[] = decodedIds.split(",");
             for (let i = 0; i < idArray.length; i++) {
                 const company: Company | null = await CompanyModel.findOne({ id: idArray[i] });

@@ -1,6 +1,11 @@
 import { Request, Response } from 'express';
 import { UserModel, User } from '../../model/user';
 import connectDB from '../../utils/database';
+import jwt from 'jsonwebtoken';
+import bcrypt from 'bcrypt';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 /**
  * ログイン時のAPI
@@ -12,11 +17,26 @@ export default async function (req: Request, res: Response) {
     try {
         await connectDB();
 
-        const savedUserData: User | null = await UserModel.findOne({ email: req.body.email, password: req.body.password });
+        const savedUserData: User | null = await UserModel.findOne({ email: req.body.email });
+        const password: string = req.body.password;
+
+
+
         if (savedUserData) {
-            return res.status(200).json({ message: 'ログイン成功', savedUserData: savedUserData });
+
+            const hashed = savedUserData.password;
+
+            if (await bcrypt.compare(password, hashed)) {
+                const token = jwt.sign({ email: savedUserData.email }, process.env.SECRET_KEY!, { expiresIn: 3600 });
+                console.log(token);
+                return res.status(200).json({ message: 'ログイン成功', name: savedUserData.name, token: token });
+            } else {
+                return res.status(400).json({ message: 'ログイン失敗' });
+            }
+
         } else {
-            return res.status(400).json({ message: 'ログイン失敗:ユーザー登録をしてください' });
+            console.log("ユーザが存在しません")
+            return res.status(400).json({ message: 'ログイン失敗' });
         }
     } catch (err) {
         console.error(err);

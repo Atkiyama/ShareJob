@@ -26,11 +26,12 @@ function EditUser({
 		e.preventDefault();
 		try {
 			const response = await fetch(
-				`http://localhost:5000/user/updateAll/${user.email}`,
+				process.env.REACT_APP_BASE_URL! + `user/updateAll/${user.email}`,
 				{
 					method: 'PUT',
 					headers: {
 						'Content-Type': 'application/json',
+						authorization: `Bearer ${localStorage.getItem('token')}`,
 					},
 					body: JSON.stringify({
 						name: name,
@@ -82,9 +83,12 @@ function EditUser({
 		const confirmDelete = window.confirm('本当にユーザを削除しますか？');
 		if (confirmDelete) {
 			const response = await fetch(
-				`http://localhost:5000/user/delete/${email}`,
+				process.env.REACT_APP_BASE_URL! + `user/delete/${email}`,
 				{
 					method: 'DELETE',
+					headers: {
+						authorization: `Bearer ${localStorage.getItem('token')}`,
+					},
 				}
 			);
 
@@ -97,6 +101,7 @@ function EditUser({
 				updateCompanyList([]); // 空の配列でリストを更新
 				updateMyCompanyList([]); // 空の配列でリストを更新
 				updateUser({ name: '', email: '' }); // 空のユーザ情報で更新
+				localStorage.removeItem('token');
 
 				// 削除後にリダイレクトする場合は以下の行を有効化する
 				navigate('/');

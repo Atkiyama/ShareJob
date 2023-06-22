@@ -14,6 +14,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const user_1 = require("../../model/user");
 const database_1 = __importDefault(require("../../utils/database"));
+const bcryptjs_1 = __importDefault(require("bcryptjs"));
 /**
  * ユーザ情報登録のAPI
  * @param req bodyにemail,name,passwordを格納する
@@ -26,10 +27,13 @@ function default_1(req, res) {
             yield (0, database_1.default)();
             const exitsTest = yield user_1.UserModel.findOne({ email: req.body.email });
             if (!exitsTest) {
+                const saltRounds = parseInt(process.env.SALT_ROUNDS);
+                const salt = yield bcryptjs_1.default.genSalt(saltRounds);
+                const hashedPassword = yield bcryptjs_1.default.hash(req.body.password, salt);
                 const user = new user_1.UserModel({
                     name: req.body.name,
                     email: req.body.email,
-                    password: req.body.password,
+                    password: hashedPassword,
                 });
                 yield user.save();
                 return res.status(200).json({ message: "ユーザー登録に成功しました" });

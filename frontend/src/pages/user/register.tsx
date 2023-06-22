@@ -16,18 +16,21 @@ const Register = () => {
 	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		try {
-			const response = await fetch('http://localhost:5000/user/register', {
-				method: 'POST',
-				headers: {
-					Accept: 'application/json',
-					'Content-Type': 'application/json',
-				},
-				body: JSON.stringify({
-					name: name,
-					email: email,
-					password: password,
-				}),
-			});
+			const response = await fetch(
+				process.env.REACT_APP_BASE_URL! + `user/register`,
+				{
+					method: 'POST',
+					headers: {
+						Accept: 'application/json',
+						'Content-Type': 'application/json',
+					},
+					body: JSON.stringify({
+						name: name,
+						email: email,
+						password: password,
+					}),
+				}
+			);
 			const jsonResponse = await response.json();
 			alert(jsonResponse.message);
 		} catch (err) {

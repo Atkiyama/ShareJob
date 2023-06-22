@@ -68,18 +68,19 @@ function CompanyList({
 	 */
 	const handleMyCompanyList = async () => {
 		const response = await fetch(
-			`http://localhost:5000/company/getRegisterCompanyList?email=${user.email}`,
+			process.env.REACT_APP_BASE_URL! +
+				`company/getRegisterCompanyList?email=${user.email}`,
 			{
 				method: 'GET',
 				headers: {
 					Accept: 'application/json',
 					'Content-Type': 'application/json',
+					authorization: `Bearer ${localStorage.getItem('token')}`,
 				},
 			}
 		);
 		const jsonResponse = await response.json();
 		updateRegisterCompanyList(jsonResponse.companyList);
-		console.log(jsonResponse.companyList);
 	};
 	const handleAdd = async () => {
 		navigate(`/pages/company/companyRegister/`);

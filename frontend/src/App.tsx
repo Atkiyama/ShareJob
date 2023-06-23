@@ -261,7 +261,6 @@ function App() {
 								user={user}
 								registerCompanyList={registerCompanyList}
 								updateRegisterCompanyList={updateRegisterCompanyList}
-								handleUpdate={handleUpdate}
 							/>
 						}
 					/>

@@ -133,6 +133,7 @@ function Home({ user, myCompanyList, companyList }: HomeProps) {
 				</tbody>
 			</table>
 			<div className="position-fixed">
+				企業の検索、追加 →{' '}
 				<button className="large-button" onClick={handleSearch}>
 					+
 				</button>

@@ -18,7 +18,6 @@ function CompanyList({
 	user,
 	registerCompanyList,
 	updateRegisterCompanyList,
-	handleUpdate,
 }: CompanyListProps) {
 	const navigate = useNavigate();
 	/**
@@ -116,6 +115,7 @@ function CompanyList({
 					</tbody>
 				</table>
 				<div className="position-fixed">
+					企業の追加登録 →{' '}
 					<button className="large-button" onClick={handleAdd}>
 						+
 					</button>

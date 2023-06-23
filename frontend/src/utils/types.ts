@@ -130,7 +130,7 @@ export interface CompanyListProps {
     user: UserType,
     registerCompanyList: CompanyType[]
     updateRegisterCompanyList: (updatedRegisterCompanyList: CompanyType[]) => void;
-    handleUpdate: () => void;
+
 }
 
 /**

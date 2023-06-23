@@ -17,6 +17,11 @@ export interface LoginProps {
 
 }
 
+export interface HeaderProps {
+    user: UserType;
+
+}
+
 /**
  * ログアウト画面のprops
  */

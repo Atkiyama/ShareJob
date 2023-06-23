@@ -186,14 +186,14 @@ function App() {
 	return (
 		<BrowserRouter>
 			<div className="container">
-				<Header />
+				<Header user={user} />
 
-				<p>user:{user.email}</p>
+				{/* <p>user:{user.email}</p>
 				<p>useToken:{useToken(loginFlag, updateLoginFlag).email}</p>
 
 				<p>user{user.name}</p>
 				<p>useToken:{useToken(loginFlag, updateLoginFlag).name}</p>
-				<p>Token:{localStorage.getItem('token')}</p>
+				<p>Token:{localStorage.getItem('token')}</p> */}
 				<Routes>
 					<Route path="/" element={<Top />} />
 					<Route

@@ -101,8 +101,7 @@ function Home({ user, myCompanyList, companyList }: HomeProps) {
 
 	return (
 		<div>
-			<h2>{user.name}様</h2>
-			<h3>登録企業</h3>
+			<h3>My企業</h3>
 
 			<table className="table">
 				<thead>

@@ -91,7 +91,7 @@ function CompanyList({
 	 */
 	useEffect(() => {
 		document.title = `登録企業一覧`;
-		if (user) {
+		if (user.email !== '') {
 			handleMyCompanyList();
 		} else {
 			alert('ログインしてください');

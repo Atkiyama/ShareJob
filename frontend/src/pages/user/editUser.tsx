@@ -61,7 +61,7 @@ function EditUser({
 	 * ログインしていなければログイン画面に遷移する
 	 */
 	useEffect(() => {
-		if (!user) {
+		if (user.email === '') {
 			alert('ログインしていません');
 			handleCancel();
 		}

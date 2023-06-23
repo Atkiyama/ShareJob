@@ -14,12 +14,7 @@ import {
  * @param param0
  * @returns
  */
-function Home({
-	user,
-	myCompanyList,
-	companyList,
-	updateCompanyList,
-}: HomeProps) {
+function Home({ user, myCompanyList, companyList }: HomeProps) {
 	const navigate = useNavigate();
 	const [data, setData] = useState<MyCompanyTableType[]>([]);
 	/**
@@ -58,7 +53,7 @@ function Home({
 	 * companyInfoからcompanyInfoTableの情報を取得する
 	 */
 	useEffect(() => {
-		if (user.email !== '') {
+		if (user) {
 			document.title = 'ホーム';
 			const handleCompanyInfoTable = async () => {
 				if (companyList.length > 0) {

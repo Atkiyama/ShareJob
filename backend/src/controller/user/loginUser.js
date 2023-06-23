@@ -33,7 +33,7 @@ function default_1(req, res) {
             if (savedUserData) {
                 const hashed = savedUserData.password;
                 if (yield bcrypt_1.default.compare(password, hashed)) {
-                    const token = jsonwebtoken_1.default.sign({ email: savedUserData.email }, process.env.SECRET_KEY, { expiresIn: 3600 });
+                    const token = jsonwebtoken_1.default.sign({ email: savedUserData.email, name: savedUserData.name }, process.env.SECRET_KEY, { expiresIn: 3600 });
                     console.log(token);
                     return res.status(200).json({ message: 'ログイン成功', name: savedUserData.name, token: token });
                 }

@@ -9,22 +9,19 @@ export type UserType = {
     name: string,
     email: string,
 }
-
 /**
- * ログイン画面のprops
+ * ログアウト画面のprops
  */
 export interface LoginProps {
-    updateUser: (user: UserType) => void;
-    handleMyCompanyList: () => void;
-    handleCompanyList: () => void;
+    updatedLoginFlag: (updatedLoginFlag: boolean) => void;
+
 }
 
 /**
  * ログアウト画面のprops
  */
 export interface LogoutProps {
-    user: UserType,
-    updateUser: (user: UserType) => void;
+    user: UserType;
     updateCompanyList: (updatedCompanyList: CompanyType[]) => void;
     updateMyCompanyList: (updatedMyCompanyList: MyCompanyType[]) => void;
     updateSearchCompanyList: (updateSearchCompanyList: CompanyType[]) => void;
@@ -47,7 +44,7 @@ export type HomeProps = {
     user: UserType;
     myCompanyList: MyCompanyType[];
     companyList: CompanyType[];
-    updateCompanyList: (updatedCompanyList: CompanyType[]) => void;
+
 };
 
 
@@ -92,7 +89,6 @@ export interface EditMemoProps {
  */
 export interface EditUserProps {
     user: UserType,
-    updateUser: (user: UserType) => void;
     updateCompanyList: (updatedCompanyList: CompanyType[]) => void;
     updateMyCompanyList: (updatedMyCompanyList: MyCompanyType[]) => void;
     handleUpdate: () => void;

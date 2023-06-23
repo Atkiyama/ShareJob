@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { EditUserProps, UserType } from '../../utils/types';
+import { EditUserProps } from '../../utils/types';
 
 /**
  * ユーザ情報を編集する
@@ -9,7 +9,6 @@ import { EditUserProps, UserType } from '../../utils/types';
  */
 function EditUser({
 	user,
-	updateUser,
 	updateCompanyList,
 	updateMyCompanyList,
 	handleUpdate,
@@ -41,13 +40,14 @@ function EditUser({
 				}
 			);
 			const jsonResponse = await response.json();
-			const updatedUser: UserType = {
-				name: name,
-				email: email,
-			};
-			updateUser(updatedUser);
+			updateCompanyList([]); // 空の配列でリストを更新
+			updateMyCompanyList([]); // 空の配列でリストを更新
+			localStorage.removeItem('token');
+
+			// 削除後にリダイレクトする場合は以下の行を有効化する
+			navigate('/');
 			alert(jsonResponse.message);
-			handleUpdate();
+			//handleUpdate();
 		} catch (err) {
 			console.log(err);
 			alert(
@@ -61,7 +61,7 @@ function EditUser({
 	 * ログインしていなければログイン画面に遷移する
 	 */
 	useEffect(() => {
-		if (user.email === '') {
+		if (!user) {
 			alert('ログインしていません');
 			handleCancel();
 		}
@@ -100,7 +100,6 @@ function EditUser({
 			if (response.ok) {
 				updateCompanyList([]); // 空の配列でリストを更新
 				updateMyCompanyList([]); // 空の配列でリストを更新
-				updateUser({ name: '', email: '' }); // 空のユーザ情報で更新
 				localStorage.removeItem('token');
 
 				// 削除後にリダイレクトする場合は以下の行を有効化する
@@ -114,6 +113,7 @@ function EditUser({
 	return (
 		<div>
 			<h1 className="page-title">ユーザ情報編集</h1>
+			<h2>注:ユーザ情報を変更すると一度ログアウトします</h2>
 			<form onSubmit={handleSubmit}>
 				<input
 					value={name}

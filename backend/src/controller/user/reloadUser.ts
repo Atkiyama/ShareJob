@@ -8,7 +8,8 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 /**
- * ログイン時のAPI
+ * リロード時のAPI
+ * トークンがあればnameを返してくれる
  * @param req emailとpasswordがbodyに格納される
  * @param res メッセージとユーザ情報を返す
  * @returns 
@@ -18,22 +19,9 @@ export default async function (req: Request, res: Response) {
         await connectDB();
 
         const savedUserData: User | null = await UserModel.findOne({ email: req.body.email });
-        const password: string = req.body.password;
-
-
 
         if (savedUserData) {
-
-            const hashed = savedUserData.password;
-
-            if (await bcrypt.compare(password, hashed)) {
-                const token = jwt.sign({ email: savedUserData.email, name: savedUserData.name }, process.env.SECRET_KEY!, { expiresIn: 3600 });
-                console.log(token);
-                return res.status(200).json({ message: 'ログイン成功', name: savedUserData.name, token: token });
-            } else {
-                return res.status(400).json({ message: 'ログイン失敗' });
-            }
-
+            return res.status(200).json({ name: savedUserData.name });
         } else {
             console.log("ユーザが存在しません")
             return res.status(400).json({ message: 'ログイン失敗' });

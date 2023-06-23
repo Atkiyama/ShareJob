@@ -25,7 +25,6 @@ function default_1(req, res) {
         try {
             yield (0, database_1.default)();
             const myCompanyList = yield myCompany_1.MyCompanyModel.find({ email: req.query.email });
-            console.log(myCompanyList.length);
             return res.status(200).json({ myCompanyList: myCompanyList });
         }
         catch (err) {

@@ -7,22 +7,13 @@ import { LogoutProps } from '../../utils/types';
  * @param param0
  * @returns
  */
-function Logout({
-	user,
-	updateUser,
-	updateCompanyList,
-	updateMyCompanyList,
-}: LogoutProps) {
+function Logout({ user, updateCompanyList, updateMyCompanyList }: LogoutProps) {
 	const navigate = useNavigate();
 	/**
 	 *ログアウト処理を行う
 	 */
 	const handleRemoveData = () => {
 		localStorage.removeItem('token');
-		updateUser({
-			name: '',
-			email: '',
-		});
 		updateCompanyList([]); // 空の配列でリストを更新
 		updateMyCompanyList([]); // 空の配列でリストを更新
 

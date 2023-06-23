@@ -1,7 +1,10 @@
 import { Request, Response } from 'express';
 import { UserModel, User } from '../../model/user';
 import connectDB from '../../utils/database';
+import bcrypt from 'bcrypt';
+import dotenv from 'dotenv';
 
+dotenv.config();
 /**
  * ユーザの更新用のAPI
  * @param req paramsにemail,bodyにemailとcompanyInfoListを格納
@@ -13,7 +16,9 @@ export default async function (req: Request, res: Response) {
         await connectDB();
         //ユーザが存在するかのチェック
         const existsTest: User | null = await UserModel.findOne({ email: req.params.email });
-
+        const saltRounds: number = parseInt(process.env.SALT_ROUNDS!);
+        const salt: string = await bcrypt.genSalt(saltRounds);
+        const hashedPassword = await bcrypt.hash(req.body.password, salt);
         if (existsTest) {
             await UserModel.updateOne({
                 name: req.body.name,
@@ -21,7 +26,7 @@ export default async function (req: Request, res: Response) {
             },
                 {
                     $set: {
-                        password: existsTest.password,
+                        password: hashedPassword,
                     }
                 });
             const test: User | null = await UserModel.findOne({ email: req.params.email });

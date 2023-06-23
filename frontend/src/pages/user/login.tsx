@@ -7,11 +7,7 @@ import { LoginProps } from '../../utils/types';
  * @param param0
  * @returns
  */
-function Login({
-	handleMyCompanyList,
-	handleCompanyList,
-	updateUser,
-}: LoginProps) {
+function Login({ updatedLoginFlag }: LoginProps) {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 	const navigate = useNavigate();
@@ -42,17 +38,8 @@ function Login({
 			const name = jsonResponse.name;
 			if (jsonResponse.token) {
 				localStorage.setItem('token', jsonResponse.token);
-				/**
-				 * 同期処理を行う
-				 */
-				await Promise.all([
-					updateUser({
-						name: name,
-						email: email,
-					}),
-
-					alert(name + 'でログインしました'),
-				]);
+				updatedLoginFlag(true);
+				alert(name + 'でログインしました');
 
 				navigate('/pages/home');
 			} else {

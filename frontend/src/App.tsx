@@ -15,21 +15,16 @@ import CompanyRegister from './pages/company/companyRegister';
 import CompanyList from './pages/company/companyList';
 import CompanyEdit from './pages/company/companyEdit';
 
-import { UserType, MyCompanyType, CompanyType } from './utils/types';
+import { MyCompanyType, CompanyType } from './utils/types';
 import CompanyAdd from './pages/company/companyAdd';
+import useToken from './utils/useToken';
 
 function App() {
 	/**
-	 * ログインしているユーザの情報
+	 * ログイン管理のフラグ
 	 */
-	const [user, setUser] = useState<UserType>({
-		name: '',
-		email: '',
-	});
+	const [loginFlag, setLoginFlag] = useState<boolean>(false);
 
-	/**
-	 * ユーザの企業メモ
-	 */
 	const [myCompanyList, setMyCompanyList] = useState<MyCompanyType[]>([]);
 	/**
 	 * メモを登録している企業のリスト
@@ -50,9 +45,8 @@ function App() {
 	 * 以下、下位のコンポーネントで各変数を更新するための関数
 	 * @param updatedUser
 	 */
-
-	const updateUser = (updatedUser: UserType) => {
-		setUser(updatedUser);
+	const updateLoginFlag = (updatedLoginFlag: boolean) => {
+		setLoginFlag(updatedLoginFlag);
 	};
 
 	const updateMyCompanyList = (updatedMyCompanyList: MyCompanyType[]) => {
@@ -74,6 +68,11 @@ function App() {
 	) => {
 		setSearchedCompany(updatedSearchedCompanyList);
 	};
+
+	/**
+	 * ログイン情報
+	 */
+	const user = useToken(loginFlag, updateLoginFlag);
 
 	/**
 	 *企業メモのリストを取得する
@@ -158,19 +157,14 @@ function App() {
 		await handleCompanyList();
 		await handleRegisterCompanyList();
 	};
-	/**
-	 * companyInfoListを取得する
-	 */
+
 	useEffect(() => {
 		document.title = 'ShareJob';
 		if (user.email !== '') {
-			handleMyCompanyList();
+			handleUpdate();
 		}
 	}, [user.email]);
 
-	/**
-	 * companyListを取得する
-	 */
 	useEffect(() => {
 		if (user.email !== '' && myCompanyList.length > 0) {
 			handleCompanyList();
@@ -193,6 +187,13 @@ function App() {
 		<BrowserRouter>
 			<div className="container">
 				<Header />
+
+				<p>user:{user.email}</p>
+				<p>useToken:{useToken(loginFlag, updateLoginFlag).email}</p>
+
+				<p>user{user.name}</p>
+				<p>useToken:{useToken(loginFlag, updateLoginFlag).name}</p>
+				<p>Token:{localStorage.getItem('token')}</p>
 				<Routes>
 					<Route path="/" element={<Top />} />
 					<Route
@@ -202,26 +203,18 @@ function App() {
 								user={user}
 								myCompanyList={myCompanyList}
 								companyList={companyList}
-								updateCompanyList={updateCompanyList}
 							/>
 						}
 					/>
 					<Route
 						path="/pages/user/login"
-						element={
-							<Login
-								handleMyCompanyList={handleMyCompanyList}
-								handleCompanyList={handleCompanyList}
-								updateUser={updateUser}
-							/>
-						}
+						element={<Login updatedLoginFlag={updateLoginFlag} />}
 					/>
 					<Route
 						path="/pages/user/logout"
 						element={
 							<Logout
 								user={user}
-								updateUser={updateUser}
 								updateCompanyList={updateCompanyList}
 								updateMyCompanyList={updateMyCompanyList}
 								updateSearchCompanyList={updateSearchCompanyList}
@@ -233,7 +226,6 @@ function App() {
 						element={
 							<EditUser
 								user={user}
-								updateUser={updateUser}
 								updateCompanyList={updateCompanyList}
 								updateMyCompanyList={updateMyCompanyList}
 								handleUpdate={handleUpdate}

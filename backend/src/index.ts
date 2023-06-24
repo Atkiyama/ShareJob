@@ -1,8 +1,6 @@
 import express, { Request, Response } from 'express';
 import cors from 'cors';
-import jwt from 'jsonwebtoken';
 
-import connectDB from './utils/database';
 import routers from './routers'
 const app = express();
 app.use(cors());

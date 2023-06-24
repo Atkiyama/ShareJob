@@ -13,13 +13,16 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importDefault(require("mongoose"));
+const dotenv_1 = __importDefault(require("dotenv"));
+dotenv_1.default.config();
+const db = process.env.MONGODB_LOCAL;
 // pass:45GvKUHZB6ILlhQJ
 /**
  * データベースに接続する
  */
 const connectDB = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        yield mongoose_1.default.connect("mongodb://127.0.0.1/shareJob");
+        yield mongoose_1.default.connect(db);
         //console.log("Success: Connected to MongoDB");
     }
     catch (err) {

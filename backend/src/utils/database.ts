@@ -1,12 +1,19 @@
 import mongoose from "mongoose";
 
+import dotenv from 'dotenv';
+
+dotenv.config();
+
+const db: string = process.env.MONGODB_LOCAL!;
+
 // pass:45GvKUHZB6ILlhQJ
 /**
  * データベースに接続する
  */
 const connectDB = async (): Promise<void> => {
     try {
-        await mongoose.connect("mongodb://127.0.0.1/shareJob");
+
+        await mongoose.connect(db);
         //console.log("Success: Connected to MongoDB");
     } catch (err) {
         console.log("Failure: Unconnected to MongoDB");

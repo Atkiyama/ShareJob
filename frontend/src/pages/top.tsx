@@ -25,7 +25,7 @@ function Top() {
 			</p>
 			<img
 				src={require('../image/homeExample.png')}
-				alt="画像の説明"
+				alt=""
 				style={{ width: '600px', height: '350px' }}
 			/>
 			<h3>企業情報の登録</h3>
@@ -38,7 +38,7 @@ function Top() {
 			</p>
 			<img
 				src={require('../image/ListExample.png')}
-				alt="画像の説明"
+				alt=""
 				style={{ width: '600px', height: '350px' }}
 			/>
 		</div>

@@ -8,7 +8,12 @@ import { HeaderProps } from '../utils/types';
 function Header({ user }: HeaderProps) {
 	return (
 		<div className="header-container">
-			<h1 className="header-title">ShareJob</h1>
+			<img
+				src={require('../image/headerLogo.png')}
+				alt="画像の説明"
+				style={{ width: '250px', height: '70px' }}
+			/>
+			{/* <h1 className="header-title">ShareJob</h1> */}
 			<ul className="header-links">
 				<li>
 					<Link to="/">トップページ</Link>

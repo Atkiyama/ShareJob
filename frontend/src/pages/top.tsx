@@ -28,15 +28,6 @@ function Top() {
 				alt="画像の説明"
 				style={{ width: '600px', height: '350px' }}
 			/>
-			<p>各企業に対する就職活動の状況をメモとして登録することができます。</p>
-			<p>
-				ホーム画面の右下の+ボタンを押すと企業検索画面に移るのでそこから企業をMy企業に登録して選考状況を登録できます。
-			</p>
-			<img
-				src={require('../image/homeExample.png')}
-				alt="画像の説明"
-				style={{ width: '600px', height: '350px' }}
-			/>
 			<h3>企業情報の登録</h3>
 			<p>検索に企業がヒットしない場合、自分で登録することもできます</p>
 			<p>
@@ -46,7 +37,7 @@ function Top() {
 				右下の+ボタンから新規登録ができるので是非企業情報の登録にご協力ください！
 			</p>
 			<img
-				src={require('../image/companyListExample.png')}
+				src={require('../image/ListExample.png')}
 				alt="画像の説明"
 				style={{ width: '600px', height: '350px' }}
 			/>

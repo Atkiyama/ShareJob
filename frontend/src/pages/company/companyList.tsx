@@ -18,7 +18,6 @@ function CompanyList({
 	user,
 	registerCompanyList,
 	updateRegisterCompanyList,
-	handleUpdate,
 }: CompanyListProps) {
 	const navigate = useNavigate();
 	/**
@@ -91,7 +90,7 @@ function CompanyList({
 	 */
 	useEffect(() => {
 		document.title = `登録企業一覧`;
-		if (user) {
+		if (user.email !== '') {
 			handleMyCompanyList();
 		} else {
 			alert('ログインしてください');
@@ -116,6 +115,7 @@ function CompanyList({
 					</tbody>
 				</table>
 				<div className="position-fixed">
+					企業の追加登録 →{' '}
 					<button className="large-button" onClick={handleAdd}>
 						+
 					</button>

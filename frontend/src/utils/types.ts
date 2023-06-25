@@ -17,6 +17,11 @@ export interface LoginProps {
 
 }
 
+export interface HeaderProps {
+    user: UserType;
+
+}
+
 /**
  * ログアウト画面のprops
  */
@@ -125,7 +130,7 @@ export interface CompanyListProps {
     user: UserType,
     registerCompanyList: CompanyType[]
     updateRegisterCompanyList: (updatedRegisterCompanyList: CompanyType[]) => void;
-    handleUpdate: () => void;
+
 }
 
 /**

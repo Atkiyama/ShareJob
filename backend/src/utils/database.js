@@ -15,7 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importDefault(require("mongoose"));
 const dotenv_1 = __importDefault(require("dotenv"));
 dotenv_1.default.config();
-const db = process.env.MONGODB_LOCAL;
+const db = process.env.MONGODB_ATLAS;
 // pass:45GvKUHZB6ILlhQJ
 /**
  * データベースに接続する

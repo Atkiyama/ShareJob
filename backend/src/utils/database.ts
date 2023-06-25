@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const db: string = process.env.MONGODB_LOCAL!;
+const db: string = process.env.MONGODB_ATLAS!;
 
 // pass:45GvKUHZB6ILlhQJ
 /**

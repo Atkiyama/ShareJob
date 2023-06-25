@@ -48,7 +48,7 @@ const logRequestAndResponse = (
 ) => {
     const requestTime = new Date().toISOString();
     const logMessage = `[${requestTime}] ${req.method} ${req.url}\n`;
-    const logFilePath = path.join(__dirname, `../../../database/log/${getFormattedDate()}.log`); // 日付ごとのログファイルのパスを指定
+    //const logFilePath = path.join(__dirname, `../../../database/log/${getFormattedDate()}.log`); // 日付ごとのログファイルのパスを指定
 
     console.log(logMessage); // コンソールにログを表示
 
@@ -61,6 +61,7 @@ const logRequestAndResponse = (
     const requestBodyMessage = `Request Body: ${JSON.stringify(req.body)}\n`;
     console.log(requestBodyMessage);
 
+    /*
     fs.appendFileSync(logFilePath, logMessage);
     fs.appendFileSync(logFilePath, requestHeaderMessage);
     fs.appendFileSync(logFilePath, requestBodyMessage);
@@ -77,6 +78,7 @@ const logRequestAndResponse = (
         fs.appendFileSync(logFilePath, responseMessage);
         fs.appendFileSync(logFilePath, responseDataMessage);
     });
+    */
 
     next();
 };

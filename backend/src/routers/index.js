@@ -3,7 +3,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const fs_1 = __importDefault(require("fs"));
 const path_1 = __importDefault(require("path"));
 const express_1 = __importDefault(require("express"));
 const auth_1 = __importDefault(require("../utils/auth"));
@@ -55,18 +54,24 @@ const logRequestAndResponse = (req, res, next) => {
     // リクエストボディをログに追加
     const requestBodyMessage = `Request Body: ${JSON.stringify(req.body)}\n`;
     console.log(requestBodyMessage);
-    fs_1.default.appendFileSync(logFilePath, logMessage);
-    fs_1.default.appendFileSync(logFilePath, requestHeaderMessage);
-    fs_1.default.appendFileSync(logFilePath, requestBodyMessage);
+    /*
+    fs.appendFileSync(logFilePath, logMessage);
+    fs.appendFileSync(logFilePath, requestHeaderMessage);
+    fs.appendFileSync(logFilePath, requestBodyMessage);
+
     res.on('finish', () => {
         const responseMessage = `Response ${res.statusCode} ${res.statusMessage}\n`;
+
         console.log(responseMessage); // コンソールにレスポンスのログを表示
+
         // レスポンスの内容をログに追加
         const responseDataMessage = `Response Data: ${JSON.stringify(res.locals.data)}\n`;
         console.log(responseDataMessage);
-        fs_1.default.appendFileSync(logFilePath, responseMessage);
-        fs_1.default.appendFileSync(logFilePath, responseDataMessage);
+
+        fs.appendFileSync(logFilePath, responseMessage);
+        fs.appendFileSync(logFilePath, responseDataMessage);
     });
+    */
     next();
 };
 router.use(logRequestAndResponse);

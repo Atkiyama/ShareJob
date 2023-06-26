@@ -73,7 +73,7 @@ frontend
 REACT_APP_BASE_URL={バックエンドのベースとなるURL(ローカル環境の場合はhttp://localhost:5000/)}
 ```
 
-以下のコマンドでそれぞれのサーバを起動してください
+3.以下のコマンドでそれぞれのサーバを起動してください
 
 backend
 
@@ -105,13 +105,17 @@ $ npm run build
 - python3 系
 - MongoDB
 
-  1.database ディレクトリに移動し以下のコマンドを実行すると MongoDB に shareJob データベースが書き込まれます。
+  database ディレクトリに移動し以下のコマンドを実行すると MongoDB に shareJob データベースが書き込まれます。
   追加されるデータは json ディレクトリに記載されています
 
 ```shell
 $ cd ShareJob/database
 $ python dbReset.py
 ```
+
+## ドキュメント
+
+もっと詳しいドキュメントをご覧になりたい方は document フォルダの各種ドキュメントをご覧ください
 
 ## 今後の改良予定
 

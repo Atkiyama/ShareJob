@@ -13,7 +13,7 @@
 以下の技術スタックを用いています。
 
 - バックエンド
-  - nodejs(Typescript)
+  - node.js(Typescript)
   - express
 - フロントエンド
   - React
@@ -24,14 +24,14 @@
 
 ## 動作環境
 
-MAC OS Ventura 13.4.1
-node v16.17.0
-npm 8.15.0
+- MAC OS Ventura 13.4.1
+- node v16.17.0
+- npm 8.15.0
 
 ### テスト環境
 
-Python 3.9.7
-MongoDB shell version v5.0.17
+- Python 3.9.7
+- MongoDB shell version v5.0.17
 
 ```json
 

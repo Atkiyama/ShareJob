@@ -1,2 +1,5 @@
-backend/.env
+backend
+frontend
 database/log
+backend/.env
+frontend/.env

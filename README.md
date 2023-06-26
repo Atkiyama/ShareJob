@@ -13,10 +13,10 @@
 以下の技術スタックを用いています。
 
 - バックエンド
-  - node.js(Typescript)
+  - node.js(TypeScript)
   - express
 - フロントエンド
-  - React
+  - React(TypeScript)
 - データベース
   - MongoDB
     - 本番環境 [MongoDB atlas](https://www.mongodb.com/ja-jp/atlas/database)

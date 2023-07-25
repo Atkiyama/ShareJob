@@ -6,7 +6,7 @@
     "birthday": "1990-01-15 12:30:00:000",
     "password": "$2b$05$IX74lyLKySFPJa8yUXOOH.NCSIhgb1ylk/RP7QNTehr6x/gQd.hsG",
     "follow": [],
-    "follower": [],
+    "follower": ["jane@example.com"],
     "favorite": []
   },
   {
@@ -15,9 +15,9 @@
     "abstract": "Ut fringilla enim sed condimentum consectetur. Fusce tristique ultrices augue, ut tristique tellus. In at libero ex. Sed faucibus metus id lectus tincidunt, et consectetur tortor eleifend. Nullam pharetra leo nec felis commodo, sed finibus neque tempor.",
     "birthday": "1988-07-20 09:45:00:000",
     "password": "$2b$05$UsLzOLVF3AukGL/../AYju66BlnuftKjOLvqjHZnoCe4Rfe5q/AQK",
-    "follow": [],
-    "follower": [],
-    "favorite": []
+    "follow": [ "john@example.com","alex@example.com","sara@example.com"],
+    "follower": ["michael@example.com","emily@example.com","william@example.com"],
+    "favorite": ["1","2","18","19","20"]
   },
   {
     "name": "Alex Johnson",
@@ -26,7 +26,7 @@
     "birthday": "1995-04-03 18:15:00:000",
     "password": "$2b$05$zTZogoQJxfnxeBaMdaA8zuoLj7w9TvTaikYZAulB7VpTn5m8leL0S",
     "follow": [],
-    "follower": [],
+    "follower": ["jane@example.com"],
     "favorite": []
   },
   {
@@ -36,7 +36,7 @@
     "birthday": "1992-11-10 15:20:00:000",
     "password": "$2b$05$kgMnIU9osoNZS9X6AXrUduhIZoWWtIl4qcsROYgtDcIBM3JauYunC",
     "follow": [],
-    "follower": [],
+    "follower": ["jane@example.com"],
     "favorite": []
   },
   {
@@ -45,7 +45,7 @@
     "abstract": "Vestibulum finibus gravida aliquam. Sed eget facilisis lorem. Morbi et luctus ligula. Aenean posuere, nunc et scelerisque iaculis, risus diam consectetur tortor, eget finibus mauris tellus in nisi.",
     "birthday": "1987-03-25 08:00:00:000",
     "password": "$2b$05$9NoI9HOK7bLYQWf5Pgi/a.jjnE.ihZEX6A/yOUt4XhAeVnl3sNueq",
-    "follow": [],
+    "follow": ["jane@example.com"],
     "follower": [],
     "favorite": []
   },
@@ -55,7 +55,7 @@
     "abstract": "Maecenas quis metus id erat dignissim posuere. Quisque accumsan nibh id tortor consectetur, a sagittis ipsum posuere. Mauris bibendum dapibus placerat. Suspendisse sed ligula vel eros venenatis sagittis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;",
     "birthday": "1994-09-05 14:10:00:000",
     "password": "$2b$05$jzBgqEATlghppsnMsj2fj.3K7pE6iVvYbqiRdfjGk5XHM3yD3FMey",
-    "follow": [],
+    "follow": ["jane@example.com"],
     "follower": [],
     "favorite": []
   },
@@ -65,7 +65,7 @@
     "abstract": "Fusce non libero quis sem condimentum efficitur. Sed bibendum, tellus sed rhoncus ultrices, tellus velit pharetra nunc, ut aliquam arcu risus sit amet felis. Aliquam erat volutpat. Proin et ex nec est vehicula tincidunt. Etiam nec tincidunt ligula.",
     "birthday": "1991-06-18 10:55:00:000",
     "password": "$2b$05$8r5IoW/QdTHu9l4xoHrzB.IRN7va80DztAfQ35KC07pN0rwadHwqO",
-    "follow": [],
+    "follow": ["jane@example.com"],
     "follower": [],
     "favorite": []
   },
